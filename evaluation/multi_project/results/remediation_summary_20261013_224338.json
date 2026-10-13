@@ -1,0 +1,162 @@
+{
+  "timestamp": "20261013_224338",
+  "domains": {
+    "banking_management": {
+      "run_id": "3a91ae0c-de6f-4902-9d57-1edae12258ec",
+      "domain_key": "banking_management",
+      "project_title": "Banking Management System",
+      "timestamp": "2026-10-13T22:44:15.701400",
+      "llm_enabled": true,
+      "llm_extraction_succeeded": true,
+      "fallback_used": false,
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "matching_summary": {
+        "predicted_requirements_count": 26,
+        "reference_requirements_count": 25,
+        "uniquely_matched_count": 25,
+        "unmatched_predictions_count": 1,
+        "ambiguous_predictions_count": 0,
+        "duplicate_gold_matches_count": 0,
+        "unmatched_reference_count": 0
+      },
+      "classification_evaluation": {
+        "valid_matched_denominator": 25,
+        "correct_classifications": 19,
+        "accuracy": 0.76,
+        "penalized_end_to_end_accuracy": 0.7308,
+        "macro_precision": 0.7917,
+        "macro_recall": 0.7958,
+        "macro_f1": 0.725,
+        "per_class_metrics": {
+          "AUTHENTICATION": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "BOOKING": {
+            "tp": 2,
+            "fp": 2,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667
+          },
+          "DATA": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 4,
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333
+          },
+          "FILE": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667
+          },
+          "NOTIFICATION": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "PAYMENT": {
+            "tp": 4,
+            "fp": 2,
+            "fn": 0,
+            "precision": 0.6667,
+            "recall": 1.0,
+            "f1": 0.8
+          },
+          "PROFILE": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667
+          },
+          "REPORTING": {
+            "tp": 2,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.6667,
+            "recall": 0.6667,
+            "f1": 0.6667
+          }
+        },
+        "errors_sample": [
+          {
+            "pred_id": "FR-002",
+            "gold_id": "FR-002",
+            "summary": "View account balances and transaction history",
+            "expected": "DATA",
+            "predicted": "PROFILE"
+          },
+          {
+            "pred_id": "FR-016",
+            "gold_id": "FR-015",
+            "summary": "Loan Management and Underwriting Loan officers should be able to...",
+            "expected": "FILE",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-017",
+            "gold_id": "FR-016",
+            "summary": "Loan officers should be able to calculate debt-to-income ratios and...",
+            "expected": "REPORTING",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-019",
+            "gold_id": "FR-018",
+            "summary": "The system should calculate interest, track monthly installment payments, and...",
+            "expected": "DATA",
+            "predicted": "PAYMENT"
+          },
+          {
+            "pred_id": "FR-021",
+            "gold_id": "FR-019",
+            "summary": "The system should automatically monitor transactions against AML (Anti-Money Laundering)...",
+            "expected": "DATA",
+            "predicted": "REPORTING"
+          },
+          {
+            "pred_id": "FR-020",
+            "gold_id": "NFR-003",
+            "summary": "All transactions must be immutably recorded in a tamper-resistant financial...",
+            "expected": "DATA",
+            "predicted": "PAYMENT"
+          }
+        ],
+        "total_errors": 6
+      },
+      "structural_integrity": {
+        "total_requirements": 26,
+        "requirements_with_tasks": 26,
+        "requirements_without_tasks": 0,
+        "task_coverage_pct": 100.0,
+        "total_modules": 9,
+        "total_relations": 21,
+        "total_tasks": 26,
+        "total_test_cases": 26,
+        "untested_requirements_count": 0,
+        "traceability_matrix_rows": 26
+      },
+      "unsupported_metrics_declared": [
+        "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+        "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+        "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+      ]
+    }
+  }
+}

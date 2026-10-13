@@ -1,0 +1,148 @@
+{
+  "timestamp": "20261013_170911",
+  "domains": {
+    "banking_management": {
+      "run_id": "661bce2f-ba98-4710-bb20-6ae42bd8de0d",
+      "domain_key": "banking_management",
+      "project_title": "Banking Management System",
+      "timestamp": "2026-10-13T17:09:36.002638",
+      "llm_enabled": true,
+      "llm_extraction_succeeded": true,
+      "fallback_used": false,
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "matching_summary": {
+        "predicted_requirements_count": 26,
+        "reference_requirements_count": 25,
+        "uniquely_matched_count": 25,
+        "unmatched_predictions_count": 1,
+        "ambiguous_predictions_count": 0,
+        "duplicate_gold_matches_count": 0,
+        "unmatched_reference_count": 0
+      },
+      "classification_evaluation": {
+        "valid_matched_denominator": 25,
+        "correct_classifications": 21,
+        "accuracy": 0.84,
+        "penalized_end_to_end_accuracy": 0.8077,
+        "macro_precision": 0.875,
+        "macro_recall": 0.8458,
+        "macro_f1": 0.8318,
+        "per_class_metrics": {
+          "AUTHENTICATION": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "BOOKING": {
+            "tp": 2,
+            "fp": 2,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667
+          },
+          "DATA": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.75
+          },
+          "FILE": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667
+          },
+          "NOTIFICATION": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "PAYMENT": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "PROFILE": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "REPORTING": {
+            "tp": 2,
+            "fp": 2,
+            "fn": 1,
+            "precision": 0.5,
+            "recall": 0.6667,
+            "f1": 0.5714
+          }
+        },
+        "errors_sample": [
+          {
+            "pred_id": "FR-016",
+            "gold_id": "FR-015",
+            "summary": "Loan Management and Underwriting Loan officers should be able to...",
+            "expected": "FILE",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-017",
+            "gold_id": "FR-016",
+            "summary": "Loan officers should be able to calculate debt-to-income ratios and...",
+            "expected": "REPORTING",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-021",
+            "gold_id": "FR-019",
+            "summary": "The system should automatically monitor transactions against AML (Anti-Money Laundering)...",
+            "expected": "DATA",
+            "predicted": "REPORTING"
+          },
+          {
+            "pred_id": "NFR-002",
+            "gold_id": "NFR-004",
+            "summary": "All administrative changes, security policy updates, and manual ledger adjustments...",
+            "expected": "DATA",
+            "predicted": "REPORTING"
+          }
+        ],
+        "total_errors": 4
+      },
+      "structural_integrity": {
+        "total_requirements": 26,
+        "requirements_with_tasks": 26,
+        "requirements_without_tasks": 0,
+        "task_coverage_pct": 100.0,
+        "total_modules": 9,
+        "total_relations": 18,
+        "total_tasks": 26,
+        "total_test_cases": 26,
+        "untested_requirements_count": 0,
+        "traceability_matrix_rows": 26
+      },
+      "unsupported_metrics_declared": [
+        "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+        "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+        "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+      ]
+    }
+  }
+}

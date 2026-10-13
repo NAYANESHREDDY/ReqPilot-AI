@@ -1,0 +1,106 @@
+
+==============================================================================================================
+REQPILOT EV FINAL REPRODUCIBILITY VALIDATION
+==============================================================================================================
+Project ID : ec691f0a-f7d3-4516-8f56-e834de9137ad
+Database   : .\backend\reqpilot.db
+
+==============================================================================================================
+PROJECT COUNTS
+==============================================================================================================
+Requirements             : 58
+Architecture Modules     : 10
+Architecture Relations   : 21
+Epics                    : 10
+Features                 : 10
+Tasks                    : 58
+Task Dependencies        : 7
+Sprints                  : 5
+Test Cases               : 58
+Traceability Links       : 116
+Reports                  : 5
+
+==============================================================================================================
+INDEPENDENT SPECIFICATION-DERIVED ORACLE
+==============================================================================================================
+Requirements evaluated : 58
+Oracle labels defined  : 58
+Correct classifications: 58
+Accuracy               : 100.00%
+Missing oracle labels  : NONE
+Missing source evidence: NONE
+Missing/duplicate tasks: NONE
+
+==============================================================================================================
+REQUIREMENT-LEVEL VALIDATION
+==============================================================================================================
+ALL 58 REQUIREMENTS: PASS
+
+==============================================================================================================
+PER-MODULE PRECISION / RECALL / F1
+==============================================================================================================
+MODULE                            TP    FP    FN   PRECISION    RECALL        F1
+Authentication & Authorization     4     0     0       1.000     1.000     1.000
+Booking & Scheduling               9     0     0       1.000     1.000     1.000
+Charging Session Management        5     0     0       1.000     1.000     1.000
+Charging Station Management       11     0     0       1.000     1.000     1.000
+Application Data Store             7     0     0       1.000     1.000     1.000
+API Gateway                        1     0     0       1.000     1.000     1.000
+Maintenance Management             5     0     0       1.000     1.000     1.000
+Notification Service               7     0     0       1.000     1.000     1.000
+Payment Management                 4     0     0       1.000     1.000     1.000
+Reporting & Analytics              5     0     0       1.000     1.000     1.000
+
+Macro Precision : 1.000
+Macro Recall    : 1.000
+Macro F1        : 1.000
+
+==============================================================================================================
+CONFUSION MATRIX
+==============================================================================================================
+No off-diagonal classification errors.
+
+==============================================================================================================
+TASK INTEGRITY
+==============================================================================================================
+Missing requirement refs       : 0
+Missing module refs            : 0
+Duplicate requirement mappings : 0
+Requirements without tasks     : 0
+
+==============================================================================================================
+ARCHITECTURE RELATION INTEGRITY
+==============================================================================================================
+Architecture relations : 21
+Invalid relations      : 0
+
+==============================================================================================================
+TEST INTEGRITY
+==============================================================================================================
+Test cases                     : 58
+Invalid test→requirement refs  : 0
+Invalid test→task refs         : 0
+
+==============================================================================================================
+TASK DEPENDENCY INTEGRITY
+==============================================================================================================
+Task dependencies            : 7
+Invalid dependency refs      : 0
+
+==============================================================================================================
+COMPLETE TRACEABILITY INTEGRITY
+==============================================================================================================
+Traceability links             : 116
+Invalid trace→requirement refs : 0
+Invalid trace→module refs      : 0
+Invalid trace→task refs        : 0
+Invalid trace→test refs        : 0
+
+==============================================================================================================
+FINAL VALIDATION RESULT
+==============================================================================================================
+PASS
+
+ReqPilot achieved 100% agreement with the specification-derived deterministic validation oracle across all 58 EV requirements.
+
+All checked project-level structural integrity conditions also passed.

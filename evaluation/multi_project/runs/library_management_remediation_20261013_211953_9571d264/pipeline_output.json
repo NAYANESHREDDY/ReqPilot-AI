@@ -1,0 +1,3596 @@
+{
+  "requirements": [
+    {
+      "id": "FR-001",
+      "req_type": "functional",
+      "summary": "Patrons can register for a library membership card and log in securely",
+      "description": "Patrons should be able to register for a library membership card and log in securely.",
+      "actor": "Patron",
+      "action": "register for a library membership card and log in securely",
+      "target_object": "library membership account",
+      "preconditions": "",
+      "expected_outcome": "Patron is registered and logged in securely",
+      "acceptance_criteria": [
+        "Given the patron accesses the registration interface, When the patron registers for a library membership card and logs in securely, Then the patron is registered and logged in securely"
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Patron and Member Requirements Patrons should be able to register for a library membership card and log in securely.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 91.0,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 85.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-002",
+      "req_type": "functional",
+      "summary": "Patrons can search the OPAC by various fields",
+      "description": "Patrons should be able to search the Online Public Access Catalog (OPAC) by title, author, ISBN, subject, and keyword.",
+      "actor": "Patron",
+      "action": "search the OPAC",
+      "target_object": "catalog records",
+      "preconditions": "",
+      "expected_outcome": "Search results matching the specified fields are returned",
+      "acceptance_criteria": [
+        "Given the patron accesses the OPAC search function, When the patron searches by title, author, ISBN, subject, or keyword, Then matching catalog records are returned"
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Patrons should be able to search the Online Public Access Catalog (OPAC) by title, author, ISBN, subject, and keyword.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-003",
+      "req_type": "functional",
+      "summary": "Patrons can view real-time catalog availability, shelf location, and call numbers",
+      "description": "Patrons should be able to view real-time catalog availability, shelf location, and call numbers.",
+      "actor": "Patron",
+      "action": "view real-time catalog availability, shelf location, and call numbers",
+      "target_object": "catalog entries",
+      "preconditions": "",
+      "expected_outcome": "Patron sees current availability, location, and call number information",
+      "acceptance_criteria": [
+        "Given the patron selects a catalog item, When the system displays availability, shelf location, and call number, Then the patron sees accurate real-time information"
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Patrons should be able to view real-time catalog availability, shelf location, and call numbers.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-004",
+      "req_type": "functional",
+      "summary": "Patrons can reserve or place a hold on checked-out or in-transit books",
+      "description": "Patrons should be able to reserve or place a hold on currently checked-out or in-transit books.",
+      "actor": "Patron",
+      "action": "reserve or place a hold",
+      "target_object": "checked-out or in-transit books",
+      "preconditions": "",
+      "expected_outcome": "Hold request is recorded for the selected item",
+      "acceptance_criteria": [
+        "Given the patron selects a checked-out or in-transit book, When the patron places a hold, Then the hold is recorded in the system"
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Patrons should be able to reserve or place a hold on currently checked-out or in-transit books.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-005",
+      "req_type": "functional",
+      "summary": "Patrons can view their active borrowed items, due dates, renewal counts, and reading history",
+      "description": "Patrons should be able to view their active borrowed items, due dates, renewal counts, and reading history.",
+      "actor": "Patron",
+      "action": "view active borrowed items, due dates, renewal counts, and reading history",
+      "target_object": "patron account information",
+      "preconditions": "",
+      "expected_outcome": "Patron sees a list of borrowed items with associated details",
+      "acceptance_criteria": [
+        "Given the patron accesses their account dashboard, When the system displays active borrowed items, due dates, renewal counts, and reading history, Then the patron can review this information"
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Patrons should be able to view their active borrowed items, due dates, renewal counts, and reading history.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 95.5,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 95.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-006",
+      "req_type": "functional",
+      "summary": "Patrons can renew eligible borrowed books online before the due date",
+      "description": "Patrons should be able to renew eligible borrowed books online before the scheduled due date.",
+      "actor": "Patron",
+      "action": "renew eligible borrowed books online",
+      "target_object": "borrowed books",
+      "preconditions": "",
+      "expected_outcome": "Renewal is processed and due date extended",
+      "acceptance_criteria": [
+        "Given the patron selects an eligible borrowed book before its due date, When the patron requests renewal online, Then the system extends the due date"
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Patrons should be able to renew eligible borrowed books online before the scheduled due date.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-007",
+      "req_type": "functional",
+      "summary": "Patrons can view outstanding late return fines and make electronic fee payments",
+      "description": "Patrons should be able to view outstanding late return fines and make electronic fee payments.",
+      "actor": "Patron",
+      "action": "view outstanding fines and make electronic payments",
+      "target_object": "patron fine account",
+      "preconditions": "",
+      "expected_outcome": "Patron sees fine balance and can pay electronically",
+      "acceptance_criteria": [
+        "Given the patron accesses their fine account, When the system shows outstanding fines and the patron submits an electronic payment, Then the fine balance is updated"
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Patrons should be able to view outstanding late return fines and make electronic fee payments.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-008",
+      "req_type": "functional",
+      "summary": "Patrons receive automated notification alerts for due dates, hold arrivals, and overdue notices",
+      "description": "Patrons should receive automated notification alerts for upcoming due dates, available hold arrivals, and overdue notices.",
+      "actor": "System",
+      "action": "send automated notification alerts",
+      "target_object": "patron contact channels",
+      "preconditions": "",
+      "expected_outcome": "Patron receives timely alerts for due dates, holds, and overdue items",
+      "acceptance_criteria": [
+        "Given a due date is approaching, a hold becomes available, or an item is overdue, When the system generates an alert, Then the patron receives the notification"
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Patrons should receive automated notification alerts for upcoming due dates, available hold arrivals, and overdue notices.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-009",
+      "req_type": "functional",
+      "summary": "Patrons can submit purchase recommendations or inter-library loan requests for missing titles",
+      "description": "Patrons should be able to submit purchase recommendations or inter-library loan requests for missing titles.",
+      "actor": "Patron",
+      "action": "submit purchase recommendations or inter-library loan requests",
+      "target_object": "missing titles",
+      "preconditions": "",
+      "expected_outcome": "Submission is recorded for library consideration",
+      "acceptance_criteria": [
+        "Given the patron identifies a missing title, When the patron submits a purchase recommendation or inter-library loan request, Then the request is stored in the system"
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Patrons should be able to submit purchase recommendations or inter-library loan requests for missing titles.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-010",
+      "req_type": "functional",
+      "summary": "Circulation staff can verify patron membership status, hold privileges, and fine balances",
+      "description": "Circulation staff should be able to verify patron membership status, active hold privileges, and fine balances.",
+      "actor": "Circulation staff",
+      "action": "verify patron membership status, hold privileges, and fine balances",
+      "target_object": "patron account",
+      "preconditions": "",
+      "expected_outcome": "Staff obtains current status, privileges, and balances",
+      "acceptance_criteria": [
+        "Given the staff accesses a patron record, When the system displays membership status, hold privileges, and fine balances, Then the staff can view the information"
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Circulation Desk Staff Requirements Circulation staff should be able to verify patron membership status, active hold privileges, and fine balances.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 95.5,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 95.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-011",
+      "req_type": "functional",
+      "summary": "Circulation staff can check out physical materials by scanning patron cards and book barcodes",
+      "description": "Circulation staff should be able to check out physical materials by scanning patron cards and book barcodes.",
+      "actor": "Circulation staff",
+      "action": "check out physical materials by scanning patron cards and book barcodes",
+      "target_object": "physical materials",
+      "preconditions": "",
+      "expected_outcome": "Materials are recorded as checked out to the patron",
+      "acceptance_criteria": [
+        "Given the staff scans a patron card and a book barcode, When the checkout process completes, Then the item is recorded as borrowed by the patron"
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Circulation staff should be able to check out physical materials by scanning patron cards and book barcodes.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 95.5,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 95.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-012",
+      "req_type": "functional",
+      "summary": "Circulation staff can process returned items, inspect condition, and return items to inventory",
+      "description": "Circulation staff should be able to process returned items, inspect material condition, and return items to inventory.",
+      "actor": "Circulation staff",
+      "action": "process returned items, inspect condition, and return to inventory",
+      "target_object": "returned materials",
+      "preconditions": "",
+      "expected_outcome": "Returned items are updated in inventory with condition status",
+      "acceptance_criteria": [
+        "Given a returned item is scanned, When the staff inspects its condition and confirms receipt, Then the system updates inventory status accordingly"
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Circulation staff should be able to process returned items, inspect material condition, and return items to inventory.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 95.5,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 95.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-013",
+      "req_type": "functional",
+      "summary": "System automatically calculates late fees for overdue returned items based on membership policy rules",
+      "description": "The system should automatically calculate late fees for overdue returned items based on membership policy rules.",
+      "actor": "System",
+      "action": "calculate late fees automatically",
+      "target_object": "overdue returned items",
+      "preconditions": "",
+      "expected_outcome": "Late fees are computed according to policy",
+      "acceptance_criteria": [
+        "Given an item is returned after its due date, When the system applies membership policy rules, Then the appropriate late fee is calculated"
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "The system should automatically calculate late fees for overdue returned items based on membership policy rules.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 95.5,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 95.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-014",
+      "req_type": "functional",
+      "summary": "Circulation staff should be able to collect in-person fine payments...",
+      "description": "Circulation staff should be able to collect in-person fine payments and print receipt slips.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "Circulation staff should be able to collect in-person fine payments and print receipt slips.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "Circulation staff should be able to collect in-person fine payments and print receipt slips.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-015",
+      "req_type": "functional",
+      "summary": "Circulation staff should be able to manage physical reservations and...",
+      "description": "Circulation staff should be able to manage physical reservations and notify patrons when reserved books are staged on hold shelves.",
+      "actor": "System",
+      "action": "manage",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "Circulation staff should be able to manage physical reservations and notify patrons when reserved books are staged on hold shelves.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "Circulation staff should be able to manage physical reservations and notify patrons when reserved books are staged on hold shelves.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-016",
+      "req_type": "functional",
+      "summary": "Cataloging and Collection Management Catalogers should be able to add...",
+      "description": "Cataloging and Collection Management Catalogers should be able to add new bibliographic records, assign Dewey Decimal / Library of Congress classifications, and print barcode labels.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "Cataloging and Collection Management Catalogers should be able to add new bibliographic records, assign Dewey Decimal / Library of Congress classifications, and print barcode labels.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "Cataloging and Collection Management Catalogers should be able to add new bibliographic records, assign Dewey Decimal / Library of Congress classifications, and print barcode labels.",
+      "quality_score": 92.5,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 75.0,
+        "consistency": 90.0,
+        "testability": 95.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-017",
+      "req_type": "functional",
+      "summary": "Catalogers should be able to manage inventory copies, track lost...",
+      "description": "Catalogers should be able to manage inventory copies, track lost or damaged materials, and decommission obsolete items.",
+      "actor": "System",
+      "action": "manage",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "Catalogers should be able to manage inventory copies, track lost or damaged materials, and decommission obsolete items.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "Catalogers should be able to manage inventory copies, track lost or damaged materials, and decommission obsolete items.",
+      "quality_score": 95.5,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 95.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-018",
+      "req_type": "functional",
+      "summary": "The system should track circulation frequency and generate collection utilization...",
+      "description": "The system should track circulation frequency and generate collection utilization reports.",
+      "actor": "System",
+      "action": "track",
+      "target_object": "reports",
+      "preconditions": "",
+      "expected_outcome": "The system should track circulation frequency and generate collection utilization reports.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "The system should track circulation frequency and generate collection utilization reports.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-019",
+      "req_type": "functional",
+      "summary": "Catalogers should be able to conduct periodic physical inventory audits...",
+      "description": "Catalogers should be able to conduct periodic physical inventory audits using barcode scanners.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "Catalogers should be able to conduct periodic physical inventory audits using barcode scanners.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "Catalogers should be able to conduct periodic physical inventory audits using barcode scanners.",
+      "quality_score": 95.5,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 95.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "NFR-001",
+      "req_type": "non_functional",
+      "summary": "Administration and Security The system should provide secure role-based access...",
+      "description": "Administration and Security The system should provide secure role-based access control separating patrons, circulation staff, catalogers, and administrators.",
+      "actor": "Administrators",
+      "action": "provide",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "Administration and Security The system should provide secure role-based access control separating patrons, circulation staff, catalogers, and administrators.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "high",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "Administration and Security The system should provide secure role-based access control separating patrons, circulation staff, catalogers, and administrators.",
+      "quality_score": 88.0,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 85.0,
+        "atomicity": 75.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-020",
+      "req_type": "functional",
+      "summary": "Patrons must only access their own borrowing history, reservation queues,...",
+      "description": "Patrons must only access their own borrowing history, reservation queues, and personal information.",
+      "actor": "System",
+      "action": "access",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "Patrons must only access their own borrowing history, reservation queues, and personal information.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "high",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "Patrons must only access their own borrowing history, reservation queues, and personal information.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-021",
+      "req_type": "functional",
+      "summary": "Administrators should be able to configure loan durations, maximum borrowing...",
+      "description": "Administrators should be able to configure loan durations, maximum borrowing limits, renewal rules, and fine rate schedules.",
+      "actor": "Administrators",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "Administrators should be able to configure loan durations, maximum borrowing limits, renewal rules, and fine rate schedules.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "Administrators should be able to configure loan durations, maximum borrowing limits, renewal rules, and fine rate schedules.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-022",
+      "req_type": "functional",
+      "summary": "Administrators should be able to generate operational reports on patron...",
+      "description": "Administrators should be able to generate operational reports on patron membership, circulation velocity, and fine collections.",
+      "actor": "Administrators",
+      "action": "generate",
+      "target_object": "reports",
+      "preconditions": "",
+      "expected_outcome": "Administrators should be able to generate operational reports on patron membership, circulation velocity, and fine collections.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "Administrators should be able to generate operational reports on patron membership, circulation velocity, and fine collections.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "NFR-002",
+      "req_type": "non_functional",
+      "summary": "All configuration updates and administrative overrides must be preserved in...",
+      "description": "All configuration updates and administrative overrides must be preserved in a system audit log.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "All configuration updates and administrative overrides must be preserved in a system audit log.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "high",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "All configuration updates and administrative overrides must be preserved in a system audit log.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    }
+  ],
+  "issues": [
+    {
+      "requirement_id": "NFR-001",
+      "issue_type": "ambiguity",
+      "title": "Ambiguous specification: 'secure'",
+      "description": "The term 'secure' is subjective and lacks measurable engineering verification criteria.",
+      "detected_phrase": "secure",
+      "severity": "high",
+      "confidence": 0.88,
+      "question": "What encryption standards (e.g., AES-256, TLS 1.3), authentication mechanisms (MFA, OAuth2), and compliance policies are required?",
+      "suggested_options": [
+        "TLS 1.3 in transit + AES-256 at rest",
+        "OAuth2 / JWT with RBAC",
+        "SOC2 / GDPR compliance"
+      ]
+    }
+  ],
+  "clarifications": [
+    {
+      "requirement_id": "NFR-001",
+      "question": "What encryption standards (e.g., AES-256, TLS 1.3), authentication mechanisms (MFA, OAuth2), and compliance policies are required?",
+      "rationale": "Clarifying ambiguous phrase: 'secure'",
+      "priority": "high",
+      "suggested_options": [
+        "TLS 1.3 in transit + AES-256 at rest",
+        "OAuth2 / JWT with RBAC",
+        "SOC2 / GDPR compliance"
+      ],
+      "status": "pending"
+    }
+  ],
+  "modules": [
+    {
+      "id": "MOD-GATEWAY",
+      "name": "API Gateway",
+      "description": "Provides a common entry point for the application services derived from the software requirements.",
+      "module_type": "gateway",
+      "tech_stack": "API gateway / reverse proxy",
+      "responsibilities": [
+        "Route API requests",
+        "Apply common request controls"
+      ],
+      "api_endpoints": [
+        "/api/*"
+      ],
+      "pos_x": 400.0,
+      "pos_y": 50.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-AUTHENTICATION",
+      "name": "Authentication & Authorization",
+      "description": "Handles user login, registration, token issuance and role\u2011based permission enforcement for patrons and staff.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Authenticate users and issue tokens",
+        "Enforce role\u2011based access control",
+        "Register new patron accounts",
+        "Manage profile access permissions"
+      ],
+      "api_endpoints": [
+        "/api/authentication",
+        "/api/authentication/{id}"
+      ],
+      "pos_x": 150.0,
+      "pos_y": 180.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-SEARCH",
+      "name": "Search & Discovery",
+      "description": "Provides catalog lookup, filtering and real\u2011time availability information for patrons.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Execute catalog queries across multiple fields",
+        "Return real\u2011time availability and location data",
+        "Support pagination and result filtering"
+      ],
+      "api_endpoints": [
+        "/api/search",
+        "/api/search/{id}"
+      ],
+      "pos_x": 400.0,
+      "pos_y": 180.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-BOOKING",
+      "name": "Booking & Scheduling",
+      "description": "Manages holds, reservations, check\u2011out, return, renewal and related transaction workflows.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Process hold and reservation requests",
+        "Manage checkout and return workflows",
+        "Handle loan renewals and eligibility checks",
+        "Record transaction events for inventory updates"
+      ],
+      "api_endpoints": [
+        "/api/booking",
+        "/api/booking/{id}"
+      ],
+      "pos_x": 650.0,
+      "pos_y": 180.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-PAYMENT",
+      "name": "Payment Management",
+      "description": "Calculates overdue fees and processes electronic or in\u2011person fine payments.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Calculate overdue fees based on policy rules",
+        "Process electronic fine payments",
+        "Record in\u2011person cash payments",
+        "Update patron fine balances"
+      ],
+      "api_endpoints": [
+        "/api/payment",
+        "/api/payment/{id}"
+      ],
+      "pos_x": 150.0,
+      "pos_y": 350.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-NOTIFICATION",
+      "name": "Notification Service",
+      "description": "Sends automated alerts (email/SMS/push) for due dates, holds, overdue notices and payment confirmations.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Generate alerts for due dates, holds and overdue items",
+        "Dispatch notifications based on event triggers",
+        "Manage patron contact preferences"
+      ],
+      "api_endpoints": [
+        "/api/notification",
+        "/api/notification/{id}"
+      ],
+      "pos_x": 400.0,
+      "pos_y": 350.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-REPORTING",
+      "name": "Reporting & Analytics",
+      "description": "Aggregates circulation data and produces operational, utilization and compliance reports.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Aggregate circulation and utilization metrics",
+        "Produce operational and compliance reports",
+        "Provide dashboards for administrators"
+      ],
+      "api_endpoints": [
+        "/api/reporting",
+        "/api/reporting/{id}"
+      ],
+      "pos_x": 650.0,
+      "pos_y": 350.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-AUTHENTICATION",
+      "name": "Authentication & Authorization",
+      "description": "Enables catalogers to create bibliographic records, manage copy inventory and conduct physical audits.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Create and edit bibliographic records",
+        "Manage copy inventory, status and location",
+        "Conduct physical inventory audits and reconcile discrepancies"
+      ],
+      "api_endpoints": [
+        "/api/authentication",
+        "/api/authentication/{id}"
+      ],
+      "pos_x": 150.0,
+      "pos_y": 520.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-ADMINISTRATION",
+      "name": "Administration & Configuration",
+      "description": "Allows administrators to set loan policies, system parameters and maintains an audit trail of changes.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Configure loan periods, borrowing limits and fine policies",
+        "Persist configuration changes with audit logging",
+        "Manage system\u2011wide settings and overrides"
+      ],
+      "api_endpoints": [
+        "/api/administration",
+        "/api/administration/{id}"
+      ],
+      "pos_x": 400.0,
+      "pos_y": 520.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-DATA",
+      "name": "Application Data Store",
+      "description": "Provides persistent storage for entities and records required by the analyzed software requirements.",
+      "module_type": "database",
+      "tech_stack": "Relational database",
+      "responsibilities": [
+        "Persist application entities",
+        "Maintain data consistency",
+        "Support application data retrieval"
+      ],
+      "api_endpoints": [],
+      "pos_x": 400.0,
+      "pos_y": 500.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    }
+  ],
+  "relations": [
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-AUTHENTICATION",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-SEARCH",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-BOOKING",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-PAYMENT",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-NOTIFICATION",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-REPORTING",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-AUTHENTICATION",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-ADMINISTRATION",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-AUTHENTICATION",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Authentication & Authorization persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-SEARCH",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Search & Discovery persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-BOOKING",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Booking & Scheduling persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-PAYMENT",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Payment Management persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-NOTIFICATION",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Notification Service persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-REPORTING",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Reporting & Analytics persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-AUTHENTICATION",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Authentication & Authorization persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-ADMINISTRATION",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Administration & Configuration persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-BOOKING",
+      "target_module_id": "MOD-AUTHENTICATION",
+      "relation_type": "calls",
+      "description": "Booking service validates patron identity and permissions via authentication service."
+    },
+    {
+      "source_module_id": "MOD-BOOKING",
+      "target_module_id": "MOD-NOTIFICATION",
+      "relation_type": "publishes_to",
+      "description": "Booking events (holds, checkouts, returns) trigger notifications."
+    },
+    {
+      "source_module_id": "MOD-PAYMENT",
+      "target_module_id": "MOD-AUTHENTICATION",
+      "relation_type": "calls",
+      "description": "Payment service checks user role and account status before processing fees."
+    },
+    {
+      "source_module_id": "MOD-PAYMENT",
+      "target_module_id": "MOD-NOTIFICATION",
+      "relation_type": "publishes_to",
+      "description": "Successful payment generates a receipt notification."
+    },
+    {
+      "source_module_id": "MOD-SEARCH",
+      "target_module_id": "MOD-AUTHENTICATION",
+      "relation_type": "calls",
+      "description": "Search service enforces access control for patron queries."
+    },
+    {
+      "source_module_id": "MOD-ADMINISTRATION",
+      "target_module_id": "MOD-AUTHENTICATION",
+      "relation_type": "calls",
+      "description": "Administration actions are protected by role\u2011based access checks."
+    },
+    {
+      "source_module_id": "MOD-REPORTING",
+      "target_module_id": "MOD-BOOKING",
+      "relation_type": "reads_from",
+      "description": "Reporting service consumes loan and reservation data for utilization metrics."
+    },
+    {
+      "source_module_id": "MOD-REPORTING",
+      "target_module_id": "MOD-PAYMENT",
+      "relation_type": "reads_from",
+      "description": "Reporting service aggregates fine and payment data for financial reports."
+    }
+  ],
+  "epics": [
+    {
+      "id": "EPIC-01",
+      "title": "Authentication & Access Management",
+      "description": "Implementation of capabilities related to authentication & access management."
+    },
+    {
+      "id": "EPIC-02",
+      "title": "Search & Discovery",
+      "description": "Implementation of capabilities related to search & discovery."
+    },
+    {
+      "id": "EPIC-03",
+      "title": "Booking & Scheduling",
+      "description": "Implementation of capabilities related to booking & scheduling."
+    },
+    {
+      "id": "EPIC-04",
+      "title": "Data Management & Storage",
+      "description": "Implementation of capabilities related to data management & storage."
+    },
+    {
+      "id": "EPIC-05",
+      "title": "Commerce & Order Management",
+      "description": "Implementation of capabilities related to commerce & order management."
+    },
+    {
+      "id": "EPIC-06",
+      "title": "Notifications & Communication",
+      "description": "Implementation of capabilities related to notifications & communication."
+    },
+    {
+      "id": "EPIC-07",
+      "title": "Reporting & Analytics",
+      "description": "Implementation of capabilities related to reporting & analytics."
+    }
+  ],
+  "features": [
+    {
+      "id": "FEAT-01",
+      "epic_id": "EPIC-01",
+      "title": "Authentication & Authorization",
+      "description": "Implement authentication & authorization."
+    },
+    {
+      "id": "FEAT-02",
+      "epic_id": "EPIC-02",
+      "title": "Search & Filtering",
+      "description": "Implement search & filtering."
+    },
+    {
+      "id": "FEAT-03",
+      "epic_id": "EPIC-03",
+      "title": "Booking & Scheduling",
+      "description": "Implement booking & scheduling."
+    },
+    {
+      "id": "FEAT-04",
+      "epic_id": "EPIC-04",
+      "title": "Data Persistence",
+      "description": "Implement data persistence."
+    },
+    {
+      "id": "FEAT-05",
+      "epic_id": "EPIC-05",
+      "title": "Payment Processing",
+      "description": "Implement payment processing."
+    },
+    {
+      "id": "FEAT-06",
+      "epic_id": "EPIC-06",
+      "title": "Notifications",
+      "description": "Implement notifications."
+    },
+    {
+      "id": "FEAT-07",
+      "epic_id": "EPIC-07",
+      "title": "Reporting & Analytics",
+      "description": "Implement reporting & analytics."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "epic_id": "EPIC-01",
+      "feature_id": "FEAT-01",
+      "requirement_id": "FR-001",
+      "module_id": "MOD-AUTHENTICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Authentication & Authorization",
+        "File & Document Management"
+      ],
+      "title": "Implement: Patrons can register for a library membership card and log in securely",
+      "description": "Implement the behavior specified by FR-001: Patrons can register for a library membership card and log in securely. This work belongs to the Authentication & Authorization feature and uses architecture module MOD-AUTHENTICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for library membership account",
+        "Implement application logic for library membership account",
+        "Expose the required API behavior for library membership account",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-001"
+      ],
+      "acceptance_criteria": [
+        "Given the patron accesses the registration interface, When the patron registers for a library membership card and logs in securely, Then the patron is registered and logged in securely"
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.97,
+      "classification_reasoning": "Handles patron registration and secure login functionality.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-002",
+      "epic_id": "EPIC-02",
+      "feature_id": "FEAT-02",
+      "requirement_id": "FR-002",
+      "module_id": "MOD-SEARCH",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Search & Filtering"
+      ],
+      "title": "Implement: Patrons can search the OPAC by various fields",
+      "description": "Implement the behavior specified by FR-002: Patrons can search the OPAC by various fields. This work belongs to the Search & Filtering feature and uses architecture module MOD-SEARCH.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for catalog records",
+        "Implement application logic for catalog records",
+        "Expose the required API behavior for catalog records",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-002"
+      ],
+      "acceptance_criteria": [
+        "Given the patron accesses the OPAC search function, When the patron searches by title, author, ISBN, subject, or keyword, Then matching catalog records are returned"
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.96,
+      "classification_reasoning": "Provides catalog search capabilities across multiple fields.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-003",
+      "epic_id": "EPIC-02",
+      "feature_id": "FEAT-02",
+      "requirement_id": "FR-003",
+      "module_id": "MOD-SEARCH",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Search & Filtering"
+      ],
+      "title": "Implement: Patrons can view real-time catalog availability, shelf location, and call numbers",
+      "description": "Implement the behavior specified by FR-003: Patrons can view real-time catalog availability, shelf location, and call numbers. This work belongs to the Search & Filtering feature and uses architecture module MOD-SEARCH.",
+      "complexity": "medium",
+      "estimated_hours": 12.0,
+      "story_points": 3,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for catalog entries",
+        "Implement application logic for catalog entries",
+        "Expose the required API behavior for catalog entries",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-003"
+      ],
+      "acceptance_criteria": [
+        "Given the patron selects a catalog item, When the system displays availability, shelf location, and call number, Then the patron sees accurate real-time information"
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.94,
+      "classification_reasoning": "Exposes real\u2011time availability and location data as part of catalog discovery.",
+      "estimate_min_hours": 9.0,
+      "estimate_max_hours": 15.0,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-004",
+      "epic_id": "EPIC-03",
+      "feature_id": "FEAT-03",
+      "requirement_id": "FR-004",
+      "module_id": "MOD-BOOKING",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Payment Processing"
+      ],
+      "title": "Implement: Patrons can reserve or place a hold on checked-out or in-transit books",
+      "description": "Implement the behavior specified by FR-004: Patrons can reserve or place a hold on checked-out or in-transit books. This work belongs to the Booking & Scheduling feature and uses architecture module MOD-BOOKING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for checked-out or in-transit books",
+        "Implement application logic for checked-out or in-transit books",
+        "Expose the required API behavior for checked-out or in-transit books",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-004"
+      ],
+      "acceptance_criteria": [
+        "Given the patron selects a checked-out or in-transit book, When the patron places a hold, Then the hold is recorded in the system"
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.95,
+      "classification_reasoning": "Implements hold/reservation workflow for items in transit or checked out.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-005",
+      "epic_id": "EPIC-04",
+      "feature_id": "FEAT-04",
+      "requirement_id": "FR-005",
+      "module_id": "MOD-DATA",
+      "required_skills": [
+        "Relational Database"
+      ],
+      "title": "Implement: Patrons can view their active borrowed items, due dates, renewal counts, and reading history",
+      "description": "Implement the behavior specified by FR-005: Patrons can view their active borrowed items, due dates, renewal counts, and reading history. This work belongs to the Data Persistence feature and uses architecture module MOD-DATA.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for patron account information",
+        "Implement application logic for patron account information",
+        "Expose the required API behavior for patron account information",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-005"
+      ],
+      "acceptance_criteria": [
+        "Given the patron accesses their account dashboard, When the system displays active borrowed items, due dates, renewal counts, and reading history, Then the patron can review this information"
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.93,
+      "classification_reasoning": "Retrieves patron\u2019s borrowed\u2011item records and reading history from the data store.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-006",
+      "epic_id": "EPIC-03",
+      "feature_id": "FEAT-03",
+      "requirement_id": "FR-006",
+      "module_id": "MOD-BOOKING",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Payment Processing"
+      ],
+      "title": "Implement: Patrons can renew eligible borrowed books online before the due date",
+      "description": "Implement the behavior specified by FR-006: Patrons can renew eligible borrowed books online before the due date. This work belongs to the Booking & Scheduling feature and uses architecture module MOD-BOOKING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for borrowed books",
+        "Implement application logic for borrowed books",
+        "Expose the required API behavior for borrowed books",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-006"
+      ],
+      "acceptance_criteria": [
+        "Given the patron selects an eligible borrowed book before its due date, When the patron requests renewal online, Then the system extends the due date"
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.96,
+      "classification_reasoning": "Processes loan renewal actions, a core booking/scheduling capability.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-007",
+      "epic_id": "EPIC-05",
+      "feature_id": "FEAT-05",
+      "requirement_id": "FR-007",
+      "module_id": "MOD-PAYMENT",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Payment Processing"
+      ],
+      "title": "Implement: Patrons can view outstanding late return fines and make electronic fee payments",
+      "description": "Implement the behavior specified by FR-007: Patrons can view outstanding late return fines and make electronic fee payments. This work belongs to the Payment Processing feature and uses architecture module MOD-PAYMENT.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for patron fine account",
+        "Implement application logic for patron fine account",
+        "Expose the required API behavior for patron fine account",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-007"
+      ],
+      "acceptance_criteria": [
+        "Given the patron accesses their fine account, When the system shows outstanding fines and the patron submits an electronic payment, Then the fine balance is updated"
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.96,
+      "classification_reasoning": "Manages fine balance display and electronic fee payment processing.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-008",
+      "epic_id": "EPIC-06",
+      "feature_id": "FEAT-06",
+      "requirement_id": "FR-008",
+      "module_id": "MOD-NOTIFICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Notification Systems"
+      ],
+      "title": "Implement: Patrons receive automated notification alerts for due dates, hold arrivals, and overdue notices",
+      "description": "Implement the behavior specified by FR-008: Patrons receive automated notification alerts for due dates, hold arrivals, and overdue notices. This work belongs to the Notifications feature and uses architecture module MOD-NOTIFICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for patron contact channels",
+        "Implement application logic for patron contact channels",
+        "Expose the required API behavior for patron contact channels",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-008"
+      ],
+      "acceptance_criteria": [
+        "Given a due date is approaching, a hold becomes available, or an item is overdue, When the system generates an alert, Then the patron receives the notification"
+      ],
+      "depends_on": [
+        "TASK-004"
+      ],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.97,
+      "classification_reasoning": "Generates and dispatches automated alerts for due dates, holds, and overdue items.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-009",
+      "epic_id": "EPIC-03",
+      "feature_id": "FEAT-03",
+      "requirement_id": "FR-009",
+      "module_id": "MOD-BOOKING",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Payment Processing"
+      ],
+      "title": "Implement: Patrons can submit purchase recommendations or inter-library loan requests for missing titles",
+      "description": "Implement the behavior specified by FR-009: Patrons can submit purchase recommendations or inter-library loan requests for missing titles. This work belongs to the Booking & Scheduling feature and uses architecture module MOD-BOOKING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for missing titles",
+        "Implement application logic for missing titles",
+        "Expose the required API behavior for missing titles",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-009"
+      ],
+      "acceptance_criteria": [
+        "Given the patron identifies a missing title, When the patron submits a purchase recommendation or inter-library loan request, Then the request is stored in the system"
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.92,
+      "classification_reasoning": "Handles purchase recommendations and inter\u2011library loan requests as reservation\u2011type actions.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-010",
+      "epic_id": "EPIC-01",
+      "feature_id": "FEAT-01",
+      "requirement_id": "FR-010",
+      "module_id": "MOD-AUTHENTICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Authentication & Authorization",
+        "File & Document Management"
+      ],
+      "title": "Implement: Circulation staff can verify patron membership status, hold privileges, and fine balances",
+      "description": "Implement the behavior specified by FR-010: Circulation staff can verify patron membership status, hold privileges, and fine balances. This work belongs to the Authentication & Authorization feature and uses architecture module MOD-AUTHENTICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for patron account",
+        "Implement application logic for patron account",
+        "Expose the required API behavior for patron account",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-010"
+      ],
+      "acceptance_criteria": [
+        "Given the staff accesses a patron record, When the system displays membership status, hold privileges, and fine balances, Then the staff can view the information"
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.9,
+      "classification_reasoning": "Enables staff to verify patron membership, hold rights, and fine status, an auth\u2011related check.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-011",
+      "epic_id": "EPIC-03",
+      "feature_id": "FEAT-03",
+      "requirement_id": "FR-011",
+      "module_id": "MOD-BOOKING",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Payment Processing"
+      ],
+      "title": "Implement: Circulation staff can check out physical materials by scanning patron cards and book barcodes",
+      "description": "Implement the behavior specified by FR-011: Circulation staff can check out physical materials by scanning patron cards and book barcodes. This work belongs to the Booking & Scheduling feature and uses architecture module MOD-BOOKING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for physical materials",
+        "Implement application logic for physical materials",
+        "Expose the required API behavior for physical materials",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-011"
+      ],
+      "acceptance_criteria": [
+        "Given the staff scans a patron card and a book barcode, When the checkout process completes, Then the item is recorded as borrowed by the patron"
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.97,
+      "classification_reasoning": "Checkout of physical items is core loan processing handled by Booking & Scheduling.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-012",
+      "epic_id": "EPIC-03",
+      "feature_id": "FEAT-03",
+      "requirement_id": "FR-012",
+      "module_id": "MOD-BOOKING",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Payment Processing"
+      ],
+      "title": "Implement: Circulation staff can process returned items, inspect condition, and return items to inventory",
+      "description": "Implement the behavior specified by FR-012: Circulation staff can process returned items, inspect condition, and return items to inventory. This work belongs to the Booking & Scheduling feature and uses architecture module MOD-BOOKING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for returned materials",
+        "Implement application logic for returned materials",
+        "Expose the required API behavior for returned materials",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-012"
+      ],
+      "acceptance_criteria": [
+        "Given a returned item is scanned, When the staff inspects its condition and confirms receipt, Then the system updates inventory status accordingly"
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.96,
+      "classification_reasoning": "Return processing and inventory reintegration are part of the circulation workflow in Booking & Scheduling.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-013",
+      "epic_id": "EPIC-05",
+      "feature_id": "FEAT-05",
+      "requirement_id": "FR-013",
+      "module_id": "MOD-PAYMENT",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Payment Processing"
+      ],
+      "title": "Implement: System automatically calculates late fees for overdue returned items based on membership policy rules",
+      "description": "Implement the behavior specified by FR-013: System automatically calculates late fees for overdue returned items based on membership policy rules. This work belongs to the Payment Processing feature and uses architecture module MOD-PAYMENT.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for overdue returned items",
+        "Implement application logic for overdue returned items",
+        "Expose the required API behavior for overdue returned items",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-013"
+      ],
+      "acceptance_criteria": [
+        "Given an item is returned after its due date, When the system applies membership policy rules, Then the appropriate late fee is calculated"
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.98,
+      "classification_reasoning": "Automatic calculation of overdue fees is a payment\u2011related function.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-014",
+      "epic_id": "EPIC-05",
+      "feature_id": "FEAT-05",
+      "requirement_id": "FR-014",
+      "module_id": "MOD-PAYMENT",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Payment Processing"
+      ],
+      "title": "Implement: Circulation staff should be able to collect in-person fine payments...",
+      "description": "Implement the behavior specified by FR-014: Circulation staff should be able to collect in-person fine payments.... This work belongs to the Payment Processing feature and uses architecture module MOD-PAYMENT.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-014"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.99,
+      "classification_reasoning": "Collecting in\u2011person fine payments and printing receipts falls under Payment Management.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-015",
+      "epic_id": "EPIC-03",
+      "feature_id": "FEAT-03",
+      "requirement_id": "FR-015",
+      "module_id": "MOD-BOOKING",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Payment Processing"
+      ],
+      "title": "Implement: Circulation staff should be able to manage physical reservations and...",
+      "description": "Implement the behavior specified by FR-015: Circulation staff should be able to manage physical reservations and.... This work belongs to the Booking & Scheduling feature and uses architecture module MOD-BOOKING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-015"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.95,
+      "classification_reasoning": "Managing physical reservations is a primary booking capability; notifications are secondary.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-016",
+      "epic_id": "EPIC-01",
+      "feature_id": "FEAT-01",
+      "requirement_id": "FR-016",
+      "module_id": "MOD-AUTHENTICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Authentication & Authorization",
+        "File & Document Management"
+      ],
+      "title": "Implement: Cataloging and Collection Management Catalogers should be able to add...",
+      "description": "Implement the behavior specified by FR-016: Cataloging and Collection Management Catalogers should be able to add.... This work belongs to the Authentication & Authorization feature and uses architecture module MOD-AUTHENTICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-016"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.9,
+      "classification_reasoning": "Adding bibliographic records and classification is covered by the cataloging responsibilities listed under MOD\u2011AUTHENTICATION.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-017",
+      "epic_id": "EPIC-01",
+      "feature_id": "FEAT-01",
+      "requirement_id": "FR-017",
+      "module_id": "MOD-AUTHENTICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Authentication & Authorization",
+        "File & Document Management"
+      ],
+      "title": "Implement: Catalogers should be able to manage inventory copies, track lost...",
+      "description": "Implement the behavior specified by FR-017: Catalogers should be able to manage inventory copies, track lost.... This work belongs to the Authentication & Authorization feature and uses architecture module MOD-AUTHENTICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-017"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.9,
+      "classification_reasoning": "Inventory copy management and decommissioning are cataloging functions assigned to MOD\u2011AUTHENTICATION.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-018",
+      "epic_id": "EPIC-07",
+      "feature_id": "FEAT-07",
+      "requirement_id": "FR-018",
+      "module_id": "MOD-REPORTING",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Reporting & Analytics"
+      ],
+      "title": "Implement: The system should track circulation frequency and generate collection utilization...",
+      "description": "Implement the behavior specified by FR-018: The system should track circulation frequency and generate collection utilization.... This work belongs to the Reporting & Analytics feature and uses architecture module MOD-REPORTING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for reports",
+        "Implement application logic for reports",
+        "Expose the required API behavior for reports",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-018"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.97,
+      "classification_reasoning": "Generating utilization reports is a reporting and analytics capability.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-019",
+      "epic_id": "EPIC-01",
+      "feature_id": "FEAT-01",
+      "requirement_id": "FR-019",
+      "module_id": "MOD-AUTHENTICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Authentication & Authorization",
+        "File & Document Management"
+      ],
+      "title": "Implement: Catalogers should be able to conduct periodic physical inventory audits...",
+      "description": "Implement the behavior specified by FR-019: Catalogers should be able to conduct periodic physical inventory audits.... This work belongs to the Authentication & Authorization feature and uses architecture module MOD-AUTHENTICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-019"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.9,
+      "classification_reasoning": "Physical inventory audits are part of cataloging/inventory management under MOD\u2011AUTHENTICATION.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-020",
+      "epic_id": "EPIC-01",
+      "feature_id": "FEAT-01",
+      "requirement_id": "NFR-001",
+      "module_id": "MOD-AUTHENTICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Authentication & Authorization",
+        "File & Document Management"
+      ],
+      "title": "Implement: Administration and Security The system should provide secure role-based access...",
+      "description": "Implement the behavior specified by NFR-001: Administration and Security The system should provide secure role-based access.... This work belongs to the Authentication & Authorization feature and uses architecture module MOD-AUTHENTICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement NFR-001"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.99,
+      "classification_reasoning": "Secure role\u2011based access control is the core responsibility of Authentication & Authorization.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-021",
+      "epic_id": "EPIC-01",
+      "feature_id": "FEAT-01",
+      "requirement_id": "FR-020",
+      "module_id": "MOD-AUTHENTICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Authentication & Authorization",
+        "File & Document Management"
+      ],
+      "title": "Implement: Patrons must only access their own borrowing history, reservation queues,...",
+      "description": "Implement the behavior specified by FR-020: Patrons must only access their own borrowing history, reservation queues,.... This work belongs to the Authentication & Authorization feature and uses architecture module MOD-AUTHENTICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-020"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.96,
+      "classification_reasoning": "Enforces per\u2011patron access restrictions, which is core to authentication and authorization.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-022",
+      "epic_id": "EPIC-03",
+      "feature_id": "FEAT-03",
+      "requirement_id": "FR-021",
+      "module_id": "MOD-BOOKING",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Payment Processing"
+      ],
+      "title": "Implement: Administrators should be able to configure loan durations, maximum borrowing...",
+      "description": "Implement the behavior specified by FR-021: Administrators should be able to configure loan durations, maximum borrowing.... This work belongs to the Booking & Scheduling feature and uses architecture module MOD-BOOKING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-021"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.94,
+      "classification_reasoning": "Configuring loan periods, limits and renewal rules is a primary booking and scheduling capability.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-023",
+      "epic_id": "EPIC-07",
+      "feature_id": "FEAT-07",
+      "requirement_id": "FR-022",
+      "module_id": "MOD-REPORTING",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Reporting & Analytics"
+      ],
+      "title": "Implement: Administrators should be able to generate operational reports on patron...",
+      "description": "Implement the behavior specified by FR-022: Administrators should be able to generate operational reports on patron.... This work belongs to the Reporting & Analytics feature and uses architecture module MOD-REPORTING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for reports",
+        "Implement application logic for reports",
+        "Expose the required API behavior for reports",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-022"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.95,
+      "classification_reasoning": "Generating operational reports on circulation and fines falls under reporting & analytics.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-024",
+      "epic_id": "EPIC-04",
+      "feature_id": "FEAT-04",
+      "requirement_id": "NFR-002",
+      "module_id": "MOD-DATA",
+      "required_skills": [
+        "Relational Database"
+      ],
+      "title": "Implement: All configuration updates and administrative overrides must be preserved in...",
+      "description": "Implement the behavior specified by NFR-002: All configuration updates and administrative overrides must be preserved in.... This work belongs to the Data Persistence feature and uses architecture module MOD-DATA.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement NFR-002"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.93,
+      "classification_reasoning": "Persisting configuration changes with audit logging is a data\u2011store responsibility.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    }
+  ],
+  "dependencies": [
+    {
+      "task_id": "TASK-008",
+      "depends_on_task_id": "TASK-004",
+      "dependency_type": "blocks"
+    }
+  ],
+  "sprints": [
+    {
+      "sprint_name": "Sprint 1",
+      "total_points": 25,
+      "task_ids": [
+        "TASK-001",
+        "TASK-002",
+        "TASK-003",
+        "TASK-004",
+        "TASK-005",
+        "TASK-006",
+        "TASK-007",
+        "TASK-009",
+        "TASK-010",
+        "TASK-011",
+        "TASK-012",
+        "TASK-013"
+      ],
+      "over_capacity": false
+    },
+    {
+      "sprint_name": "Sprint 2",
+      "total_points": 24,
+      "task_ids": [
+        "TASK-014",
+        "TASK-015",
+        "TASK-016",
+        "TASK-017",
+        "TASK-018",
+        "TASK-019",
+        "TASK-020",
+        "TASK-021",
+        "TASK-022",
+        "TASK-023",
+        "TASK-024",
+        "TASK-008"
+      ],
+      "over_capacity": false
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "TEST-001",
+      "requirement_id": "FR-001",
+      "title": "Verify Patrons can register for a library membership card and log in securely",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Patron logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Patrons can register for a library membership card and log in securely'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected library membership account"
+      ],
+      "expected_result": "Requirement FR-001 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-002",
+      "requirement_id": "FR-002",
+      "title": "Verify Patrons can search the OPAC by various fields",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Patron logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Patrons can search the OPAC by various fields'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected catalog records"
+      ],
+      "expected_result": "Requirement FR-002 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-003",
+      "requirement_id": "FR-003",
+      "title": "Verify Patrons can view real-time catalog availability, shelf location, and call numbers",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Patron logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Patrons can view real-time catalog availability, shelf location, and call numbers'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected catalog entries"
+      ],
+      "expected_result": "Requirement FR-003 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-004",
+      "requirement_id": "FR-004",
+      "title": "Verify Patrons can reserve or place a hold on checked-out or in-transit books",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Patron logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Patrons can reserve or place a hold on checked-out or in-transit books'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected checked-out or in-transit books"
+      ],
+      "expected_result": "Requirement FR-004 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-005",
+      "requirement_id": "FR-005",
+      "title": "Verify Patrons can view their active borrowed items, due dates, renewal counts, and reading history",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Patron logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Patrons can view their active borrowed items, due dates, renewal counts, and reading history'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected patron account information"
+      ],
+      "expected_result": "Requirement FR-005 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-006",
+      "requirement_id": "FR-006",
+      "title": "Verify Patrons can renew eligible borrowed books online before the due date",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Patron logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Patrons can renew eligible borrowed books online before the due date'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected borrowed books"
+      ],
+      "expected_result": "Requirement FR-006 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-007",
+      "requirement_id": "FR-007",
+      "title": "Verify Patrons can view outstanding late return fines and make electronic fee payments",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Patron logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Patrons can view outstanding late return fines and make electronic fee payments'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected patron fine account"
+      ],
+      "expected_result": "Requirement FR-007 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-008",
+      "requirement_id": "FR-008",
+      "title": "Verify Patrons receive automated notification alerts for due dates, hold arrivals, and overdue notices",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Patrons receive automated notification alerts for due dates, hold arrivals, and overdue notices'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected patron contact channels"
+      ],
+      "expected_result": "Requirement FR-008 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-009",
+      "requirement_id": "FR-009",
+      "title": "Verify Patrons can submit purchase recommendations or inter-library loan requests for missing titles",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Patron logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Patrons can submit purchase recommendations or inter-library loan requests for missing titles'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected missing titles"
+      ],
+      "expected_result": "Requirement FR-009 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-010",
+      "requirement_id": "FR-010",
+      "title": "Verify Circulation staff can verify patron membership status, hold privileges, and fine balances",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Circulation staff logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Circulation staff can verify patron membership status, hold privileges, and fine balances'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected patron account"
+      ],
+      "expected_result": "Requirement FR-010 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-011",
+      "requirement_id": "FR-011",
+      "title": "Verify Circulation staff can check out physical materials by scanning patron cards and book barcodes",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Circulation staff logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Circulation staff can check out physical materials by scanning patron cards and book barcodes'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected physical materials"
+      ],
+      "expected_result": "Requirement FR-011 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-012",
+      "requirement_id": "FR-012",
+      "title": "Verify Circulation staff can process returned items, inspect condition, and return items to inventory",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Circulation staff logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Circulation staff can process returned items, inspect condition, and return items to inventory'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected returned materials"
+      ],
+      "expected_result": "Requirement FR-012 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-013",
+      "requirement_id": "FR-013",
+      "title": "Verify System automatically calculates late fees for overdue returned items based on membership policy rules",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'System automatically calculates late fees for overdue returned items based on membership policy rules'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected overdue returned items"
+      ],
+      "expected_result": "Requirement FR-013 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-014",
+      "requirement_id": "FR-014",
+      "title": "Verify Circulation staff should be able to collect in-person fine payments...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Circulation staff should be able to collect in-person fine payments...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-014 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-015",
+      "requirement_id": "FR-015",
+      "title": "Verify Circulation staff should be able to manage physical reservations and...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Circulation staff should be able to manage physical reservations and...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-015 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-016",
+      "requirement_id": "FR-016",
+      "title": "Verify Cataloging and Collection Management Catalogers should be able to add...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Cataloging and Collection Management Catalogers should be able to add...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-016 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-017",
+      "requirement_id": "FR-017",
+      "title": "Verify Catalogers should be able to manage inventory copies, track lost...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Catalogers should be able to manage inventory copies, track lost...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-017 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-018",
+      "requirement_id": "FR-018",
+      "title": "Verify The system should track circulation frequency and generate collection utilization...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'The system should track circulation frequency and generate collection utilization...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected reports"
+      ],
+      "expected_result": "Requirement FR-018 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-019",
+      "requirement_id": "FR-019",
+      "title": "Verify Catalogers should be able to conduct periodic physical inventory audits...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Catalogers should be able to conduct periodic physical inventory audits...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-019 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-020",
+      "requirement_id": "NFR-001",
+      "title": "Verify Administration and Security The system should provide secure role-based access...",
+      "test_type": "performance",
+      "preconditions": "System deployed; Administrators logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Administration and Security The system should provide secure role-based access...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement NFR-001 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-021",
+      "requirement_id": "FR-020",
+      "title": "Verify Patrons must only access their own borrowing history, reservation queues,...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Patrons must only access their own borrowing history, reservation queues,...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-020 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-022",
+      "requirement_id": "FR-021",
+      "title": "Verify Administrators should be able to configure loan durations, maximum borrowing...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Administrators logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Administrators should be able to configure loan durations, maximum borrowing...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-021 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-023",
+      "requirement_id": "FR-022",
+      "title": "Verify Administrators should be able to generate operational reports on patron...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Administrators logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Administrators should be able to generate operational reports on patron...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected reports"
+      ],
+      "expected_result": "Requirement FR-022 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-024",
+      "requirement_id": "NFR-002",
+      "title": "Verify All configuration updates and administrative overrides must be preserved in...",
+      "test_type": "performance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'All configuration updates and administrative overrides must be preserved in...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement NFR-002 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    }
+  ],
+  "traceability": {
+    "matrix": [
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-001",
+        "requirement_summary": "Patrons can register for a library membership card and log in securely",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-AUTHENTICATION",
+        "module_name": "Authentication & Authorization",
+        "task_ids": [
+          "TASK-001"
+        ],
+        "test_ids": [
+          "TEST-001"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-001",
+            "module_id": "MOD-AUTHENTICATION",
+            "module_name": "Authentication & Authorization"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-002",
+        "requirement_summary": "Patrons can search the OPAC by various fields",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-SEARCH",
+        "module_name": "Search & Discovery",
+        "task_ids": [
+          "TASK-002"
+        ],
+        "test_ids": [
+          "TEST-002"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-002",
+            "module_id": "MOD-SEARCH",
+            "module_name": "Search & Discovery"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-003",
+        "requirement_summary": "Patrons can view real-time catalog availability, shelf location, and call numbers",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-SEARCH",
+        "module_name": "Search & Discovery",
+        "task_ids": [
+          "TASK-003"
+        ],
+        "test_ids": [
+          "TEST-003"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-003",
+            "module_id": "MOD-SEARCH",
+            "module_name": "Search & Discovery"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-004",
+        "requirement_summary": "Patrons can reserve or place a hold on checked-out or in-transit books",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-BOOKING",
+        "module_name": "Booking & Scheduling",
+        "task_ids": [
+          "TASK-004"
+        ],
+        "test_ids": [
+          "TEST-004"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-004",
+            "module_id": "MOD-BOOKING",
+            "module_name": "Booking & Scheduling"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-005",
+        "requirement_summary": "Patrons can view their active borrowed items, due dates, renewal counts, and reading history",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-DATA",
+        "module_name": "Application Data Store",
+        "task_ids": [
+          "TASK-005"
+        ],
+        "test_ids": [
+          "TEST-005"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-005",
+            "module_id": "MOD-DATA",
+            "module_name": "Application Data Store"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-006",
+        "requirement_summary": "Patrons can renew eligible borrowed books online before the due date",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-BOOKING",
+        "module_name": "Booking & Scheduling",
+        "task_ids": [
+          "TASK-006"
+        ],
+        "test_ids": [
+          "TEST-006"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-006",
+            "module_id": "MOD-BOOKING",
+            "module_name": "Booking & Scheduling"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-007",
+        "requirement_summary": "Patrons can view outstanding late return fines and make electronic fee payments",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-PAYMENT",
+        "module_name": "Payment Management",
+        "task_ids": [
+          "TASK-007"
+        ],
+        "test_ids": [
+          "TEST-007"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-007",
+            "module_id": "MOD-PAYMENT",
+            "module_name": "Payment Management"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-008",
+        "requirement_summary": "Patrons receive automated notification alerts for due dates, hold arrivals, and overdue notices",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-NOTIFICATION",
+        "module_name": "Notification Service",
+        "task_ids": [
+          "TASK-008"
+        ],
+        "test_ids": [
+          "TEST-008"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-008",
+            "module_id": "MOD-NOTIFICATION",
+            "module_name": "Notification Service"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-009",
+        "requirement_summary": "Patrons can submit purchase recommendations or inter-library loan requests for missing titles",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-BOOKING",
+        "module_name": "Booking & Scheduling",
+        "task_ids": [
+          "TASK-009"
+        ],
+        "test_ids": [
+          "TEST-009"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-009",
+            "module_id": "MOD-BOOKING",
+            "module_name": "Booking & Scheduling"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-010",
+        "requirement_summary": "Circulation staff can verify patron membership status, hold privileges, and fine balances",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-AUTHENTICATION",
+        "module_name": "Authentication & Authorization",
+        "task_ids": [
+          "TASK-010"
+        ],
+        "test_ids": [
+          "TEST-010"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-010",
+            "module_id": "MOD-AUTHENTICATION",
+            "module_name": "Authentication & Authorization"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-011",
+        "requirement_summary": "Circulation staff can check out physical materials by scanning patron cards and book barcodes",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-BOOKING",
+        "module_name": "Booking & Scheduling",
+        "task_ids": [
+          "TASK-011"
+        ],
+        "test_ids": [
+          "TEST-011"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-011",
+            "module_id": "MOD-BOOKING",
+            "module_name": "Booking & Scheduling"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-012",
+        "requirement_summary": "Circulation staff can process returned items, inspect condition, and return items to inventory",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-BOOKING",
+        "module_name": "Booking & Scheduling",
+        "task_ids": [
+          "TASK-012"
+        ],
+        "test_ids": [
+          "TEST-012"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-012",
+            "module_id": "MOD-BOOKING",
+            "module_name": "Booking & Scheduling"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-013",
+        "requirement_summary": "System automatically calculates late fees for overdue returned items based on membership policy rules",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-PAYMENT",
+        "module_name": "Payment Management",
+        "task_ids": [
+          "TASK-013"
+        ],
+        "test_ids": [
+          "TEST-013"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-013",
+            "module_id": "MOD-PAYMENT",
+            "module_name": "Payment Management"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-014",
+        "requirement_summary": "Circulation staff should be able to collect in-person fine payments...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-PAYMENT",
+        "module_name": "Payment Management",
+        "task_ids": [
+          "TASK-014"
+        ],
+        "test_ids": [
+          "TEST-014"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-014",
+            "module_id": "MOD-PAYMENT",
+            "module_name": "Payment Management"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-015",
+        "requirement_summary": "Circulation staff should be able to manage physical reservations and...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-BOOKING",
+        "module_name": "Booking & Scheduling",
+        "task_ids": [
+          "TASK-015"
+        ],
+        "test_ids": [
+          "TEST-015"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-015",
+            "module_id": "MOD-BOOKING",
+            "module_name": "Booking & Scheduling"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-016",
+        "requirement_summary": "Cataloging and Collection Management Catalogers should be able to add...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-AUTHENTICATION",
+        "module_name": "Authentication & Authorization",
+        "task_ids": [
+          "TASK-016"
+        ],
+        "test_ids": [
+          "TEST-016"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-016",
+            "module_id": "MOD-AUTHENTICATION",
+            "module_name": "Authentication & Authorization"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-017",
+        "requirement_summary": "Catalogers should be able to manage inventory copies, track lost...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-AUTHENTICATION",
+        "module_name": "Authentication & Authorization",
+        "task_ids": [
+          "TASK-017"
+        ],
+        "test_ids": [
+          "TEST-017"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-017",
+            "module_id": "MOD-AUTHENTICATION",
+            "module_name": "Authentication & Authorization"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-018",
+        "requirement_summary": "The system should track circulation frequency and generate collection utilization...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-REPORTING",
+        "module_name": "Reporting & Analytics",
+        "task_ids": [
+          "TASK-018"
+        ],
+        "test_ids": [
+          "TEST-018"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-018",
+            "module_id": "MOD-REPORTING",
+            "module_name": "Reporting & Analytics"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-019",
+        "requirement_summary": "Catalogers should be able to conduct periodic physical inventory audits...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-AUTHENTICATION",
+        "module_name": "Authentication & Authorization",
+        "task_ids": [
+          "TASK-019"
+        ],
+        "test_ids": [
+          "TEST-019"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-019",
+            "module_id": "MOD-AUTHENTICATION",
+            "module_name": "Authentication & Authorization"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "NFR-001",
+        "requirement_summary": "Administration and Security The system should provide secure role-based access...",
+        "req_type": "non_functional",
+        "status": "needs_review",
+        "module_id": "MOD-AUTHENTICATION",
+        "module_name": "Authentication & Authorization",
+        "task_ids": [
+          "TASK-020"
+        ],
+        "test_ids": [
+          "TEST-020"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-020",
+            "module_id": "MOD-AUTHENTICATION",
+            "module_name": "Authentication & Authorization"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-020",
+        "requirement_summary": "Patrons must only access their own borrowing history, reservation queues,...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-AUTHENTICATION",
+        "module_name": "Authentication & Authorization",
+        "task_ids": [
+          "TASK-021"
+        ],
+        "test_ids": [
+          "TEST-021"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-021",
+            "module_id": "MOD-AUTHENTICATION",
+            "module_name": "Authentication & Authorization"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-021",
+        "requirement_summary": "Administrators should be able to configure loan durations, maximum borrowing...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-BOOKING",
+        "module_name": "Booking & Scheduling",
+        "task_ids": [
+          "TASK-022"
+        ],
+        "test_ids": [
+          "TEST-022"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-022",
+            "module_id": "MOD-BOOKING",
+            "module_name": "Booking & Scheduling"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-022",
+        "requirement_summary": "Administrators should be able to generate operational reports on patron...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-REPORTING",
+        "module_name": "Reporting & Analytics",
+        "task_ids": [
+          "TASK-023"
+        ],
+        "test_ids": [
+          "TEST-023"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-023",
+            "module_id": "MOD-REPORTING",
+            "module_name": "Reporting & Analytics"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "NFR-002",
+        "requirement_summary": "All configuration updates and administrative overrides must be preserved in...",
+        "req_type": "non_functional",
+        "status": "needs_review",
+        "module_id": "MOD-DATA",
+        "module_name": "Application Data Store",
+        "task_ids": [
+          "TASK-024"
+        ],
+        "test_ids": [
+          "TEST-024"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-024",
+            "module_id": "MOD-DATA",
+            "module_name": "Application Data Store"
+          }
+        ],
+        "is_orphan": false
+      }
+    ],
+    "total_requirements": 24,
+    "fully_linked_count": 24,
+    "orphan_count": 0,
+    "coverage_pct": 100.0,
+    "requirements_without_tasks": [],
+    "requirements_without_tests": [],
+    "requirements_with_invalid_modules": [],
+    "dangling_task_requirement_refs": [],
+    "dangling_test_requirement_refs": [],
+    "traceability_integrity": true
+  },
+  "source_trust": {
+    "overall_score": 98.15,
+    "status": "high_source_alignment",
+    "evidence_support_pct": 100.0,
+    "semantic_alignment_pct": 92.58,
+    "constraint_preservation_pct": 100.0,
+    "coverage_consistency_pct": 100.0,
+    "unsupported_content_pct": 0.0,
+    "requirements_total": 24,
+    "requirements_with_direct_evidence": 24,
+    "requirements_with_strong_semantic_match": 22,
+    "requirements_with_preserved_constraints": 24,
+    "source_statements_detected": 24,
+    "source_statements_supported": 24,
+    "uncovered_source_statements": [],
+    "requirements": [
+      {
+        "requirement_id": "FR-001",
+        "summary": "Patrons can register for a library membership card and log in securely",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "normalized_source_match",
+        "semantic_alignment_pct": 78.11,
+        "semantic_match_source": "Patron and Member Requirements Patrons should be able to register for a library membership card and log in securely.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [
+          "securely"
+        ],
+        "constraints_preserved": [
+          "securely"
+        ],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Patron and Member Requirements Patrons should be able to register for a library membership card and log in securely.",
+        "verification_status": "mostly_supported"
+      },
+      {
+        "requirement_id": "FR-002",
+        "summary": "Patrons can search the OPAC by various fields",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 82.99,
+        "semantic_match_source": "Patrons should be able to search the Online Public Access Catalog (OPAC) by title, author, ISBN, subject, and keyword.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Patrons should be able to search the Online Public Access Catalog (OPAC) by title, author, ISBN, subject, and keyword.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-003",
+        "summary": "Patrons can view real-time catalog availability, shelf location, and call numbers",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 94.77,
+        "semantic_match_source": "Patrons should be able to view real-time catalog availability, shelf location, and call numbers.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [
+          "real-time"
+        ],
+        "constraints_preserved": [
+          "real-time"
+        ],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Patrons should be able to view real-time catalog availability, shelf location, and call numbers.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-004",
+        "summary": "Patrons can reserve or place a hold on checked-out or in-transit books",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 93.26,
+        "semantic_match_source": "Patrons should be able to reserve or place a hold on currently checked-out or in-transit books.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Patrons should be able to reserve or place a hold on currently checked-out or in-transit books.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-005",
+        "summary": "Patrons can view their active borrowed items, due dates, renewal counts, and reading history",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 95.35,
+        "semantic_match_source": "Patrons should be able to view their active borrowed items, due dates, renewal counts, and reading history.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Patrons should be able to view their active borrowed items, due dates, renewal counts, and reading history.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-006",
+        "summary": "Patrons can renew eligible borrowed books online before the due date",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 91.66,
+        "semantic_match_source": "Patrons should be able to renew eligible borrowed books online before the scheduled due date.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Patrons should be able to renew eligible borrowed books online before the scheduled due date.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-007",
+        "summary": "Patrons can view outstanding late return fines and make electronic fee payments",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 94.7,
+        "semantic_match_source": "Patrons should be able to view outstanding late return fines and make electronic fee payments.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Patrons should be able to view outstanding late return fines and make electronic fee payments.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-008",
+        "summary": "Patrons receive automated notification alerts for due dates, hold arrivals, and overdue notices",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 93.37,
+        "semantic_match_source": "Patrons should receive automated notification alerts for upcoming due dates, available hold arrivals, and overdue notices.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Patrons should receive automated notification alerts for upcoming due dates, available hold arrivals, and overdue notices.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-009",
+        "summary": "Patrons can submit purchase recommendations or inter-library loan requests for missing titles",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 95.18,
+        "semantic_match_source": "Patrons should be able to submit purchase recommendations or inter-library loan requests for missing titles.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Patrons should be able to submit purchase recommendations or inter-library loan requests for missing titles.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-010",
+        "summary": "Circulation staff can verify patron membership status, hold privileges, and fine balances",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "normalized_source_match",
+        "semantic_alignment_pct": 79.24,
+        "semantic_match_source": "Circulation Desk Staff Requirements Circulation staff should be able to verify patron membership status, active hold privileges, and fine balances.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Circulation Desk Staff Requirements Circulation staff should be able to verify patron membership status, active hold privileges, and fine balances.",
+        "verification_status": "mostly_supported"
+      },
+      {
+        "requirement_id": "FR-011",
+        "summary": "Circulation staff can check out physical materials by scanning patron cards and book barcodes",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 95.17,
+        "semantic_match_source": "Circulation staff should be able to check out physical materials by scanning patron cards and book barcodes.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Circulation staff should be able to check out physical materials by scanning patron cards and book barcodes.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-012",
+        "summary": "Circulation staff can process returned items, inspect condition, and return items to inventory",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 92.7,
+        "semantic_match_source": "Circulation staff should be able to process returned items, inspect material condition, and return items to inventory.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Circulation staff should be able to process returned items, inspect material condition, and return items to inventory.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-013",
+        "summary": "System automatically calculates late fees for overdue returned items based on membership policy rules",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 93.26,
+        "semantic_match_source": "The system should automatically calculate late fees for overdue returned items based on membership policy rules.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "The system should automatically calculate late fees for overdue returned items based on membership policy rules.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-014",
+        "summary": "Circulation staff should be able to collect in-person fine payments...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 94.74,
+        "semantic_match_source": "Circulation staff should be able to collect in-person fine payments and print receipt slips.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Circulation staff should be able to collect in-person fine payments and print receipt slips.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-015",
+        "summary": "Circulation staff should be able to manage physical reservations and...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 93.06,
+        "semantic_match_source": "Circulation staff should be able to manage physical reservations and notify patrons when reserved books are staged on hold shelves.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Circulation staff should be able to manage physical reservations and notify patrons when reserved books are staged on hold shelves.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-016",
+        "summary": "Cataloging and Collection Management Catalogers should be able to add...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "normalized_source_match",
+        "semantic_alignment_pct": 93.44,
+        "semantic_match_source": "Cataloging and Collection Management Catalogers should be able to add new bibliographic records, assign Dewey Decimal / Library of Congress classifications, and print barcode labels.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Cataloging and Collection Management Catalogers should be able to add new bibliographic records, assign Dewey Decimal / Library of Congress classifications, and print barcode labels.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-017",
+        "summary": "Catalogers should be able to manage inventory copies, track lost...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 93.62,
+        "semantic_match_source": "Catalogers should be able to manage inventory copies, track lost or damaged materials, and decommission obsolete items.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Catalogers should be able to manage inventory copies, track lost or damaged materials, and decommission obsolete items.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-018",
+        "summary": "The system should track circulation frequency and generate collection utilization...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 97.46,
+        "semantic_match_source": "The system should track circulation frequency and generate collection utilization reports.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "The system should track circulation frequency and generate collection utilization reports.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-019",
+        "summary": "Catalogers should be able to conduct periodic physical inventory audits...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 94.97,
+        "semantic_match_source": "Catalogers should be able to conduct periodic physical inventory audits using barcode scanners.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Catalogers should be able to conduct periodic physical inventory audits using barcode scanners.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "NFR-001",
+        "summary": "Administration and Security The system should provide secure role-based access...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "normalized_source_match",
+        "semantic_alignment_pct": 94.74,
+        "semantic_match_source": "Administration and Security The system should provide secure role-based access control separating patrons, circulation staff, catalogers, and administrators.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [
+          "secure"
+        ],
+        "constraints_preserved": [
+          "secure"
+        ],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Administration and Security The system should provide secure role-based access control separating patrons, circulation staff, catalogers, and administrators.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-020",
+        "summary": "Patrons must only access their own borrowing history, reservation queues,...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 96.32,
+        "semantic_match_source": "Patrons must only access their own borrowing history, reservation queues, and personal information.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [
+          "only"
+        ],
+        "constraints_preserved": [
+          "only"
+        ],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Patrons must only access their own borrowing history, reservation queues, and personal information.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-021",
+        "summary": "Administrators should be able to configure loan durations, maximum borrowing...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 93.76,
+        "semantic_match_source": "Administrators should be able to configure loan durations, maximum borrowing limits, renewal rules, and fine rate schedules.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Administrators should be able to configure loan durations, maximum borrowing limits, renewal rules, and fine rate schedules.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-022",
+        "summary": "Administrators should be able to generate operational reports on patron...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 93.99,
+        "semantic_match_source": "Administrators should be able to generate operational reports on patron membership, circulation velocity, and fine collections.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Administrators should be able to generate operational reports on patron membership, circulation velocity, and fine collections.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "NFR-002",
+        "summary": "All configuration updates and administrative overrides must be preserved in...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 96.11,
+        "semantic_match_source": "All configuration updates and administrative overrides must be preserved in a system audit log.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "All configuration updates and administrative overrides must be preserved in a system audit log.",
+        "verification_status": "verified"
+      }
+    ],
+    "methodology": {
+      "evidence_weight": 0.3,
+      "semantic_weight": 0.25,
+      "constraint_weight": 0.25,
+      "coverage_weight": 0.2,
+      "semantic_match_threshold": 0.45,
+      "strong_semantic_match_threshold": 0.6,
+      "note": "This is an automated source-alignment and trustworthiness measure, not ground-truth accuracy."
+    }
+  },
+  "reports": [
+    {
+      "report_type": "srs",
+      "title": "Software Requirements Specification (SRS)",
+      "content_markdown": "# Software Requirements Specification (SRS)\n\n## Project: Library Management System\n\n**Domain:** Not specified  \n**Generated by:** ReqPilot AI Multi-Agent Engine  \n**Date:** 2026-10-13 15:50:25 UTC  \n**Status:** Generated Report\n\n---\n\n### 1. Executive Summary & Scope\n\nBenchmark evaluation project for Library Management System\n\n### 2. Functional Requirements (22 Total)\n\n#### [FR-001] Patrons can register for a library membership card and log in securely\n\n- **Actor:** Patron\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Patrons should be able to register for a library membership card and log in securely.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Patron is registered and logged in securely\n- **Acceptance Criteria:**\n  - Given the patron accesses the registration interface, When the patron registers for a library membership card and logs in securely, Then the patron is registered and logged in securely\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Patron and Member Requirements Patrons should be able to register for a library membership card and log in securely.\"\n\n#### [FR-002] Patrons can search the OPAC by various fields\n\n- **Actor:** Patron\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Patrons should be able to search the Online Public Access Catalog (OPAC) by title, author, ISBN, subject, and keyword.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Search results matching the specified fields are returned\n- **Acceptance Criteria:**\n  - Given the patron accesses the OPAC search function, When the patron searches by title, author, ISBN, subject, or keyword, Then matching catalog records are returned\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Patrons should be able to search the Online Public Access Catalog (OPAC) by title, author, ISBN, subject, and keyword.\"\n\n#### [FR-003] Patrons can view real-time catalog availability, shelf location, and call numbers\n\n- **Actor:** Patron\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Patrons should be able to view real-time catalog availability, shelf location, and call numbers.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Patron sees current availability, location, and call number information\n- **Acceptance Criteria:**\n  - Given the patron selects a catalog item, When the system displays availability, shelf location, and call number, Then the patron sees accurate real-time information\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Patrons should be able to view real-time catalog availability, shelf location, and call numbers.\"\n\n#### [FR-004] Patrons can reserve or place a hold on checked-out or in-transit books\n\n- **Actor:** Patron\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Patrons should be able to reserve or place a hold on currently checked-out or in-transit books.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Hold request is recorded for the selected item\n- **Acceptance Criteria:**\n  - Given the patron selects a checked-out or in-transit book, When the patron places a hold, Then the hold is recorded in the system\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Patrons should be able to reserve or place a hold on currently checked-out or in-transit books.\"\n\n#### [FR-005] Patrons can view their active borrowed items, due dates, renewal counts, and reading history\n\n- **Actor:** Patron\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Patrons should be able to view their active borrowed items, due dates, renewal counts, and reading history.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Patron sees a list of borrowed items with associated details\n- **Acceptance Criteria:**\n  - Given the patron accesses their account dashboard, When the system displays active borrowed items, due dates, renewal counts, and reading history, Then the patron can review this information\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Patrons should be able to view their active borrowed items, due dates, renewal counts, and reading history.\"\n\n#### [FR-006] Patrons can renew eligible borrowed books online before the due date\n\n- **Actor:** Patron\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Patrons should be able to renew eligible borrowed books online before the scheduled due date.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Renewal is processed and due date extended\n- **Acceptance Criteria:**\n  - Given the patron selects an eligible borrowed book before its due date, When the patron requests renewal online, Then the system extends the due date\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Patrons should be able to renew eligible borrowed books online before the scheduled due date.\"\n\n#### [FR-007] Patrons can view outstanding late return fines and make electronic fee payments\n\n- **Actor:** Patron\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Patrons should be able to view outstanding late return fines and make electronic fee payments.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Patron sees fine balance and can pay electronically\n- **Acceptance Criteria:**\n  - Given the patron accesses their fine account, When the system shows outstanding fines and the patron submits an electronic payment, Then the fine balance is updated\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Patrons should be able to view outstanding late return fines and make electronic fee payments.\"\n\n#### [FR-008] Patrons receive automated notification alerts for due dates, hold arrivals, and overdue notices\n\n- **Actor:** System\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Patrons should receive automated notification alerts for upcoming due dates, available hold arrivals, and overdue notices.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Patron receives timely alerts for due dates, holds, and overdue items\n- **Acceptance Criteria:**\n  - Given a due date is approaching, a hold becomes available, or an item is overdue, When the system generates an alert, Then the patron receives the notification\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Patrons should receive automated notification alerts for upcoming due dates, available hold arrivals, and overdue notices.\"\n\n#### [FR-009] Patrons can submit purchase recommendations or inter-library loan requests for missing titles\n\n- **Actor:** Patron\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Patrons should be able to submit purchase recommendations or inter-library loan requests for missing titles.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Submission is recorded for library consideration\n- **Acceptance Criteria:**\n  - Given the patron identifies a missing title, When the patron submits a purchase recommendation or inter-library loan request, Then the request is stored in the system\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Patrons should be able to submit purchase recommendations or inter-library loan requests for missing titles.\"\n\n#### [FR-010] Circulation staff can verify patron membership status, hold privileges, and fine balances\n\n- **Actor:** Circulation staff\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Circulation staff should be able to verify patron membership status, active hold privileges, and fine balances.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Staff obtains current status, privileges, and balances\n- **Acceptance Criteria:**\n  - Given the staff accesses a patron record, When the system displays membership status, hold privileges, and fine balances, Then the staff can view the information\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Circulation Desk Staff Requirements Circulation staff should be able to verify patron membership status, active hold privileges, and fine balances.\"\n\n#### [FR-011] Circulation staff can check out physical materials by scanning patron cards and book barcodes\n\n- **Actor:** Circulation staff\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Circulation staff should be able to check out physical materials by scanning patron cards and book barcodes.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Materials are recorded as checked out to the patron\n- **Acceptance Criteria:**\n  - Given the staff scans a patron card and a book barcode, When the checkout process completes, Then the item is recorded as borrowed by the patron\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Circulation staff should be able to check out physical materials by scanning patron cards and book barcodes.\"\n\n#### [FR-012] Circulation staff can process returned items, inspect condition, and return items to inventory\n\n- **Actor:** Circulation staff\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Circulation staff should be able to process returned items, inspect material condition, and return items to inventory.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Returned items are updated in inventory with condition status\n- **Acceptance Criteria:**\n  - Given a returned item is scanned, When the staff inspects its condition and confirms receipt, Then the system updates inventory status accordingly\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Circulation staff should be able to process returned items, inspect material condition, and return items to inventory.\"\n\n#### [FR-013] System automatically calculates late fees for overdue returned items based on membership policy rules\n\n- **Actor:** System\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** The system should automatically calculate late fees for overdue returned items based on membership policy rules.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Late fees are computed according to policy\n- **Acceptance Criteria:**\n  - Given an item is returned after its due date, When the system applies membership policy rules, Then the appropriate late fee is calculated\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"The system should automatically calculate late fees for overdue returned items based on membership policy rules.\"\n\n#### [FR-014] Circulation staff should be able to collect in-person fine payments...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Circulation staff should be able to collect in-person fine payments and print receipt slips.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Circulation staff should be able to collect in-person fine payments and print receipt slips.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Circulation staff should be able to collect in-person fine payments and print receipt slips.\"\n\n#### [FR-015] Circulation staff should be able to manage physical reservations and...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Circulation staff should be able to manage physical reservations and notify patrons when reserved books are staged on hold shelves.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Circulation staff should be able to manage physical reservations and notify patrons when reserved books are staged on hold shelves.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Circulation staff should be able to manage physical reservations and notify patrons when reserved books are staged on hold shelves.\"\n\n#### [FR-016] Cataloging and Collection Management Catalogers should be able to add...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Cataloging and Collection Management Catalogers should be able to add new bibliographic records, assign Dewey Decimal / Library of Congress classifications, and print barcode labels.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Cataloging and Collection Management Catalogers should be able to add new bibliographic records, assign Dewey Decimal / Library of Congress classifications, and print barcode labels.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Cataloging and Collection Management Catalogers should be able to add new bibliographic records, assign Dewey Decimal / Library of Congress classifications, and print barcode labels.\"\n\n#### [FR-017] Catalogers should be able to manage inventory copies, track lost...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Catalogers should be able to manage inventory copies, track lost or damaged materials, and decommission obsolete items.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Catalogers should be able to manage inventory copies, track lost or damaged materials, and decommission obsolete items.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Catalogers should be able to manage inventory copies, track lost or damaged materials, and decommission obsolete items.\"\n\n#### [FR-018] The system should track circulation frequency and generate collection utilization...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** The system should track circulation frequency and generate collection utilization reports.\n- **Preconditions:** Not specified\n- **Expected Outcome:** The system should track circulation frequency and generate collection utilization reports.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"The system should track circulation frequency and generate collection utilization reports.\"\n\n#### [FR-019] Catalogers should be able to conduct periodic physical inventory audits...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Catalogers should be able to conduct periodic physical inventory audits using barcode scanners.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Catalogers should be able to conduct periodic physical inventory audits using barcode scanners.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Catalogers should be able to conduct periodic physical inventory audits using barcode scanners.\"\n\n#### [FR-020] Patrons must only access their own borrowing history, reservation queues,...\n\n- **Actor:** System\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Patrons must only access their own borrowing history, reservation queues, and personal information.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Patrons must only access their own borrowing history, reservation queues, and personal information.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Patrons must only access their own borrowing history, reservation queues, and personal information.\"\n\n#### [FR-021] Administrators should be able to configure loan durations, maximum borrowing...\n\n- **Actor:** Administrators\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Administrators should be able to configure loan durations, maximum borrowing limits, renewal rules, and fine rate schedules.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Administrators should be able to configure loan durations, maximum borrowing limits, renewal rules, and fine rate schedules.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Administrators should be able to configure loan durations, maximum borrowing limits, renewal rules, and fine rate schedules.\"\n\n#### [FR-022] Administrators should be able to generate operational reports on patron...\n\n- **Actor:** Administrators\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Administrators should be able to generate operational reports on patron membership, circulation velocity, and fine collections.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Administrators should be able to generate operational reports on patron membership, circulation velocity, and fine collections.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Administrators should be able to generate operational reports on patron membership, circulation velocity, and fine collections.\"\n\n---\n\n### 3. Non-Functional Requirements (2 Total)\n\n#### [NFR-001] Administration and Security The system should provide secure role-based access...\n\n- **Priority:** high\n- **Quality Score:** 88.0%\n- **Specification:** Administration and Security The system should provide secure role-based access control separating patrons, circulation staff, catalogers, and administrators.\n- **Source Citation:** specification.docx (Page 3)\n\n#### [NFR-002] All configuration updates and administrative overrides must be preserved in...\n\n- **Priority:** high\n- **Quality Score:** 93.2%\n- **Specification:** All configuration updates and administrative overrides must be preserved in a system audit log.\n- **Source Citation:** specification.docx (Page 3)\n"
+    },
+    {
+      "report_type": "quality_audit",
+      "title": "Requirements Quality & Risk Audit",
+      "content_markdown": "# Requirements Quality & Risk Audit Report\n\n## Project: Library Management System\n\n**Overall Quality Score:** 93.5 / 100.0  \n**Audit Date:** 2026-10-13  \n**Total Requirements Evaluated:** 24\n\n---\n\n### Quality Dimension Weights & Scoring\n\n- **Completeness (20%):** Evaluates presence of actors, actions, preconditions, and acceptance criteria.\n- **Clarity (15%):** Penalizes subjective or vague terms.\n- **Atomicity (15%):** Ensures single coherent behavioral statements.\n- **Consistency (20%):** Validates absence of logical or temporal contradictions.\n- **Testability (15%):** Checks for measurable verification conditions.\n- **Feasibility (10%):** Assesses technical realism.\n- **Traceability (5%):** Validates links to raw source citations.\n\n---\n\n### Detected Issues Summary\n\n- **Ambiguities:** 1\n- **Potential Conflicts:** 0\n- **Near-Duplicates / Overlaps:** 0\n\n### Active Conflict Issues\n\nNo active conflict issues were detected.\n\n### Active Ambiguity Findings\n- **NFR-001:** Found subjective phrase *'secure'*. The term 'secure' is subjective and lacks measurable engineering verification criteria.\n"
+    },
+    {
+      "report_type": "architecture",
+      "title": "System Architecture Proposal",
+      "content_markdown": "# System Architecture & Technical Decomposition\n\n## Project: Library Management System\n\n**Total Modules:** 10  \n**Total Inter-Service Relations:** 24\n\n---\n\n### Module Specifications\n\n#### MOD-GATEWAY: API Gateway (GATEWAY)\n\n- **Tech Stack:** API gateway / reverse proxy\n- **Description:** Provides a common entry point for the application services derived from the software requirements.\n- **Responsibilities:**\n  - Route API requests\n  - Apply common request controls\n- **Exposed APIs:**\n  - `/api/*`\n\n#### MOD-AUTHENTICATION: Authentication & Authorization (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Handles user login, registration, token issuance and role\u2011based permission enforcement for patrons and staff.\n- **Responsibilities:**\n  - Authenticate users and issue tokens\n  - Enforce role\u2011based access control\n  - Register new patron accounts\n  - Manage profile access permissions\n- **Exposed APIs:**\n  - `/api/authentication`\n  - `/api/authentication/{id}`\n\n#### MOD-SEARCH: Search & Discovery (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Provides catalog lookup, filtering and real\u2011time availability information for patrons.\n- **Responsibilities:**\n  - Execute catalog queries across multiple fields\n  - Return real\u2011time availability and location data\n  - Support pagination and result filtering\n- **Exposed APIs:**\n  - `/api/search`\n  - `/api/search/{id}`\n\n#### MOD-BOOKING: Booking & Scheduling (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Manages holds, reservations, check\u2011out, return, renewal and related transaction workflows.\n- **Responsibilities:**\n  - Process hold and reservation requests\n  - Manage checkout and return workflows\n  - Handle loan renewals and eligibility checks\n  - Record transaction events for inventory updates\n- **Exposed APIs:**\n  - `/api/booking`\n  - `/api/booking/{id}`\n\n#### MOD-PAYMENT: Payment Management (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Calculates overdue fees and processes electronic or in\u2011person fine payments.\n- **Responsibilities:**\n  - Calculate overdue fees based on policy rules\n  - Process electronic fine payments\n  - Record in\u2011person cash payments\n  - Update patron fine balances\n- **Exposed APIs:**\n  - `/api/payment`\n  - `/api/payment/{id}`\n\n#### MOD-NOTIFICATION: Notification Service (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Sends automated alerts (email/SMS/push) for due dates, holds, overdue notices and payment confirmations.\n- **Responsibilities:**\n  - Generate alerts for due dates, holds and overdue items\n  - Dispatch notifications based on event triggers\n  - Manage patron contact preferences\n- **Exposed APIs:**\n  - `/api/notification`\n  - `/api/notification/{id}`\n\n#### MOD-REPORTING: Reporting & Analytics (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Aggregates circulation data and produces operational, utilization and compliance reports.\n- **Responsibilities:**\n  - Aggregate circulation and utilization metrics\n  - Produce operational and compliance reports\n  - Provide dashboards for administrators\n- **Exposed APIs:**\n  - `/api/reporting`\n  - `/api/reporting/{id}`\n\n#### MOD-AUTHENTICATION: Authentication & Authorization (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Enables catalogers to create bibliographic records, manage copy inventory and conduct physical audits.\n- **Responsibilities:**\n  - Create and edit bibliographic records\n  - Manage copy inventory, status and location\n  - Conduct physical inventory audits and reconcile discrepancies\n- **Exposed APIs:**\n  - `/api/authentication`\n  - `/api/authentication/{id}`\n\n#### MOD-ADMINISTRATION: Administration & Configuration (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Allows administrators to set loan policies, system parameters and maintains an audit trail of changes.\n- **Responsibilities:**\n  - Configure loan periods, borrowing limits and fine policies\n  - Persist configuration changes with audit logging\n  - Manage system\u2011wide settings and overrides\n- **Exposed APIs:**\n  - `/api/administration`\n  - `/api/administration/{id}`\n\n#### MOD-DATA: Application Data Store (DATABASE)\n\n- **Tech Stack:** Relational database\n- **Description:** Provides persistent storage for entities and records required by the analyzed software requirements.\n- **Responsibilities:**\n  - Persist application entities\n  - Maintain data consistency\n  - Support application data retrieval\n- **Exposed APIs:**\n  - No API endpoints specified.\n\n---\n\n### Inter-Module Dependencies\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-AUTHENTICATION`: Gateway routes external requests to this service.\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-SEARCH`: Gateway routes external requests to this service.\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-BOOKING`: Gateway routes external requests to this service.\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-PAYMENT`: Gateway routes external requests to this service.\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-NOTIFICATION`: Gateway routes external requests to this service.\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-REPORTING`: Gateway routes external requests to this service.\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-AUTHENTICATION`: Gateway routes external requests to this service.\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-ADMINISTRATION`: Gateway routes external requests to this service.\n- `MOD-AUTHENTICATION` **--[persists_to]-->** `MOD-DATA`: Authentication & Authorization persists state to application data store.\n- `MOD-SEARCH` **--[persists_to]-->** `MOD-DATA`: Search & Discovery persists state to application data store.\n- `MOD-BOOKING` **--[persists_to]-->** `MOD-DATA`: Booking & Scheduling persists state to application data store.\n- `MOD-PAYMENT` **--[persists_to]-->** `MOD-DATA`: Payment Management persists state to application data store.\n- `MOD-NOTIFICATION` **--[persists_to]-->** `MOD-DATA`: Notification Service persists state to application data store.\n- `MOD-REPORTING` **--[persists_to]-->** `MOD-DATA`: Reporting & Analytics persists state to application data store.\n- `MOD-AUTHENTICATION` **--[persists_to]-->** `MOD-DATA`: Authentication & Authorization persists state to application data store.\n- `MOD-ADMINISTRATION` **--[persists_to]-->** `MOD-DATA`: Administration & Configuration persists state to application data store.\n- `MOD-BOOKING` **--[calls]-->** `MOD-AUTHENTICATION`: Booking service validates patron identity and permissions via authentication service.\n- `MOD-BOOKING` **--[publishes_to]-->** `MOD-NOTIFICATION`: Booking events (holds, checkouts, returns) trigger notifications.\n- `MOD-PAYMENT` **--[calls]-->** `MOD-AUTHENTICATION`: Payment service checks user role and account status before processing fees.\n- `MOD-PAYMENT` **--[publishes_to]-->** `MOD-NOTIFICATION`: Successful payment generates a receipt notification.\n- `MOD-SEARCH` **--[calls]-->** `MOD-AUTHENTICATION`: Search service enforces access control for patron queries.\n- `MOD-ADMINISTRATION` **--[calls]-->** `MOD-AUTHENTICATION`: Administration actions are protected by role\u2011based access checks.\n- `MOD-REPORTING` **--[reads_from]-->** `MOD-BOOKING`: Reporting service consumes loan and reservation data for utilization metrics.\n- `MOD-REPORTING` **--[reads_from]-->** `MOD-PAYMENT`: Reporting service aggregates fine and payment data for financial reports.\n"
+    },
+    {
+      "report_type": "plan",
+      "title": "Project Plan & Sprint Schedule",
+      "content_markdown": "# Software Project Plan & Sprint Schedule\n\n## Project: Library Management System\n\n**Total Estimated Effort:** 150.0 Hours (49.0 Story Points)  \n**Total Persisted Sprints:** 2\n\n---\n\n### Sprint Roadmap\n\n#### Sprint 1 (Capacity: 25 Points)\n- **[TASK-001]** Implement: Patrons can register for a library membership card and log in securely (2 pts, 6.0 hrs, low complexity)\n- **[TASK-002]** Implement: Patrons can search the OPAC by various fields (2 pts, 6.0 hrs, low complexity)\n- **[TASK-003]** Implement: Patrons can view real-time catalog availability, shelf location, and call numbers (3 pts, 12.0 hrs, medium complexity)\n- **[TASK-004]** Implement: Patrons can reserve or place a hold on checked-out or in-transit books (2 pts, 6.0 hrs, low complexity)\n- **[TASK-005]** Implement: Patrons can view their active borrowed items, due dates, renewal counts, and reading history (2 pts, 6.0 hrs, low complexity)\n- **[TASK-006]** Implement: Patrons can renew eligible borrowed books online before the due date (2 pts, 6.0 hrs, low complexity)\n- **[TASK-007]** Implement: Patrons can view outstanding late return fines and make electronic fee payments (2 pts, 6.0 hrs, low complexity)\n- **[TASK-009]** Implement: Patrons can submit purchase recommendations or inter-library loan requests for missing titles (2 pts, 6.0 hrs, low complexity)\n- **[TASK-010]** Implement: Circulation staff can verify patron membership status, hold privileges, and fine balances (2 pts, 6.0 hrs, low complexity)\n- **[TASK-011]** Implement: Circulation staff can check out physical materials by scanning patron cards and book barcodes (2 pts, 6.0 hrs, low complexity)\n- **[TASK-012]** Implement: Circulation staff can process returned items, inspect condition, and return items to inventory (2 pts, 6.0 hrs, low complexity)\n- **[TASK-013]** Implement: System automatically calculates late fees for overdue returned items based on membership policy rules (2 pts, 6.0 hrs, low complexity)\n\n\n#### Sprint 2 (Capacity: 24 Points)\n- **[TASK-008]** Implement: Patrons receive automated notification alerts for due dates, hold arrivals, and overdue notices (2 pts, 6.0 hrs, low complexity)\n- **[TASK-014]** Implement: Circulation staff should be able to collect in-person fine payments... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-015]** Implement: Circulation staff should be able to manage physical reservations and... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-016]** Implement: Cataloging and Collection Management Catalogers should be able to add... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-017]** Implement: Catalogers should be able to manage inventory copies, track lost... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-018]** Implement: The system should track circulation frequency and generate collection utilization... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-019]** Implement: Catalogers should be able to conduct periodic physical inventory audits... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-020]** Implement: Administration and Security The system should provide secure role-based access... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-021]** Implement: Patrons must only access their own borrowing history, reservation queues,... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-022]** Implement: Administrators should be able to configure loan durations, maximum borrowing... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-023]** Implement: Administrators should be able to generate operational reports on patron... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-024]** Implement: All configuration updates and administrative overrides must be preserved in... (2 pts, 6.0 hrs, low complexity)\n\n"
+    },
+    {
+      "report_type": "traceability",
+      "title": "Traceability Matrix Report",
+      "content_markdown": "# End-to-End Requirements Traceability Matrix (RTM)\n\n## Project: Library Management System\n\n| Source Provenance | Requirement ID | Type | Architecture Module | Development Tasks | Test Cases | Traceability Status |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| specification.docx:p3 | `FR-001` | functional | `MOD-AUTHENTICATION` | TASK-001 | TEST-001 | Linked |\n| specification.docx:p3 | `FR-002` | functional | `MOD-SEARCH` | TASK-002 | TEST-002 | Linked |\n| specification.docx:p3 | `FR-003` | functional | `MOD-SEARCH` | TASK-003 | TEST-003 | Linked |\n| specification.docx:p3 | `FR-004` | functional | `MOD-BOOKING` | TASK-004 | TEST-004 | Linked |\n| specification.docx:p3 | `FR-005` | functional | `MOD-DATA` | TASK-005 | TEST-005 | Linked |\n| specification.docx:p3 | `FR-006` | functional | `MOD-BOOKING` | TASK-006 | TEST-006 | Linked |\n| specification.docx:p3 | `FR-007` | functional | `MOD-PAYMENT` | TASK-007 | TEST-007 | Linked |\n| specification.docx:p3 | `FR-008` | functional | `MOD-NOTIFICATION` | TASK-008 | TEST-008 | Linked |\n| specification.docx:p3 | `FR-009` | functional | `MOD-BOOKING` | TASK-009 | TEST-009 | Linked |\n| specification.docx:p3 | `FR-010` | functional | `MOD-AUTHENTICATION` | TASK-010 | TEST-010 | Linked |\n| specification.docx:p3 | `FR-011` | functional | `MOD-BOOKING` | TASK-011 | TEST-011 | Linked |\n| specification.docx:p3 | `FR-012` | functional | `MOD-BOOKING` | TASK-012 | TEST-012 | Linked |\n| specification.docx:p3 | `FR-013` | functional | `MOD-PAYMENT` | TASK-013 | TEST-013 | Linked |\n| specification.docx:p3 | `FR-014` | functional | `MOD-PAYMENT` | TASK-014 | TEST-014 | Linked |\n| specification.docx:p3 | `FR-015` | functional | `MOD-BOOKING` | TASK-015 | TEST-015 | Linked |\n| specification.docx:p3 | `FR-016` | functional | `MOD-AUTHENTICATION` | TASK-016 | TEST-016 | Linked |\n| specification.docx:p3 | `FR-017` | functional | `MOD-AUTHENTICATION` | TASK-017 | TEST-017 | Linked |\n| specification.docx:p3 | `FR-018` | functional | `MOD-REPORTING` | TASK-018 | TEST-018 | Linked |\n| specification.docx:p3 | `FR-019` | functional | `MOD-AUTHENTICATION` | TASK-019 | TEST-019 | Linked |\n| specification.docx:p3 | `NFR-001` | non_functional | `MOD-AUTHENTICATION` | TASK-020 | TEST-020 | Linked |\n| specification.docx:p3 | `FR-020` | functional | `MOD-AUTHENTICATION` | TASK-021 | TEST-021 | Linked |\n| specification.docx:p3 | `FR-021` | functional | `MOD-BOOKING` | TASK-022 | TEST-022 | Linked |\n| specification.docx:p3 | `FR-022` | functional | `MOD-REPORTING` | TASK-023 | TEST-023 | Linked |\n| specification.docx:p3 | `NFR-002` | non_functional | `MOD-DATA` | TASK-024 | TEST-024 | Linked |\n"
+    }
+  ],
+  "logs": [
+    "Step 1/8: Initialized pipeline with 1 source chunks.",
+    "Step 2/8: Running Requirement Extraction Agent with evidence grounding...",
+    "Extracted 24 structured requirements.",
+    "Step 3/8: Running Quality Agent across 7 transparent dimensions...",
+    "Step 4/8: Detecting ambiguities, contradictions, and duplicates...",
+    "Detected 1 ambiguities, 0 conflicts, 0 duplicate candidates.",
+    "Generated 1 prioritized stakeholder clarification questions.",
+    "Step 5/8: Generating system architecture modules and interface topology...",
+    "Step 6/8: Decomposing requirements into Epics, Features, and Tasks...",
+    "Running deterministic effort estimation for generated tasks...",
+    "No team members supplied; resource matching skipped without fabricating assignments.",
+    "Step 7/8: Constructing end-to-end traceability matrix and test cases...",
+    "Running automated Source-Trust Verification against the original client document...",
+    "Source-Trust Verification completed: 98.15% source-alignment score.",
+    "Step 8/8: Generating analysis reports...",
+    "Pipeline execution successfully completed with evidence-grounded analysis."
+  ]
+}

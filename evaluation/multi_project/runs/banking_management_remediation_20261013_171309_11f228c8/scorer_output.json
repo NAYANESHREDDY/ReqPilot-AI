@@ -1,0 +1,129 @@
+{
+  "run_id": "11f228c8-5b46-47ed-ae3e-790c14d05164",
+  "domain_key": "banking_management",
+  "project_title": "Banking Management System",
+  "timestamp": "2026-10-13T17:15:54.283583",
+  "llm_enabled": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": true,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "matching_summary": {
+    "predicted_requirements_count": 26,
+    "reference_requirements_count": 25,
+    "uniquely_matched_count": 25,
+    "unmatched_predictions_count": 1,
+    "ambiguous_predictions_count": 0,
+    "duplicate_gold_matches_count": 0,
+    "unmatched_reference_count": 0
+  },
+  "classification_evaluation": {
+    "valid_matched_denominator": 25,
+    "correct_classifications": 23,
+    "accuracy": 0.92,
+    "penalized_end_to_end_accuracy": 0.8846,
+    "macro_precision": 0.95,
+    "macro_recall": 0.9542,
+    "macro_f1": 0.9497,
+    "per_class_metrics": {
+      "AUTHENTICATION": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.8333,
+        "f1": 0.9091
+      },
+      "BOOKING": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "DATA": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1": 0.8
+      },
+      "FILE": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "NOTIFICATION": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "PAYMENT": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8889
+      },
+      "PROFILE": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "REPORTING": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "errors_sample": [
+      {
+        "pred_id": "FR-020",
+        "gold_id": "FR-019",
+        "summary": "The system should automatically monitor transactions against AML (Anti-Money Laundering)...",
+        "expected": "DATA",
+        "predicted": "PAYMENT"
+      },
+      {
+        "pred_id": "NFR-004",
+        "gold_id": "NFR-005",
+        "summary": "Customer financial records and account balances must be protected with...",
+        "expected": "AUTHENTICATION",
+        "predicted": "DATA"
+      }
+    ],
+    "total_errors": 2
+  },
+  "structural_integrity": {
+    "total_requirements": 26,
+    "requirements_with_tasks": 26,
+    "requirements_without_tasks": 0,
+    "task_coverage_pct": 100.0,
+    "total_modules": 9,
+    "total_relations": 18,
+    "total_tasks": 26,
+    "total_test_cases": 26,
+    "untested_requirements_count": 0,
+    "traceability_matrix_rows": 26
+  },
+  "unsupported_metrics_declared": [
+    "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+    "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+    "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+  ]
+}

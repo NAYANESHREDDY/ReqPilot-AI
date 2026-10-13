@@ -1,0 +1,165 @@
+{
+  "run_id": "45844d7e-8c75-4f02-85c4-6d1e756d6401",
+  "domain_key": "ecommerce_platform",
+  "project_title": "E-Commerce Platform",
+  "timestamp": "2026-10-13T06:32:47.920040",
+  "llm_enabled": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": false,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "matching_summary": {
+    "predicted_requirements_count": 37,
+    "reference_requirements_count": 36,
+    "uniquely_matched_count": 36,
+    "unmatched_predictions_count": 1,
+    "ambiguous_predictions_count": 0,
+    "duplicate_gold_matches_count": 0,
+    "unmatched_reference_count": 0
+  },
+  "classification_evaluation": {
+    "valid_matched_denominator": 36,
+    "correct_classifications": 30,
+    "accuracy": 0.8333,
+    "penalized_end_to_end_accuracy": 0.8108,
+    "macro_precision": 0.7944,
+    "macro_recall": 0.775,
+    "macro_f1": 0.7777,
+    "per_class_metrics": {
+      "AUTHENTICATION": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.8333,
+        "f1": 0.9091
+      },
+      "BOOKING": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1": 0.8
+      },
+      "DATA": {
+        "tp": 7,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.7778,
+        "recall": 0.875,
+        "f1": 0.8235
+      },
+      "FILE": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "NOTIFICATION": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "PAYMENT": {
+        "tp": 4,
+        "fp": 3,
+        "fn": 1,
+        "precision": 0.5714,
+        "recall": 0.8,
+        "f1": 0.6667
+      },
+      "PROFILE": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "REPORTING": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8
+      },
+      "SEARCH": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "errors_sample": [
+      {
+        "pred_id": "FR-020",
+        "gold_id": "FR-019",
+        "summary": "The system should automatically reserve stock items when an order...",
+        "expected": "DATA",
+        "predicted": "BOOKING"
+      },
+      {
+        "pred_id": "FR-021",
+        "gold_id": "FR-020",
+        "summary": "The system should release reserved stock if payment is not...",
+        "expected": "PAYMENT",
+        "predicted": "DATA"
+      },
+      {
+        "pred_id": "FR-022",
+        "gold_id": "FR-021",
+        "summary": "Warehouse staff should be able to generate packing slips, assign...",
+        "expected": "FILE",
+        "predicted": "DATA"
+      },
+      {
+        "pred_id": "FR-026",
+        "gold_id": "FR-025",
+        "summary": "The system should generate tax invoices and itemized receipts for...",
+        "expected": "REPORTING",
+        "predicted": "PAYMENT"
+      },
+      {
+        "pred_id": "FR-030",
+        "gold_id": "FR-029",
+        "summary": "Support agents should be able to initiate replacement requests or...",
+        "expected": "BOOKING",
+        "predicted": "PAYMENT"
+      },
+      {
+        "pred_id": "NFR-001",
+        "gold_id": "NFR-001",
+        "summary": "All transactions must enforce PCI-DSS compliant tokenization and never store...",
+        "expected": "AUTHENTICATION",
+        "predicted": "PAYMENT"
+      }
+    ],
+    "total_errors": 6
+  },
+  "structural_integrity": {
+    "total_requirements": 37,
+    "requirements_with_tasks": 37,
+    "requirements_without_tasks": 0,
+    "task_coverage_pct": 100.0,
+    "total_modules": 10,
+    "total_relations": 20,
+    "total_tasks": 37,
+    "total_test_cases": 37,
+    "untested_requirements_count": 0,
+    "traceability_matrix_rows": 37
+  },
+  "unsupported_metrics_declared": [
+    "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+    "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+    "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+  ]
+}

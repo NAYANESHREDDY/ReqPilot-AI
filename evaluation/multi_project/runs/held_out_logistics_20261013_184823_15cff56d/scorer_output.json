@@ -1,0 +1,143 @@
+{
+  "run_id": "15cff56d-1bee-479a-87aa-fd42ea70b7e4",
+  "domain_key": "held_out_logistics",
+  "project_title": "Warehouse Logistics & Fleet Dispatch System",
+  "timestamp": "2026-10-13T18:48:53.494041",
+  "llm_enabled": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": false,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "matching_summary": {
+    "predicted_requirements_count": 21,
+    "reference_requirements_count": 20,
+    "uniquely_matched_count": 20,
+    "unmatched_predictions_count": 1,
+    "ambiguous_predictions_count": 0,
+    "duplicate_gold_matches_count": 0,
+    "unmatched_reference_count": 0
+  },
+  "classification_evaluation": {
+    "valid_matched_denominator": 20,
+    "correct_classifications": 16,
+    "accuracy": 0.8,
+    "penalized_end_to_end_accuracy": 0.7619,
+    "macro_precision": 0.5938,
+    "macro_recall": 0.5,
+    "macro_f1": 0.5342,
+    "per_class_metrics": {
+      "AUTHENTICATION": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571
+      },
+      "BOOKING": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 0.75
+      },
+      "DATA": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667
+      },
+      "FLEET & EQUIPMENT TELEMETRY": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "INVENTORY & PALLET TRACKING": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "NOTIFICATION": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "OUTBOUND DISPATCH & ROUTE PLANNING": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "REPORTING": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "errors_sample": [
+      {
+        "pred_id": "FR-003",
+        "gold_id": "FR-003",
+        "summary": "Supervisor and manager approval required to override dangerous cargo limits",
+        "expected": "AUTHENTICATION",
+        "predicted": "BOOKING"
+      },
+      {
+        "pred_id": "FR-006",
+        "gold_id": "FR-006",
+        "summary": "Warehouse supervisors schedule outbound routes and allocate trucks",
+        "expected": "BOOKING",
+        "predicted": "OUTBOUND DISPATCH & ROUTE PLANNING"
+      },
+      {
+        "pred_id": "FR-013",
+        "gold_id": "FR-013",
+        "summary": "The system should maintain persistent inventory records of pallet barcode,...",
+        "expected": "DATA",
+        "predicted": "INVENTORY & PALLET TRACKING"
+      },
+      {
+        "pred_id": "FR-014",
+        "gold_id": "FR-015",
+        "summary": "The system should record forklift equipment telematics, battery charging cycles,...",
+        "expected": "DATA",
+        "predicted": "FLEET & EQUIPMENT TELEMETRY"
+      }
+    ],
+    "total_errors": 4
+  },
+  "structural_integrity": {
+    "total_requirements": 21,
+    "requirements_with_tasks": 21,
+    "requirements_without_tasks": 0,
+    "task_coverage_pct": 100.0,
+    "total_modules": 9,
+    "total_relations": 23,
+    "total_tasks": 21,
+    "total_test_cases": 21,
+    "untested_requirements_count": 0,
+    "traceability_matrix_rows": 21
+  },
+  "unsupported_metrics_declared": [
+    "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+    "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+    "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+  ]
+}

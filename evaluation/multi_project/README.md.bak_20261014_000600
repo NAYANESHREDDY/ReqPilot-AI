@@ -1,0 +1,28 @@
+# ReqPilot AI Multi-Project Ground-Truth Evaluation Benchmark
+
+This directory (evaluation/multi_project/) contains a reproducible multi-domain ground-truth benchmark and scoring harness for the ReqPilot AI requirements analysis pipeline across five software engineering domains:
+1. **EV Charging Station Management System** (ev_charging)
+2. **Hospital Management System** (hospital_management)
+3. **E-Commerce Platform** (ecommerce_platform)
+4. **Banking Management System** (banking_management)
+5. **Library Management System** (library_management)
+
+---
+
+## Directory Structure
+
+- benchmark/: DOCX, TXT, gold_reference.json, PROVENANCE.md for each domain
+- manifest.json: SHA-256 hashes of all frozen benchmark references
+- runs/: Raw immutable pipeline outputs and run_meta.json for each run
+- scripts/: scorer.py, generate_reports.py
+- reports/: Project-level markdown reports
+- results/: summary.csv, summary.json, final_report.md
+
+---
+
+## Reproducibility Command
+
+To regenerate all scores and reports:
+`powershell
+python evaluation/multi_project/scripts/generate_reports.py
+`

@@ -1,0 +1,217 @@
+{
+  "run_id": "24607f9a-3e12-4839-8b89-6b69e1db0fb8",
+  "domain_key": "hospital_management",
+  "project_title": "Hospital Management System",
+  "timestamp": "2026-10-13T22:55:50.050044",
+  "llm_enabled": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": false,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "matching_summary": {
+    "predicted_requirements_count": 125,
+    "reference_requirements_count": 124,
+    "uniquely_matched_count": 124,
+    "unmatched_predictions_count": 1,
+    "ambiguous_predictions_count": 0,
+    "duplicate_gold_matches_count": 0,
+    "unmatched_reference_count": 0
+  },
+  "classification_evaluation": {
+    "valid_matched_denominator": 124,
+    "correct_classifications": 56,
+    "accuracy": 0.4516,
+    "penalized_end_to_end_accuracy": 0.448,
+    "macro_precision": 0.3165,
+    "macro_recall": 0.4507,
+    "macro_f1": 0.3203,
+    "per_class_metrics": {
+      "AUTHENTICATION": {
+        "tp": 7,
+        "fp": 6,
+        "fn": 7,
+        "precision": 0.5385,
+        "recall": 0.5,
+        "f1": 0.5185
+      },
+      "BOOKING": {
+        "tp": 17,
+        "fp": 8,
+        "fn": 1,
+        "precision": 0.68,
+        "recall": 0.9444,
+        "f1": 0.7907
+      },
+      "DATA": {
+        "tp": 19,
+        "fp": 41,
+        "fn": 3,
+        "precision": 0.3167,
+        "recall": 0.8636,
+        "f1": 0.4634
+      },
+      "DEPARTMENT": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "FILE": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "GATEWAY": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1": 0.3333
+      },
+      "NOTIFICATION": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "PAYMENT": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 13,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "PROFILE": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.3333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "REPORTING": {
+        "tp": 9,
+        "fp": 8,
+        "fn": 1,
+        "precision": 0.5294,
+        "recall": 0.9,
+        "f1": 0.6667
+      },
+      "SEARCH": {
+        "tp": 2,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      },
+      "UNASSIGNED_OR_NULL": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 27,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "errors_sample": [
+      {
+        "pred_id": "FR-009",
+        "gold_id": "FR-009",
+        "summary": "Patients can view prescriptions issued by doctors",
+        "expected": "UNASSIGNED_OR_NULL",
+        "predicted": "DATA"
+      },
+      {
+        "pred_id": "FR-011",
+        "gold_id": "FR-011",
+        "summary": "Patients should be able to view their hospital bills and...",
+        "expected": "PAYMENT",
+        "predicted": "DATA"
+      },
+      {
+        "pred_id": "FR-012",
+        "gold_id": "FR-012",
+        "summary": "Patients should be able to make eligible payments through the...",
+        "expected": "PAYMENT",
+        "predicted": "DATA"
+      },
+      {
+        "pred_id": "FR-013",
+        "gold_id": "FR-013",
+        "summary": "Patients should receive notifications about appointments, laboratory results, payments, and...",
+        "expected": "PAYMENT",
+        "predicted": "BOOKING"
+      },
+      {
+        "pred_id": "FR-016",
+        "gold_id": "FR-016",
+        "summary": "Doctors should be able to access the medical records of...",
+        "expected": "AUTHENTICATION",
+        "predicted": "DATA"
+      },
+      {
+        "pred_id": "FR-019",
+        "gold_id": "FR-019",
+        "summary": "Doctors should be able to create electronic prescriptions.",
+        "expected": "UNASSIGNED_OR_NULL",
+        "predicted": "DATA"
+      },
+      {
+        "pred_id": "FR-020",
+        "gold_id": "FR-020",
+        "summary": "Doctors should be able to modify or cancel prescriptions before...",
+        "expected": "UNASSIGNED_OR_NULL",
+        "predicted": "DATA"
+      },
+      {
+        "pred_id": "FR-021",
+        "gold_id": "FR-021",
+        "summary": "Doctors should be able to request laboratory tests for patients.",
+        "expected": "UNASSIGNED_OR_NULL",
+        "predicted": "DATA"
+      },
+      {
+        "pred_id": "FR-022",
+        "gold_id": "FR-022",
+        "summary": "Doctors should be able to view completed laboratory results.",
+        "expected": "UNASSIGNED_OR_NULL",
+        "predicted": "DATA"
+      },
+      {
+        "pred_id": "FR-023",
+        "gold_id": "FR-023",
+        "summary": "Reception and Staff Requirements Reception staff should be able to...",
+        "expected": "AUTHENTICATION",
+        "predicted": "PROFILE"
+      }
+    ],
+    "total_errors": 68
+  },
+  "structural_integrity": {
+    "total_requirements": 125,
+    "requirements_with_tasks": 125,
+    "requirements_without_tasks": 0,
+    "task_coverage_pct": 100.0,
+    "total_modules": 7,
+    "total_relations": 10,
+    "total_tasks": 125,
+    "total_test_cases": 125,
+    "untested_requirements_count": 0,
+    "traceability_matrix_rows": 125
+  },
+  "unsupported_metrics_declared": [
+    "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+    "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+    "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+  ]
+}

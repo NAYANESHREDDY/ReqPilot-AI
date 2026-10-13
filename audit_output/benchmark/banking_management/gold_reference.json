@@ -1,0 +1,191 @@
+{
+  "project_name": "Banking Management System",
+  "domain": "Banking / FinTech / Core Financial Services",
+  "version": "1.0.0",
+  "date_frozen": "2026-10-12",
+  "source_document": "specification.docx",
+  "source_document_text": "specification.txt",
+  "total_requirements_evaluated": 25,
+  "expected_module_assignments": {
+    "FR-001": "AUTHENTICATION",
+    "FR-002": "DATA",
+    "FR-003": "PAYMENT",
+    "FR-004": "PAYMENT",
+    "FR-005": "BOOKING",
+    "FR-006": "FILE",
+    "FR-007": "PROFILE",
+    "FR-008": "NOTIFICATION",
+    "FR-009": "NOTIFICATION",
+    "FR-010": "AUTHENTICATION",
+    "FR-011": "PAYMENT",
+    "FR-012": "AUTHENTICATION",
+    "FR-013": "PAYMENT",
+    "NFR-001": "AUTHENTICATION",
+    "FR-014": "REPORTING",
+    "FR-015": "FILE",
+    "FR-016": "REPORTING",
+    "FR-017": "BOOKING",
+    "FR-018": "DATA",
+    "NFR-002": "AUTHENTICATION",
+    "NFR-003": "DATA",
+    "FR-019": "DATA",
+    "FR-020": "REPORTING",
+    "NFR-004": "DATA",
+    "NFR-005": "AUTHENTICATION"
+  },
+  "requirement_details": {
+    "FR-001": {
+      "statement": "Customers should be able to register, complete initial KYC verification, and log in with multi-factor authentication.",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "functional"
+    },
+    "FR-002": {
+      "statement": "Customers should be able to view account balances and real-time transaction history for savings and checking accounts.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional"
+    },
+    "FR-003": {
+      "statement": "Customers should be able to initiate domestic fund transfers between internal accounts and to external beneficiaries.",
+      "canonical": "PAYMENT",
+      "display": "Payment Management",
+      "type": "functional"
+    },
+    "FR-004": {
+      "statement": "Customers should be able to schedule recurring standing instructions and future-dated payments.",
+      "canonical": "PAYMENT",
+      "display": "Payment Management",
+      "type": "functional"
+    },
+    "FR-005": {
+      "statement": "Customers should be able to apply for personal, vehicle, or mortgage loans online.",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional"
+    },
+    "FR-006": {
+      "statement": "Customers should be able to download monthly account statements and tax certificates in PDF format.",
+      "canonical": "FILE",
+      "display": "File & Document Management",
+      "type": "functional"
+    },
+    "FR-007": {
+      "statement": "Customers should be able to request debit card activation, temporary card freezing, and daily spending limit adjustments.",
+      "canonical": "PROFILE",
+      "display": "Profile Management",
+      "type": "functional"
+    },
+    "FR-008": {
+      "statement": "Customers should receive instantaneous SMS and push notifications for all debits, credits, and security alerts.",
+      "canonical": "NOTIFICATION",
+      "display": "Notification Service",
+      "type": "functional"
+    },
+    "FR-009": {
+      "statement": "Customers should be able to report suspicious transactions or compromised credentials immediately.",
+      "canonical": "NOTIFICATION",
+      "display": "Notification Service",
+      "type": "functional"
+    },
+    "FR-010": {
+      "statement": "Tellers should be able to log in securely using terminal authorization and biometric credentials.",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "functional"
+    },
+    "FR-011": {
+      "statement": "Tellers should be able to process cash deposits and cash withdrawals against customer accounts.",
+      "canonical": "PAYMENT",
+      "display": "Payment Management",
+      "type": "functional"
+    },
+    "FR-012": {
+      "statement": "Tellers should be able to verify customer signatures, photo identity documents, and account status.",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "functional"
+    },
+    "FR-013": {
+      "statement": "Tellers should be able to issue cashier checks and process inter-branch account adjustments.",
+      "canonical": "PAYMENT",
+      "display": "Payment Management",
+      "type": "functional"
+    },
+    "NFR-001": {
+      "statement": "All teller transactions exceeding configured threshold amounts must require mandatory supervisory override.",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "non_functional"
+    },
+    "FR-014": {
+      "statement": "Tellers should perform end-of-day cash drawer balancing and generate teller reconciliation reports.",
+      "canonical": "REPORTING",
+      "display": "Reporting & Analytics",
+      "type": "functional"
+    },
+    "FR-015": {
+      "statement": "Loan officers should be able to review customer loan applications, credit scores, and uploaded income proofs.",
+      "canonical": "FILE",
+      "display": "File & Document Management",
+      "type": "functional"
+    },
+    "FR-016": {
+      "statement": "Loan officers should be able to calculate debt-to-income ratios and generate proposed repayment schedules.",
+      "canonical": "REPORTING",
+      "display": "Reporting & Analytics",
+      "type": "functional"
+    },
+    "FR-017": {
+      "statement": "Loan officers should be able to approve, reject, or refer loan applications according to credit policy guidelines.",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional"
+    },
+    "FR-018": {
+      "statement": "The system should calculate interest, track monthly installment payments, and flag delinquent accounts.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional"
+    },
+    "NFR-002": {
+      "statement": "The system should enforce role-based access control and strict separation of duties across all banking operations.",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "non_functional"
+    },
+    "NFR-003": {
+      "statement": "All transactions must be immutably recorded in a tamper-resistant financial ledger.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "non_functional"
+    },
+    "FR-019": {
+      "statement": "The system should automatically monitor transactions against AML (Anti-Money Laundering) rule thresholds.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional"
+    },
+    "FR-020": {
+      "statement": "The system should flag high-value or suspicious patterns and generate regulatory compliance reports.",
+      "canonical": "REPORTING",
+      "display": "Reporting & Analytics",
+      "type": "functional"
+    },
+    "NFR-004": {
+      "statement": "All administrative changes, security policy updates, and manual ledger adjustments must be recorded in an audit trail.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "non_functional"
+    },
+    "NFR-005": {
+      "statement": "Customer financial records and account balances must be protected with strong database encryption at rest and in transit.",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "non_functional"
+    }
+  },
+  "structural_expectations": {
+    "expected_requirements_count": 25
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "timestamp": "20261013_235526",
+  "domains": {
+    "hospital_management": {
+      "run_id": "c678741f-250b-427f-ae13-82e75dbfa1fd",
+      "domain_key": "hospital_management",
+      "project_title": "Hospital Management System",
+      "timestamp": "2026-10-13T23:56:42.515415",
+      "llm_enabled": true,
+      "llm_extraction_succeeded": true,
+      "fallback_used": false,
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "matching_summary": {
+        "predicted_requirements_count": 125,
+        "reference_requirements_count": 124,
+        "uniquely_matched_count": 124,
+        "unmatched_predictions_count": 1,
+        "ambiguous_predictions_count": 0,
+        "duplicate_gold_matches_count": 0,
+        "unmatched_reference_count": 0
+      },
+      "classification_evaluation": {
+        "valid_matched_denominator": 124,
+        "correct_classifications": 62,
+        "accuracy": 0.5,
+        "penalized_end_to_end_accuracy": 0.496,
+        "macro_precision": 0.511,
+        "macro_recall": 0.4993,
+        "macro_f1": 0.4721,
+        "per_class_metrics": {
+          "AUTHENTICATION": {
+            "tp": 7,
+            "fp": 5,
+            "fn": 7,
+            "precision": 0.5833,
+            "recall": 0.5,
+            "f1": 0.5385
+          },
+          "BOOKING": {
+            "tp": 16,
+            "fp": 3,
+            "fn": 2,
+            "precision": 0.8421,
+            "recall": 0.8889,
+            "f1": 0.8649
+          },
+          "DATA": {
+            "tp": 9,
+            "fp": 15,
+            "fn": 13,
+            "precision": 0.375,
+            "recall": 0.4091,
+            "f1": 0.3913
+          },
+          "DEPARTMENT": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "FILE": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "GATEWAY": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 4,
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333
+          },
+          "MEDICAL RECORD MANAGEMENT": {
+            "tp": 0,
+            "fp": 29,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "NOTIFICATION": {
+            "tp": 9,
+            "fp": 3,
+            "fn": 0,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571
+          },
+          "PAYMENT": {
+            "tp": 9,
+            "fp": 4,
+            "fn": 4,
+            "precision": 0.6923,
+            "recall": 0.6923,
+            "f1": 0.6923
+          },
+          "PROFILE": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "REPORTING": {
+            "tp": 8,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8889
+          },
+          "SEARCH": {
+            "tp": 2,
+            "fp": 3,
+            "fn": 0,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714
+          },
+          "UNASSIGNED_OR_NULL": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 27,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "errors_sample": [
+          {
+            "pred_id": "FR-008",
+            "gold_id": "FR-008",
+            "summary": "Patients view medical history and consultation records",
+            "expected": "DATA",
+            "predicted": "MEDICAL RECORD MANAGEMENT"
+          },
+          {
+            "pred_id": "FR-009",
+            "gold_id": "FR-009",
+            "summary": "Patients view prescriptions issued by doctors",
+            "expected": "UNASSIGNED_OR_NULL",
+            "predicted": "MEDICAL RECORD MANAGEMENT"
+          },
+          {
+            "pred_id": "FR-010",
+            "gold_id": "FR-010",
+            "summary": "Patients view available laboratory results",
+            "expected": "DATA",
+            "predicted": "MEDICAL RECORD MANAGEMENT"
+          },
+          {
+            "pred_id": "FR-013",
+            "gold_id": "FR-013",
+            "summary": "Patients should receive notifications about appointments, laboratory results, payments, and...",
+            "expected": "PAYMENT",
+            "predicted": "NOTIFICATION"
+          },
+          {
+            "pred_id": "FR-016",
+            "gold_id": "FR-016",
+            "summary": "Doctors should be able to access the medical records of...",
+            "expected": "AUTHENTICATION",
+            "predicted": "MEDICAL RECORD MANAGEMENT"
+          },
+          {
+            "pred_id": "FR-017",
+            "gold_id": "FR-017",
+            "summary": "Doctors should be able to record consultation notes, symptoms, diagnoses,...",
+            "expected": "DATA",
+            "predicted": "MEDICAL RECORD MANAGEMENT"
+          },
+          {
+            "pred_id": "FR-018",
+            "gold_id": "FR-018",
+            "summary": "Doctors should be able to record patient allergies and relevant...",
+            "expected": "DATA",
+            "predicted": "MEDICAL RECORD MANAGEMENT"
+          },
+          {
+            "pred_id": "FR-019",
+            "gold_id": "FR-019",
+            "summary": "Doctors should be able to create electronic prescriptions.",
+            "expected": "UNASSIGNED_OR_NULL",
+            "predicted": "MEDICAL RECORD MANAGEMENT"
+          },
+          {
+            "pred_id": "FR-020",
+            "gold_id": "FR-020",
+            "summary": "Doctors should be able to modify or cancel prescriptions before...",
+            "expected": "UNASSIGNED_OR_NULL",
+            "predicted": "MEDICAL RECORD MANAGEMENT"
+          },
+          {
+            "pred_id": "FR-021",
+            "gold_id": "FR-021",
+            "summary": "Doctors should be able to request laboratory tests for patients.",
+            "expected": "UNASSIGNED_OR_NULL",
+            "predicted": "MEDICAL RECORD MANAGEMENT"
+          }
+        ],
+        "total_errors": 62
+      },
+      "structural_integrity": {
+        "total_requirements": 125,
+        "requirements_with_tasks": 125,
+        "requirements_without_tasks": 0,
+        "task_coverage_pct": 100.0,
+        "total_modules": 10,
+        "total_relations": 16,
+        "total_tasks": 125,
+        "total_test_cases": 125,
+        "untested_requirements_count": 0,
+        "traceability_matrix_rows": 125
+      },
+      "unsupported_metrics_declared": [
+        "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+        "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+        "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,556 @@
+{
+  "project_id": "ec691f0a-f7d3-4516-8f56-e834de9137ad",
+  "project_name": "EV Charging Station Management System",
+  "domain": "CleanTech / IoT / Smart Mobility",
+  "version": "2.0.0",
+  "date_frozen": "2026-10-12",
+  "source_document": "specification.docx",
+  "source_document_text": "specification.txt",
+  "total_requirements_evaluated": 58,
+  "canonical_modules": {
+    "AUTHENTICATION": "Authentication & Authorization",
+    "CHARGING-STATION": "Charging Station Management",
+    "BOOKING": "Booking & Scheduling",
+    "CHARGING-SESSION": "Charging Session Management",
+    "NOTIFICATION": "Notification Service",
+    "MAINTENANCE": "Maintenance Management",
+    "DATA": "Application Data Store",
+    "REPORTING": "Reporting & Analytics",
+    "PAYMENT": "Payment Management",
+    "GATEWAY": "API Gateway"
+  },
+  "expected_module_assignments": {
+    "FR-001": "AUTHENTICATION",
+    "FR-002": "BOOKING",
+    "FR-003": "CHARGING-SESSION",
+    "FR-004": "CHARGING-SESSION",
+    "FR-005": "NOTIFICATION",
+    "FR-006": "NOTIFICATION",
+    "FR-007": "CHARGING-SESSION",
+    "FR-008": "MAINTENANCE",
+    "FR-009": "CHARGING-STATION",
+    "FR-010": "CHARGING-STATION",
+    "FR-011": "BOOKING",
+    "FR-012": "CHARGING-STATION",
+    "FR-013": "CHARGING-STATION",
+    "FR-014": "CHARGING-STATION",
+    "FR-015": "MAINTENANCE",
+    "FR-016": "MAINTENANCE",
+    "FR-017": "MAINTENANCE",
+    "FR-018": "BOOKING",
+    "FR-019": "DATA",
+    "FR-020": "MAINTENANCE",
+    "FR-021": "REPORTING",
+    "FR-022": "DATA",
+    "FR-023": "NOTIFICATION",
+    "FR-024": "AUTHENTICATION",
+    "FR-025": "CHARGING-STATION",
+    "FR-026": "AUTHENTICATION",
+    "FR-027": "BOOKING",
+    "FR-028": "BOOKING",
+    "FR-029": "BOOKING",
+    "FR-030": "CHARGING-SESSION",
+    "FR-031": "BOOKING",
+    "FR-032": "NOTIFICATION",
+    "FR-033": "NOTIFICATION",
+    "FR-034": "NOTIFICATION",
+    "FR-035": "PAYMENT",
+    "FR-036": "PAYMENT",
+    "FR-037": "PAYMENT",
+    "FR-038": "PAYMENT",
+    "FR-039": "CHARGING-STATION",
+    "FR-040": "BOOKING",
+    "FR-041": "CHARGING-SESSION",
+    "FR-042": "NOTIFICATION",
+    "FR-043": "REPORTING",
+    "FR-044": "REPORTING",
+    "FR-045": "DATA",
+    "FR-046": "DATA",
+    "FR-047": "CHARGING-STATION",
+    "FR-048": "BOOKING",
+    "FR-049": "REPORTING",
+    "FR-050": "REPORTING",
+    "FR-051": "DATA",
+    "NFR-001": "CHARGING-STATION",
+    "NFR-002": "CHARGING-STATION",
+    "NFR-003": "AUTHENTICATION",
+    "NFR-004": "DATA",
+    "NFR-005": "CHARGING-STATION",
+    "NFR-006": "GATEWAY",
+    "NFR-007": "DATA"
+  },
+  "requirement_details": {
+    "FR-001": {
+      "statement": "Driver Requirements Drivers should be able to register and log in securely.",
+      "summary": "Driver Requirements Drivers should be able to register and log...",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-001 established in historical EV validation oracle"
+    },
+    "FR-002": {
+      "statement": "Drivers should be able to reserve an available charging slot before arriving.",
+      "summary": "Drivers should be able to reserve an available charging slot...",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-002 established in historical EV validation oracle"
+    },
+    "FR-003": {
+      "statement": "Drivers should be able to start a charging session after authenticating at the selected charger.",
+      "summary": "Drivers should be able to start a charging session after...",
+      "canonical": "CHARGING-SESSION",
+      "display": "Charging Session Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-003 established in historical EV validation oracle"
+    },
+    "FR-004": {
+      "statement": "Drivers should be able to view charging session status, energy consumed, duration, and estimated cost.",
+      "summary": "Drivers should be able to view charging session status, energy...",
+      "canonical": "CHARGING-SESSION",
+      "display": "Charging Session Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-004 established in historical EV validation oracle"
+    },
+    "FR-005": {
+      "statement": "Drivers should receive notifications when a reserved slot is about to begin.",
+      "summary": "Drivers should receive notifications when a reserved slot is about...",
+      "canonical": "NOTIFICATION",
+      "display": "Notification Service",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-005 established in historical EV validation oracle"
+    },
+    "FR-006": {
+      "statement": "Drivers should receive notifications when a charging session starts, pauses, completes, or encounters an error.",
+      "summary": "Drivers should receive notifications when a charging session starts, pauses,...",
+      "canonical": "NOTIFICATION",
+      "display": "Notification Service",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-006 established in historical EV validation oracle"
+    },
+    "FR-007": {
+      "statement": "Drivers should be able to view their charging history and invoices.",
+      "summary": "Drivers should be able to view their charging history and...",
+      "canonical": "CHARGING-SESSION",
+      "display": "Charging Session Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-007 established in historical EV validation oracle"
+    },
+    "FR-008": {
+      "statement": "Drivers should be able to report a faulty charger or station issue.",
+      "summary": "Drivers should be able to report a faulty charger or...",
+      "canonical": "MAINTENANCE",
+      "display": "Maintenance Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-008 established in historical EV validation oracle"
+    },
+    "FR-009": {
+      "statement": "Station Operator Requirements Station operators should be able to register and manage charging stations.",
+      "summary": "Station Operator Requirements Station operators should be able to register...",
+      "canonical": "CHARGING-STATION",
+      "display": "Charging Station Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-009 established in historical EV validation oracle"
+    },
+    "FR-010": {
+      "statement": "Station operators should be able to configure charger identifiers, connector types, charging speeds, and operating hours.",
+      "summary": "Station operators should be able to configure charger identifiers, connector...",
+      "canonical": "CHARGING-STATION",
+      "display": "Charging Station Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-010 established in historical EV validation oracle"
+    },
+    "FR-011": {
+      "statement": "Station operators should be able to view active reservations and charging sessions.",
+      "summary": "Station operators should be able to view active reservations and...",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-011 established in historical EV validation oracle"
+    },
+    "FR-012": {
+      "statement": "Station operators should be able to set station-specific pricing rules.",
+      "summary": "Station operators should be able to set station-specific pricing rules.",
+      "canonical": "CHARGING-STATION",
+      "display": "Charging Station Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-012 established in historical EV validation oracle"
+    },
+    "FR-013": {
+      "statement": "Station operators should be able to temporarily disable a charger for maintenance.",
+      "summary": "Station operators should be able to temporarily disable a charger...",
+      "canonical": "CHARGING-STATION",
+      "display": "Charging Station Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-013 established in historical EV validation oracle"
+    },
+    "FR-014": {
+      "statement": "Station operators should be able to view station utilization and revenue reports.",
+      "summary": "Station operators should be able to view station utilization and...",
+      "canonical": "CHARGING-STATION",
+      "display": "Charging Station Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-014 established in historical EV validation oracle"
+    },
+    "FR-015": {
+      "statement": "Maintenance Requirements Maintenance staff should be able to view assigned charger faults and maintenance requests.",
+      "summary": "Maintenance Requirements Maintenance staff should be able to view assigned...",
+      "canonical": "MAINTENANCE",
+      "display": "Maintenance Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-015 established in historical EV validation oracle"
+    },
+    "FR-016": {
+      "statement": "Maintenance staff should be able to update the status of a maintenance request.",
+      "summary": "Maintenance staff should be able to update the status of...",
+      "canonical": "MAINTENANCE",
+      "display": "Maintenance Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-016 established in historical EV validation oracle"
+    },
+    "FR-017": {
+      "statement": "Maintenance staff should record inspection results and repair actions.",
+      "summary": "Maintenance staff should record inspection results and repair actions.",
+      "canonical": "MAINTENANCE",
+      "display": "Maintenance Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-017 established in historical EV validation oracle"
+    },
+    "FR-018": {
+      "statement": "The system should prevent a charger marked unavailable for maintenance from being reserved.",
+      "summary": "The system should prevent a charger marked unavailable for maintenance...",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-018 established in historical EV validation oracle"
+    },
+    "FR-019": {
+      "statement": "Maintenance records should remain available for audit purposes.",
+      "summary": "Maintenance records should remain available for audit purposes.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-019 established in historical EV validation oracle"
+    },
+    "FR-020": {
+      "statement": "Administrator Requirements Administrators should manage drivers, operators, maintenance staff, stations, chargers, pricing rules, and system settings.",
+      "summary": "Administrator Requirements Administrators should manage drivers, operators, maintenance staff, stations,...",
+      "canonical": "MAINTENANCE",
+      "display": "Maintenance Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-020 established in historical EV validation oracle"
+    },
+    "FR-021": {
+      "statement": "Administrators should have complete access to operational and financial reports.",
+      "summary": "Administrators should have complete access to operational and financial reports.",
+      "canonical": "REPORTING",
+      "display": "Reporting & Analytics",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-021 established in historical EV validation oracle"
+    },
+    "FR-022": {
+      "statement": "Administrators should be able to suspend accounts that violate system policies.",
+      "summary": "Administrators should be able to suspend accounts that violate system...",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-022 established in historical EV validation oracle"
+    },
+    "FR-023": {
+      "statement": "Administrators should be able to configure global notification and reservation policies.",
+      "summary": "Administrators should be able to configure global notification and reservation...",
+      "canonical": "NOTIFICATION",
+      "display": "Notification Service",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-023 established in historical EV validation oracle"
+    },
+    "FR-024": {
+      "statement": "Drivers must only access their own reservations, sessions, invoices, and charging history.",
+      "summary": "Drivers must only access their own reservations, sessions, invoices, and...",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-024 established in historical EV validation oracle"
+    },
+    "FR-025": {
+      "statement": "Station operators should only modify stations assigned to their organization.",
+      "summary": "Station operators should only modify stations assigned to their organization.",
+      "canonical": "CHARGING-STATION",
+      "display": "Charging Station Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-025 established in historical EV validation oracle"
+    },
+    "FR-026": {
+      "statement": "Maintenance staff should only access maintenance requests assigned to them or their team.",
+      "summary": "Maintenance staff should only access maintenance requests assigned to them...",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-026 established in historical EV validation oracle"
+    },
+    "FR-027": {
+      "statement": "Reservation and Charging Policy A driver should not be able to reserve a charger that is already reserved for the requested time.",
+      "summary": "Reservation and Charging Policy A driver should not be able...",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-027 established in historical EV validation oracle"
+    },
+    "FR-028": {
+      "statement": "A reservation should expire if the driver does not start the session within 15 minutes of the reservation start time.",
+      "summary": "A reservation should expire if the driver does not start...",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-028 established in historical EV validation oracle"
+    },
+    "FR-029": {
+      "statement": "A charger should become unavailable for new reservations when a fault is detected.",
+      "summary": "A charger should become unavailable for new reservations when a...",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-029 established in historical EV validation oracle"
+    },
+    "FR-030": {
+      "statement": "A charging session should not be terminated automatically merely because the estimated charging time has elapsed; the actual charger state should determine completion.",
+      "summary": "A charging session should not be terminated automatically merely because...",
+      "canonical": "CHARGING-SESSION",
+      "display": "Charging Session Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-030 established in historical EV validation oracle"
+    },
+    "FR-031": {
+      "statement": "A reservation should not be cancellable after the charging session has started.",
+      "summary": "A reservation should not be cancellable after the charging session...",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-031 established in historical EV validation oracle"
+    },
+    "FR-032": {
+      "statement": "Notifications The system should provide real-time notifications to drivers and relevant operators.",
+      "summary": "Notifications The system should provide real-time notifications to drivers and...",
+      "canonical": "NOTIFICATION",
+      "display": "Notification Service",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-032 established in historical EV validation oracle"
+    },
+    "FR-033": {
+      "statement": "Email and in-app notifications should be supported.",
+      "summary": "Email and in-app notifications should be supported.",
+      "canonical": "NOTIFICATION",
+      "display": "Notification Service",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-033 established in historical EV validation oracle"
+    },
+    "FR-034": {
+      "statement": "The system should notify maintenance staff when a charger reports a critical fault.",
+      "summary": "The system should notify maintenance staff when a charger reports...",
+      "canonical": "NOTIFICATION",
+      "display": "Notification Service",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-034 established in historical EV validation oracle"
+    },
+    "FR-035": {
+      "statement": "Payments and Invoicing The system should calculate charging cost using the applicable pricing rule and energy consumed.",
+      "summary": "Payments and Invoicing The system should calculate charging cost using...",
+      "canonical": "PAYMENT",
+      "display": "Payment Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-035 established in historical EV validation oracle"
+    },
+    "FR-036": {
+      "statement": "Drivers should be able to view the final amount before completing payment when the required information is available.",
+      "summary": "Drivers should be able to view the final amount before...",
+      "canonical": "PAYMENT",
+      "display": "Payment Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-036 established in historical EV validation oracle"
+    },
+    "FR-037": {
+      "statement": "The system should generate an invoice for each completed paid charging session.",
+      "summary": "The system should generate an invoice for each completed paid...",
+      "canonical": "PAYMENT",
+      "display": "Payment Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-037 established in historical EV validation oracle"
+    },
+    "FR-038": {
+      "statement": "Payment failures should be recorded without marking the charging session as successfully paid.",
+      "summary": "Payment failures should be recorded without marking the charging session...",
+      "canonical": "PAYMENT",
+      "display": "Payment Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-038 established in historical EV validation oracle"
+    },
+    "FR-039": {
+      "statement": "Real-time charger-status updates should be reflected without requiring a full page refresh.",
+      "summary": "Real-time charger-status updates should be reflected without requiring a full...",
+      "canonical": "CHARGING-STATION",
+      "display": "Charging Station Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-039 established in historical EV validation oracle"
+    },
+    "FR-040": {
+      "statement": "Reservation creation should prevent conflicting reservations under concurrent requests.",
+      "summary": "Reservation creation should prevent conflicting reservations under concurrent requests.",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-040 established in historical EV validation oracle"
+    },
+    "FR-041": {
+      "statement": "Charging-session state should be recoverable after a temporary application restart.",
+      "summary": "Charging-session state should be recoverable after a temporary application restart.",
+      "canonical": "CHARGING-SESSION",
+      "display": "Charging Session Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-041 established in historical EV validation oracle"
+    },
+    "FR-042": {
+      "statement": "Operational data should not be lost when a notification service is temporarily unavailable.",
+      "summary": "Operational data should not be lost when a notification service...",
+      "canonical": "NOTIFICATION",
+      "display": "Notification Service",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-042 established in historical EV validation oracle"
+    },
+    "FR-043": {
+      "statement": "Reporting Administrators should be able to generate reports for station utilization, charging energy, revenue, failed payments, maintenance activity, and driver activity.",
+      "summary": "Reporting Administrators should be able to generate reports for station...",
+      "canonical": "REPORTING",
+      "display": "Reporting & Analytics",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-043 established in historical EV validation oracle"
+    },
+    "FR-044": {
+      "statement": "Station operators should be able to generate reports for stations assigned to their organization.",
+      "summary": "Station operators should be able to generate reports for stations...",
+      "canonical": "REPORTING",
+      "display": "Reporting & Analytics",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-044 established in historical EV validation oracle"
+    },
+    "FR-045": {
+      "statement": "Data Retention Completed charging sessions, invoices, reservations, and maintenance records should be retained for audit and reporting purposes.",
+      "summary": "Data Retention Completed charging sessions, invoices, reservations, and maintenance records...",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-045 established in historical EV validation oracle"
+    },
+    "FR-046": {
+      "statement": "Inactive driver accounts should be anonymized after three years unless retention is required by an applicable policy.",
+      "summary": "Inactive driver accounts should be anonymized after three years unless...",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-046 established in historical EV validation oracle"
+    },
+    "FR-047": {
+      "statement": "Important Operational Policy A charger can be manually disabled by an authorized operator or automatically marked unavailable after a critical fault.",
+      "summary": "Important Operational Policy A charger can be manually disabled by...",
+      "canonical": "CHARGING-STATION",
+      "display": "Charging Station Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-047 established in historical EV validation oracle"
+    },
+    "FR-048": {
+      "statement": "A disabled charger must not accept new reservations.",
+      "summary": "A disabled charger must not accept new reservations.",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-048 established in historical EV validation oracle"
+    },
+    "FR-049": {
+      "statement": "Reporting and Auditability Every reservation, charging-session state transition, payment state transition, maintenance update, and administrative policy change should have a traceable record.",
+      "summary": "Reporting and Auditability Every reservation, charging-session state transition, payment state...",
+      "canonical": "REPORTING",
+      "display": "Reporting & Analytics",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-049 established in historical EV validation oracle"
+    },
+    "FR-050": {
+      "statement": "Reports should identify the station, charger, time period, and relevant status information used to produce the reported totals.",
+      "summary": "Reports should identify the station, charger, time period, and relevant...",
+      "canonical": "REPORTING",
+      "display": "Reporting & Analytics",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-050 established in historical EV validation oracle"
+    },
+    "FR-051": {
+      "statement": "The organization has not specified whether anonymized driver accounts can later be restored.",
+      "summary": "The organization has not specified whether anonymized driver accounts can...",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-051 established in historical EV validation oracle"
+    },
+    "NFR-001": {
+      "statement": "Drivers should be able to search charging stations by location, connector type, charging speed, and availability.",
+      "summary": "Drivers should be able to search charging stations by location,...",
+      "canonical": "CHARGING-STATION",
+      "display": "Charging Station Management",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-001 established in historical EV validation oracle"
+    },
+    "NFR-002": {
+      "statement": "Drivers should be able to view real-time charger availability and estimated waiting time.",
+      "summary": "Drivers should be able to view real-time charger availability and...",
+      "canonical": "CHARGING-STATION",
+      "display": "Charging Station Management",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-002 established in historical EV validation oracle"
+    },
+    "NFR-003": {
+      "statement": "Authentication and Security The system should provide secure authentication and role-based access control.",
+      "summary": "Authentication and Security The system should provide secure authentication and...",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-003 established in historical EV validation oracle"
+    },
+    "NFR-004": {
+      "statement": "Administrative actions should be recorded in an audit log.",
+      "summary": "Administrative actions should be recorded in an audit log.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-004 established in historical EV validation oracle"
+    },
+    "NFR-005": {
+      "statement": "Performance The system should remain responsive when thousands of drivers search stations or view availability simultaneously.",
+      "summary": "Performance The system should remain responsive when thousands of drivers...",
+      "canonical": "CHARGING-STATION",
+      "display": "Charging Station Management",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-005 established in historical EV validation oracle"
+    },
+    "NFR-006": {
+      "statement": "Availability and Reliability The system should be available 24/7 except during planned maintenance.",
+      "summary": "Availability and Reliability The system should be available 24/7 except...",
+      "canonical": "GATEWAY",
+      "display": "API Gateway",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-006 established in historical EV validation oracle"
+    },
+    "NFR-007": {
+      "statement": "Audit logs should be retained according to the configured administrative retention period.",
+      "summary": "Audit logs should be retained according to the configured administrative...",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-007 established in historical EV validation oracle"
+    }
+  },
+  "structural_expectations": {
+    "expected_requirements_count": 58,
+    "expected_modules_count": 10,
+    "expected_tasks_count": 58,
+    "expected_tests_count": 58,
+    "expected_traceability_links_count": 116,
+    "expected_reports_count": 5
+  }
+}

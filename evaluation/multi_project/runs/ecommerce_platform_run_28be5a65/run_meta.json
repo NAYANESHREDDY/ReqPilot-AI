@@ -1,0 +1,26 @@
+{
+  "run_id": "28be5a65-d978-4fff-9c74-f02ce5f0446a",
+  "domain_key": "ecommerce_platform",
+  "project_title": "E-Commerce Platform",
+  "timestamp": "2026-10-12T17:20:55.183109",
+  "duration_seconds": 0.771213,
+  "llm_enabled": true,
+  "provider": "groq",
+  "model": "llama-3.3-70b-versatile",
+  "llm_attempted": true,
+  "llm_extraction_succeeded": false,
+  "fallback_used": true,
+  "original_db_hash_before": "abc1e7028050e60139969f5dae0633a8851b377cdc841d6180ef7b1a9be566cd",
+  "original_db_hash_after": "abc1e7028050e60139969f5dae0633a8851b377cdc841d6180ef7b1a9be566cd",
+  "original_db_unchanged": true,
+  "input_file": "evaluation\\multi_project\\benchmark\\ecommerce_platform\\specification.docx",
+  "counts": {
+    "chunks": 1,
+    "requirements": 37,
+    "modules": 11,
+    "relations": 23,
+    "tasks": 37,
+    "test_cases": 37,
+    "reports": 5
+  }
+}

@@ -1,0 +1,5 @@
+domain,project_title,run_id,llm_succeeded,fallback_used,pred_reqs,gold_reqs,matched,unmatched_pred,correct,accuracy,macro_precision,macro_recall,macro_f1,task_coverage_pct,total_modules,total_relations
+ev_charging,EV Charging Station Management System,1c57d2e2,True,False,58,58,58,0,58,1.0,1.0,1.0,1.0,100.0,11,23
+ecommerce_platform,E-Commerce Platform,1e2d6f1a,False,True,37,36,36,1,16,0.4444,0.3762,0.3194,0.3356,100.0,11,23
+banking_management,Banking Management System,ba26cb8e,True,False,25,25,25,0,9,0.36,0.5,0.3583,0.3979,100.0,8,15
+library_management,Library Management System,037fa230,False,True,24,24,24,0,16,0.6667,0.7778,0.6151,0.6679,100.0,10,21

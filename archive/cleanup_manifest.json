@@ -1,0 +1,462 @@
+{
+  "created_at": "2026-10-14T00:24:28.082267",
+  "policy": "Zero permanent loss: Quarantine obsolete backups/loose scripts into fsd_pro/archive; purge only reproducible caches",
+  "actions": [
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\ev_semantic_direct.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\scratch_scripts\\ev_semantic_direct.py",
+      "action": "quarantine",
+      "reason": "Root directory scratch script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\temp_ev_semantic_audit.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\scratch_scripts\\temp_ev_semantic_audit.py",
+      "action": "quarantine",
+      "reason": "Root directory scratch script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\temp_ev_task_classifier_audit.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\scratch_scripts\\temp_ev_task_classifier_audit.py",
+      "action": "quarantine",
+      "reason": "Root directory scratch script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\temp_ev_task_classifier_audit_header.tmp",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\scratch_scripts\\temp_ev_task_classifier_audit_header.tmp",
+      "action": "quarantine",
+      "reason": "Root directory scratch script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\temp_ev_task_current_audit.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\scratch_scripts\\temp_ev_task_current_audit.py",
+      "action": "quarantine",
+      "reason": "Root directory scratch script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\temp_ev_task_quality_audit.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\scratch_scripts\\temp_ev_task_quality_audit.py",
+      "action": "quarantine",
+      "reason": "Root directory scratch script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\temp_ev_architecture_baseline.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\temp_ev_architecture_baseline.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\temp_ev_architecture_evidence_audit.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\temp_ev_architecture_evidence_audit.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\temp_ev_domain_diagnostic.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\temp_ev_domain_diagnostic.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\temp_ev_domain_evidence.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\temp_ev_domain_evidence.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\temp_ev_semantic_audit.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\temp_ev_semantic_audit.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\temp_ev_task_current_audit.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\temp_ev_task_current_audit.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\temp_ev_task_quality_audit.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\temp_ev_task_quality_audit.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\temp_smartcampus_architecture_regression.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\temp_smartcampus_architecture_regression.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\temp_smartcampus_domain_audit.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\temp_smartcampus_domain_audit.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\evaluation_audit_after.txt",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\evaluation_audit_after.txt",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\evaluation_audit_before.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\evaluation_audit_before.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\test_change_impact.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\test_change_impact.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\test_change_impact_domain.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\test_change_impact_domain.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\test_change_impact_empty.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\test_change_impact_empty.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\db_audit.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\db_audit.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\diagnose_autoassign.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\diagnose_autoassign.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\diagnose_mismatches.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\diagnose_mismatches.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\diagnose_skills.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\diagnose_skills.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\diagnose_team.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\diagnose_team.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\update_report.py",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\diagnostic_scripts\\update_report.py",
+      "action": "quarantine",
+      "reason": "Top-level diagnostic/temp script"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\config.py.bak_20261013_221316",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\config.py.bak_20261013_221316",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\models.py.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\models.py.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\schemas.py.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\schemas.py.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\architecture_agent.py.backup",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\architecture_agent.py.backup",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\architecture_agent.py.bak_20261013_221316",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\architecture_agent.py.bak_20261013_221316",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\architecture_agent.py.bak_20261013_234200",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\architecture_agent.py.bak_20261013_234200",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\architecture_agent.py.before_ev_architecture.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\architecture_agent.py.before_ev_architecture.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\architecture_agent.py.before_ev_architecture_precision.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\architecture_agent.py.before_ev_architecture_precision.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\architecture_agent.py.before_maintenance_precision.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\architecture_agent.py.before_maintenance_precision.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\architecture_agent.py.before_normalized_type.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\architecture_agent.py.before_normalized_type.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\architecture_agent.py.before_reporting_semantic_fix.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\architecture_agent.py.before_reporting_semantic_fix.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\architecture_agent.py.before_type_aware_matching.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\architecture_agent.py.before_type_aware_matching.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\conflict_agent.py.before_benchmark_fix.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\conflict_agent.py.before_benchmark_fix.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\duplicate_agent.py.before_benchmark_fix.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\duplicate_agent.py.before_benchmark_fix.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\extraction_agent.py.before_boundary_fix.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\extraction_agent.py.before_boundary_fix.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\extraction_agent.py.before_controlled_batch.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\extraction_agent.py.before_controlled_batch.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\extraction_agent.py.before_requirement_stability.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\extraction_agent.py.before_requirement_stability.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\llm_adapter.py.bak_20261013_221316",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\llm_adapter.py.bak_20261013_221316",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\orchestrator.py.before_source_trust.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\orchestrator.py.before_source_trust.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\task_agent.py.bak_20261013_221316",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\task_agent.py.bak_20261013_221316",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\task_agent.py.bak_20261013_231528",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\task_agent.py.bak_20261013_231528",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\task_agent.py.bak_20261013_232930",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\task_agent.py.bak_20261013_232930",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\task_agent.py.bak_20261013_234200",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\task_agent.py.bak_20261013_234200",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\task_agent.py.before_architecture_mapping.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\task_agent.py.before_architecture_mapping.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\task_agent.py.before_auth_session_fix.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\task_agent.py.before_auth_session_fix.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\task_agent.py.before_crosscutting_fallback_fix.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\task_agent.py.before_crosscutting_fallback_fix.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\task_agent.py.before_cross_domain_audit_fix.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\task_agent.py.before_cross_domain_audit_fix.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\task_agent.py.before_fr008_fix.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\task_agent.py.before_fr008_fix.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\task_agent.py.before_fr008_semantic_fix.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\task_agent.py.before_fr008_semantic_fix.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\task_agent.py.before_nfr_domain_fix.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\task_agent.py.before_nfr_domain_fix.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\task_agent.py.before_semantic_disambiguation.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\task_agent.py.before_semantic_disambiguation.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\task_agent.py.before_session_classifier_fix.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\task_agent.py.before_session_classifier_fix.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\task_agent.py.before_task_quality.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\task_agent.py.before_task_quality.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\task_agent.py.before_unscoped_fallback_fix.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\task_agent.py.before_unscoped_fallback_fix.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\task_agent.py.taskagent_ev_checkpoint.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\task_agent.py.taskagent_ev_checkpoint.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\taxonomy.py.bak_20261013_221316",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\taxonomy.py.bak_20261013_221316",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents\\taxonomy.py.bak_20261013_234830",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\agents\\taxonomy.py.bak_20261013_234830",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\api\\architecture.py.before_id_mapping_fix.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\api\\architecture.py.before_id_mapping_fix.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\api\\architecture.py.before_req_type_fix.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\api\\architecture.py.before_req_type_fix.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\api\\change_impact.py.final_verified.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\api\\change_impact.py.final_verified.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\api\\evaluation.py.before_real_benchmark.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\api\\evaluation.py.before_real_benchmark.bak",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\api\\workflow.py.bak_20261013_221316",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\api\\workflow.py.bak_20261013_221316",
+      "action": "quarantine",
+      "reason": "Obsolete source backup in app directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\app\\agents_backup_1791836628",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\agents_backup_1791836628",
+      "action": "quarantine",
+      "reason": "Retired agents backup directory"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\reqpilot.db.before_ev_architecture_regeneration.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\database_snapshots\\reqpilot.db.before_ev_architecture_regeneration.bak",
+      "action": "quarantine",
+      "reason": "Historical database snapshot backup"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\reqpilot.db.before_ev_task_regeneration.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\database_snapshots\\reqpilot.db.before_ev_task_regeneration.bak",
+      "action": "quarantine",
+      "reason": "Historical database snapshot backup"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\reqpilot.db.before_final_ev_validation.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\database_snapshots\\reqpilot.db.before_final_ev_validation.bak",
+      "action": "quarantine",
+      "reason": "Historical database snapshot backup"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\reqpilot.db.before_smartcampus_e2e.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\database_snapshots\\reqpilot.db.before_smartcampus_e2e.bak",
+      "action": "quarantine",
+      "reason": "Historical database snapshot backup"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\backend\\reqpilot_before_final_validation.db",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\database_snapshots\\reqpilot_before_final_validation.db",
+      "action": "quarantine",
+      "reason": "Historical database snapshot backup"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\frontend\\src\\components\\workspace\\EvaluationTab.tsx.before_truthful_evaluation.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\frontend\\components\\workspace\\EvaluationTab.tsx.before_truthful_evaluation.bak",
+      "action": "quarantine",
+      "reason": "Frontend component backup"
+    },
+    {
+      "src": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\frontend\\src\\components\\workspace\\TeamTab.tsx.final_verified.bak",
+      "dst": "c:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\archive\\backups_pre_remediation\\frontend\\components\\workspace\\TeamTab.tsx.final_verified.bak",
+      "action": "quarantine",
+      "reason": "Frontend component backup"
+    }
+  ]
+}

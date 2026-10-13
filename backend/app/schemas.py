@@ -1,0 +1,467 @@
+from typing import List, Optional, Dict, Any
+from datetime import datetime
+from pydantic import BaseModel, Field
+
+# ----------------- Auth Schemas -----------------
+class UserRegister(BaseModel):
+    email: str
+    full_name: str
+    password: str
+    role: Optional[str] = "analyst"
+
+class UserLogin(BaseModel):
+    email: str
+    password: str
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+    user: Dict[str, Any]
+
+class UserResponse(BaseModel):
+    id: str
+    email: str
+    full_name: str
+    role: str
+    created_at: datetime
+
+    class Config:
+        from_attributes = True
+
+# ----------------- Project Schemas -----------------
+class ProjectCreate(BaseModel):
+    title: str
+    description: Optional[str] = ""
+    domain: Optional[str] = "General Software"
+
+class ProjectUpdate(BaseModel):
+    title: Optional[str] = None
+    description: Optional[str] = None
+    domain: Optional[str] = None
+    status: Optional[str] = None
+
+class ProjectResponse(BaseModel):
+    id: str
+    title: str
+    description: str
+    domain: str
+    status: str
+    health_score: float
+    created_at: datetime
+    updated_at: datetime
+
+    class Config:
+        from_attributes = True
+
+class ProjectStatsResponse(BaseModel):
+    total_requirements: int
+    approved_requirements: int
+    needs_review_requirements: int
+    open_issues: int
+    conflict_count: int
+    ambiguity_count: int
+    total_tasks: int
+    completed_tasks: int
+    average_quality_score: float
+    health_score: float
+
+# ----------------- Document Schemas -----------------
+class DocumentChunkResponse(BaseModel):
+    id: str
+    chunk_index: int
+    section_title: str
+    page_number: int
+    content: str
+    token_count: int
+
+    class Config:
+        from_attributes = True
+
+class DocumentResponse(BaseModel):
+    id: str
+    filename: str
+    file_type: str
+    file_size: int
+    status: str
+    created_at: datetime
+    chunks: Optional[List[DocumentChunkResponse]] = []
+
+    class Config:
+        from_attributes = True
+
+# ----------------- Requirement Schemas -----------------
+class RequirementCreate(BaseModel):
+    summary: str
+    description: Optional[str] = ""
+    req_type: Optional[str] = "functional"
+    actor: Optional[str] = "User"
+    action: Optional[str] = ""
+    target_object: Optional[str] = ""
+    preconditions: Optional[str] = ""
+    expected_outcome: Optional[str] = ""
+    acceptance_criteria: Optional[List[str]] = []
+    priority: Optional[str] = "medium"
+
+class RequirementUpdate(BaseModel):
+    summary: Optional[str] = None
+    description: Optional[str] = None
+    req_type: Optional[str] = None
+    actor: Optional[str] = None
+    action: Optional[str] = None
+    target_object: Optional[str] = None
+    preconditions: Optional[str] = None
+    expected_outcome: Optional[str] = None
+    acceptance_criteria: Optional[List[str]] = None
+    priority: Optional[str] = None
+    status: Optional[str] = None
+    change_reason: Optional[str] = "Manual user update"
+
+class RequirementStatusUpdate(BaseModel):
+    status: str  # approved, rejected, needs_review
+    note: Optional[str] = ""
+
+class RequirementSplitRequest(BaseModel):
+    split_into: List[RequirementCreate]
+
+class RequirementMergeRequest(BaseModel):
+    source_requirement_ids: List[str]
+    merged_summary: str
+    merged_description: str
+
+class RequirementResponse(BaseModel):
+    id: str
+    project_id: str
+    req_type: str
+    summary: str
+    description: str
+    actor: str
+    action: str
+    target_object: str
+    preconditions: str
+    expected_outcome: str
+    acceptance_criteria: List[str]
+    priority: str
+    status: str
+    quality_score: float
+    quality_breakdown: Dict[str, Any]
+    confidence: float
+    is_ai_suggested: bool
+    version: int
+    source_id: str
+    source_page: int
+    source_excerpt: str
+    created_at: Optional[datetime] = None
+    updated_at: Optional[datetime] = None
+
+    class Config:
+        from_attributes = True
+
+# ----------------- Issue Schemas -----------------
+class IssueResolveRequest(BaseModel):
+    resolution_note: str
+    mark_status: Optional[str] = "resolved"
+
+class RequirementIssueResponse(BaseModel):
+    id: str
+    project_id: str
+    requirement_id: Optional[str]
+    conflict_with_id: Optional[str]
+    issue_type: str
+    title: str
+    description: str
+    detected_phrase: str
+    severity: str
+    confidence: float
+    status: str
+    resolution_note: Optional[str] = None
+    created_at: Optional[datetime] = None
+
+    class Config:
+        from_attributes = True
+
+# ----------------- Clarification Schemas -----------------
+class ClarificationAnswerRequest(BaseModel):
+    answer: str
+    update_requirement: Optional[bool] = True
+
+class ClarificationResponse(BaseModel):
+    id: str
+    project_id: str
+    requirement_id: Optional[str]
+    question: str
+    rationale: str
+    priority: str
+    suggested_options: List[str]
+    answer: str
+    answered_by: str
+    status: str
+    created_at: datetime
+    answered_at: Optional[datetime]
+
+    class Config:
+        from_attributes = True
+
+# ----------------- Architecture Schemas -----------------
+class ArchitectureModuleCreate(BaseModel):
+    id: Optional[str] = None
+    name: str
+    description: Optional[str] = ""
+    module_type: Optional[str] = "service"
+    tech_stack: Optional[str] = ""
+    responsibilities: Optional[List[str]] = []
+    api_endpoints: Optional[List[str]] = []
+    pos_x: Optional[float] = 100.0
+    pos_y: Optional[float] = 100.0
+
+class ArchitectureModuleUpdate(BaseModel):
+    name: Optional[str] = None
+    description: Optional[str] = None
+    module_type: Optional[str] = None
+    tech_stack: Optional[str] = None
+    responsibilities: Optional[List[str]] = None
+    api_endpoints: Optional[List[str]] = None
+    pos_x: Optional[float] = None
+    pos_y: Optional[float] = None
+    status: Optional[str] = None
+
+class ArchitectureRelationCreate(BaseModel):
+    source_module_id: str
+    target_module_id: str
+    relation_type: Optional[str] = "calls"
+    description: Optional[str] = ""
+
+class ArchitectureModuleResponse(BaseModel):
+    id: str
+    name: str
+    description: str
+    module_type: str
+    tech_stack: str
+    responsibilities: List[str]
+    api_endpoints: List[str]
+    pos_x: float
+    pos_y: float
+    is_ai_suggested: bool
+    status: str
+
+    class Config:
+        from_attributes = True
+
+class ArchitectureRelationResponse(BaseModel):
+    id: str
+    source_module_id: str
+    target_module_id: str
+    relation_type: str
+    description: str
+
+    class Config:
+        from_attributes = True
+
+class ArchitectureResponse(BaseModel):
+    modules: List[ArchitectureModuleResponse]
+    relations: List[ArchitectureRelationResponse]
+
+# ----------------- Planning Schemas -----------------
+class TaskCreate(BaseModel):
+    title: str
+    description: Optional[str] = ""
+    epic_id: Optional[str] = None
+    feature_id: Optional[str] = None
+    requirement_id: Optional[str] = None
+    module_id: Optional[str] = None
+    complexity: Optional[str] = "medium"
+    estimated_hours: Optional[float] = 8.0
+    story_points: Optional[int] = 3
+    priority: Optional[str] = "medium"
+    assignee_name: Optional[str] = "Unassigned"
+    sprint_name: Optional[str] = "Sprint 1"
+    subtasks: Optional[List[str]] = []
+    acceptance_criteria: Optional[List[str]] = []
+    depends_on: Optional[List[str]] = []
+
+class TaskUpdate(BaseModel):
+    title: Optional[str] = None
+    description: Optional[str] = None
+    status: Optional[str] = None
+    assignee_name: Optional[str] = None
+    sprint_name: Optional[str] = None
+    estimated_hours: Optional[float] = None
+    story_points: Optional[int] = None
+    priority: Optional[str] = None
+
+class TaskResponse(BaseModel):
+    id: str
+    project_id: str
+    epic_id: Optional[str]
+    feature_id: Optional[str]
+    requirement_id: Optional[str]
+    module_id: Optional[str]
+    title: str
+    description: str
+    complexity: str
+    estimated_hours: float
+    story_points: int
+    priority: str
+    status: str
+    assignee_name: str
+    sprint_name: str
+    subtasks: List[str]
+    acceptance_criteria: List[str]
+    depends_on: Optional[List[str]] = []
+    created_at: Optional[datetime] = None
+    updated_at: Optional[datetime] = None
+
+    class Config:
+        from_attributes = True
+
+class EpicResponse(BaseModel):
+    id: str
+    title: str
+    description: str
+    status: str
+    tasks: Optional[List[TaskResponse]] = []
+
+    class Config:
+        from_attributes = True
+
+class SprintResponse(BaseModel):
+    id: str
+    name: str
+    goal: str
+    start_date: str
+    end_date: str
+    capacity_points: int
+    status: str
+
+    class Config:
+        from_attributes = True
+
+# ----------------- Team & Skills Schemas -----------------
+class TeamMemberCreate(BaseModel):
+    name: str
+    email: Optional[str] = ""
+    role: Optional[str] = "Full Stack Developer"
+    capacity_hours_per_week: Optional[float] = 40.0
+    skills: Optional[Dict[str, int]] = {}
+
+class TeamMemberResponse(BaseModel):
+    id: str
+    name: str
+    email: str
+    role: str
+    capacity_hours_per_week: float
+    current_load_pct: float
+    skills: Dict[str, int]
+
+    class Config:
+        from_attributes = True
+
+# ----------------- Traceability Schemas -----------------
+class TraceabilityMatrixRow(BaseModel):
+    source_id: str
+    source_page: int
+    requirement_id: str
+    requirement_summary: str
+    req_type: str
+    status: str
+    module_id: Optional[str]
+    module_name: Optional[str]
+    task_ids: List[str]
+    test_ids: List[str]
+    is_orphan: bool
+
+class TraceabilityResponse(BaseModel):
+    matrix: List[TraceabilityMatrixRow]
+    total_requirements: int
+    fully_linked_count: int
+    orphan_count: int
+    coverage_pct: float
+
+# ----------------- Change Impact Schemas -----------------
+class ChangeRequestCreate(BaseModel):
+    requirement_id: str
+    title: str
+    description: str
+    proposed_summary: str
+    proposed_description: str
+
+class ImpactItemResponse(BaseModel):
+    id: str
+    artifact_type: str
+    artifact_id: str
+    artifact_name: str
+    impact_description: str
+    severity: str
+
+    class Config:
+        from_attributes = True
+
+class ChangeRequestResponse(BaseModel):
+    id: str
+    project_id: str
+    requirement_id: str
+    title: str
+    description: str
+    proposed_summary: str
+    proposed_description: str
+    risk_level: str
+    schedule_impact: str
+    status: str
+    created_at: datetime
+    impact_items: List[ImpactItemResponse] = []
+
+    class Config:
+        from_attributes = True
+
+# ----------------- Workflow Schemas -----------------
+class AnalyzeRequest(BaseModel):
+    use_llm: Optional[bool] = False
+    api_key: Optional[str] = None
+    provider: Optional[str] = "gemini"  # gemini, openai, groq, offline
+    model: Optional[str] = None
+
+class WorkflowStatusResponse(BaseModel):
+    id: str
+    project_id: str
+    status: str
+    current_step: str
+    current_step_index: int
+    total_steps: int
+    progress_pct: float
+    log_messages: List[str]
+
+# ----------------- Report Schemas -----------------
+class ReportResponse(BaseModel):
+    id: str
+    project_id: str
+    report_type: str
+    title: str
+    content_markdown: str
+    created_at: datetime
+
+    class Config:
+        from_attributes = True
+
+# ----------------- Evaluation Schemas -----------------
+class EvaluationMetric(BaseModel):
+    precision: float
+    recall: float
+    f1_score: float
+    accuracy: float
+    total_samples: int
+
+class BaselineComparison(BaseModel):
+    system_name: str
+    extraction_f1: float
+    conflict_f1: float
+    ambiguity_f1: float
+    hallucination_rate_pct: float
+    avg_latency_seconds: float
+
+class EvaluationResultResponse(BaseModel):
+    requirement_extraction: EvaluationMetric
+    ambiguity_detection: EvaluationMetric
+    conflict_detection: EvaluationMetric
+    duplicate_detection: EvaluationMetric
+    traceability_coverage_pct: float
+    baseline_comparisons: List[BaselineComparison]
+    tested_at: datetime

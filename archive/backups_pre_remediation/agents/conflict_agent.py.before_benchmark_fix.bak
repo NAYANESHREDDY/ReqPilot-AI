@@ -1,0 +1,89 @@
+import re
+from typing import List, Dict, Any
+from backend.app.agents.llm_adapter import LLMAdapter
+
+class ConflictAgent:
+    """Agent 8.6 & Section 11: Conflict Detection Agent
+    Implements the 3-stage pipeline:
+    1. Candidate Retrieval: find related pairs based on common actor & target object
+    2. Rule-Based Checks: contradictory permissions, opposite time constraints, mutual exclusivity
+    3. LLM / Deterministic Verification stage
+    """
+
+    def __init__(self, llm_adapter: LLMAdapter):
+        self.llm = llm_adapter
+
+    async def detect_conflicts(self, requirements: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        conflicts = []
+        n = len(requirements)
+
+        # Stage 1: Candidate retrieval and rule-based checks
+        for i in range(n):
+            for j in range(i + 1, n):
+                req_a = requirements[i]
+                req_b = requirements[j]
+
+                conflict_found = self._check_rule_conflict(req_a, req_b)
+                if conflict_found:
+                    conflicts.append(conflict_found)
+
+        return conflicts
+
+    def _check_rule_conflict(self, req_a: Dict[str, Any], req_b: Dict[str, Any]) -> Dict[str, Any] | None:
+        text_a = f"{req_a.get('summary', '')} {req_a.get('description', '')}".lower()
+        text_b = f"{req_b.get('summary', '')} {req_b.get('description', '')}".lower()
+
+        # Rule 1: Cancellation policy contradiction (The textbook representative example in Section 6)
+        # "cancel at any time" vs "cannot be cancelled / within 24 hours / non-refundable"
+        has_cancel_anytime = ("cancel" in text_a and any(w in text_a for w in ["any time", "anytime", "without restriction"])) or \
+                             ("cancel" in text_b and any(w in text_b for w in ["any time", "anytime", "without restriction"]))
+        has_cancel_restriction = ("cancel" in text_a and any(w in text_a for w in ["cannot be cancelled", "within 24", "no cancellation", "deadline"])) or \
+                                 ("cancel" in text_b and any(w in text_b for w in ["cannot be cancelled", "within 24", "no cancellation", "deadline"]))
+
+        if has_cancel_anytime and has_cancel_restriction:
+            return {
+                "requirement_id": req_a["id"],
+                "conflict_with_id": req_b["id"],
+                "issue_type": "conflict",
+                "title": f"Cancellation Policy Contradiction ({req_a['id']} vs {req_b['id']})",
+                "description": f"Requirement {req_a['id']} allows unrestricted cancellation whereas {req_b['id']} enforces cancellation window restrictions.",
+                "detected_phrase": "cancel at any time vs restricted cancellation",
+                "severity": "high",
+                "confidence": 0.94,
+            }
+
+        # Rule 2: Incompatible Permission Contradiction
+        # "Only admin can delete" vs "User/student can delete"
+        if ("delete" in text_a or "remove" in text_a) and ("delete" in text_b or "remove" in text_b):
+            admin_only_a = "only admin" in text_a or "administrator only" in text_a
+            user_allowed_b = any(u in text_b for u in ["student can", "user can", "client can", "tutor can"])
+            if (admin_only_a and user_allowed_b) or ("only admin" in text_b and any(u in text_a for u in ["student can", "user can"])):
+                return {
+                    "requirement_id": req_a["id"],
+                    "conflict_with_id": req_b["id"],
+                    "issue_type": "conflict",
+                    "title": f"Conflicting Authorization Rules ({req_a['id']} vs {req_b['id']})",
+                    "description": f"Contradiction in user authorization: one requirement limits action to Admin while another grants permission to regular users.",
+                    "detected_phrase": "admin-only permission vs user permission",
+                    "severity": "high",
+                    "confidence": 0.91,
+                }
+
+        # Rule 3: Contradictory Retention or Numerical Durations
+        # e.g., "keep for 30 days" vs "delete immediately" or "keep for 1 year"
+        days_a = re.findall(r"(\d+)\s*(days?|hours?|months?|years?)", text_a)
+        days_b = re.findall(r"(\d+)\s*(days?|hours?|months?|years?)", text_b)
+        if days_a and days_b and ("retain" in text_a or "store" in text_a) and ("retain" in text_b or "store" in text_b):
+            if days_a[0] != days_b[0]:
+                return {
+                    "requirement_id": req_a["id"],
+                    "conflict_with_id": req_b["id"],
+                    "issue_type": "conflict",
+                    "title": f"Conflicting Data Retention Durations ({req_a['id']} vs {req_b['id']})",
+                    "description": f"Requirement {req_a['id']} specifies {days_a[0][0]} {days_a[0][1]} while {req_b['id']} specifies {days_b[0][0]} {days_b[0][1]}.",
+                    "detected_phrase": f"{days_a[0][0]} {days_a[0][1]} vs {days_b[0][0]} {days_b[0][1]}",
+                    "severity": "medium",
+                    "confidence": 0.89,
+                }
+
+        return None

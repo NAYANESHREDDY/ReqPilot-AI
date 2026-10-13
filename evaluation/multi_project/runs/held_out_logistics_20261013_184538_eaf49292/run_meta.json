@@ -1,0 +1,23 @@
+{
+  "run_id": "eaf49292-9eca-45f9-9d1a-9057df438c79",
+  "domain_key": "held_out_logistics",
+  "project_title": "Warehouse Logistics & Fleet Dispatch System",
+  "timestamp": "2026-10-13T18:46:10.253434",
+  "duration_seconds": 31.77,
+  "llm_enabled": true,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "counts": {
+    "chunks": 7,
+    "requirements": 21,
+    "modules": 8,
+    "relations": 22,
+    "tasks": 21
+  },
+  "classification_stats": {
+    "llm_classified": 21,
+    "fallback_classified": 0,
+    "domain_rotations": 1,
+    "domain_api_successes": 6
+  }
+}

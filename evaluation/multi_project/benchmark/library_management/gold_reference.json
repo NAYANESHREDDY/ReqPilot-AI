@@ -1,0 +1,184 @@
+{
+  "project_name": "Library Management System",
+  "domain": "Education / Library Information Science",
+  "version": "1.0.0",
+  "date_frozen": "2026-10-12",
+  "source_document": "specification.docx",
+  "source_document_text": "specification.txt",
+  "total_requirements_evaluated": 24,
+  "expected_module_assignments": {
+    "FR-001": "AUTHENTICATION",
+    "FR-002": "SEARCH",
+    "FR-003": "DATA",
+    "FR-004": "BOOKING",
+    "FR-005": "DATA",
+    "FR-006": "BOOKING",
+    "FR-007": "PAYMENT",
+    "FR-008": "NOTIFICATION",
+    "FR-009": "BOOKING",
+    "FR-010": "AUTHENTICATION",
+    "FR-011": "BOOKING",
+    "FR-012": "DATA",
+    "FR-013": "PAYMENT",
+    "FR-014": "PAYMENT",
+    "FR-015": "BOOKING",
+    "FR-016": "DATA",
+    "FR-017": "DATA",
+    "FR-018": "REPORTING",
+    "FR-019": "DATA",
+    "NFR-001": "AUTHENTICATION",
+    "NFR-002": "AUTHENTICATION",
+    "FR-020": "BOOKING",
+    "FR-021": "REPORTING",
+    "NFR-003": "DATA"
+  },
+  "requirement_details": {
+    "FR-001": {
+      "statement": "Patrons should be able to register for a library membership card and log in securely.",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "functional"
+    },
+    "FR-002": {
+      "statement": "Patrons should be able to search the Online Public Access Catalog (OPAC) by title, author, ISBN, subject, and keyword.",
+      "canonical": "SEARCH",
+      "display": "Search & Discovery",
+      "type": "functional"
+    },
+    "FR-003": {
+      "statement": "Patrons should be able to view real-time catalog availability, shelf location, and call numbers.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional"
+    },
+    "FR-004": {
+      "statement": "Patrons should be able to reserve or place a hold on currently checked-out or in-transit books.",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional"
+    },
+    "FR-005": {
+      "statement": "Patrons should be able to view their active borrowed items, due dates, renewal counts, and reading history.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional"
+    },
+    "FR-006": {
+      "statement": "Patrons should be able to renew eligible borrowed books online before the scheduled due date.",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional"
+    },
+    "FR-007": {
+      "statement": "Patrons should be able to view outstanding late return fines and make electronic fee payments.",
+      "canonical": "PAYMENT",
+      "display": "Payment Management",
+      "type": "functional"
+    },
+    "FR-008": {
+      "statement": "Patrons should receive automated notification alerts for upcoming due dates, available hold arrivals, and overdue notices.",
+      "canonical": "NOTIFICATION",
+      "display": "Notification Service",
+      "type": "functional"
+    },
+    "FR-009": {
+      "statement": "Patrons should be able to submit purchase recommendations or inter-library loan requests for missing titles.",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional"
+    },
+    "FR-010": {
+      "statement": "Circulation staff should be able to verify patron membership status, active hold privileges, and fine balances.",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "functional"
+    },
+    "FR-011": {
+      "statement": "Circulation staff should be able to check out physical materials by scanning patron cards and book barcodes.",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional"
+    },
+    "FR-012": {
+      "statement": "Circulation staff should be able to process returned items, inspect material condition, and return items to inventory.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional"
+    },
+    "FR-013": {
+      "statement": "The system should automatically calculate late fees for overdue returned items based on membership policy rules.",
+      "canonical": "PAYMENT",
+      "display": "Payment Management",
+      "type": "functional"
+    },
+    "FR-014": {
+      "statement": "Circulation staff should be able to collect in-person fine payments and print receipt slips.",
+      "canonical": "PAYMENT",
+      "display": "Payment Management",
+      "type": "functional"
+    },
+    "FR-015": {
+      "statement": "Circulation staff should be able to manage physical reservations and notify patrons when reserved books are staged on hold shelves.",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional"
+    },
+    "FR-016": {
+      "statement": "Catalogers should be able to add new bibliographic records, assign Dewey Decimal / Library of Congress classifications, and print barcode labels.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional"
+    },
+    "FR-017": {
+      "statement": "Catalogers should be able to manage inventory copies, track lost or damaged materials, and decommission obsolete items.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional"
+    },
+    "FR-018": {
+      "statement": "The system should track circulation frequency and generate collection utilization reports.",
+      "canonical": "REPORTING",
+      "display": "Reporting & Analytics",
+      "type": "functional"
+    },
+    "FR-019": {
+      "statement": "Catalogers should be able to conduct periodic physical inventory audits using barcode scanners.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional"
+    },
+    "NFR-001": {
+      "statement": "The system should provide secure role-based access control separating patrons, circulation staff, catalogers, and administrators.",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "non_functional"
+    },
+    "NFR-002": {
+      "statement": "Patrons must only access their own borrowing history, reservation queues, and personal information.",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "non_functional"
+    },
+    "FR-020": {
+      "statement": "Administrators should be able to configure loan durations, maximum borrowing limits, renewal rules, and fine rate schedules.",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional"
+    },
+    "FR-021": {
+      "statement": "Administrators should be able to generate operational reports on patron membership, circulation velocity, and fine collections.",
+      "canonical": "REPORTING",
+      "display": "Reporting & Analytics",
+      "type": "functional"
+    },
+    "NFR-003": {
+      "statement": "All configuration updates and administrative overrides must be preserved in a system audit log.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "non_functional"
+    }
+  },
+  "structural_expectations": {
+    "expected_requirements_count": 24
+  }
+}

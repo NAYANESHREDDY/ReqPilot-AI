@@ -1,0 +1,149 @@
+{
+  "run_id": "ff5985ce-ce4c-4f6a-9134-55a27a68a413",
+  "domain_key": "held_out_logistics",
+  "project_title": "Warehouse Logistics & Fleet Dispatch System",
+  "timestamp": "2026-10-13T18:47:09.125180",
+  "llm_enabled": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": false,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "matching_summary": {
+    "predicted_requirements_count": 21,
+    "reference_requirements_count": 20,
+    "uniquely_matched_count": 20,
+    "unmatched_predictions_count": 1,
+    "ambiguous_predictions_count": 0,
+    "duplicate_gold_matches_count": 0,
+    "unmatched_reference_count": 0
+  },
+  "classification_evaluation": {
+    "valid_matched_denominator": 20,
+    "correct_classifications": 14,
+    "accuracy": 0.7,
+    "penalized_end_to_end_accuracy": 0.6667,
+    "macro_precision": 0.5714,
+    "macro_recall": 0.5,
+    "macro_f1": 0.5238,
+    "per_class_metrics": {
+      "AUTHENTICATION": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "BOOKING": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "DATA": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667
+      },
+      "DOCK & ROUTE SCHEDULING": {
+        "tp": 0,
+        "fp": 4,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "INVENTORY & TELEMETRY": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "NOTIFICATION": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "REPORTING": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "errors_sample": [
+      {
+        "pred_id": "FR-001",
+        "gold_id": "FR-005",
+        "summary": "Freight carriers book dock appointments and reserve arrival slots",
+        "expected": "BOOKING",
+        "predicted": "DOCK & ROUTE SCHEDULING"
+      },
+      {
+        "pred_id": "FR-002",
+        "gold_id": "FR-006",
+        "summary": "Warehouse supervisors schedule outbound routes and allocate trucks",
+        "expected": "BOOKING",
+        "predicted": "DOCK & ROUTE SCHEDULING"
+      },
+      {
+        "pred_id": "FR-003",
+        "gold_id": "FR-007",
+        "summary": "The system should prevent a loading bay marked unavailable for...",
+        "expected": "BOOKING",
+        "predicted": "DOCK & ROUTE SCHEDULING"
+      },
+      {
+        "pred_id": "FR-004",
+        "gold_id": "FR-008",
+        "summary": "Dock appointments should automatically expire if the transport vehicle fails...",
+        "expected": "BOOKING",
+        "predicted": "DOCK & ROUTE SCHEDULING"
+      },
+      {
+        "pred_id": "FR-009",
+        "gold_id": "FR-013",
+        "summary": "The system should maintain persistent inventory records of pallet barcode,...",
+        "expected": "DATA",
+        "predicted": "INVENTORY & TELEMETRY"
+      },
+      {
+        "pred_id": "FR-010",
+        "gold_id": "FR-015",
+        "summary": "The system should record forklift equipment telematics, battery charging cycles,...",
+        "expected": "DATA",
+        "predicted": "INVENTORY & TELEMETRY"
+      }
+    ],
+    "total_errors": 6
+  },
+  "structural_integrity": {
+    "total_requirements": 21,
+    "requirements_with_tasks": 21,
+    "requirements_without_tasks": 0,
+    "task_coverage_pct": 100.0,
+    "total_modules": 7,
+    "total_relations": 15,
+    "total_tasks": 21,
+    "total_test_cases": 21,
+    "untested_requirements_count": 0,
+    "traceability_matrix_rows": 21
+  },
+  "unsupported_metrics_declared": [
+    "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+    "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+    "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+  ]
+}

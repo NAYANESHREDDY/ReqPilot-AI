@@ -1,0 +1,39 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Frontend dependencies and builds
+node_modules/
+dist/
+.vite/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Local databases — review before committing
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary report-generation tests
+audit_test.docx
+audit_test.pdf
+audit_test.txt
+test_table_props.py
+test_tbl_repeat.docx

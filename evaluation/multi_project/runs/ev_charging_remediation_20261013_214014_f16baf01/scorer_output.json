@@ -1,0 +1,188 @@
+{
+  "run_id": "f16baf01-6bfb-41f2-bedf-f748bd3132f7",
+  "domain_key": "ev_charging",
+  "project_title": "EV Charging Network Management System",
+  "timestamp": "2026-10-13T21:41:05.763836",
+  "llm_enabled": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": false,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "matching_summary": {
+    "predicted_requirements_count": 58,
+    "reference_requirements_count": 58,
+    "uniquely_matched_count": 58,
+    "unmatched_predictions_count": 0,
+    "ambiguous_predictions_count": 0,
+    "duplicate_gold_matches_count": 0,
+    "unmatched_reference_count": 0
+  },
+  "classification_evaluation": {
+    "valid_matched_denominator": 58,
+    "correct_classifications": 51,
+    "accuracy": 0.8793,
+    "penalized_end_to_end_accuracy": 0.8793,
+    "macro_precision": 0.8175,
+    "macro_recall": 0.8011,
+    "macro_f1": 0.8057,
+    "per_class_metrics": {
+      "AUTHENTICATION": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 0.75
+      },
+      "BOOKING": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.8889,
+        "f1": 0.9412
+      },
+      "CHARGING-SESSION": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "CHARGING-STATION": {
+        "tp": 10,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.9091,
+        "recall": 0.9091,
+        "f1": 0.9091
+      },
+      "DATA": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.8333,
+        "recall": 0.7143,
+        "f1": 0.7692
+      },
+      "FILE": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "GATEWAY": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "MAINTENANCE": {
+        "tp": 4,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.6667,
+        "recall": 0.8,
+        "f1": 0.7273
+      },
+      "NOTIFICATION": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "PAYMENT": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571
+      },
+      "REPORTING": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8333,
+        "recall": 1.0,
+        "f1": 0.9091
+      }
+    },
+    "errors_sample": [
+      {
+        "pred_id": "FR-016",
+        "gold_id": "FR-014",
+        "summary": "Station operators should be able to view station utilization and...",
+        "expected": "CHARGING-STATION",
+        "predicted": "REPORTING"
+      },
+      {
+        "pred_id": "FR-021",
+        "gold_id": "FR-019",
+        "summary": "Maintenance records should remain available for audit purposes.",
+        "expected": "DATA",
+        "predicted": "MAINTENANCE"
+      },
+      {
+        "pred_id": "FR-022",
+        "gold_id": "FR-020",
+        "summary": "Administrator Requirements Administrators should manage drivers, operators, maintenance staff, stations,...",
+        "expected": "MAINTENANCE",
+        "predicted": "DATA"
+      },
+      {
+        "pred_id": "FR-024",
+        "gold_id": "FR-022",
+        "summary": "Administrators should be able to suspend accounts that violate system...",
+        "expected": "DATA",
+        "predicted": "AUTHENTICATION"
+      },
+      {
+        "pred_id": "FR-028",
+        "gold_id": "FR-026",
+        "summary": "Maintenance staff should only access maintenance requests assigned to them...",
+        "expected": "AUTHENTICATION",
+        "predicted": "MAINTENANCE"
+      },
+      {
+        "pred_id": "FR-031",
+        "gold_id": "FR-029",
+        "summary": "A charger should become unavailable for new reservations when a...",
+        "expected": "BOOKING",
+        "predicted": "CHARGING-STATION"
+      },
+      {
+        "pred_id": "FR-039",
+        "gold_id": "FR-037",
+        "summary": "The system should generate an invoice for each completed paid...",
+        "expected": "PAYMENT",
+        "predicted": "FILE"
+      }
+    ],
+    "total_errors": 7
+  },
+  "structural_integrity": {
+    "total_requirements": 58,
+    "requirements_with_tasks": 58,
+    "requirements_without_tasks": 0,
+    "task_coverage_pct": 100.0,
+    "total_modules": 11,
+    "total_relations": 21,
+    "total_tasks": 58,
+    "total_test_cases": 58,
+    "untested_requirements_count": 0,
+    "traceability_matrix_rows": 58
+  },
+  "unsupported_metrics_declared": [
+    "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+    "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+    "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+  ]
+}

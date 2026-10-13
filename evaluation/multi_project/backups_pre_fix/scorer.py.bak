@@ -1,0 +1,190 @@
+# ReqPilot Multi-Project Ground-Truth Scorer
+# Evaluates saved immutable runs against frozen gold references.
+
+import json
+from pathlib import Path
+from collections import Counter
+
+CANONICAL_MODULE_MAP = {
+    'AUTHENTICATION': ['Authentication & Authorization', 'Authentication', 'Security & Access Control'],
+    'CHARGING-STATION': ['Charging Station Management', 'Charging Station'],
+    'BOOKING': ['Booking & Scheduling', 'Booking', 'Reservation'],
+    'CHARGING-SESSION': ['Charging Session Management', 'Charging Session'],
+    'NOTIFICATION': ['Notification Service', 'Notifications & Communication', 'Notifications'],
+    'MAINTENANCE': ['Maintenance Management', 'Maintenance'],
+    'DATA': ['Application Data Store', 'Data Management', 'Core Storage'],
+    'REPORTING': ['Reporting & Analytics', 'Reports', 'Analytics'],
+    'PAYMENT': ['Payment Management', 'Billing and Payment', 'Payments'],
+    'GATEWAY': ['API Gateway', 'System Gateway'],
+    'SEARCH': ['Search & Discovery', 'Search'],
+    'PROFILE': ['Profile Management', 'User Profile'],
+    'FILE': ['File & Document Management', 'Document Management'],
+    'DEPARTMENT': ['Department']
+}
+
+def canonicalize(module_name):
+    if not module_name:
+        return 'UNASSIGNED'
+    name_clean = module_name.strip().upper()
+    for canon, variants in CANONICAL_MODULE_MAP.items():
+        if name_clean == canon:
+            return canon
+        for v in variants:
+            if name_clean == v.upper() or v.upper() in name_clean:
+                return canon
+    return name_clean
+
+def score_run(run_dir_path, gold_ref_path):
+    run_meta = json.loads((run_dir_path / 'run_meta.json').read_text(encoding='utf-8'))
+    pipeline_out = json.loads((run_dir_path / 'pipeline_output.json').read_text(encoding='utf-8'))
+    gold_ref = json.loads(gold_ref_path.read_text(encoding='utf-8'))
+    
+    reqs = pipeline_out.get('requirements', [])
+    tasks = pipeline_out.get('tasks', [])
+    modules = pipeline_out.get('modules', [])
+    relations = pipeline_out.get('relations', [])
+    tests = pipeline_out.get('test_cases', [])
+    trace = pipeline_out.get('traceability', {})
+    trace_matrix = trace.get('matrix', []) if isinstance(trace, dict) else []
+    
+    # Map requirements to task modules
+    # In ReqPilot, tasks link requirement_id to module_id
+    mod_id_to_name = {m['id']: m['name'] for m in modules}
+    req_to_pred_module = {}
+    for t in tasks:
+        rid = t.get('requirement_id')
+        mid = t.get('module_id')
+        if rid and mid in mod_id_to_name:
+            req_to_pred_module[rid] = canonicalize(mod_id_to_name[mid])
+            
+    expected_modules = gold_ref.get('expected_module_assignments', {})
+    
+    # Evaluation of module classification
+    tp = Counter()
+    fp = Counter()
+    fn = Counter()
+    all_classes = set()
+    
+    total_evaluated = 0
+    correct = 0
+    errors = []
+    
+    # Align by short requirement ID or normalized index
+    for i, req in enumerate(reqs, 1):
+        rid = req.get('id', '')
+        short_id = rid.split('-')[-2] + '-' + rid.split('-')[-1] if '-' in rid and len(rid.split('-')) > 2 else rid
+        
+        # Look up in expected
+        exp_mod = expected_modules.get(short_id) or expected_modules.get(f'FR-{i:03d}')
+        if not exp_mod and i <= len(expected_modules):
+            exp_mod = list(expected_modules.values())[i-1]
+            
+        if not exp_mod:
+            continue
+            
+        exp_canon = canonicalize(exp_mod)
+        pred_canon = req_to_pred_module.get(rid, 'UNASSIGNED')
+        
+        total_evaluated += 1
+        all_classes.add(exp_canon)
+        all_classes.add(pred_canon)
+        
+        if pred_canon == exp_canon:
+            correct += 1
+            tp[exp_canon] += 1
+        else:
+            fp[pred_canon] += 1
+            fn[exp_canon] += 1
+            errors.append({
+                'requirement_id': rid,
+                'summary': req.get('summary', ''),
+                'expected': exp_canon,
+                'predicted': pred_canon
+            })
+            
+    accuracy = (correct / total_evaluated) if total_evaluated > 0 else 0.0
+    
+    # Per-class metrics
+    class_metrics = {}
+    precisions = []
+    recalls = []
+    f1s = []
+    
+    for cls in sorted(all_classes):
+        if cls == 'UNASSIGNED':
+            continue
+        c_tp = tp[cls]
+        c_fp = fp[cls]
+        c_fn = fn[cls]
+        
+        c_prec = c_tp / (c_tp + c_fp) if (c_tp + c_fp) > 0 else 0.0
+        c_rec = c_tp / (c_tp + c_fn) if (c_tp + c_fn) > 0 else 0.0
+        c_f1 = (2 * c_prec * c_rec) / (c_prec + c_rec) if (c_prec + c_rec) > 0 else 0.0
+        
+        class_metrics[cls] = {
+            'tp': c_tp, 'fp': c_fp, 'fn': c_fn,
+            'precision': round(c_prec, 4),
+            'recall': round(c_rec, 4),
+            'f1': round(c_f1, 4)
+        }
+        precisions.append(c_prec)
+        recalls.append(c_rec)
+        f1s.append(c_f1)
+        
+    macro_precision = sum(precisions) / len(precisions) if precisions else 0.0
+    macro_recall = sum(recalls) / len(recalls) if recalls else 0.0
+    macro_f1 = sum(f1s) / len(f1s) if f1s else 0.0
+    
+    # Structural Integrity Checks
+    req_ids = {r['id'] for r in reqs}
+    task_req_ids = {t.get('requirement_id') for t in tasks if t.get('requirement_id')}
+    uncovered_reqs = req_ids - task_req_ids
+    
+    test_req_ids = {t.get('requirement_id') for t in tests if t.get('requirement_id')}
+    untested_reqs = req_ids - test_req_ids
+    
+    structural_integrity = {
+        'total_requirements': len(reqs),
+        'requirements_with_tasks': len(task_req_ids),
+        'requirements_without_tasks': len(uncovered_reqs),
+        'task_coverage_pct': round((len(task_req_ids) / len(reqs) * 100) if reqs else 0, 2),
+        'total_modules': len(modules),
+        'total_relations': len(relations),
+        'total_tasks': len(tasks),
+        'total_test_cases': len(tests),
+        'untested_requirements_count': len(untested_reqs),
+        'traceability_matrix_rows': len(trace_matrix)
+    }
+    
+    report = {
+        'run_id': run_meta['run_id'],
+        'domain_key': run_meta['domain_key'],
+        'project_title': run_meta['project_title'],
+        'timestamp': run_meta['timestamp'],
+        'llm_enabled': run_meta['llm_enabled'],
+        'llm_extraction_succeeded': run_meta['llm_extraction_succeeded'],
+        'fallback_used': run_meta['fallback_used'],
+        'provider': run_meta['provider'],
+        'model': run_meta['model'],
+        'classification_evaluation': {
+            'total_evaluated': total_evaluated,
+            'correct_classifications': correct,
+            'accuracy': round(accuracy, 4),
+            'macro_precision': round(macro_precision, 4),
+            'macro_recall': round(macro_recall, 4),
+            'macro_f1': round(macro_f1, 4),
+            'per_class_metrics': class_metrics,
+            'errors_sample': errors[:10],
+            'total_errors': len(errors)
+        },
+        'structural_integrity': structural_integrity,
+        'unsupported_metrics_declared': [
+            'semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)',
+            'code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)',
+            'dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)'
+        ]
+    }
+    return report
+
+if __name__ == '__main__':
+    print('Scorer module verified.')

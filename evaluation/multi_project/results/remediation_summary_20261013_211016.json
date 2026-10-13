@@ -1,0 +1,198 @@
+{
+  "timestamp": "20261013_211016",
+  "domains": {
+    "ecommerce_platform": {
+      "run_id": "10f3c0bf-64e3-44eb-acda-0cf154e44001",
+      "domain_key": "ecommerce_platform",
+      "project_title": "E-Commerce Platform",
+      "timestamp": "2026-10-13T21:10:54.256985",
+      "llm_enabled": true,
+      "llm_extraction_succeeded": true,
+      "fallback_used": false,
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "matching_summary": {
+        "predicted_requirements_count": 37,
+        "reference_requirements_count": 36,
+        "uniquely_matched_count": 36,
+        "unmatched_predictions_count": 1,
+        "ambiguous_predictions_count": 0,
+        "duplicate_gold_matches_count": 0,
+        "unmatched_reference_count": 0
+      },
+      "classification_evaluation": {
+        "valid_matched_denominator": 36,
+        "correct_classifications": 16,
+        "accuracy": 0.4444,
+        "penalized_end_to_end_accuracy": 0.4324,
+        "macro_precision": 0.254,
+        "macro_recall": 0.3333,
+        "macro_f1": 0.2716,
+        "per_class_metrics": {
+          "AUTHENTICATION": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "BOOKING": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 5,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "DATA": {
+            "tp": 8,
+            "fp": 20,
+            "fn": 0,
+            "precision": 0.2857,
+            "recall": 1.0,
+            "f1": 0.4444
+          },
+          "FILE": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "NOTIFICATION": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "PAYMENT": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 5,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "PROFILE": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "REPORTING": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "SEARCH": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "errors_sample": [
+          {
+            "pred_id": "FR-003",
+            "gold_id": "FR-002",
+            "summary": "Customer product search and filter",
+            "expected": "SEARCH",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-005",
+            "gold_id": "FR-004",
+            "summary": "Customer add to cart and modify quantities",
+            "expected": "BOOKING",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-007",
+            "gold_id": "FR-006",
+            "summary": "Customer multi-step checkout process",
+            "expected": "BOOKING",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-008",
+            "gold_id": "FR-007",
+            "summary": "Customer secure payment options",
+            "expected": "PAYMENT",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-009",
+            "gold_id": "FR-008",
+            "summary": "Customer order confirmation notifications",
+            "expected": "NOTIFICATION",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-011",
+            "gold_id": "FR-010",
+            "summary": "Customer order cancellation or return request",
+            "expected": "BOOKING",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-016",
+            "gold_id": "FR-015",
+            "summary": "Vendor order notification",
+            "expected": "NOTIFICATION",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-017",
+            "gold_id": "FR-016",
+            "summary": "Vendors should be able to view pending orders and acknowledge...",
+            "expected": "BOOKING",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-018",
+            "gold_id": "FR-017",
+            "summary": "Vendors should be able to view sales analytics, revenue breakdowns,...",
+            "expected": "REPORTING",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-021",
+            "gold_id": "FR-020",
+            "summary": "The system should release reserved stock if payment is not...",
+            "expected": "PAYMENT",
+            "predicted": "DATA"
+          }
+        ],
+        "total_errors": 20
+      },
+      "structural_integrity": {
+        "total_requirements": 37,
+        "requirements_with_tasks": 37,
+        "requirements_without_tasks": 0,
+        "task_coverage_pct": 100.0,
+        "total_modules": 4,
+        "total_relations": 4,
+        "total_tasks": 37,
+        "total_test_cases": 37,
+        "untested_requirements_count": 0,
+        "traceability_matrix_rows": 37
+      },
+      "unsupported_metrics_declared": [
+        "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+        "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+        "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+      ]
+    }
+  }
+}

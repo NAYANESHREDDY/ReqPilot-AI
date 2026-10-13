@@ -1,0 +1,29 @@
+{
+  "run_id": "d1f0a831-7ead-43bd-8803-c213b54d3539",
+  "domain_key": "library_management",
+  "project_title": "Library Management System",
+  "timestamp": "2026-10-13T21:25:46.432825",
+  "duration_seconds": 35.61,
+  "llm_enabled": true,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "llm_attempted": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": false,
+  "input_file": "evaluation/multi_project/benchmark/library_management/specification.docx",
+  "counts": {
+    "chunks": 1,
+    "requirements": 25,
+    "modules": 10,
+    "relations": 26,
+    "tasks": 25,
+    "test_cases": 25,
+    "reports": 5
+  },
+  "classification_stats": {
+    "llm_classified": 25,
+    "fallback_classified": 0,
+    "domain_rotations": 3,
+    "domain_api_successes": 6
+  }
+}

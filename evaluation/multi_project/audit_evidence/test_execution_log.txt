@@ -1,0 +1,75 @@
+======================================================================
+REQPILOT SCORER VERSION 3.0 - REPRODUCIBILITY AUDIT TEST LOG
+Timestamp: 2026-10-13T01:14:00
+Environment: Windows 11 / Python 3.11.9
+Scorer File: evaluation/multi_project/scripts/scorer.py
+Scorer SHA-256: b6c599655cc7c8e8fe8550c8e74c2bd13335ff6ec41f859a0354b3932a3655fb
+======================================================================
+
+1. BASELINE ROBUSTNESS TEST SUITE (3 TESTS)
+Command: python evaluation/multi_project/scripts/test_scorer_robustness.py
+Exit Code: 0
+Captured Stderr/Stdout:
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK
+
+
+
+2. ADVERSARIAL & REGRESSION TEST SUITE (19 TESTS)
+Command: python evaluation/multi_project/audit_evidence/test_adversarial_scorer.py
+Exit Code: 0
+Captured Stderr/Stdout:
+test_case_01_unrelated_statement_same_id (__main__.ScorerAdversarialAuditTests.test_case_01_unrelated_statement_same_id) ... ok
+test_case_02_reordered_renumbered_ids (__main__.ScorerAdversarialAuditTests.test_case_02_reordered_renumbered_ids) ... ok
+test_case_03_generic_substring_shared_by_multiple_gold (__main__.ScorerAdversarialAuditTests.test_case_03_generic_substring_shared_by_multiple_gold) ... ok
+test_case_04_duplicate_predictions_same_gold (__main__.ScorerAdversarialAuditTests.test_case_04_duplicate_predictions_same_gold) ... ok
+test_case_05_similar_gold_distinct_meanings (__main__.ScorerAdversarialAuditTests.test_case_05_similar_gold_distinct_meanings) ... ok
+test_case_06_matching_wording_wrong_module (__main__.ScorerAdversarialAuditTests.test_case_06_matching_wording_wrong_module) ... ok
+test_case_07_gold_with_no_prediction (__main__.ScorerAdversarialAuditTests.test_case_07_gold_with_no_prediction) ... ok
+test_case_08_one_unmatched_prediction (__main__.ScorerAdversarialAuditTests.test_case_08_one_unmatched_prediction) ... ok
+test_case_09_duplicate_gold_statements (__main__.ScorerAdversarialAuditTests.test_case_09_duplicate_gold_statements) ... ok
+test_case_10_empty_or_missing_source_excerpts (__main__.ScorerAdversarialAuditTests.test_case_10_empty_or_missing_source_excerpts) ... ok
+test_regression_01_partial_before_exact_precedence (__main__.ScorerAdversarialAuditTests.test_regression_01_partial_before_exact_precedence)
+1. Partial prediction listed before an exact prediction for same gold requirement: ... ok
+test_regression_02_order_invariance_on_reversal (__main__.ScorerAdversarialAuditTests.test_regression_02_order_invariance_on_reversal)
+2. Reversing prediction order produces 100% identical evaluation results. ... ok
+test_regression_03_context_embedding_not_matched (__main__.ScorerAdversarialAuditTests.test_regression_03_context_embedding_not_matched)
+3. A prediction that mentions another requirement in background context is not incorrectly matched. ... ok
+test_regression_04_similar_gold_different_meanings (__main__.ScorerAdversarialAuditTests.test_regression_04_similar_gold_different_meanings)
+4. Two similar gold requirements with different meanings: generic statement flagged ambiguous. ... ok
+test_regression_05_duplicate_predictions_for_same_gold (__main__.ScorerAdversarialAuditTests.test_regression_05_duplicate_predictions_for_same_gold)
+5. Duplicate predictions targeting the same gold requirement: handled globally with duplicate tracking. ... ok
+test_regression_06_ev_charging_58_exact_matches_intact (__main__.ScorerAdversarialAuditTests.test_regression_06_ev_charging_58_exact_matches_intact)
+6. All 58 current EV exact matches remain intact. ... ok
+test_regression_07_multiple_competing_exact_candidates (__main__.ScorerAdversarialAuditTests.test_regression_07_multiple_competing_exact_candidates)
+7. Multiple competing exact candidates: single prediction matching multiple gold statements marked ambiguous. ... ok
+test_regression_08_tied_partial_matches_resolution (__main__.ScorerAdversarialAuditTests.test_regression_08_tied_partial_matches_resolution)
+8. Tied partial matches for single gold requirement: assigns exactly one, tracks duplicate without double-counting. ... ok
+test_regression_09_ambiguous_and_unknown_module_canonicalization (__main__.ScorerAdversarialAuditTests.test_regression_09_ambiguous_and_unknown_module_canonicalization)
+9. Ambiguous and unknown module canonicalization: empty/None mapped to UNASSIGNED, unknown strings uppercased. ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.064s
+
+OK
+
+
+
+======================================================================
+SUMMARY VERIFICATION:
+- Baseline Tests: 3/3 PASSED (Exit code 0)
+- Adversarial & Regression Tests: 19/19 PASSED (Exit code 0)
+- Total Tests: 22/22 PASSED (100% OK)
+- Exact Match Precedence: VERIFIED (Partial matches cannot steal assignments)
+- Global Order Invariance: VERIFIED (Reversed lists produce identical pairs)
+- Context Embedding Rejection: VERIFIED (Embedded background text rejected)
+- Ambiguous MFA Attributions: VERIFIED (Shared generic phrases flagged)
+- Duplicate Tracking: VERIFIED (Exact and tied partial duplicates tracked)
+- Multiple Competing Exact Targets: VERIFIED (Flagged ambiguous)
+- Tied Partial Matches: VERIFIED (1 assigned deterministically, 1 tracked duplicate)
+- Module Canonicalization: VERIFIED (Unknown/empty/None handled safely)
+- EV Charging Baseline: VERIFIED (58/58 exact matches intact)
+======================================================================

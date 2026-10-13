@@ -1,0 +1,6 @@
+domain,project_title,run_id,llm_succeeded,fallback_used,pred_reqs,gold_reqs,uniquely_matched,unmatched_pred,unmatched_gold,matching_coverage_pct,matched_pair_accuracy_pct,penalized_overall_accuracy_pct,macro_precision,macro_recall,macro_f1,task_coverage_pct,correct_classifications,discrepancy_explanation
+ev_charging,EV Charging Station Management System,1c57d2e2,True,False,58,58,58,0,0,100.0,100.0,100.0,1.0,1.0,1.0,100.0,58,Exact match with summary.csv under Scorer Version 3.0
+hospital_management,Hospital Management System,4046c3ca,False,True,124,124,124,0,0,100.0,78.23,78.23,0.9167,0.9167,0.9167,100.0,97,Exact match with summary.csv under Scorer Version 3.0
+ecommerce_platform,E-Commerce Platform,1e2d6f1a,False,True,37,36,36,1,0,100.0,44.44,43.24,0.3762,0.3194,0.3356,100.0,16,Exact match with summary.csv under Scorer Version 3.0
+banking_management,Banking Management System,ba26cb8e,True,False,25,25,25,0,0,100.0,36.0,36.0,0.5,0.3583,0.3979,100.0,9,Exact match with summary.csv under Scorer Version 3.0
+library_management,Library Management System,037fa230,False,True,24,24,24,0,0,100.0,66.67,66.67,0.7778,0.6151,0.6679,100.0,16,Exact match with summary.csv under Scorer Version 3.0

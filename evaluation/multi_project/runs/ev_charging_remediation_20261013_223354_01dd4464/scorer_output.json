@@ -1,0 +1,152 @@
+{
+  "run_id": "01dd4464-685d-4b6b-afc9-ac91219318d1",
+  "domain_key": "ev_charging",
+  "project_title": "EV Charging Network Management System",
+  "timestamp": "2026-10-13T22:34:42.166227",
+  "llm_enabled": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": false,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "matching_summary": {
+    "predicted_requirements_count": 58,
+    "reference_requirements_count": 58,
+    "uniquely_matched_count": 58,
+    "unmatched_predictions_count": 0,
+    "ambiguous_predictions_count": 0,
+    "duplicate_gold_matches_count": 0,
+    "unmatched_reference_count": 0
+  },
+  "classification_evaluation": {
+    "valid_matched_denominator": 58,
+    "correct_classifications": 55,
+    "accuracy": 0.9483,
+    "penalized_end_to_end_accuracy": 0.9483,
+    "macro_precision": 0.9633,
+    "macro_recall": 0.9687,
+    "macro_f1": 0.9633,
+    "per_class_metrics": {
+      "AUTHENTICATION": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8889
+      },
+      "BOOKING": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.7778,
+        "f1": 0.875
+      },
+      "CHARGING-SESSION": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "CHARGING-STATION": {
+        "tp": 10,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.8333,
+        "recall": 0.9091,
+        "f1": 0.8696
+      },
+      "DATA": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "GATEWAY": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "MAINTENANCE": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "NOTIFICATION": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "PAYMENT": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "REPORTING": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "errors_sample": [
+      {
+        "pred_id": "FR-013",
+        "gold_id": "FR-011",
+        "summary": "Station operators view active reservations and charging sessions",
+        "expected": "BOOKING",
+        "predicted": "CHARGING-STATION"
+      },
+      {
+        "pred_id": "FR-027",
+        "gold_id": "FR-025",
+        "summary": "Station operators should only modify stations assigned to their organization.",
+        "expected": "CHARGING-STATION",
+        "predicted": "AUTHENTICATION"
+      },
+      {
+        "pred_id": "FR-031",
+        "gold_id": "FR-029",
+        "summary": "A charger should become unavailable for new reservations when a...",
+        "expected": "BOOKING",
+        "predicted": "CHARGING-STATION"
+      }
+    ],
+    "total_errors": 3
+  },
+  "structural_integrity": {
+    "total_requirements": 58,
+    "requirements_with_tasks": 58,
+    "requirements_without_tasks": 0,
+    "task_coverage_pct": 100.0,
+    "total_modules": 11,
+    "total_relations": 19,
+    "total_tasks": 58,
+    "total_test_cases": 58,
+    "untested_requirements_count": 0,
+    "traceability_matrix_rows": 58
+  },
+  "unsupported_metrics_declared": [
+    "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+    "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+    "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+  ]
+}

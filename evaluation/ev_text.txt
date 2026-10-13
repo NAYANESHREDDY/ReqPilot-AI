@@ -1,0 +1,82 @@
+EV CHARGING STATION MANAGEMENT SYSTEM
+STAKEHOLDER REQUIREMENTS
+1. System Overview
+The organization needs a centralized web-based EV Charging Station Management System for drivers, station operators, maintenance teams, and administrators.
+2. Driver Requirements
+Drivers should be able to register and log in securely.
+Drivers should be able to search charging stations by location, connector type, charging speed, and availability.
+Drivers should be able to view real-time charger availability and estimated waiting time.
+Drivers should be able to reserve an available charging slot before arriving.
+Drivers should be able to start a charging session after authenticating at the selected charger.
+Drivers should be able to view charging session status, energy consumed, duration, and estimated cost.
+Drivers should receive notifications when a reserved slot is about to begin.
+Drivers should receive notifications when a charging session starts, pauses, completes, or encounters an error.
+Drivers should be able to view their charging history and invoices.
+Drivers should be able to report a faulty charger or station issue.
+3. Station Operator Requirements
+Station operators should be able to register and manage charging stations.
+Station operators should be able to configure charger identifiers, connector types, charging speeds, and operating hours.
+Station operators should be able to view active reservations and charging sessions.
+Station operators should be able to set station-specific pricing rules.
+Station operators should be able to temporarily disable a charger for maintenance.
+Station operators should be able to view station utilization and revenue reports.
+4. Maintenance Requirements
+Maintenance staff should be able to view assigned charger faults and maintenance requests.
+Maintenance staff should be able to update the status of a maintenance request.
+Maintenance staff should record inspection results and repair actions.
+The system should prevent a charger marked unavailable for maintenance from being reserved.
+Maintenance records should remain available for audit purposes.
+5. Administrator Requirements
+Administrators should manage drivers, operators, maintenance staff, stations, chargers, pricing rules, and system settings.
+Administrators should have complete access to operational and financial reports.
+Administrators should be able to suspend accounts that violate system policies.
+Administrators should be able to configure global notification and reservation policies.
+6. Authentication and Security
+The system should provide secure authentication and role-based access control.
+Drivers must only access their own reservations, sessions, invoices, and charging history.
+Station operators should only modify stations assigned to their organization.
+Maintenance staff should only access maintenance requests assigned to them or their team.
+Administrative actions should be recorded in an audit log.
+7. Reservation and Charging Policy
+A driver should not be able to reserve a charger that is already reserved for the requested time.
+A reservation should expire if the driver does not start the session within 15 minutes of the reservation start time.
+A charger should become unavailable for new reservations when a fault is detected.
+A charging session should not be terminated automatically merely because the estimated charging time has elapsed; the actual charger state should determine completion.
+A reservation should not be cancellable after the charging session has started.
+8. Notifications
+The system should provide real-time notifications to drivers and relevant operators.
+Email and in-app notifications should be supported.
+The system should notify maintenance staff when a charger reports a critical fault.
+9. Payments and Invoicing
+The system should calculate charging cost using the applicable pricing rule and energy consumed.
+Drivers should be able to view the final amount before completing payment when the required information is available.
+The system should generate an invoice for each completed paid charging session.
+Payment failures should be recorded without marking the charging session as successfully paid.
+10. Performance
+The system should remain responsive when thousands of drivers search stations or view availability simultaneously.
+Real-time charger-status updates should be reflected without requiring a full page refresh.
+Reservation creation should prevent conflicting reservations under concurrent requests.
+11. Availability and Reliability
+The system should be available 24/7 except during planned maintenance.
+Charging-session state should be recoverable after a temporary application restart.
+Operational data should not be lost when a notification service is temporarily unavailable.
+12. Reporting
+Administrators should be able to generate reports for station utilization, charging energy, revenue, failed payments, maintenance activity, and driver activity.
+Station operators should be able to generate reports for stations assigned to their organization.
+13. Data Retention
+Completed charging sessions, invoices, reservations, and maintenance records should be retained for audit and reporting purposes.
+Inactive driver accounts should be anonymized after three years unless retention is required by an applicable policy.
+Audit logs should be retained according to the configured administrative retention period.
+14. Important Operational Policy
+A charger can be manually disabled by an authorized operator or automatically marked unavailable after a critical fault.
+A disabled charger must not accept new reservations.
+Existing charging sessions may continue only if the charger remains electrically safe and the station operator has not issued a shutdown command.
+When an emergency shutdown is issued, the active charging session should be stopped and the event should be recorded.
+15. Reporting and Auditability
+Every reservation, charging-session state transition, payment state transition, maintenance update, and administrative policy change should have a traceable record.
+Reports should identify the station, charger, time period, and relevant status information used to produce the reported totals.
+16. Ambiguous Stakeholder Points
+The organization has not specified whether reservation fees are refundable when a driver cancels before the reservation begins.
+The organization has not specified whether dynamic pricing may change after a reservation is created.
+The organization has not specified the maximum number of simultaneous reservations allowed per driver.
+The organization has not specified whether anonymized driver accounts can later be restored.

@@ -1,0 +1,150 @@
+HOSPITAL MANAGEMENT SYSTEM
+STAKEHOLDER REQUIREMENTS
+1. System Overview
+The organization needs a centralized web-based Hospital Management System for patients, doctors, nurses, reception staff, laboratory staff, pharmacists, billing teams, and administrators.
+2. Patient Requirements
+Patients should be able to register and log in securely.
+Patients should be able to view and update their personal information.
+Patients should be able to search for doctors by department and specialization.
+Patients should be able to view available appointment time slots.
+Patients should be able to book an appointment with an available doctor.
+Patients should be able to cancel or reschedule an appointment according to hospital policies.
+Patients should be able to view their upcoming and previous appointments.
+Patients should be able to view their medical history and previous consultation records.
+Patients should be able to view prescriptions issued by doctors.
+Patients should be able to view available laboratory results associated with their records.
+Patients should be able to view their hospital bills and payment history.
+Patients should be able to make eligible payments through the online payment system.
+Patients should receive notifications about appointments, laboratory results, payments, and other relevant hospital activities.
+3. Doctor Requirements
+Doctors should be able to log in securely and access their assigned work areas.
+Doctors should be able to view their appointment schedules.
+Doctors should be able to access the medical records of patients they are authorized to treat.
+Doctors should be able to record consultation notes, symptoms, diagnoses, and treatment recommendations.
+Doctors should be able to record patient allergies and relevant medical conditions.
+Doctors should be able to create electronic prescriptions.
+Doctors should be able to modify or cancel prescriptions before they are dispensed.
+Doctors should be able to request laboratory tests for patients.
+Doctors should be able to view completed laboratory results.
+Doctors should be able to update the availability of their consultation time slots.
+4. Reception and Staff Requirements
+Reception staff should be able to register new patients.
+Reception staff should be able to search for existing patient records.
+Reception staff should be able to book, cancel, and reschedule appointments on behalf of patients.
+Reception staff should be able to view doctor availability.
+Authorized staff should be able to update patient demographic information.
+Authorized staff should be able to admit patients for inpatient treatment.
+Authorized staff should be able to record patient transfers and discharges.
+5. Laboratory Requirements
+Laboratory staff should be able to view pending laboratory test requests.
+Laboratory staff should be able to update the status of laboratory tests.
+Laboratory staff should be able to record laboratory test results.
+Laboratory results should become available to authorized doctors after completion.
+Patients should be able to view their laboratory results after they are released.
+Doctors should receive notifications when requested laboratory results become available.
+6. Pharmacy Requirements
+Pharmacists should be able to view prescriptions submitted for dispensing.
+Pharmacists should be able to record prescription dispensing status.
+The system should maintain medicine inventory information including medicine name, batch number, quantity, expiry date, and price.
+The system should automatically reduce medicine inventory when a prescription is dispensed.
+The system should notify pharmacy staff when medicine stock falls below the configured minimum level.
+Expired medicines should not be dispensed.
+7. Billing and Payment Requirements
+Billing staff should be able to generate bills for consultations, laboratory tests, medicines, procedures, and other hospital services.
+Patients should be able to view outstanding and completed bills.
+The system should calculate the total amount based on applicable hospital charges.
+Patients should be able to make eligible electronic payments.
+The system should generate a payment receipt after successful payment.
+Payment failures should be recorded without marking the bill as successfully paid.
+The system should maintain payment history for each patient.
+8. Inpatient and Bed Management
+Hospital staff should be able to view available wards, rooms, and beds.
+Authorized staff should be able to assign an available bed to an admitted patient.
+The system should prevent an occupied bed from being assigned to another patient.
+Staff should be able to record patient admission information.
+Staff should be able to record patient transfers between wards or rooms.
+Staff should be able to record patient discharge information.
+The system should provide current bed availability information to authorized staff.
+9. Authentication and Security
+The system should provide secure authentication and role-based access control.
+Patients must only access their own personal information, appointments, medical records, prescriptions, and bills.
+Doctors should only access patient records required for their authorized clinical activities.
+Laboratory staff should only access laboratory information required for their assigned work.
+Pharmacy staff should only access prescription and inventory information required for pharmacy operations.
+Administrative actions should be recorded in an audit log.
+Access to confidential medical records should be restricted to authorized users.
+10. Appointment and Scheduling Policy
+A patient should not be able to book an unavailable doctor time slot.
+The system should prevent two patients from booking the same doctor time slot.
+An appointment should be associated with a specific patient, doctor, date, and time.
+Cancelled appointments should become available for future booking when applicable.
+A rescheduled appointment should update the corresponding doctor and patient schedules.
+Appointment changes should be recorded for audit purposes.
+11. Notifications
+The system should provide notifications to patients and relevant hospital staff.
+Email and in-app notifications should be supported.
+The system should notify patients when an appointment is booked, cancelled, or rescheduled.
+The system should send appointment reminders before scheduled consultations.
+The system should notify doctors when laboratory results become available.
+The system should notify pharmacy staff when medicine inventory reaches a critical level.
+The system should notify patients when payments are successfully completed.
+12. Performance
+The system should remain responsive when a large number of patients and hospital staff search for records or appointments simultaneously.
+Patient and doctor searches should return results without unnecessary delay under normal operating conditions.
+Appointment booking should prevent conflicting appointments under concurrent requests.
+Updates to appointment, bed, laboratory, and billing status should be reflected without requiring unnecessary page refreshes.
+13. Availability and Reliability
+The system should be available 24/7 except during planned maintenance.
+Patient medical records should remain recoverable after a temporary application failure.
+Billing and payment information should not be lost after a temporary system restart.
+Appointment information should remain consistent after a temporary service interruption.
+Operational data should not be lost when the notification service is temporarily unavailable.
+The system should support backup and recovery of critical hospital information.
+14. Reporting
+Administrators should be able to generate reports for patient registrations, appointments, admissions, discharges, laboratory activity, pharmacy inventory, billing, payments, and hospital operations.
+Doctors should be able to view reports related to their assigned clinical activities.
+Pharmacy staff should be able to generate medicine inventory and dispensing reports.
+Laboratory staff should be able to generate reports for laboratory requests and completed tests.
+Administrators should be able to generate financial and operational reports.
+Reports should identify the relevant department, time period, and status information used to produce the reported totals.
+15. Data Retention and Privacy
+Patient medical records should be retained according to the hospital's configured data-retention policy.
+Completed appointments, consultation records, prescriptions, laboratory results, bills, and payment records should remain available for authorized historical access.
+Audit logs should be retained according to the configured administrative retention period.
+Sensitive patient information should only be accessible to authorized users.
+The system should maintain records of important changes made to patient medical information.
+Inactive patient accounts should be handled according to the hospital's configured retention and privacy policy.
+16. Administrative Requirements
+Administrators should be able to manage patients, doctors, nurses, reception staff, laboratory staff, pharmacists, billing staff, and other system users.
+Administrators should be able to assign and modify user roles.
+Administrators should be able to activate or deactivate user accounts.
+Administrators should be able to manage hospital departments and services.
+Administrators should be able to configure hospital-wide appointment, notification, billing, and data-retention policies.
+Administrators should have access to authorized operational and financial reports.
+Administrative actions should be traceable through audit records.
+17. Important Operational Policies
+A patient must not be assigned to an occupied hospital bed.
+A doctor time slot must not be assigned to multiple patients for the same appointment period.
+A medicine that has expired must not be dispensed.
+A patient payment must not be marked as successful when the payment provider reports a failure.
+A laboratory result should only become visible to patients according to the hospital's configured release policy.
+Unauthorized users must not be able to modify confidential medical records.
+When a critical hospital operation fails temporarily, previously recorded patient and operational data should remain recoverable.
+18. Reporting and Auditability
+Every appointment creation, cancellation, and rescheduling operation should have a traceable record.
+Medical-record updates should have a traceable record showing the relevant user and operation.
+Prescription creation and dispensing updates should be traceable.
+Laboratory result updates should be traceable.
+Payment state transitions should have a traceable record.
+Important administrative policy changes should be recorded in the audit log.
+Reports should identify the relevant department, activity, and time period used to produce reported totals.
+19. Ambiguous Stakeholder Points
+The organization has not specified whether patients should be allowed to cancel appointments after a particular time before the consultation.
+The organization has not specified whether missed appointments should automatically be marked as cancelled or no-show.
+The organization has not specified whether patients should be able to directly download complete medical records.
+The organization has not specified whether online payments should support partial payment of hospital bills.
+The organization has not specified whether laboratory results require doctor approval before becoming visible to patients.
+The organization has not specified whether inactive patient accounts should be anonymized or permanently deleted after the configured retention period.
+The organization has not specified whether a patient's medical record can be accessed by doctors from different departments during the same treatment episode.
+The organization has not specified the maximum number of simultaneous appointments a patient may hold.
+This is much closer to the EV document, bro. It gives ReqPilot natural stakeholder requirements with cross-domain interactions and ambiguous points, rather than giving it the answer through explicit FR-001, NFR-001 labels.

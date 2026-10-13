@@ -1,0 +1,246 @@
+{
+  "package_name": "reqpilot_independent_audit_package",
+  "created_at": "2026-10-13T16:12:00",
+  "files": [
+    {
+      "path": "AUDIT_REPORT.md",
+      "sha256": "7d479de1b4d73cde11f63e73b672ccf009f466179b32377737ddb6f6a84907c8",
+      "size_bytes": 17323,
+      "purpose": "Documentation"
+    },
+    {
+      "path": "benchmark/banking_management/gold_reference.json",
+      "sha256": "50916a000e2f6f8382999dbec787a1a334430063151cf2091ad8a3d08b079af8",
+      "size_bytes": 7647,
+      "purpose": "Frozen Benchmark Gold Reference"
+    },
+    {
+      "path": "benchmark/ecommerce_platform/gold_reference.json",
+      "sha256": "9096b24889b6f213e45908bdeea68a7690b9784f39e1f49e4e8fb92ca59978d0",
+      "size_bytes": 10410,
+      "purpose": "Frozen Benchmark Gold Reference"
+    },
+    {
+      "path": "benchmark/ev_charging/gold_reference.json",
+      "sha256": "de7b0f66dc9ffec90cc36e8ca132eca7ba275d6bf8e501403f4b056e8c52ef19",
+      "size_bytes": 30425,
+      "purpose": "Frozen Benchmark Gold Reference"
+    },
+    {
+      "path": "benchmark/hospital_management/gold_reference.json",
+      "sha256": "60ef330d34fcaf3754c12fe3af45672401a4c43e11a420ac115159a153923dbc",
+      "size_bytes": 61961,
+      "purpose": "Frozen Benchmark Gold Reference"
+    },
+    {
+      "path": "benchmark/library_management/gold_reference.json",
+      "sha256": "158664146dd1936731d574fb4fa8cca4e6092a3397909ad7fe36554961c8a950",
+      "size_bytes": 7377,
+      "purpose": "Frozen Benchmark Gold Reference"
+    },
+    {
+      "path": "logs/fresh_eval_execution_redacted.log",
+      "sha256": "2ddc7d32c038e8fcc5ba8735dc051bbb41d135e58fa7172e01b99786580df64c",
+      "size_bytes": 3122,
+      "purpose": "Redacted Execution Logs"
+    },
+    {
+      "path": "logs/test_suite_execution.log",
+      "sha256": "488f0f8bd94567c79aefb631cb0d1a773a7143ce6c0f0f7d12a3ac15f6bc799a",
+      "size_bytes": 7720,
+      "purpose": "Redacted Execution Logs"
+    },
+    {
+      "path": "reproduction/banking_management_scorer_output.json",
+      "sha256": "68ba69ee0963635dc5f5ddeb1115bc5efe8bbc269a252b086abc947dfbf27006",
+      "size_bytes": 4155,
+      "purpose": "Independent Reproduction Outputs & Logs"
+    },
+    {
+      "path": "reproduction/ecommerce_platform_scorer_output.json",
+      "sha256": "a9eafced34e5d98991e9664da9ce3ff36bb9b41640c77b856b153f2951ef29b5",
+      "size_bytes": 4486,
+      "purpose": "Independent Reproduction Outputs & Logs"
+    },
+    {
+      "path": "reproduction/ev_charging_scorer_output.json",
+      "sha256": "e128644c6dddd404e4e1eabcd8f3a50d9731f1c4d6fac285f8ac39560a10da24",
+      "size_bytes": 5883,
+      "purpose": "Independent Reproduction Outputs & Logs"
+    },
+    {
+      "path": "reproduction/hospital_management_scorer_output.json",
+      "sha256": "86d9ef5bba80b393c5f801ba4bc6981be1a2314946150ad9034c829fd9b47a2b",
+      "size_bytes": 5996,
+      "purpose": "Independent Reproduction Outputs & Logs"
+    },
+    {
+      "path": "reproduction/library_management_scorer_output.json",
+      "sha256": "a02ac723d130b2c382dca960143fda0288a7b6efdb4c12a42b923d6c0ee634ac",
+      "size_bytes": 3728,
+      "purpose": "Independent Reproduction Outputs & Logs"
+    },
+    {
+      "path": "reproduction/reproduced_summary.json",
+      "sha256": "6c15ad55cbc0720e6d2de1093c47a4476d71baa5f112c3181e1a7513219bb84b",
+      "size_bytes": 26138,
+      "purpose": "Independent Reproduction Outputs & Logs"
+    },
+    {
+      "path": "reproduction/REPRODUCTION_LOG.md",
+      "sha256": "54abf838afe494d02accd7b284fe29336451902851828d122bbc0bb02064de42",
+      "size_bytes": 2582,
+      "purpose": "Independent Reproduction Outputs & Logs"
+    },
+    {
+      "path": "runs/banking_management_fresh_eval_20261013_063036_2b62b57a/pipeline_output.json",
+      "sha256": "cf600e114ba840a5adfac5a11dc87bee27ceeaa7253cc30ee2ca995fe25c2c7c",
+      "size_bytes": 193567,
+      "purpose": "Preserved Evaluation Pipeline Run Outputs"
+    },
+    {
+      "path": "runs/banking_management_fresh_eval_20261013_063036_2b62b57a/run_meta.json",
+      "sha256": "048334378b07baf2b2ece6ae614cb3c55be99466991df2790d9fa92b5956bdd3",
+      "size_bytes": 805,
+      "purpose": "Preserved Evaluation Pipeline Run Outputs"
+    },
+    {
+      "path": "runs/ecommerce_platform_fresh_eval_20261013_063036_45844d7e/pipeline_output.json",
+      "sha256": "038511ce2becfd0d7048362ab74c7d985190c484f5f371d62b74b0db61a6c11c",
+      "size_bytes": 262612,
+      "purpose": "Preserved Evaluation Pipeline Run Outputs"
+    },
+    {
+      "path": "runs/ecommerce_platform_fresh_eval_20261013_063036_45844d7e/run_meta.json",
+      "sha256": "69f4557e913232ad797aa717ece826717ca86643e6077c88dcd8a3524013cf14",
+      "size_bytes": 800,
+      "purpose": "Preserved Evaluation Pipeline Run Outputs"
+    },
+    {
+      "path": "runs/ev_charging_fresh_eval_20261013_063036_9f5c7e88/pipeline_output.json",
+      "sha256": "33c0a7343e7e03912a96451b8ade547d036e39cc9b1f5419344afa6c084d6655",
+      "size_bytes": 402899,
+      "purpose": "Preserved Evaluation Pipeline Run Outputs"
+    },
+    {
+      "path": "runs/ev_charging_fresh_eval_20261013_063036_9f5c7e88/run_meta.json",
+      "sha256": "01aa2f081907862b33e18efb774e0d1acbad76043ccf2457bcad3b6122546041",
+      "size_bytes": 804,
+      "purpose": "Preserved Evaluation Pipeline Run Outputs"
+    },
+    {
+      "path": "runs/fresh_eval_summary_20261013_063036.json",
+      "sha256": "0b4fb8c3a56871fbb3f933f69d50be66a89d36da3f6f38aff2e13f4a07780264",
+      "size_bytes": 26612,
+      "purpose": "Preserved Evaluation Pipeline Run Outputs"
+    },
+    {
+      "path": "runs/hospital_management_fresh_eval_20261013_063036_217ecc14/pipeline_output.json",
+      "sha256": "e7bd1918d490dbd4b87c5ee561f40ea5b3353c034569f777cd68778aab2501a4",
+      "size_bytes": 813043,
+      "purpose": "Preserved Evaluation Pipeline Run Outputs"
+    },
+    {
+      "path": "runs/hospital_management_fresh_eval_20261013_063036_217ecc14/run_meta.json",
+      "sha256": "9cd37599f89b8294ad4b5a083b56b9674b1c5fd66f3b6f8973524f3a0f677961",
+      "size_bytes": 814,
+      "purpose": "Preserved Evaluation Pipeline Run Outputs"
+    },
+    {
+      "path": "runs/library_management_fresh_eval_20261013_063036_a4e5b94c/pipeline_output.json",
+      "sha256": "b29cbd43e451e74cda4a249c9c56424c5539a182bc97f12ea42ea8860580210d",
+      "size_bytes": 188212,
+      "purpose": "Preserved Evaluation Pipeline Run Outputs"
+    },
+    {
+      "path": "runs/library_management_fresh_eval_20261013_063036_a4e5b94c/run_meta.json",
+      "sha256": "b598dd4a03fa77f3756f880ee0ab6ef29ff07132d46f9710664530a5d2b60f44",
+      "size_bytes": 805,
+      "purpose": "Preserved Evaluation Pipeline Run Outputs"
+    },
+    {
+      "path": "scorer/__pycache__/scorer.cpython-311.pyc",
+      "sha256": "464caa13e799ebc612959f07b3817c48f242780d4ac69b858f7a4c1a3c9aef51",
+      "size_bytes": 24074,
+      "purpose": "Official Scorer & Hash Record"
+    },
+    {
+      "path": "scorer/scorer.py",
+      "sha256": "b6c599655cc7c8e8fe8550c8e74c2bd13335ff6ec41f859a0354b3932a3655fb",
+      "size_bytes": 17092,
+      "purpose": "Official Scorer & Hash Record"
+    },
+    {
+      "path": "scorer/SHA256_VERIFICATION.txt",
+      "sha256": "19671c434d864debfa902a9b8ae8f90a5d79ad36cfff9e96564a1b8a789c07e5",
+      "size_bytes": 360,
+      "purpose": "Official Scorer & Hash Record"
+    },
+    {
+      "path": "source_snapshot/backend/app/agents/architecture_agent.py",
+      "sha256": "d574765d3c5b18aab32bc23100ec8ad5c29287a836e5fbe065f79ee3abfb0d20",
+      "size_bytes": 47306,
+      "purpose": "Directly Relevant Source Code Snapshot"
+    },
+    {
+      "path": "source_snapshot/backend/app/agents/extraction_agent.py",
+      "sha256": "e9b7a1af03b4d63596e84e8fd86a2c0af9f856da38ba841c8b5b77c233dfa1f2",
+      "size_bytes": 64987,
+      "purpose": "Directly Relevant Source Code Snapshot"
+    },
+    {
+      "path": "source_snapshot/backend/app/agents/llm_adapter.py",
+      "sha256": "ab545188e968ba4b2aec9c5f1c51357ed5bbd69b73182fd0d4418d2cc3b94cf5",
+      "size_bytes": 18916,
+      "purpose": "Directly Relevant Source Code Snapshot"
+    },
+    {
+      "path": "source_snapshot/backend/app/agents/orchestrator.py",
+      "sha256": "abcf1ecddf52ba2ade26cb97b58db5474ec56740e40bb85f72ac5896166f5207",
+      "size_bytes": 18671,
+      "purpose": "Directly Relevant Source Code Snapshot"
+    },
+    {
+      "path": "source_snapshot/backend/app/agents/task_agent.py",
+      "sha256": "cfb588bccd00d46cc141c51b47930f9c4e9e32e6e35a15a4ca34d2c2dcf0c5ca",
+      "size_bytes": 85446,
+      "purpose": "Directly Relevant Source Code Snapshot"
+    },
+    {
+      "path": "source_snapshot/backend/app/api/workflow.py",
+      "sha256": "4498650603085cfcb3e84b1587cb848acc7fb47d3b9796461eb82282037749e3",
+      "size_bytes": 31184,
+      "purpose": "Directly Relevant Source Code Snapshot"
+    },
+    {
+      "path": "source_snapshot/backend/app/config.py",
+      "sha256": "8cdb692b3342ac254b173524037a540bf3b0f993d4db23a6d47cec07c681d220",
+      "size_bytes": 1732,
+      "purpose": "Directly Relevant Source Code Snapshot"
+    },
+    {
+      "path": "tests/test_adversarial_scorer.py",
+      "sha256": "d7aa75cce1afe1d84a9cfcce2140ee20d2c2f82bdd6ad508a271da450b9c7a0f",
+      "size_bytes": 14956,
+      "purpose": "Automated Test Suites"
+    },
+    {
+      "path": "tests/test_groq_multikey_fallback.py",
+      "sha256": "db2c52a5282f5c8736d5cc4009e5120c760cbf4a9d1ffe1aa47763eb0c2032be",
+      "size_bytes": 16638,
+      "purpose": "Automated Test Suites"
+    },
+    {
+      "path": "tests/test_scorer_robustness.py",
+      "sha256": "402a014e0dce08374660ee8c9ad30fae58f7bd0078dbc3e75ff468c6a62a46de",
+      "size_bytes": 2994,
+      "purpose": "Automated Test Suites"
+    },
+    {
+      "path": "tests/test_semantic_classification.py",
+      "sha256": "59f89643c379e8fb10dd431de91e272fec2fb8b0c07620f4bf680dfd36a8030a",
+      "size_bytes": 10889,
+      "purpose": "Automated Test Suites"
+    }
+  ]
+}

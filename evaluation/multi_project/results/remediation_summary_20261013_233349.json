@@ -1,0 +1,206 @@
+{
+  "timestamp": "20261013_233349",
+  "domains": {
+    "ev_charging": {
+      "run_id": "19617a63-0550-484f-9678-99f3fc58ca9d",
+      "domain_key": "ev_charging",
+      "project_title": "EV Charging Network Management System",
+      "timestamp": "2026-10-13T23:34:38.972219",
+      "llm_enabled": true,
+      "llm_extraction_succeeded": true,
+      "fallback_used": false,
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "matching_summary": {
+        "predicted_requirements_count": 58,
+        "reference_requirements_count": 58,
+        "uniquely_matched_count": 58,
+        "unmatched_predictions_count": 0,
+        "ambiguous_predictions_count": 0,
+        "duplicate_gold_matches_count": 0,
+        "unmatched_reference_count": 0
+      },
+      "classification_evaluation": {
+        "valid_matched_denominator": 58,
+        "correct_classifications": 45,
+        "accuracy": 0.7759,
+        "penalized_end_to_end_accuracy": 0.7759,
+        "macro_precision": 0.6907,
+        "macro_recall": 0.78,
+        "macro_f1": 0.7248,
+        "per_class_metrics": {
+          "AUTHENTICATION": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "BOOKING": {
+            "tp": 9,
+            "fp": 3,
+            "fn": 0,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571
+          },
+          "CHARGING-SESSION": {
+            "tp": 5,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.8333,
+            "recall": 1.0,
+            "f1": 0.9091
+          },
+          "CHARGING-STATION": {
+            "tp": 11,
+            "fp": 5,
+            "fn": 0,
+            "precision": 0.6875,
+            "recall": 1.0,
+            "f1": 0.8148
+          },
+          "DATA": {
+            "tp": 7,
+            "fp": 4,
+            "fn": 0,
+            "precision": 0.6364,
+            "recall": 1.0,
+            "f1": 0.7778
+          },
+          "GATEWAY": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "MAINTENANCE": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 5,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "NOTIFICATION": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 7,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "PAYMENT": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "REPORTING": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8889
+          }
+        },
+        "errors_sample": [
+          {
+            "pred_id": "FR-007",
+            "gold_id": "FR-005",
+            "summary": "Notify driver before reserved slot begins",
+            "expected": "NOTIFICATION",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-008",
+            "gold_id": "FR-006",
+            "summary": "Notify driver of charging session events",
+            "expected": "NOTIFICATION",
+            "predicted": "CHARGING-SESSION"
+          },
+          {
+            "pred_id": "FR-010",
+            "gold_id": "FR-008",
+            "summary": "Report faulty charger or station issue",
+            "expected": "MAINTENANCE",
+            "predicted": "CHARGING-STATION"
+          },
+          {
+            "pred_id": "FR-017",
+            "gold_id": "FR-015",
+            "summary": "Maintenance Requirements Maintenance staff should be able to view assigned...",
+            "expected": "MAINTENANCE",
+            "predicted": "CHARGING-STATION"
+          },
+          {
+            "pred_id": "FR-018",
+            "gold_id": "FR-016",
+            "summary": "Maintenance staff should be able to update the status of...",
+            "expected": "MAINTENANCE",
+            "predicted": "CHARGING-STATION"
+          },
+          {
+            "pred_id": "FR-019",
+            "gold_id": "FR-017",
+            "summary": "Maintenance staff should record inspection results and repair actions.",
+            "expected": "MAINTENANCE",
+            "predicted": "CHARGING-STATION"
+          },
+          {
+            "pred_id": "FR-022",
+            "gold_id": "FR-020",
+            "summary": "Administrator Requirements Administrators should manage drivers, operators, maintenance staff, stations,...",
+            "expected": "MAINTENANCE",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-025",
+            "gold_id": "FR-023",
+            "summary": "Administrators should be able to configure global notification and reservation...",
+            "expected": "NOTIFICATION",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-034",
+            "gold_id": "FR-032",
+            "summary": "Notifications The system should provide real-time notifications to drivers and...",
+            "expected": "NOTIFICATION",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-035",
+            "gold_id": "FR-033",
+            "summary": "Email and in-app notifications should be supported.",
+            "expected": "NOTIFICATION",
+            "predicted": "BOOKING"
+          }
+        ],
+        "total_errors": 13
+      },
+      "structural_integrity": {
+        "total_requirements": 58,
+        "requirements_with_tasks": 58,
+        "requirements_without_tasks": 0,
+        "task_coverage_pct": 100.0,
+        "total_modules": 9,
+        "total_relations": 14,
+        "total_tasks": 58,
+        "total_test_cases": 58,
+        "untested_requirements_count": 0,
+        "traceability_matrix_rows": 58
+      },
+      "unsupported_metrics_declared": [
+        "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+        "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+        "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+      ]
+    }
+  }
+}

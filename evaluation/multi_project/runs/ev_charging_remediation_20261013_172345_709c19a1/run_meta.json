@@ -1,0 +1,29 @@
+{
+  "run_id": "709c19a1-9da1-40a5-af43-b5f767d97dca",
+  "domain_key": "ev_charging",
+  "project_title": "EV Charging Network Management System",
+  "timestamp": "2026-10-13T17:24:33.736602",
+  "duration_seconds": 48.68,
+  "llm_enabled": true,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "llm_attempted": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": true,
+  "input_file": "evaluation/multi_project/benchmark/ev_charging/specification.docx",
+  "counts": {
+    "chunks": 1,
+    "requirements": 58,
+    "modules": 11,
+    "relations": 23,
+    "tasks": 58,
+    "test_cases": 58,
+    "reports": 5
+  },
+  "classification_stats": {
+    "llm_classified": 57,
+    "fallback_classified": 1,
+    "domain_rotations": 1,
+    "domain_api_successes": 8
+  }
+}

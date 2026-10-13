@@ -1,0 +1,185 @@
+{
+  "timestamp": "20261013_190503",
+  "domains": {
+    "ecommerce_platform": {
+      "run_id": "7d1f0ec9-c6e3-4a37-aff8-c77b785ec9e5",
+      "domain_key": "ecommerce_platform",
+      "project_title": "E-Commerce Platform",
+      "timestamp": "2026-10-13T19:05:42.032599",
+      "llm_enabled": true,
+      "llm_extraction_succeeded": true,
+      "fallback_used": false,
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "matching_summary": {
+        "predicted_requirements_count": 37,
+        "reference_requirements_count": 36,
+        "uniquely_matched_count": 36,
+        "unmatched_predictions_count": 1,
+        "ambiguous_predictions_count": 0,
+        "duplicate_gold_matches_count": 0,
+        "unmatched_reference_count": 0
+      },
+      "classification_evaluation": {
+        "valid_matched_denominator": 36,
+        "correct_classifications": 29,
+        "accuracy": 0.8056,
+        "penalized_end_to_end_accuracy": 0.7838,
+        "macro_precision": 0.75,
+        "macro_recall": 0.725,
+        "macro_f1": 0.7109,
+        "per_class_metrics": {
+          "AUTHENTICATION": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "BOOKING": {
+            "tp": 5,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.8333,
+            "recall": 1.0,
+            "f1": 0.9091
+          },
+          "DATA": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 6,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          },
+          "FILE": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "INVENTORY & FULFILLMENT MANAGEMENT": {
+            "tp": 0,
+            "fp": 5,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "NOTIFICATION": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "PAYMENT": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "PROFILE": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "REPORTING": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "SEARCH": {
+            "tp": 2,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.6667,
+            "recall": 1.0,
+            "f1": 0.8
+          }
+        },
+        "errors_sample": [
+          {
+            "pred_id": "FR-004",
+            "gold_id": "FR-003",
+            "summary": "View real\u2011time product details",
+            "expected": "DATA",
+            "predicted": "SEARCH"
+          },
+          {
+            "pred_id": "FR-010",
+            "gold_id": "FR-009",
+            "summary": "View order history and shipment tracking",
+            "expected": "DATA",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-015",
+            "gold_id": "FR-014",
+            "summary": "Set pricing, discounts, and inventory quantities",
+            "expected": "DATA",
+            "predicted": "INVENTORY & FULFILLMENT MANAGEMENT"
+          },
+          {
+            "pred_id": "FR-019",
+            "gold_id": "FR-018",
+            "summary": "Inventory and Fulfillment Requirements Warehouse staff should be able to...",
+            "expected": "DATA",
+            "predicted": "INVENTORY & FULFILLMENT MANAGEMENT"
+          },
+          {
+            "pred_id": "FR-020",
+            "gold_id": "FR-019",
+            "summary": "The system should automatically reserve stock items when an order...",
+            "expected": "DATA",
+            "predicted": "INVENTORY & FULFILLMENT MANAGEMENT"
+          },
+          {
+            "pred_id": "FR-022",
+            "gold_id": "FR-021",
+            "summary": "Warehouse staff should be able to generate packing slips, assign...",
+            "expected": "FILE",
+            "predicted": "INVENTORY & FULFILLMENT MANAGEMENT"
+          },
+          {
+            "pred_id": "FR-023",
+            "gold_id": "FR-022",
+            "summary": "Warehouse staff should be able to dispatch packages and update...",
+            "expected": "DATA",
+            "predicted": "INVENTORY & FULFILLMENT MANAGEMENT"
+          }
+        ],
+        "total_errors": 7
+      },
+      "structural_integrity": {
+        "total_requirements": 37,
+        "requirements_with_tasks": 37,
+        "requirements_without_tasks": 0,
+        "task_coverage_pct": 100.0,
+        "total_modules": 10,
+        "total_relations": 26,
+        "total_tasks": 37,
+        "total_test_cases": 37,
+        "untested_requirements_count": 0,
+        "traceability_matrix_rows": 37
+      },
+      "unsupported_metrics_declared": [
+        "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+        "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+        "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,3105 @@
+{
+  "requirements": [
+    {
+      "id": "NFR-001",
+      "req_type": "non_functional",
+      "summary": "Secure login with corporate multi-factor authentication",
+      "description": "Logistics operators and warehouse dispatchers should be able to log in securely using corporate multi-factor authentication.",
+      "actor": "Logistics operators and warehouse dispatchers",
+      "action": "log in securely using corporate multi-factor authentication",
+      "target_object": "system login",
+      "preconditions": "",
+      "expected_outcome": "Users are authenticated securely via corporate multi-factor authentication.",
+      "acceptance_criteria": [
+        "Given a logistics operator or warehouse dispatcher, When they attempt to log in, Then they must authenticate using corporate multi-factor authentication."
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 1,
+      "source_excerpt": "Logistics operators and warehouse dispatchers should be able to log in securely using corporate multi-factor authentication.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 91.0,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 85.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "NFR-002",
+      "req_type": "non_functional",
+      "summary": "Role\u2011based access control for forklift drivers",
+      "description": "The system should enforce role-based access control restricting warehouse forklift drivers to assigned loading bays.",
+      "actor": "System",
+      "action": "enforce role-based access control restricting",
+      "target_object": "warehouse forklift drivers' access to loading bays",
+      "preconditions": "",
+      "expected_outcome": "Forklift drivers can access only their assigned loading bays.",
+      "acceptance_criteria": [
+        "Given the system is active, When a forklift driver attempts to access a loading bay, Then access is allowed only if the bay is assigned to that driver."
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 1,
+      "source_excerpt": "The system should enforce role-based access control restricting warehouse forklift drivers to assigned loading bays.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "NFR-003",
+      "req_type": "non_functional",
+      "summary": "Supervisor credentials required for dangerous cargo overrides",
+      "description": "Supervisory credentials and manager override approval should be required before overriding dangerous cargo safety limits.",
+      "actor": "System",
+      "action": "require supervisory credentials and manager override approval",
+      "target_object": "dangerous cargo safety limits",
+      "preconditions": "",
+      "expected_outcome": "Overrides of dangerous cargo safety limits are permitted only after required approvals.",
+      "acceptance_criteria": [
+        "Given a request to override dangerous cargo safety limits, When the system checks, Then it must verify supervisory credentials and manager override approval before allowing the override."
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 1,
+      "source_excerpt": "Supervisory credentials and manager override approval should be required before overriding dangerous cargo safety limits.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "NFR-004",
+      "req_type": "non_functional",
+      "summary": "Automatic session expiration on handheld scanners",
+      "description": "System sessions should automatically expire after 15 minutes of terminal inactivity on ruggedized handheld scanners.",
+      "actor": "System",
+      "action": "expire sessions automatically after 15 minutes of terminal inactivity",
+      "target_object": "system sessions on ruggedized handheld scanners",
+      "preconditions": "",
+      "expected_outcome": "Sessions are terminated after 15 minutes of inactivity.",
+      "acceptance_criteria": [
+        "Given a session on a ruggedized handheld scanner, When 15 minutes of inactivity elapse, Then the session expires automatically."
+      ],
+      "priority": "medium",
+      "confidence": 1.0,
+      "source_page": 1,
+      "source_excerpt": "System sessions should automatically expire after 15 minutes of terminal inactivity on ruggedized handheld scanners.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 95.5,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 95.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-001",
+      "req_type": "functional",
+      "summary": "Freight carriers book dock appointments and reserve arrival slots",
+      "description": "Freight carriers should be able to book loading dock appointments and reserve freight arrival time slots.",
+      "actor": "Freight carriers",
+      "action": "book loading dock appointments and reserve freight arrival time slots",
+      "target_object": "loading dock appointments and freight arrival time slots",
+      "preconditions": "",
+      "expected_outcome": "Dock appointments and arrival slots are booked and reserved for the carrier.",
+      "acceptance_criteria": [
+        "Given a freight carrier, When they request a dock appointment or arrival slot, Then the system books the appointment and reserves the slot."
+      ],
+      "priority": "medium",
+      "confidence": 1.0,
+      "source_page": 1,
+      "source_excerpt": "Freight carriers should be able to book loading dock appointments and reserve freight arrival time slots.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-002",
+      "req_type": "functional",
+      "summary": "Warehouse supervisors schedule outbound routes and allocate trucks",
+      "description": "Warehouse supervisors should be able to schedule outbound freight delivery routes and allocate trucks to delivery windows.",
+      "actor": "Warehouse supervisors",
+      "action": "schedule outbound freight delivery routes and allocate trucks to delivery windows",
+      "target_object": "outbound freight delivery routes and truck allocations",
+      "preconditions": "",
+      "expected_outcome": "Routes are scheduled and trucks are allocated to specific delivery windows.",
+      "acceptance_criteria": [
+        "Given a warehouse supervisor, When they create a delivery schedule, Then the system records the routes and truck allocations for the delivery windows."
+      ],
+      "priority": "medium",
+      "confidence": 1.0,
+      "source_page": 1,
+      "source_excerpt": "Warehouse supervisors should be able to schedule outbound freight delivery routes and allocate trucks to delivery windows.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-003",
+      "req_type": "functional",
+      "summary": "The system should prevent a loading bay marked unavailable for...",
+      "description": "The system should prevent a loading bay marked unavailable for maintenance from accepting dock reservations.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "The system should prevent a loading bay marked unavailable for maintenance from accepting dock reservations.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 1,
+      "source_excerpt": "The system should prevent a loading bay marked unavailable for maintenance from accepting dock reservations.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-004",
+      "req_type": "functional",
+      "summary": "Dock appointments should automatically expire if the transport vehicle fails...",
+      "description": "Dock appointments should automatically expire if the transport vehicle fails to check in within 30 minutes of scheduled arrival.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "Dock appointments should automatically expire if the transport vehicle fails to check in within 30 minutes of scheduled arrival.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 1,
+      "source_excerpt": "Dock appointments should automatically expire if the transport vehicle fails to check in within 30 minutes of scheduled arrival.",
+      "quality_score": 95.5,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 95.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-005",
+      "req_type": "functional",
+      "summary": "The system should send automated SMS alerts to freight drivers...",
+      "description": "The system should send automated SMS alerts to freight drivers when their designated loading dock is ready.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "The system should send automated SMS alerts to freight drivers when their designated loading dock is ready.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 2,
+      "source_excerpt": "The system should send automated SMS alerts to freight drivers when their designated loading dock is ready.",
+      "quality_score": 95.5,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 95.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-006",
+      "req_type": "functional",
+      "summary": "Warehouse managers should receive instant push notifications when a temperature-controlled...",
+      "description": "Warehouse managers should receive instant push notifications when a temperature-controlled cold-storage container experiences a temperature anomaly.",
+      "actor": "System",
+      "action": "receive",
+      "target_object": "notifications",
+      "preconditions": "",
+      "expected_outcome": "Warehouse managers should receive instant push notifications when a temperature-controlled cold-storage container experiences a temperature anomaly.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 2,
+      "source_excerpt": "Warehouse managers should receive instant push notifications when a temperature-controlled cold-storage container experiences a temperature anomaly.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-007",
+      "req_type": "functional",
+      "summary": "Automated email notifications should be dispatched to shippers when customs...",
+      "description": "Automated email notifications should be dispatched to shippers when customs clearance paperwork is rejected.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "notifications",
+      "preconditions": "",
+      "expected_outcome": "Automated email notifications should be dispatched to shippers when customs clearance paperwork is rejected.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 2,
+      "source_excerpt": "Automated email notifications should be dispatched to shippers when customs clearance paperwork is rejected.",
+      "quality_score": 95.5,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 95.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-008",
+      "req_type": "functional",
+      "summary": "The system should dispatch alert notifications to terminal staff when...",
+      "description": "The system should dispatch alert notifications to terminal staff when dangerous goods dwell time exceeds permissible safety limits.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "notifications",
+      "preconditions": "",
+      "expected_outcome": "The system should dispatch alert notifications to terminal staff when dangerous goods dwell time exceeds permissible safety limits.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 2,
+      "source_excerpt": "The system should dispatch alert notifications to terminal staff when dangerous goods dwell time exceeds permissible safety limits.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-009",
+      "req_type": "functional",
+      "summary": "The system should maintain persistent inventory records of pallet barcode,...",
+      "description": "The system should maintain persistent inventory records of pallet barcode, SKU, aisle location, bin number, weight, and expiry date.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "The system should maintain persistent inventory records of pallet barcode, SKU, aisle location, bin number, weight, and expiry date.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 2,
+      "source_excerpt": "The system should maintain persistent inventory records of pallet barcode, SKU, aisle location, bin number, weight, and expiry date.",
+      "quality_score": 95.5,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 95.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "NFR-005",
+      "req_type": "non_functional",
+      "summary": "Immutable database audit logs should preserve every pallet movement and...",
+      "description": "Immutable database audit logs should preserve every pallet movement and bin transfer for at least 7 years for regulatory compliance.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "Immutable database audit logs should preserve every pallet movement and bin transfer for at least 7 years for regulatory compliance.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 2,
+      "source_excerpt": "Immutable database audit logs should preserve every pallet movement and bin transfer for at least 7 years for regulatory compliance.",
+      "quality_score": 95.5,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 95.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-010",
+      "req_type": "functional",
+      "summary": "The system should record forklift equipment telematics, battery charging cycles,...",
+      "description": "The system should record forklift equipment telematics, battery charging cycles, and inspection history in the central database.",
+      "actor": "System",
+      "action": "record",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "The system should record forklift equipment telematics, battery charging cycles, and inspection history in the central database.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 2,
+      "source_excerpt": "The system should record forklift equipment telematics, battery charging cycles, and inspection history in the central database.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "NFR-006",
+      "req_type": "non_functional",
+      "summary": "Database backup and disaster recovery replication should ensure zero data...",
+      "description": "Database backup and disaster recovery replication should ensure zero data loss for freight manifests across secondary storage clusters.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "Database backup and disaster recovery replication should ensure zero data loss for freight manifests across secondary storage clusters.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "low",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 2,
+      "source_excerpt": "Database backup and disaster recovery replication should ensure zero data loss for freight manifests across secondary storage clusters.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "NFR-007",
+      "req_type": "non_functional",
+      "summary": "Operations executives should be able to generate quarterly freight throughput...",
+      "description": "Operations executives should be able to generate quarterly freight throughput reports and warehouse capacity utilization analytics.",
+      "actor": "System",
+      "action": "generate",
+      "target_object": "reports",
+      "preconditions": "",
+      "expected_outcome": "Operations executives should be able to generate quarterly freight throughput reports and warehouse capacity utilization analytics.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 2,
+      "source_excerpt": "Operations executives should be able to generate quarterly freight throughput reports and warehouse capacity utilization analytics.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-011",
+      "req_type": "functional",
+      "summary": "The system should calculate average dock turnaround times and carrier...",
+      "description": "The system should calculate average dock turnaround times and carrier on-time delivery statistical distributions.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "The system should calculate average dock turnaround times and carrier on-time delivery statistical distributions.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 2,
+      "source_excerpt": "The system should calculate average dock turnaround times and carrier on-time delivery statistical distributions.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-012",
+      "req_type": "functional",
+      "summary": "Logistics managers should be able to export carbon emission summaries...",
+      "description": "Logistics managers should be able to export carbon emission summaries and fleet fuel consumption reports.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "reports",
+      "preconditions": "",
+      "expected_outcome": "Logistics managers should be able to export carbon emission summaries and fleet fuel consumption reports.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 2,
+      "source_excerpt": "Logistics managers should be able to export carbon emission summaries and fleet fuel consumption reports.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-013",
+      "req_type": "functional",
+      "summary": "The system should generate carrier demurrage charge analytics and freight...",
+      "description": "The system should generate carrier demurrage charge analytics and freight invoice penalty reconciliation summaries.",
+      "actor": "System",
+      "action": "generate",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "The system should generate carrier demurrage charge analytics and freight invoice penalty reconciliation summaries.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 2,
+      "source_excerpt": "The system should generate carrier demurrage charge analytics and freight invoice penalty reconciliation summaries.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-014",
+      "req_type": "functional",
+      "summary": "Centralized system to coordinate logistics operations",
+      "description": "The organization requires a centralized Warehouse Logistics & Fleet Dispatch System to coordinate dock scheduling, pallet inventory, driver notifications, and operational reporting.",
+      "actor": "Organization",
+      "action": "coordinate",
+      "target_object": "dock scheduling, pallet inventory, driver notifications, operational reporting",
+      "preconditions": "",
+      "expected_outcome": "Dock scheduling, pallet inventory, driver notifications, and operational reporting are coordinated by the system.",
+      "acceptance_criteria": [
+        "Given the centralized system is deployed, When it operates, Then it coordinates dock scheduling, pallet inventory, driver notifications, and operational reporting."
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 1,
+      "source_excerpt": "The organization requires a centralized Warehouse Logistics & Fleet Dispatch System to coordinate dock scheduling, pallet inventory, driver notifications, and operational reporting.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    }
+  ],
+  "issues": [
+    {
+      "requirement_id": "NFR-001",
+      "issue_type": "ambiguity",
+      "title": "Ambiguous specification: 'Secure'",
+      "description": "The term 'Secure' is subjective and lacks measurable engineering verification criteria.",
+      "detected_phrase": "Secure",
+      "severity": "high",
+      "confidence": 0.88,
+      "question": "What encryption standards (e.g., AES-256, TLS 1.3), authentication mechanisms (MFA, OAuth2), and compliance policies are required?",
+      "suggested_options": [
+        "TLS 1.3 in transit + AES-256 at rest",
+        "OAuth2 / JWT with RBAC",
+        "SOC2 / GDPR compliance"
+      ]
+    }
+  ],
+  "clarifications": [
+    {
+      "requirement_id": "NFR-001",
+      "question": "What encryption standards (e.g., AES-256, TLS 1.3), authentication mechanisms (MFA, OAuth2), and compliance policies are required?",
+      "rationale": "Clarifying ambiguous phrase: 'Secure'",
+      "priority": "high",
+      "suggested_options": [
+        "TLS 1.3 in transit + AES-256 at rest",
+        "OAuth2 / JWT with RBAC",
+        "SOC2 / GDPR compliance"
+      ],
+      "status": "pending"
+    }
+  ],
+  "modules": [
+    {
+      "id": "MOD-GATEWAY",
+      "name": "API Gateway",
+      "description": "Provides a common entry point for the application services derived from the software requirements.",
+      "module_type": "gateway",
+      "tech_stack": "API gateway / reverse proxy",
+      "responsibilities": [
+        "Route API requests",
+        "Apply common request controls"
+      ],
+      "api_endpoints": [
+        "/api/*"
+      ],
+      "pos_x": 400.0,
+      "pos_y": 50.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-AUTHENTICATION",
+      "name": "Authentication & Authorization",
+      "description": "Manages corporate multi\u2011factor login, session lifecycle, and role\u2011based access control for all actors.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Validate MFA credentials",
+        "Issue and refresh access tokens",
+        "Enforce RBAC policies",
+        "Terminate idle sessions"
+      ],
+      "api_endpoints": [
+        "/api/authentication",
+        "/api/authentication/{id}"
+      ],
+      "pos_x": 150.0,
+      "pos_y": 180.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-BOOKING",
+      "name": "Dock & Route Scheduling",
+      "description": "Handles carrier dock appointment booking, outbound route planning, and truck allocation while respecting bay availability rules.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Create and reserve dock slots",
+        "Schedule outbound delivery routes",
+        "Allocate trucks to windows",
+        "Validate loading\u2011bay status",
+        "Auto\u2011expire stale appointments"
+      ],
+      "api_endpoints": [
+        "/api/booking",
+        "/api/booking/{id}"
+      ],
+      "pos_x": 400.0,
+      "pos_y": 180.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-NOTIFICATION",
+      "name": "Notification Service",
+      "description": "Delivers real\u2011time alerts via SMS, push, email and in\u2011terminal messages to drivers, staff and managers.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Send SMS alerts to drivers",
+        "Push notifications for temperature\u2011controlled events",
+        "Email customs\u2011related updates",
+        "Dispatch terminal alerts"
+      ],
+      "api_endpoints": [
+        "/api/notification",
+        "/api/notification/{id}"
+      ],
+      "pos_x": 650.0,
+      "pos_y": 180.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-INVENTORY",
+      "name": "Inventory & Telemetry",
+      "description": "Maintains immutable pallet inventory records and records forklift telematics, supporting auditability and traceability.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Persist pallet barcode movements",
+        "Store forklift battery and usage telemetry",
+        "Provide immutable audit log entries"
+      ],
+      "api_endpoints": [
+        "/api/inventory",
+        "/api/inventory/{id}"
+      ],
+      "pos_x": 150.0,
+      "pos_y": 350.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-ANALYTICS",
+      "name": "Analytics & Reporting",
+      "description": "Generates operational dashboards, throughput metrics, carbon\u2011emission summaries and demurrage analytics for executives.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Calculate dock turnaround times",
+        "Produce quarterly freight throughput reports",
+        "Export carbon\u2011emission summaries",
+        "Generate demurrage charge analytics"
+      ],
+      "api_endpoints": [
+        "/api/analytics",
+        "/api/analytics/{id}"
+      ],
+      "pos_x": 400.0,
+      "pos_y": 350.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-DATA",
+      "name": "Application Data Store",
+      "description": "Provides persistent storage for entities and records required by the analyzed software requirements.",
+      "module_type": "database",
+      "tech_stack": "Relational database",
+      "responsibilities": [
+        "Persist application entities",
+        "Maintain data consistency",
+        "Support application data retrieval"
+      ],
+      "api_endpoints": [],
+      "pos_x": 400.0,
+      "pos_y": 500.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    }
+  ],
+  "relations": [
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-AUTHENTICATION",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-BOOKING",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-NOTIFICATION",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-INVENTORY",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-ANALYTICS",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-AUTHENTICATION",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Authentication & Authorization persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-BOOKING",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Dock & Route Scheduling persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-NOTIFICATION",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Notification Service persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-INVENTORY",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Inventory & Telemetry persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-ANALYTICS",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Analytics & Reporting persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-BOOKING",
+      "target_module_id": "MOD-NOTIFICATION",
+      "relation_type": "publishes_to",
+      "description": "Booking service emits appointment and route status events for driver and staff notifications."
+    },
+    {
+      "source_module_id": "MOD-BOOKING",
+      "target_module_id": "MOD-INVENTORY",
+      "relation_type": "reads_from",
+      "description": "Scheduling validates loading\u2011bay and pallet availability against inventory data."
+    },
+    {
+      "source_module_id": "MOD-ANALYTICS",
+      "target_module_id": "MOD-BOOKING",
+      "relation_type": "reads_from",
+      "description": "Analytics consumes booking and route data to compute throughput and turnaround metrics."
+    },
+    {
+      "source_module_id": "MOD-ANALYTICS",
+      "target_module_id": "MOD-INVENTORY",
+      "relation_type": "reads_from",
+      "description": "Analytics uses inventory movement logs for carbon\u2011emission and demurrage calculations."
+    },
+    {
+      "source_module_id": "MOD-AUTHENTICATION",
+      "target_module_id": "MOD-NOTIFICATION",
+      "relation_type": "calls",
+      "description": "Authentication service triggers security\u2011related push/SMS alerts on login failures or privilege escalations."
+    }
+  ],
+  "epics": [
+    {
+      "id": "EPIC-01",
+      "title": "Authentication & Access Management",
+      "description": "Implementation of capabilities related to authentication & access management."
+    },
+    {
+      "id": "EPIC-02",
+      "title": "Booking & Scheduling",
+      "description": "Implementation of capabilities related to booking & scheduling."
+    },
+    {
+      "id": "EPIC-03",
+      "title": "Notifications & Communication",
+      "description": "Implementation of capabilities related to notifications & communication."
+    },
+    {
+      "id": "EPIC-04",
+      "title": "Inventory & Telemetry",
+      "description": "Maintains immutable pallet inventory records and records forklift telematics, supporting auditability and traceability."
+    },
+    {
+      "id": "EPIC-05",
+      "title": "Data Management & Storage",
+      "description": "Implementation of capabilities related to data management & storage."
+    },
+    {
+      "id": "EPIC-06",
+      "title": "Analytics & Reporting",
+      "description": "Generates operational dashboards, throughput metrics, carbon\u2011emission summaries and demurrage analytics for executives."
+    }
+  ],
+  "features": [
+    {
+      "id": "FEAT-01",
+      "epic_id": "EPIC-01",
+      "title": "Authentication & Authorization",
+      "description": "Implement authentication & authorization."
+    },
+    {
+      "id": "FEAT-02",
+      "epic_id": "EPIC-02",
+      "title": "Booking & Scheduling",
+      "description": "Implement booking & scheduling."
+    },
+    {
+      "id": "FEAT-03",
+      "epic_id": "EPIC-03",
+      "title": "Notifications",
+      "description": "Implement notifications."
+    },
+    {
+      "id": "FEAT-04",
+      "epic_id": "EPIC-04",
+      "title": "Inventory & Telemetry Operations",
+      "description": "Implement operations and services for Inventory & Telemetry."
+    },
+    {
+      "id": "FEAT-05",
+      "epic_id": "EPIC-05",
+      "title": "Data Persistence",
+      "description": "Implement data persistence."
+    },
+    {
+      "id": "FEAT-06",
+      "epic_id": "EPIC-06",
+      "title": "Analytics & Reporting Operations",
+      "description": "Implement operations and services for Analytics & Reporting."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "epic_id": "EPIC-01",
+      "feature_id": "FEAT-01",
+      "requirement_id": "NFR-001",
+      "module_id": "MOD-AUTHENTICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Authentication & Authorization"
+      ],
+      "title": "Implement: Secure login with corporate multi-factor authentication",
+      "description": "Implement the behavior specified by NFR-001: Secure login with corporate multi-factor authentication. This work belongs to the Authentication & Authorization feature and uses architecture module MOD-AUTHENTICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for system login",
+        "Implement application logic for system login",
+        "Expose the required API behavior for system login",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement NFR-001"
+      ],
+      "acceptance_criteria": [
+        "Given a logistics operator or warehouse dispatcher, When they attempt to log in, Then they must authenticate using corporate multi-factor authentication."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.98,
+      "classification_reasoning": "Implements MFA login, core authentication function.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-002",
+      "epic_id": "EPIC-01",
+      "feature_id": "FEAT-01",
+      "requirement_id": "NFR-002",
+      "module_id": "MOD-AUTHENTICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Authentication & Authorization"
+      ],
+      "title": "Implement: Role\u2011based access control for forklift drivers",
+      "description": "Implement the behavior specified by NFR-002: Role\u2011based access control for forklift drivers. This work belongs to the Authentication & Authorization feature and uses architecture module MOD-AUTHENTICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for warehouse forklift drivers' access to loading bays",
+        "Implement application logic for warehouse forklift drivers' access to loading bays",
+        "Expose the required API behavior for warehouse forklift drivers' access to loading bays",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement NFR-002"
+      ],
+      "acceptance_criteria": [
+        "Given the system is active, When a forklift driver attempts to access a loading bay, Then access is allowed only if the bay is assigned to that driver."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.97,
+      "classification_reasoning": "Enforces RBAC policies for forklift driver access.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-003",
+      "epic_id": "EPIC-01",
+      "feature_id": "FEAT-01",
+      "requirement_id": "NFR-003",
+      "module_id": "MOD-AUTHENTICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Authentication & Authorization"
+      ],
+      "title": "Implement: Supervisor credentials required for dangerous cargo overrides",
+      "description": "Implement the behavior specified by NFR-003: Supervisor credentials required for dangerous cargo overrides. This work belongs to the Authentication & Authorization feature and uses architecture module MOD-AUTHENTICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for dangerous cargo safety limits",
+        "Implement application logic for dangerous cargo safety limits",
+        "Expose the required API behavior for dangerous cargo safety limits",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement NFR-003"
+      ],
+      "acceptance_criteria": [
+        "Given a request to override dangerous cargo safety limits, When the system checks, Then it must verify supervisory credentials and manager override approval before allowing the override."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.96,
+      "classification_reasoning": "Requires supervisory credentials and override approval, an auth control.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-004",
+      "epic_id": "EPIC-01",
+      "feature_id": "FEAT-01",
+      "requirement_id": "NFR-004",
+      "module_id": "MOD-AUTHENTICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Authentication & Authorization"
+      ],
+      "title": "Implement: Automatic session expiration on handheld scanners",
+      "description": "Implement the behavior specified by NFR-004: Automatic session expiration on handheld scanners. This work belongs to the Authentication & Authorization feature and uses architecture module MOD-AUTHENTICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for system sessions on ruggedized handheld scanners",
+        "Implement application logic for system sessions on ruggedized handheld scanners",
+        "Expose the required API behavior for system sessions on ruggedized handheld scanners",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement NFR-004"
+      ],
+      "acceptance_criteria": [
+        "Given a session on a ruggedized handheld scanner, When 15 minutes of inactivity elapse, Then the session expires automatically."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.95,
+      "classification_reasoning": "Handles automatic session timeout, part of authentication management.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-005",
+      "epic_id": "EPIC-02",
+      "feature_id": "FEAT-02",
+      "requirement_id": "FR-001",
+      "module_id": "MOD-BOOKING",
+      "required_skills": [
+        "API Development",
+        "Relational Database"
+      ],
+      "title": "Implement: Freight carriers book dock appointments and reserve arrival slots",
+      "description": "Implement the behavior specified by FR-001: Freight carriers book dock appointments and reserve arrival slots. This work belongs to the Booking & Scheduling feature and uses architecture module MOD-BOOKING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for loading dock appointments and freight arrival time slots",
+        "Implement application logic for loading dock appointments and freight arrival time slots",
+        "Expose the required API behavior for loading dock appointments and freight arrival time slots",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-001"
+      ],
+      "acceptance_criteria": [
+        "Given a freight carrier, When they request a dock appointment or arrival slot, Then the system books the appointment and reserves the slot."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.99,
+      "classification_reasoning": "Provides dock appointment booking and slot reservation capability.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-006",
+      "epic_id": "EPIC-02",
+      "feature_id": "FEAT-02",
+      "requirement_id": "FR-002",
+      "module_id": "MOD-BOOKING",
+      "required_skills": [
+        "API Development",
+        "Relational Database"
+      ],
+      "title": "Implement: Warehouse supervisors schedule outbound routes and allocate trucks",
+      "description": "Implement the behavior specified by FR-002: Warehouse supervisors schedule outbound routes and allocate trucks. This work belongs to the Booking & Scheduling feature and uses architecture module MOD-BOOKING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for outbound freight delivery routes and truck allocations",
+        "Implement application logic for outbound freight delivery routes and truck allocations",
+        "Expose the required API behavior for outbound freight delivery routes and truck allocations",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-002"
+      ],
+      "acceptance_criteria": [
+        "Given a warehouse supervisor, When they create a delivery schedule, Then the system records the routes and truck allocations for the delivery windows."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.99,
+      "classification_reasoning": "Schedules outbound routes and allocates trucks, core booking/scheduling.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-007",
+      "epic_id": "EPIC-02",
+      "feature_id": "FEAT-02",
+      "requirement_id": "FR-003",
+      "module_id": "MOD-BOOKING",
+      "required_skills": [
+        "API Development",
+        "Relational Database"
+      ],
+      "title": "Implement: The system should prevent a loading bay marked unavailable for...",
+      "description": "Implement the behavior specified by FR-003: The system should prevent a loading bay marked unavailable for.... This work belongs to the Booking & Scheduling feature and uses architecture module MOD-BOOKING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-003"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.96,
+      "classification_reasoning": "Prevents reservations for unavailable bays, booking rule enforcement.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-008",
+      "epic_id": "EPIC-02",
+      "feature_id": "FEAT-02",
+      "requirement_id": "FR-004",
+      "module_id": "MOD-BOOKING",
+      "required_skills": [
+        "API Development",
+        "Relational Database"
+      ],
+      "title": "Implement: Dock appointments should automatically expire if the transport vehicle fails...",
+      "description": "Implement the behavior specified by FR-004: Dock appointments should automatically expire if the transport vehicle fails.... This work belongs to the Booking & Scheduling feature and uses architecture module MOD-BOOKING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-004"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.96,
+      "classification_reasoning": "Auto\u2011expires dock appointments based on check\u2011in timeout, booking logic.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-009",
+      "epic_id": "EPIC-03",
+      "feature_id": "FEAT-03",
+      "requirement_id": "FR-005",
+      "module_id": "MOD-NOTIFICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Notification Systems"
+      ],
+      "title": "Implement: The system should send automated SMS alerts to freight drivers...",
+      "description": "Implement the behavior specified by FR-005: The system should send automated SMS alerts to freight drivers.... This work belongs to the Notifications feature and uses architecture module MOD-NOTIFICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-005"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [
+        "TASK-005"
+      ],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.98,
+      "classification_reasoning": "Sends SMS alerts to drivers, primary notification service.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-010",
+      "epic_id": "EPIC-03",
+      "feature_id": "FEAT-03",
+      "requirement_id": "FR-006",
+      "module_id": "MOD-NOTIFICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Notification Systems"
+      ],
+      "title": "Implement: Warehouse managers should receive instant push notifications when a temperature-controlled...",
+      "description": "Implement the behavior specified by FR-006: Warehouse managers should receive instant push notifications when a temperature-controlled.... This work belongs to the Notifications feature and uses architecture module MOD-NOTIFICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for notifications",
+        "Implement application logic for notifications",
+        "Expose the required API behavior for notifications",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-006"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [
+        "TASK-005"
+      ],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.98,
+      "classification_reasoning": "Delivers push notifications for temperature anomalies, notification function.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-011",
+      "epic_id": "EPIC-03",
+      "feature_id": "FEAT-03",
+      "requirement_id": "FR-007",
+      "module_id": "MOD-NOTIFICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Notification Systems"
+      ],
+      "title": "Implement: Automated email notifications should be dispatched to shippers when customs...",
+      "description": "Implement the behavior specified by FR-007: Automated email notifications should be dispatched to shippers when customs.... This work belongs to the Notifications feature and uses architecture module MOD-NOTIFICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for notifications",
+        "Implement application logic for notifications",
+        "Expose the required API behavior for notifications",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-007"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [
+        "TASK-005"
+      ],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.97,
+      "classification_reasoning": "Primary function is sending automated email alerts, which belongs to the Notification Service.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-012",
+      "epic_id": "EPIC-03",
+      "feature_id": "FEAT-03",
+      "requirement_id": "FR-008",
+      "module_id": "MOD-NOTIFICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Notification Systems"
+      ],
+      "title": "Implement: The system should dispatch alert notifications to terminal staff when...",
+      "description": "Implement the behavior specified by FR-008: The system should dispatch alert notifications to terminal staff when.... This work belongs to the Notifications feature and uses architecture module MOD-NOTIFICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for notifications",
+        "Implement application logic for notifications",
+        "Expose the required API behavior for notifications",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-008"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [
+        "TASK-005"
+      ],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.96,
+      "classification_reasoning": "Dispatching safety\u2011related alerts to staff is a notification capability.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-013",
+      "epic_id": "EPIC-04",
+      "feature_id": "FEAT-04",
+      "requirement_id": "FR-009",
+      "module_id": "MOD-INVENTORY",
+      "required_skills": [
+        "API Development",
+        "Relational Database"
+      ],
+      "title": "Implement: The system should maintain persistent inventory records of pallet barcode,...",
+      "description": "Implement the behavior specified by FR-009: The system should maintain persistent inventory records of pallet barcode,.... This work belongs to the Inventory & Telemetry Operations feature and uses architecture module MOD-INVENTORY.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-009"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.94,
+      "classification_reasoning": "Maintaining persistent pallet inventory records aligns with Inventory & Telemetry responsibilities.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-014",
+      "epic_id": "EPIC-05",
+      "feature_id": "FEAT-05",
+      "requirement_id": "NFR-005",
+      "module_id": "MOD-DATA",
+      "required_skills": [
+        "Relational Database"
+      ],
+      "title": "Implement: Immutable database audit logs should preserve every pallet movement and...",
+      "description": "Implement the behavior specified by NFR-005: Immutable database audit logs should preserve every pallet movement and.... This work belongs to the Data Persistence feature and uses architecture module MOD-DATA.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement NFR-005"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.93,
+      "classification_reasoning": "Immutable audit\u2011log preservation is a core data\u2011store concern handled by the Application Data Store.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-015",
+      "epic_id": "EPIC-04",
+      "feature_id": "FEAT-04",
+      "requirement_id": "FR-010",
+      "module_id": "MOD-INVENTORY",
+      "required_skills": [
+        "API Development",
+        "Relational Database"
+      ],
+      "title": "Implement: The system should record forklift equipment telematics, battery charging cycles,...",
+      "description": "Implement the behavior specified by FR-010: The system should record forklift equipment telematics, battery charging cycles,.... This work belongs to the Inventory & Telemetry Operations feature and uses architecture module MOD-INVENTORY.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-010"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.95,
+      "classification_reasoning": "Recording forklift telematics and inspection history is telemetry, which falls under Inventory & Telemetry.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-016",
+      "epic_id": "EPIC-05",
+      "feature_id": "FEAT-05",
+      "requirement_id": "NFR-006",
+      "module_id": "MOD-DATA",
+      "required_skills": [
+        "Relational Database"
+      ],
+      "title": "Implement: Database backup and disaster recovery replication should ensure zero data...",
+      "description": "Implement the behavior specified by NFR-006: Database backup and disaster recovery replication should ensure zero data.... This work belongs to the Data Persistence feature and uses architecture module MOD-DATA.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "low",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement NFR-006"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.94,
+      "classification_reasoning": "Backup and disaster\u2011recovery for freight manifests are data\u2011store reliability responsibilities.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-017",
+      "epic_id": "EPIC-06",
+      "feature_id": "FEAT-06",
+      "requirement_id": "NFR-007",
+      "module_id": "MOD-ANALYTICS",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Reporting & Analytics"
+      ],
+      "title": "Implement: Operations executives should be able to generate quarterly freight throughput...",
+      "description": "Implement the behavior specified by NFR-007: Operations executives should be able to generate quarterly freight throughput.... This work belongs to the Analytics & Reporting Operations feature and uses architecture module MOD-ANALYTICS.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for reports",
+        "Implement application logic for reports",
+        "Expose the required API behavior for reports",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement NFR-007"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.96,
+      "classification_reasoning": "Generating executive freight throughput and capacity utilization reports is an analytics function.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-018",
+      "epic_id": "EPIC-06",
+      "feature_id": "FEAT-06",
+      "requirement_id": "FR-011",
+      "module_id": "MOD-ANALYTICS",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Reporting & Analytics"
+      ],
+      "title": "Implement: The system should calculate average dock turnaround times and carrier...",
+      "description": "Implement the behavior specified by FR-011: The system should calculate average dock turnaround times and carrier.... This work belongs to the Analytics & Reporting Operations feature and uses architecture module MOD-ANALYTICS.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-011"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.95,
+      "classification_reasoning": "Calculating dock turnaround and on\u2011time delivery statistics is a reporting/analytics capability.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-019",
+      "epic_id": "EPIC-06",
+      "feature_id": "FEAT-06",
+      "requirement_id": "FR-012",
+      "module_id": "MOD-ANALYTICS",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Reporting & Analytics"
+      ],
+      "title": "Implement: Logistics managers should be able to export carbon emission summaries...",
+      "description": "Implement the behavior specified by FR-012: Logistics managers should be able to export carbon emission summaries.... This work belongs to the Analytics & Reporting Operations feature and uses architecture module MOD-ANALYTICS.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for reports",
+        "Implement application logic for reports",
+        "Expose the required API behavior for reports",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-012"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.95,
+      "classification_reasoning": "Exporting carbon emission and fuel consumption summaries is an analytics/reporting task.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-020",
+      "epic_id": "EPIC-06",
+      "feature_id": "FEAT-06",
+      "requirement_id": "FR-013",
+      "module_id": "MOD-ANALYTICS",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Reporting & Analytics"
+      ],
+      "title": "Implement: The system should generate carrier demurrage charge analytics and freight...",
+      "description": "Implement the behavior specified by FR-013: The system should generate carrier demurrage charge analytics and freight.... This work belongs to the Analytics & Reporting Operations feature and uses architecture module MOD-ANALYTICS.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-013"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.95,
+      "classification_reasoning": "Generating demurrage charge analytics and penalty reconciliation summaries belongs to Analytics & Reporting.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-021",
+      "epic_id": "EPIC-02",
+      "feature_id": "FEAT-02",
+      "requirement_id": "FR-014",
+      "module_id": "MOD-BOOKING",
+      "required_skills": [
+        "API Development",
+        "Relational Database"
+      ],
+      "title": "Implement: Centralized system to coordinate logistics operations",
+      "description": "Implement the behavior specified by FR-014: Centralized system to coordinate logistics operations. This work belongs to the Booking & Scheduling feature and uses architecture module MOD-BOOKING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for dock scheduling, pallet inventory, driver notifications, operational reporting",
+        "Implement application logic for dock scheduling, pallet inventory, driver notifications, operational reporting",
+        "Expose the required API behavior for dock scheduling, pallet inventory, driver notifications, operational reporting",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-014"
+      ],
+      "acceptance_criteria": [
+        "Given the centralized system is deployed, When it operates, Then it coordinates dock scheduling, pallet inventory, driver notifications, and operational reporting."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.62,
+      "classification_reasoning": "The core capability is coordinating dock scheduling, which is the primary function of the Booking & Scheduling module; other aspects are supporting services.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    }
+  ],
+  "dependencies": [
+    {
+      "task_id": "TASK-009",
+      "depends_on_task_id": "TASK-005",
+      "dependency_type": "blocks"
+    },
+    {
+      "task_id": "TASK-010",
+      "depends_on_task_id": "TASK-005",
+      "dependency_type": "blocks"
+    },
+    {
+      "task_id": "TASK-011",
+      "depends_on_task_id": "TASK-005",
+      "dependency_type": "blocks"
+    },
+    {
+      "task_id": "TASK-012",
+      "depends_on_task_id": "TASK-005",
+      "dependency_type": "blocks"
+    }
+  ],
+  "sprints": [
+    {
+      "sprint_name": "Sprint 1",
+      "total_points": 24,
+      "task_ids": [
+        "TASK-001",
+        "TASK-002",
+        "TASK-003",
+        "TASK-004",
+        "TASK-005",
+        "TASK-006",
+        "TASK-007",
+        "TASK-008",
+        "TASK-013",
+        "TASK-014",
+        "TASK-015",
+        "TASK-016"
+      ],
+      "over_capacity": false
+    },
+    {
+      "sprint_name": "Sprint 2",
+      "total_points": 18,
+      "task_ids": [
+        "TASK-017",
+        "TASK-018",
+        "TASK-019",
+        "TASK-020",
+        "TASK-021",
+        "TASK-009",
+        "TASK-010",
+        "TASK-011",
+        "TASK-012"
+      ],
+      "over_capacity": false
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "TEST-001",
+      "requirement_id": "NFR-001",
+      "title": "Verify Secure login with corporate multi-factor authentication",
+      "test_type": "performance",
+      "preconditions": "System deployed; Logistics operators and warehouse dispatchers logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Secure login with corporate multi-factor authentication'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system login"
+      ],
+      "expected_result": "Requirement NFR-001 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-002",
+      "requirement_id": "NFR-002",
+      "title": "Verify Role\u2011based access control for forklift drivers",
+      "test_type": "performance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Role\u2011based access control for forklift drivers'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected warehouse forklift drivers' access to loading bays"
+      ],
+      "expected_result": "Requirement NFR-002 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-003",
+      "requirement_id": "NFR-003",
+      "title": "Verify Supervisor credentials required for dangerous cargo overrides",
+      "test_type": "performance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Supervisor credentials required for dangerous cargo overrides'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected dangerous cargo safety limits"
+      ],
+      "expected_result": "Requirement NFR-003 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-004",
+      "requirement_id": "NFR-004",
+      "title": "Verify Automatic session expiration on handheld scanners",
+      "test_type": "performance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Automatic session expiration on handheld scanners'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system sessions on ruggedized handheld scanners"
+      ],
+      "expected_result": "Requirement NFR-004 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-005",
+      "requirement_id": "FR-001",
+      "title": "Verify Freight carriers book dock appointments and reserve arrival slots",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Freight carriers logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Freight carriers book dock appointments and reserve arrival slots'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected loading dock appointments and freight arrival time slots"
+      ],
+      "expected_result": "Requirement FR-001 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-006",
+      "requirement_id": "FR-002",
+      "title": "Verify Warehouse supervisors schedule outbound routes and allocate trucks",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Warehouse supervisors logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Warehouse supervisors schedule outbound routes and allocate trucks'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected outbound freight delivery routes and truck allocations"
+      ],
+      "expected_result": "Requirement FR-002 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-007",
+      "requirement_id": "FR-003",
+      "title": "Verify The system should prevent a loading bay marked unavailable for...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'The system should prevent a loading bay marked unavailable for...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-003 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-008",
+      "requirement_id": "FR-004",
+      "title": "Verify Dock appointments should automatically expire if the transport vehicle fails...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Dock appointments should automatically expire if the transport vehicle fails...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-004 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-009",
+      "requirement_id": "FR-005",
+      "title": "Verify The system should send automated SMS alerts to freight drivers...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'The system should send automated SMS alerts to freight drivers...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-005 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-010",
+      "requirement_id": "FR-006",
+      "title": "Verify Warehouse managers should receive instant push notifications when a temperature-controlled...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Warehouse managers should receive instant push notifications when a temperature-controlled...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected notifications"
+      ],
+      "expected_result": "Requirement FR-006 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-011",
+      "requirement_id": "FR-007",
+      "title": "Verify Automated email notifications should be dispatched to shippers when customs...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Automated email notifications should be dispatched to shippers when customs...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected notifications"
+      ],
+      "expected_result": "Requirement FR-007 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-012",
+      "requirement_id": "FR-008",
+      "title": "Verify The system should dispatch alert notifications to terminal staff when...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'The system should dispatch alert notifications to terminal staff when...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected notifications"
+      ],
+      "expected_result": "Requirement FR-008 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-013",
+      "requirement_id": "FR-009",
+      "title": "Verify The system should maintain persistent inventory records of pallet barcode,...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'The system should maintain persistent inventory records of pallet barcode,...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-009 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-014",
+      "requirement_id": "NFR-005",
+      "title": "Verify Immutable database audit logs should preserve every pallet movement and...",
+      "test_type": "performance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Immutable database audit logs should preserve every pallet movement and...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement NFR-005 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-015",
+      "requirement_id": "FR-010",
+      "title": "Verify The system should record forklift equipment telematics, battery charging cycles,...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'The system should record forklift equipment telematics, battery charging cycles,...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-010 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-016",
+      "requirement_id": "NFR-006",
+      "title": "Verify Database backup and disaster recovery replication should ensure zero data...",
+      "test_type": "performance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Database backup and disaster recovery replication should ensure zero data...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement NFR-006 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-017",
+      "requirement_id": "NFR-007",
+      "title": "Verify Operations executives should be able to generate quarterly freight throughput...",
+      "test_type": "performance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Operations executives should be able to generate quarterly freight throughput...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected reports"
+      ],
+      "expected_result": "Requirement NFR-007 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-018",
+      "requirement_id": "FR-011",
+      "title": "Verify The system should calculate average dock turnaround times and carrier...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'The system should calculate average dock turnaround times and carrier...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-011 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-019",
+      "requirement_id": "FR-012",
+      "title": "Verify Logistics managers should be able to export carbon emission summaries...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Logistics managers should be able to export carbon emission summaries...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected reports"
+      ],
+      "expected_result": "Requirement FR-012 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-020",
+      "requirement_id": "FR-013",
+      "title": "Verify The system should generate carrier demurrage charge analytics and freight...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'The system should generate carrier demurrage charge analytics and freight...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-013 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-021",
+      "requirement_id": "FR-014",
+      "title": "Verify Centralized system to coordinate logistics operations",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Organization logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Centralized system to coordinate logistics operations'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected dock scheduling, pallet inventory, driver notifications, operational reporting"
+      ],
+      "expected_result": "Requirement FR-014 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    }
+  ],
+  "traceability": {
+    "matrix": [
+      {
+        "source_id": "specification.docx",
+        "source_page": 1,
+        "requirement_id": "NFR-001",
+        "requirement_summary": "Secure login with corporate multi-factor authentication",
+        "req_type": "non_functional",
+        "status": "needs_review",
+        "module_id": "MOD-AUTHENTICATION",
+        "module_name": "Authentication & Authorization",
+        "task_ids": [
+          "TASK-001"
+        ],
+        "test_ids": [
+          "TEST-001"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-001",
+            "module_id": "MOD-AUTHENTICATION",
+            "module_name": "Authentication & Authorization"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 1,
+        "requirement_id": "NFR-002",
+        "requirement_summary": "Role\u2011based access control for forklift drivers",
+        "req_type": "non_functional",
+        "status": "needs_review",
+        "module_id": "MOD-AUTHENTICATION",
+        "module_name": "Authentication & Authorization",
+        "task_ids": [
+          "TASK-002"
+        ],
+        "test_ids": [
+          "TEST-002"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-002",
+            "module_id": "MOD-AUTHENTICATION",
+            "module_name": "Authentication & Authorization"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 1,
+        "requirement_id": "NFR-003",
+        "requirement_summary": "Supervisor credentials required for dangerous cargo overrides",
+        "req_type": "non_functional",
+        "status": "needs_review",
+        "module_id": "MOD-AUTHENTICATION",
+        "module_name": "Authentication & Authorization",
+        "task_ids": [
+          "TASK-003"
+        ],
+        "test_ids": [
+          "TEST-003"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-003",
+            "module_id": "MOD-AUTHENTICATION",
+            "module_name": "Authentication & Authorization"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 1,
+        "requirement_id": "NFR-004",
+        "requirement_summary": "Automatic session expiration on handheld scanners",
+        "req_type": "non_functional",
+        "status": "needs_review",
+        "module_id": "MOD-AUTHENTICATION",
+        "module_name": "Authentication & Authorization",
+        "task_ids": [
+          "TASK-004"
+        ],
+        "test_ids": [
+          "TEST-004"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-004",
+            "module_id": "MOD-AUTHENTICATION",
+            "module_name": "Authentication & Authorization"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 1,
+        "requirement_id": "FR-001",
+        "requirement_summary": "Freight carriers book dock appointments and reserve arrival slots",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-BOOKING",
+        "module_name": "Dock & Route Scheduling",
+        "task_ids": [
+          "TASK-005"
+        ],
+        "test_ids": [
+          "TEST-005"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-005",
+            "module_id": "MOD-BOOKING",
+            "module_name": "Dock & Route Scheduling"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 1,
+        "requirement_id": "FR-002",
+        "requirement_summary": "Warehouse supervisors schedule outbound routes and allocate trucks",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-BOOKING",
+        "module_name": "Dock & Route Scheduling",
+        "task_ids": [
+          "TASK-006"
+        ],
+        "test_ids": [
+          "TEST-006"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-006",
+            "module_id": "MOD-BOOKING",
+            "module_name": "Dock & Route Scheduling"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 1,
+        "requirement_id": "FR-003",
+        "requirement_summary": "The system should prevent a loading bay marked unavailable for...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-BOOKING",
+        "module_name": "Dock & Route Scheduling",
+        "task_ids": [
+          "TASK-007"
+        ],
+        "test_ids": [
+          "TEST-007"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-007",
+            "module_id": "MOD-BOOKING",
+            "module_name": "Dock & Route Scheduling"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 1,
+        "requirement_id": "FR-004",
+        "requirement_summary": "Dock appointments should automatically expire if the transport vehicle fails...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-BOOKING",
+        "module_name": "Dock & Route Scheduling",
+        "task_ids": [
+          "TASK-008"
+        ],
+        "test_ids": [
+          "TEST-008"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-008",
+            "module_id": "MOD-BOOKING",
+            "module_name": "Dock & Route Scheduling"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 2,
+        "requirement_id": "FR-005",
+        "requirement_summary": "The system should send automated SMS alerts to freight drivers...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-NOTIFICATION",
+        "module_name": "Notification Service",
+        "task_ids": [
+          "TASK-009"
+        ],
+        "test_ids": [
+          "TEST-009"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-009",
+            "module_id": "MOD-NOTIFICATION",
+            "module_name": "Notification Service"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 2,
+        "requirement_id": "FR-006",
+        "requirement_summary": "Warehouse managers should receive instant push notifications when a temperature-controlled...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-NOTIFICATION",
+        "module_name": "Notification Service",
+        "task_ids": [
+          "TASK-010"
+        ],
+        "test_ids": [
+          "TEST-010"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-010",
+            "module_id": "MOD-NOTIFICATION",
+            "module_name": "Notification Service"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 2,
+        "requirement_id": "FR-007",
+        "requirement_summary": "Automated email notifications should be dispatched to shippers when customs...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-NOTIFICATION",
+        "module_name": "Notification Service",
+        "task_ids": [
+          "TASK-011"
+        ],
+        "test_ids": [
+          "TEST-011"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-011",
+            "module_id": "MOD-NOTIFICATION",
+            "module_name": "Notification Service"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 2,
+        "requirement_id": "FR-008",
+        "requirement_summary": "The system should dispatch alert notifications to terminal staff when...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-NOTIFICATION",
+        "module_name": "Notification Service",
+        "task_ids": [
+          "TASK-012"
+        ],
+        "test_ids": [
+          "TEST-012"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-012",
+            "module_id": "MOD-NOTIFICATION",
+            "module_name": "Notification Service"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 2,
+        "requirement_id": "FR-009",
+        "requirement_summary": "The system should maintain persistent inventory records of pallet barcode,...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-INVENTORY",
+        "module_name": "Inventory & Telemetry",
+        "task_ids": [
+          "TASK-013"
+        ],
+        "test_ids": [
+          "TEST-013"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-013",
+            "module_id": "MOD-INVENTORY",
+            "module_name": "Inventory & Telemetry"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 2,
+        "requirement_id": "NFR-005",
+        "requirement_summary": "Immutable database audit logs should preserve every pallet movement and...",
+        "req_type": "non_functional",
+        "status": "needs_review",
+        "module_id": "MOD-DATA",
+        "module_name": "Application Data Store",
+        "task_ids": [
+          "TASK-014"
+        ],
+        "test_ids": [
+          "TEST-014"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-014",
+            "module_id": "MOD-DATA",
+            "module_name": "Application Data Store"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 2,
+        "requirement_id": "FR-010",
+        "requirement_summary": "The system should record forklift equipment telematics, battery charging cycles,...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-INVENTORY",
+        "module_name": "Inventory & Telemetry",
+        "task_ids": [
+          "TASK-015"
+        ],
+        "test_ids": [
+          "TEST-015"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-015",
+            "module_id": "MOD-INVENTORY",
+            "module_name": "Inventory & Telemetry"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 2,
+        "requirement_id": "NFR-006",
+        "requirement_summary": "Database backup and disaster recovery replication should ensure zero data...",
+        "req_type": "non_functional",
+        "status": "needs_review",
+        "module_id": "MOD-DATA",
+        "module_name": "Application Data Store",
+        "task_ids": [
+          "TASK-016"
+        ],
+        "test_ids": [
+          "TEST-016"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-016",
+            "module_id": "MOD-DATA",
+            "module_name": "Application Data Store"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 2,
+        "requirement_id": "NFR-007",
+        "requirement_summary": "Operations executives should be able to generate quarterly freight throughput...",
+        "req_type": "non_functional",
+        "status": "needs_review",
+        "module_id": "MOD-ANALYTICS",
+        "module_name": "Analytics & Reporting",
+        "task_ids": [
+          "TASK-017"
+        ],
+        "test_ids": [
+          "TEST-017"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-017",
+            "module_id": "MOD-ANALYTICS",
+            "module_name": "Analytics & Reporting"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 2,
+        "requirement_id": "FR-011",
+        "requirement_summary": "The system should calculate average dock turnaround times and carrier...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-ANALYTICS",
+        "module_name": "Analytics & Reporting",
+        "task_ids": [
+          "TASK-018"
+        ],
+        "test_ids": [
+          "TEST-018"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-018",
+            "module_id": "MOD-ANALYTICS",
+            "module_name": "Analytics & Reporting"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 2,
+        "requirement_id": "FR-012",
+        "requirement_summary": "Logistics managers should be able to export carbon emission summaries...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-ANALYTICS",
+        "module_name": "Analytics & Reporting",
+        "task_ids": [
+          "TASK-019"
+        ],
+        "test_ids": [
+          "TEST-019"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-019",
+            "module_id": "MOD-ANALYTICS",
+            "module_name": "Analytics & Reporting"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 2,
+        "requirement_id": "FR-013",
+        "requirement_summary": "The system should generate carrier demurrage charge analytics and freight...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-ANALYTICS",
+        "module_name": "Analytics & Reporting",
+        "task_ids": [
+          "TASK-020"
+        ],
+        "test_ids": [
+          "TEST-020"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-020",
+            "module_id": "MOD-ANALYTICS",
+            "module_name": "Analytics & Reporting"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 1,
+        "requirement_id": "FR-014",
+        "requirement_summary": "Centralized system to coordinate logistics operations",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-BOOKING",
+        "module_name": "Dock & Route Scheduling",
+        "task_ids": [
+          "TASK-021"
+        ],
+        "test_ids": [
+          "TEST-021"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-021",
+            "module_id": "MOD-BOOKING",
+            "module_name": "Dock & Route Scheduling"
+          }
+        ],
+        "is_orphan": false
+      }
+    ],
+    "total_requirements": 21,
+    "fully_linked_count": 21,
+    "orphan_count": 0,
+    "coverage_pct": 100.0,
+    "requirements_without_tasks": [],
+    "requirements_without_tests": [],
+    "requirements_with_invalid_modules": [],
+    "dangling_task_requirement_refs": [],
+    "dangling_test_requirement_refs": [],
+    "traceability_integrity": true
+  },
+  "source_trust": {
+    "overall_score": 97.99,
+    "status": "high_source_alignment",
+    "evidence_support_pct": 100.0,
+    "semantic_alignment_pct": 91.97,
+    "constraint_preservation_pct": 100.0,
+    "coverage_consistency_pct": 100.0,
+    "unsupported_content_pct": 0.0,
+    "requirements_total": 21,
+    "requirements_with_direct_evidence": 21,
+    "requirements_with_strong_semantic_match": 21,
+    "requirements_with_preserved_constraints": 21,
+    "source_statements_detected": 20,
+    "source_statements_supported": 20,
+    "uncovered_source_statements": [],
+    "requirements": [
+      {
+        "requirement_id": "NFR-001",
+        "summary": "Secure login with corporate multi-factor authentication",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 85.26,
+        "semantic_match_source": "Logistics operators and warehouse dispatchers should be able to log in securely using corporate multi-factor authentication.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [
+          "securely"
+        ],
+        "constraints_preserved": [
+          "securely"
+        ],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Logistics operators and warehouse dispatchers should be able to log in securely using corporate multi-factor authentication.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "NFR-002",
+        "summary": "Role\u2011based access control for forklift drivers",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 89.89,
+        "semantic_match_source": "The system should enforce role-based access control restricting warehouse forklift drivers to assigned loading bays.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "The system should enforce role-based access control restricting warehouse forklift drivers to assigned loading bays.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "NFR-003",
+        "summary": "Supervisor credentials required for dangerous cargo overrides",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 82.27,
+        "semantic_match_source": "Supervisory credentials and manager override approval should be required before overriding dangerous cargo safety limits.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Supervisory credentials and manager override approval should be required before overriding dangerous cargo safety limits.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "NFR-004",
+        "summary": "Automatic session expiration on handheld scanners",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 82.7,
+        "semantic_match_source": "System sessions should automatically expire after 15 minutes of terminal inactivity on ruggedized handheld scanners.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [
+          "15 minutes"
+        ],
+        "constraints_preserved": [
+          "15 minutes"
+        ],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "System sessions should automatically expire after 15 minutes of terminal inactivity on ruggedized handheld scanners.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-001",
+        "summary": "Freight carriers book dock appointments and reserve arrival slots",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 89.23,
+        "semantic_match_source": "Freight carriers should be able to book loading dock appointments and reserve freight arrival time slots.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Freight carriers should be able to book loading dock appointments and reserve freight arrival time slots.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-002",
+        "summary": "Warehouse supervisors schedule outbound routes and allocate trucks",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 91.15,
+        "semantic_match_source": "Warehouse supervisors should be able to schedule outbound freight delivery routes and allocate trucks to delivery windows.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Warehouse supervisors should be able to schedule outbound freight delivery routes and allocate trucks to delivery windows.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-003",
+        "summary": "The system should prevent a loading bay marked unavailable for...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 94.23,
+        "semantic_match_source": "The system should prevent a loading bay marked unavailable for maintenance from accepting dock reservations.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "The system should prevent a loading bay marked unavailable for maintenance from accepting dock reservations.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-004",
+        "summary": "Dock appointments should automatically expire if the transport vehicle fails...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 93.94,
+        "semantic_match_source": "Dock appointments should automatically expire if the transport vehicle fails to check in within 30 minutes of scheduled arrival.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [
+          "30 minutes"
+        ],
+        "constraints_preserved": [
+          "30 minutes"
+        ],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Dock appointments should automatically expire if the transport vehicle fails to check in within 30 minutes of scheduled arrival.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-005",
+        "summary": "The system should send automated SMS alerts to freight drivers...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 94.02,
+        "semantic_match_source": "The system should send automated SMS alerts to freight drivers when their designated loading dock is ready.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "The system should send automated SMS alerts to freight drivers when their designated loading dock is ready.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-006",
+        "summary": "Warehouse managers should receive instant push notifications when a temperature-controlled...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 95.13,
+        "semantic_match_source": "Warehouse managers should receive instant push notifications when a temperature-controlled cold-storage container experiences a temperature anomaly.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Warehouse managers should receive instant push notifications when a temperature-controlled cold-storage container experiences a temperature anomaly.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-007",
+        "summary": "Automated email notifications should be dispatched to shippers when customs...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 95.15,
+        "semantic_match_source": "Automated email notifications should be dispatched to shippers when customs clearance paperwork is rejected.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Automated email notifications should be dispatched to shippers when customs clearance paperwork is rejected.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-008",
+        "summary": "The system should dispatch alert notifications to terminal staff when...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 93.75,
+        "semantic_match_source": "The system should dispatch alert notifications to terminal staff when dangerous goods dwell time exceeds permissible safety limits.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "The system should dispatch alert notifications to terminal staff when dangerous goods dwell time exceeds permissible safety limits.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-009",
+        "summary": "The system should maintain persistent inventory records of pallet barcode,...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 93.76,
+        "semantic_match_source": "The system should maintain persistent inventory records of pallet barcode, SKU, aisle location, bin number, weight, and expiry date.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "The system should maintain persistent inventory records of pallet barcode, SKU, aisle location, bin number, weight, and expiry date.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "NFR-005",
+        "summary": "Immutable database audit logs should preserve every pallet movement and...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 93.87,
+        "semantic_match_source": "Immutable database audit logs should preserve every pallet movement and bin transfer for at least 7 years for regulatory compliance.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [
+          "7 years"
+        ],
+        "constraints_preserved": [
+          "7 years"
+        ],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Immutable database audit logs should preserve every pallet movement and bin transfer for at least 7 years for regulatory compliance.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-010",
+        "summary": "The system should record forklift equipment telematics, battery charging cycles,...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 94.55,
+        "semantic_match_source": "The system should record forklift equipment telematics, battery charging cycles, and inspection history in the central database.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "The system should record forklift equipment telematics, battery charging cycles, and inspection history in the central database.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "NFR-006",
+        "summary": "Database backup and disaster recovery replication should ensure zero data...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 94.2,
+        "semantic_match_source": "Database backup and disaster recovery replication should ensure zero data loss for freight manifests across secondary storage clusters.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Database backup and disaster recovery replication should ensure zero data loss for freight manifests across secondary storage clusters.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "NFR-007",
+        "summary": "Operations executives should be able to generate quarterly freight throughput...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 94.37,
+        "semantic_match_source": "Operations executives should be able to generate quarterly freight throughput reports and warehouse capacity utilization analytics.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Operations executives should be able to generate quarterly freight throughput reports and warehouse capacity utilization analytics.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-011",
+        "summary": "The system should calculate average dock turnaround times and carrier...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 94.54,
+        "semantic_match_source": "The system should calculate average dock turnaround times and carrier on-time delivery statistical distributions.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "The system should calculate average dock turnaround times and carrier on-time delivery statistical distributions.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-012",
+        "summary": "Logistics managers should be able to export carbon emission summaries...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 94.62,
+        "semantic_match_source": "Logistics managers should be able to export carbon emission summaries and fleet fuel consumption reports.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Logistics managers should be able to export carbon emission summaries and fleet fuel consumption reports.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-013",
+        "summary": "The system should generate carrier demurrage charge analytics and freight...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 94.81,
+        "semantic_match_source": "The system should generate carrier demurrage charge analytics and freight invoice penalty reconciliation summaries.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "The system should generate carrier demurrage charge analytics and freight invoice penalty reconciliation summaries.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-014",
+        "summary": "Centralized system to coordinate logistics operations",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 89.95,
+        "semantic_match_source": "The organization requires a centralized Warehouse Logistics & Fleet Dispatch System to coordinate dock scheduling, pallet inventory, driver notifications, and operational reporting.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "The organization requires a centralized Warehouse Logistics & Fleet Dispatch System to coordinate dock scheduling, pallet inventory, driver notifications, and operational reporting.",
+        "verification_status": "verified"
+      }
+    ],
+    "methodology": {
+      "evidence_weight": 0.3,
+      "semantic_weight": 0.25,
+      "constraint_weight": 0.25,
+      "coverage_weight": 0.2,
+      "semantic_match_threshold": 0.45,
+      "strong_semantic_match_threshold": 0.6,
+      "note": "This is an automated source-alignment and trustworthiness measure, not ground-truth accuracy."
+    }
+  },
+  "reports": [
+    {
+      "report_type": "srs",
+      "title": "Software Requirements Specification (SRS)",
+      "content_markdown": "# Software Requirements Specification (SRS)\n\n## Project: Warehouse Logistics & Fleet Dispatch System\n\n**Domain:** Not specified  \n**Generated by:** ReqPilot AI Multi-Agent Engine  \n**Date:** 2026-10-13 13:17:09 UTC  \n**Status:** Generated Report\n\n---\n\n### 1. Executive Summary & Scope\n\nHeld-out benchmark evaluation for Warehouse Logistics & Fleet Dispatch System\n\n### 2. Functional Requirements (14 Total)\n\n#### [FR-001] Freight carriers book dock appointments and reserve arrival slots\n\n- **Actor:** Freight carriers\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Freight carriers should be able to book loading dock appointments and reserve freight arrival time slots.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Dock appointments and arrival slots are booked and reserved for the carrier.\n- **Acceptance Criteria:**\n  - Given a freight carrier, When they request a dock appointment or arrival slot, Then the system books the appointment and reserves the slot.\n- **Source Grounding:** specification.docx (Page 1)\n> *Excerpt:* \"Freight carriers should be able to book loading dock appointments and reserve freight arrival time slots.\"\n\n#### [FR-002] Warehouse supervisors schedule outbound routes and allocate trucks\n\n- **Actor:** Warehouse supervisors\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Warehouse supervisors should be able to schedule outbound freight delivery routes and allocate trucks to delivery windows.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Routes are scheduled and trucks are allocated to specific delivery windows.\n- **Acceptance Criteria:**\n  - Given a warehouse supervisor, When they create a delivery schedule, Then the system records the routes and truck allocations for the delivery windows.\n- **Source Grounding:** specification.docx (Page 1)\n> *Excerpt:* \"Warehouse supervisors should be able to schedule outbound freight delivery routes and allocate trucks to delivery windows.\"\n\n#### [FR-003] The system should prevent a loading bay marked unavailable for...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** The system should prevent a loading bay marked unavailable for maintenance from accepting dock reservations.\n- **Preconditions:** Not specified\n- **Expected Outcome:** The system should prevent a loading bay marked unavailable for maintenance from accepting dock reservations.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 1)\n> *Excerpt:* \"The system should prevent a loading bay marked unavailable for maintenance from accepting dock reservations.\"\n\n#### [FR-004] Dock appointments should automatically expire if the transport vehicle fails...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Dock appointments should automatically expire if the transport vehicle fails to check in within 30 minutes of scheduled arrival.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Dock appointments should automatically expire if the transport vehicle fails to check in within 30 minutes of scheduled arrival.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 1)\n> *Excerpt:* \"Dock appointments should automatically expire if the transport vehicle fails to check in within 30 minutes of scheduled arrival.\"\n\n#### [FR-005] The system should send automated SMS alerts to freight drivers...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** The system should send automated SMS alerts to freight drivers when their designated loading dock is ready.\n- **Preconditions:** Not specified\n- **Expected Outcome:** The system should send automated SMS alerts to freight drivers when their designated loading dock is ready.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 2)\n> *Excerpt:* \"The system should send automated SMS alerts to freight drivers when their designated loading dock is ready.\"\n\n#### [FR-006] Warehouse managers should receive instant push notifications when a temperature-controlled...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Warehouse managers should receive instant push notifications when a temperature-controlled cold-storage container experiences a temperature anomaly.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Warehouse managers should receive instant push notifications when a temperature-controlled cold-storage container experiences a temperature anomaly.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 2)\n> *Excerpt:* \"Warehouse managers should receive instant push notifications when a temperature-controlled cold-storage container experiences a temperature anomaly.\"\n\n#### [FR-007] Automated email notifications should be dispatched to shippers when customs...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Automated email notifications should be dispatched to shippers when customs clearance paperwork is rejected.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Automated email notifications should be dispatched to shippers when customs clearance paperwork is rejected.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 2)\n> *Excerpt:* \"Automated email notifications should be dispatched to shippers when customs clearance paperwork is rejected.\"\n\n#### [FR-008] The system should dispatch alert notifications to terminal staff when...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** The system should dispatch alert notifications to terminal staff when dangerous goods dwell time exceeds permissible safety limits.\n- **Preconditions:** Not specified\n- **Expected Outcome:** The system should dispatch alert notifications to terminal staff when dangerous goods dwell time exceeds permissible safety limits.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 2)\n> *Excerpt:* \"The system should dispatch alert notifications to terminal staff when dangerous goods dwell time exceeds permissible safety limits.\"\n\n#### [FR-009] The system should maintain persistent inventory records of pallet barcode,...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** The system should maintain persistent inventory records of pallet barcode, SKU, aisle location, bin number, weight, and expiry date.\n- **Preconditions:** Not specified\n- **Expected Outcome:** The system should maintain persistent inventory records of pallet barcode, SKU, aisle location, bin number, weight, and expiry date.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 2)\n> *Excerpt:* \"The system should maintain persistent inventory records of pallet barcode, SKU, aisle location, bin number, weight, and expiry date.\"\n\n#### [FR-010] The system should record forklift equipment telematics, battery charging cycles,...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** The system should record forklift equipment telematics, battery charging cycles, and inspection history in the central database.\n- **Preconditions:** Not specified\n- **Expected Outcome:** The system should record forklift equipment telematics, battery charging cycles, and inspection history in the central database.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 2)\n> *Excerpt:* \"The system should record forklift equipment telematics, battery charging cycles, and inspection history in the central database.\"\n\n#### [FR-011] The system should calculate average dock turnaround times and carrier...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** The system should calculate average dock turnaround times and carrier on-time delivery statistical distributions.\n- **Preconditions:** Not specified\n- **Expected Outcome:** The system should calculate average dock turnaround times and carrier on-time delivery statistical distributions.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 2)\n> *Excerpt:* \"The system should calculate average dock turnaround times and carrier on-time delivery statistical distributions.\"\n\n#### [FR-012] Logistics managers should be able to export carbon emission summaries...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Logistics managers should be able to export carbon emission summaries and fleet fuel consumption reports.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Logistics managers should be able to export carbon emission summaries and fleet fuel consumption reports.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 2)\n> *Excerpt:* \"Logistics managers should be able to export carbon emission summaries and fleet fuel consumption reports.\"\n\n#### [FR-013] The system should generate carrier demurrage charge analytics and freight...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** The system should generate carrier demurrage charge analytics and freight invoice penalty reconciliation summaries.\n- **Preconditions:** Not specified\n- **Expected Outcome:** The system should generate carrier demurrage charge analytics and freight invoice penalty reconciliation summaries.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 2)\n> *Excerpt:* \"The system should generate carrier demurrage charge analytics and freight invoice penalty reconciliation summaries.\"\n\n#### [FR-014] Centralized system to coordinate logistics operations\n\n- **Actor:** Organization\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** The organization requires a centralized Warehouse Logistics & Fleet Dispatch System to coordinate dock scheduling, pallet inventory, driver notifications, and operational reporting.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Dock scheduling, pallet inventory, driver notifications, and operational reporting are coordinated by the system.\n- **Acceptance Criteria:**\n  - Given the centralized system is deployed, When it operates, Then it coordinates dock scheduling, pallet inventory, driver notifications, and operational reporting.\n- **Source Grounding:** specification.docx (Page 1)\n> *Excerpt:* \"The organization requires a centralized Warehouse Logistics & Fleet Dispatch System to coordinate dock scheduling, pallet inventory, driver notifications, and operational reporting.\"\n\n---\n\n### 3. Non-Functional Requirements (7 Total)\n\n#### [NFR-001] Secure login with corporate multi-factor authentication\n\n- **Priority:** high\n- **Quality Score:** 91.0%\n- **Specification:** Logistics operators and warehouse dispatchers should be able to log in securely using corporate multi-factor authentication.\n- **Source Citation:** specification.docx (Page 1)\n\n#### [NFR-002] Role\u2011based access control for forklift drivers\n\n- **Priority:** high\n- **Quality Score:** 93.2%\n- **Specification:** The system should enforce role-based access control restricting warehouse forklift drivers to assigned loading bays.\n- **Source Citation:** specification.docx (Page 1)\n\n#### [NFR-003] Supervisor credentials required for dangerous cargo overrides\n\n- **Priority:** high\n- **Quality Score:** 93.2%\n- **Specification:** Supervisory credentials and manager override approval should be required before overriding dangerous cargo safety limits.\n- **Source Citation:** specification.docx (Page 1)\n\n#### [NFR-004] Automatic session expiration on handheld scanners\n\n- **Priority:** medium\n- **Quality Score:** 95.5%\n- **Specification:** System sessions should automatically expire after 15 minutes of terminal inactivity on ruggedized handheld scanners.\n- **Source Citation:** specification.docx (Page 1)\n\n#### [NFR-005] Immutable database audit logs should preserve every pallet movement and...\n\n- **Priority:** medium\n- **Quality Score:** 95.5%\n- **Specification:** Immutable database audit logs should preserve every pallet movement and bin transfer for at least 7 years for regulatory compliance.\n- **Source Citation:** specification.docx (Page 2)\n\n#### [NFR-006] Database backup and disaster recovery replication should ensure zero data...\n\n- **Priority:** low\n- **Quality Score:** 93.2%\n- **Specification:** Database backup and disaster recovery replication should ensure zero data loss for freight manifests across secondary storage clusters.\n- **Source Citation:** specification.docx (Page 2)\n\n#### [NFR-007] Operations executives should be able to generate quarterly freight throughput...\n\n- **Priority:** medium\n- **Quality Score:** 93.2%\n- **Specification:** Operations executives should be able to generate quarterly freight throughput reports and warehouse capacity utilization analytics.\n- **Source Citation:** specification.docx (Page 2)\n"
+    },
+    {
+      "report_type": "quality_audit",
+      "title": "Requirements Quality & Risk Audit",
+      "content_markdown": "# Requirements Quality & Risk Audit Report\n\n## Project: Warehouse Logistics & Fleet Dispatch System\n\n**Overall Quality Score:** 93.8 / 100.0  \n**Audit Date:** 2026-10-13  \n**Total Requirements Evaluated:** 21\n\n---\n\n### Quality Dimension Weights & Scoring\n\n- **Completeness (20%):** Evaluates presence of actors, actions, preconditions, and acceptance criteria.\n- **Clarity (15%):** Penalizes subjective or vague terms.\n- **Atomicity (15%):** Ensures single coherent behavioral statements.\n- **Consistency (20%):** Validates absence of logical or temporal contradictions.\n- **Testability (15%):** Checks for measurable verification conditions.\n- **Feasibility (10%):** Assesses technical realism.\n- **Traceability (5%):** Validates links to raw source citations.\n\n---\n\n### Detected Issues Summary\n\n- **Ambiguities:** 1\n- **Potential Conflicts:** 0\n- **Near-Duplicates / Overlaps:** 0\n\n### Active Conflict Issues\n\nNo active conflict issues were detected.\n\n### Active Ambiguity Findings\n- **NFR-001:** Found subjective phrase *'Secure'*. The term 'Secure' is subjective and lacks measurable engineering verification criteria.\n"
+    },
+    {
+      "report_type": "architecture",
+      "title": "System Architecture Proposal",
+      "content_markdown": "# System Architecture & Technical Decomposition\n\n## Project: Warehouse Logistics & Fleet Dispatch System\n\n**Total Modules:** 7  \n**Total Inter-Service Relations:** 15\n\n---\n\n### Module Specifications\n\n#### MOD-GATEWAY: API Gateway (GATEWAY)\n\n- **Tech Stack:** API gateway / reverse proxy\n- **Description:** Provides a common entry point for the application services derived from the software requirements.\n- **Responsibilities:**\n  - Route API requests\n  - Apply common request controls\n- **Exposed APIs:**\n  - `/api/*`\n\n#### MOD-AUTHENTICATION: Authentication & Authorization (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Manages corporate multi\u2011factor login, session lifecycle, and role\u2011based access control for all actors.\n- **Responsibilities:**\n  - Validate MFA credentials\n  - Issue and refresh access tokens\n  - Enforce RBAC policies\n  - Terminate idle sessions\n- **Exposed APIs:**\n  - `/api/authentication`\n  - `/api/authentication/{id}`\n\n#### MOD-BOOKING: Dock & Route Scheduling (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Handles carrier dock appointment booking, outbound route planning, and truck allocation while respecting bay availability rules.\n- **Responsibilities:**\n  - Create and reserve dock slots\n  - Schedule outbound delivery routes\n  - Allocate trucks to windows\n  - Validate loading\u2011bay status\n  - Auto\u2011expire stale appointments\n- **Exposed APIs:**\n  - `/api/booking`\n  - `/api/booking/{id}`\n\n#### MOD-NOTIFICATION: Notification Service (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Delivers real\u2011time alerts via SMS, push, email and in\u2011terminal messages to drivers, staff and managers.\n- **Responsibilities:**\n  - Send SMS alerts to drivers\n  - Push notifications for temperature\u2011controlled events\n  - Email customs\u2011related updates\n  - Dispatch terminal alerts\n- **Exposed APIs:**\n  - `/api/notification`\n  - `/api/notification/{id}`\n\n#### MOD-INVENTORY: Inventory & Telemetry (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Maintains immutable pallet inventory records and records forklift telematics, supporting auditability and traceability.\n- **Responsibilities:**\n  - Persist pallet barcode movements\n  - Store forklift battery and usage telemetry\n  - Provide immutable audit log entries\n- **Exposed APIs:**\n  - `/api/inventory`\n  - `/api/inventory/{id}`\n\n#### MOD-ANALYTICS: Analytics & Reporting (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Generates operational dashboards, throughput metrics, carbon\u2011emission summaries and demurrage analytics for executives.\n- **Responsibilities:**\n  - Calculate dock turnaround times\n  - Produce quarterly freight throughput reports\n  - Export carbon\u2011emission summaries\n  - Generate demurrage charge analytics\n- **Exposed APIs:**\n  - `/api/analytics`\n  - `/api/analytics/{id}`\n\n#### MOD-DATA: Application Data Store (DATABASE)\n\n- **Tech Stack:** Relational database\n- **Description:** Provides persistent storage for entities and records required by the analyzed software requirements.\n- **Responsibilities:**\n  - Persist application entities\n  - Maintain data consistency\n  - Support application data retrieval\n- **Exposed APIs:**\n  - No API endpoints specified.\n\n---\n\n### Inter-Module Dependencies\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-AUTHENTICATION`: Gateway routes external requests to this service.\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-BOOKING`: Gateway routes external requests to this service.\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-NOTIFICATION`: Gateway routes external requests to this service.\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-INVENTORY`: Gateway routes external requests to this service.\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-ANALYTICS`: Gateway routes external requests to this service.\n- `MOD-AUTHENTICATION` **--[persists_to]-->** `MOD-DATA`: Authentication & Authorization persists state to application data store.\n- `MOD-BOOKING` **--[persists_to]-->** `MOD-DATA`: Dock & Route Scheduling persists state to application data store.\n- `MOD-NOTIFICATION` **--[persists_to]-->** `MOD-DATA`: Notification Service persists state to application data store.\n- `MOD-INVENTORY` **--[persists_to]-->** `MOD-DATA`: Inventory & Telemetry persists state to application data store.\n- `MOD-ANALYTICS` **--[persists_to]-->** `MOD-DATA`: Analytics & Reporting persists state to application data store.\n- `MOD-BOOKING` **--[publishes_to]-->** `MOD-NOTIFICATION`: Booking service emits appointment and route status events for driver and staff notifications.\n- `MOD-BOOKING` **--[reads_from]-->** `MOD-INVENTORY`: Scheduling validates loading\u2011bay and pallet availability against inventory data.\n- `MOD-ANALYTICS` **--[reads_from]-->** `MOD-BOOKING`: Analytics consumes booking and route data to compute throughput and turnaround metrics.\n- `MOD-ANALYTICS` **--[reads_from]-->** `MOD-INVENTORY`: Analytics uses inventory movement logs for carbon\u2011emission and demurrage calculations.\n- `MOD-AUTHENTICATION` **--[calls]-->** `MOD-NOTIFICATION`: Authentication service triggers security\u2011related push/SMS alerts on login failures or privilege escalations.\n"
+    },
+    {
+      "report_type": "plan",
+      "title": "Project Plan & Sprint Schedule",
+      "content_markdown": "# Software Project Plan & Sprint Schedule\n\n## Project: Warehouse Logistics & Fleet Dispatch System\n\n**Total Estimated Effort:** 126.0 Hours (42.0 Story Points)  \n**Total Persisted Sprints:** 2\n\n---\n\n### Sprint Roadmap\n\n#### Sprint 1 (Capacity: 24 Points)\n- **[TASK-001]** Implement: Secure login with corporate multi-factor authentication (2 pts, 6.0 hrs, low complexity)\n- **[TASK-002]** Implement: Role\u2011based access control for forklift drivers (2 pts, 6.0 hrs, low complexity)\n- **[TASK-003]** Implement: Supervisor credentials required for dangerous cargo overrides (2 pts, 6.0 hrs, low complexity)\n- **[TASK-004]** Implement: Automatic session expiration on handheld scanners (2 pts, 6.0 hrs, low complexity)\n- **[TASK-005]** Implement: Freight carriers book dock appointments and reserve arrival slots (2 pts, 6.0 hrs, low complexity)\n- **[TASK-006]** Implement: Warehouse supervisors schedule outbound routes and allocate trucks (2 pts, 6.0 hrs, low complexity)\n- **[TASK-007]** Implement: The system should prevent a loading bay marked unavailable for... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-008]** Implement: Dock appointments should automatically expire if the transport vehicle fails... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-013]** Implement: The system should maintain persistent inventory records of pallet barcode,... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-014]** Implement: Immutable database audit logs should preserve every pallet movement and... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-015]** Implement: The system should record forklift equipment telematics, battery charging cycles,... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-016]** Implement: Database backup and disaster recovery replication should ensure zero data... (2 pts, 6.0 hrs, low complexity)\n\n\n#### Sprint 2 (Capacity: 18 Points)\n- **[TASK-009]** Implement: The system should send automated SMS alerts to freight drivers... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-010]** Implement: Warehouse managers should receive instant push notifications when a temperature-controlled... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-011]** Implement: Automated email notifications should be dispatched to shippers when customs... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-012]** Implement: The system should dispatch alert notifications to terminal staff when... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-017]** Implement: Operations executives should be able to generate quarterly freight throughput... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-018]** Implement: The system should calculate average dock turnaround times and carrier... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-019]** Implement: Logistics managers should be able to export carbon emission summaries... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-020]** Implement: The system should generate carrier demurrage charge analytics and freight... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-021]** Implement: Centralized system to coordinate logistics operations (2 pts, 6.0 hrs, low complexity)\n\n"
+    },
+    {
+      "report_type": "traceability",
+      "title": "Traceability Matrix Report",
+      "content_markdown": "# End-to-End Requirements Traceability Matrix (RTM)\n\n## Project: Warehouse Logistics & Fleet Dispatch System\n\n| Source Provenance | Requirement ID | Type | Architecture Module | Development Tasks | Test Cases | Traceability Status |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| specification.docx:p1 | `NFR-001` | non_functional | `MOD-AUTHENTICATION` | TASK-001 | TEST-001 | Linked |\n| specification.docx:p1 | `NFR-002` | non_functional | `MOD-AUTHENTICATION` | TASK-002 | TEST-002 | Linked |\n| specification.docx:p1 | `NFR-003` | non_functional | `MOD-AUTHENTICATION` | TASK-003 | TEST-003 | Linked |\n| specification.docx:p1 | `NFR-004` | non_functional | `MOD-AUTHENTICATION` | TASK-004 | TEST-004 | Linked |\n| specification.docx:p1 | `FR-001` | functional | `MOD-BOOKING` | TASK-005 | TEST-005 | Linked |\n| specification.docx:p1 | `FR-002` | functional | `MOD-BOOKING` | TASK-006 | TEST-006 | Linked |\n| specification.docx:p1 | `FR-003` | functional | `MOD-BOOKING` | TASK-007 | TEST-007 | Linked |\n| specification.docx:p1 | `FR-004` | functional | `MOD-BOOKING` | TASK-008 | TEST-008 | Linked |\n| specification.docx:p2 | `FR-005` | functional | `MOD-NOTIFICATION` | TASK-009 | TEST-009 | Linked |\n| specification.docx:p2 | `FR-006` | functional | `MOD-NOTIFICATION` | TASK-010 | TEST-010 | Linked |\n| specification.docx:p2 | `FR-007` | functional | `MOD-NOTIFICATION` | TASK-011 | TEST-011 | Linked |\n| specification.docx:p2 | `FR-008` | functional | `MOD-NOTIFICATION` | TASK-012 | TEST-012 | Linked |\n| specification.docx:p2 | `FR-009` | functional | `MOD-INVENTORY` | TASK-013 | TEST-013 | Linked |\n| specification.docx:p2 | `NFR-005` | non_functional | `MOD-DATA` | TASK-014 | TEST-014 | Linked |\n| specification.docx:p2 | `FR-010` | functional | `MOD-INVENTORY` | TASK-015 | TEST-015 | Linked |\n| specification.docx:p2 | `NFR-006` | non_functional | `MOD-DATA` | TASK-016 | TEST-016 | Linked |\n| specification.docx:p2 | `NFR-007` | non_functional | `MOD-ANALYTICS` | TASK-017 | TEST-017 | Linked |\n| specification.docx:p2 | `FR-011` | functional | `MOD-ANALYTICS` | TASK-018 | TEST-018 | Linked |\n| specification.docx:p2 | `FR-012` | functional | `MOD-ANALYTICS` | TASK-019 | TEST-019 | Linked |\n| specification.docx:p2 | `FR-013` | functional | `MOD-ANALYTICS` | TASK-020 | TEST-020 | Linked |\n| specification.docx:p1 | `FR-014` | functional | `MOD-BOOKING` | TASK-021 | TEST-021 | Linked |\n"
+    }
+  ],
+  "logs": [
+    "Step 1/8: Initialized pipeline with 7 source chunks.",
+    "Step 2/8: Running Requirement Extraction Agent with evidence grounding...",
+    "Extracted 21 structured requirements.",
+    "Step 3/8: Running Quality Agent across 7 transparent dimensions...",
+    "Step 4/8: Detecting ambiguities, contradictions, and duplicates...",
+    "Detected 1 ambiguities, 0 conflicts, 0 duplicate candidates.",
+    "Generated 1 prioritized stakeholder clarification questions.",
+    "Step 5/8: Generating system architecture modules and interface topology...",
+    "Step 6/8: Decomposing requirements into Epics, Features, and Tasks...",
+    "Running deterministic effort estimation for generated tasks...",
+    "No team members supplied; resource matching skipped without fabricating assignments.",
+    "Step 7/8: Constructing end-to-end traceability matrix and test cases...",
+    "Running automated Source-Trust Verification against the original client document...",
+    "Source-Trust Verification completed: 97.99% source-alignment score.",
+    "Step 8/8: Generating analysis reports...",
+    "Pipeline execution successfully completed with evidence-grounded analysis."
+  ]
+}

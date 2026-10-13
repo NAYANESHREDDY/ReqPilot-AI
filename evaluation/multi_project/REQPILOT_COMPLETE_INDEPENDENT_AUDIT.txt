@@ -1,0 +1,1060 @@
+====================================================================================================
+               REQPILOT AI: COMPLETE INDEPENDENT AUDIT DOSSIER & VERIFICATION REPORT               
+====================================================================================================
+Dossier Generated At : 2026-10-13 10:58:08 UTC
+Auditor Role         : Senior ML Evaluation Engineer & Independent Software Auditor
+Archive Inspected    : reqpilot_independent_audit_package.zip
+Archive Size         : 280,382 bytes
+Archive SHA-256      : d8f40a2b8181fd963d59ee3941de7d9e1792889f7bfc400849bb524c5d75b9cc
+Official Scorer Hash : b6c599655cc7c8e8fe8550c8e74c2bd13335ff6ec41f859a0354b3932a3655fb
+Target Criteria      : >= 90.0% Classification Accuracy independently verified on every domain
+Audit Package State  : Self-contained plain-text dossier for independent technical review
+====================================================================================================
+
+====================================================================================================
+SECTION 1: COMPLETE RECURSIVE ARCHIVE FILE INVENTORY (ALL 42 ENTRIES)
+====================================================================================================
+Every file inside reqpilot_independent_audit_package.zip is documented below by directory category.
+No files are omitted. SHA-256 hashes, byte sizes, purpose, dependencies, and contents are detailed.
+
+Total entries inspected in ZIP: 42 files.
+
+[01/42] File Path : AUDIT_REPORT.md
+     Size      : 17,323 bytes (compressed: 6,491 bytes)
+     SHA-256   : 7d479de1b4d73cde11f63e73b672ccf009f466179b32377737ddb6f6a84907c8
+     Role      : Independent Software Evaluation Audit Report (Markdown format).
+     Contents  : Executive summary, input inventory, reproduced metrics table, LLM provenance findings,
+                 multi-key rotation breakdown, pytest results, root cause analyses, and recommendations.
+     Depends On: Output of evaluation runs, pytest suite, and official scorer.
+     Validation: Authoritative human-readable audit report.
+
+[02/42] File Path : benchmark/banking_management/gold_reference.json
+     Size      : 7,647 bytes (compressed: 1,856 bytes)
+     SHA-256   : 50916a000e2f6f8382999dbec787a1a334430063151cf2091ad8a3d08b079af8
+     Role      : Frozen Ground-Truth Benchmark Reference for domain 'banking_management'.
+     Contents  : JSON object with 'benchmark_domain', 'version', and 'requirement_details'.
+                 Each requirement entry defines 'canonical' module class, 'statement', and metadata.
+     Depends On: Domain specification document.
+     Validation: Critical frozen ground truth; must never be altered during audit.
+
+[03/42] File Path : benchmark/ecommerce_platform/gold_reference.json
+     Size      : 10,410 bytes (compressed: 2,264 bytes)
+     SHA-256   : 9096b24889b6f213e45908bdeea68a7690b9784f39e1f49e4e8fb92ca59978d0
+     Role      : Frozen Ground-Truth Benchmark Reference for domain 'ecommerce_platform'.
+     Contents  : JSON object with 'benchmark_domain', 'version', and 'requirement_details'.
+                 Each requirement entry defines 'canonical' module class, 'statement', and metadata.
+     Depends On: Domain specification document.
+     Validation: Critical frozen ground truth; must never be altered during audit.
+
+[04/42] File Path : benchmark/ev_charging/gold_reference.json
+     Size      : 30,425 bytes (compressed: 3,789 bytes)
+     SHA-256   : de7b0f66dc9ffec90cc36e8ca132eca7ba275d6bf8e501403f4b056e8c52ef19
+     Role      : Frozen Ground-Truth Benchmark Reference for domain 'ev_charging'.
+     Contents  : JSON object with 'benchmark_domain', 'version', and 'requirement_details'.
+                 Each requirement entry defines 'canonical' module class, 'statement', and metadata.
+     Depends On: Domain specification document.
+     Validation: Critical frozen ground truth; must never be altered during audit.
+
+[05/42] File Path : benchmark/hospital_management/gold_reference.json
+     Size      : 61,961 bytes (compressed: 6,092 bytes)
+     SHA-256   : 60ef330d34fcaf3754c12fe3af45672401a4c43e11a420ac115159a153923dbc
+     Role      : Frozen Ground-Truth Benchmark Reference for domain 'hospital_management'.
+     Contents  : JSON object with 'benchmark_domain', 'version', and 'requirement_details'.
+                 Each requirement entry defines 'canonical' module class, 'statement', and metadata.
+     Depends On: Domain specification document.
+     Validation: Critical frozen ground truth; must never be altered during audit.
+
+[06/42] File Path : benchmark/library_management/gold_reference.json
+     Size      : 7,377 bytes (compressed: 1,770 bytes)
+     SHA-256   : 158664146dd1936731d574fb4fa8cca4e6092a3397909ad7fe36554961c8a950
+     Role      : Frozen Ground-Truth Benchmark Reference for domain 'library_management'.
+     Contents  : JSON object with 'benchmark_domain', 'version', and 'requirement_details'.
+                 Each requirement entry defines 'canonical' module class, 'statement', and metadata.
+     Depends On: Domain specification document.
+     Validation: Critical frozen ground truth; must never be altered during audit.
+
+[07/42] File Path : checksums.sha256
+     Size      : 4,705 bytes (compressed: 2,205 bytes)
+     SHA-256   : 5bfd530ab19350615ffe7444343531829ca60bfb4bd1d4ab91a110eabfdc9026
+     Role      : Standard GNU/POSIX Checksum Index.
+     Contents  : 40 lines mapping SHA-256 hex strings to relative file paths.
+     Depends On: All files in audit package.
+     Validation: Enables automated validation via 'sha256sum -c checksums.sha256'.
+
+[08/42] File Path : logs/fresh_eval_execution_redacted.log
+     Size      : 3,122 bytes (compressed: 1,022 bytes)
+     SHA-256   : 2ddc7d32c038e8fcc5ba8735dc051bbb41d135e58fa7172e01b99786580df64c
+     Role      : Preserved Execution & Verification Logs (Sanitized & Redacted).
+     Contents  : Terminal logs from fresh pipeline evaluation run (task-3524) and pytest test suite (task-3627).
+                 Contains rotation notifications, cooldown notices, test outcomes, and timing.
+     Depends On: Live test and evaluation executions.
+     Validation: Provides observable proof of rotation, slot revocation, and test execution.
+
+[09/42] File Path : logs/test_suite_execution.log
+     Size      : 7,720 bytes (compressed: 957 bytes)
+     SHA-256   : 488f0f8bd94567c79aefb631cb0d1a773a7143ce6c0f0f7d12a3ac15f6bc799a
+     Role      : Preserved Execution & Verification Logs (Sanitized & Redacted).
+     Contents  : Terminal logs from fresh pipeline evaluation run (task-3524) and pytest test suite (task-3627).
+                 Contains rotation notifications, cooldown notices, test outcomes, and timing.
+     Depends On: Live test and evaluation executions.
+     Validation: Provides observable proof of rotation, slot revocation, and test execution.
+
+[10/42] File Path : manifest.json
+     Size      : 10,180 bytes (compressed: 2,781 bytes)
+     SHA-256   : 211476a7025d17f478a33b6b207370e685f673c110ee7d3f399e5ebcd19a885c
+     Role      : Audit Package Manifest File.
+     Contents  : JSON registry listing every file in the package, size, SHA-256 hash, and functional purpose.
+     Depends On: All 40 payload files in the audit package.
+     Validation: Integrity root for package verification.
+
+[11/42] File Path : reproduction/REPRODUCTION_LOG.md
+     Size      : 2,582 bytes (compressed: 626 bytes)
+     SHA-256   : 54abf838afe494d02accd7b284fe29336451902851828d122bbc0bb02064de42
+     Role      : Markdown log of scorer reproduction run.
+     Contents  : Step-by-step terminal outputs and scores computed by scorer.score_run().
+
+[12/42] File Path : reproduction/banking_management_scorer_output.json
+     Size      : 4,155 bytes (compressed: 1,291 bytes)
+     SHA-256   : 68ba69ee0963635dc5f5ddeb1115bc5efe8bbc269a252b086abc947dfbf27006
+     Role      : Machine-Readable Reproducibility Output for individual domain.
+     Contents  : JSON report generated directly by scorer.py: matching_summary, classification_evaluation,
+                 per_class_metrics, structural_integrity, errors_sample, and execution metadata.
+
+[13/42] File Path : reproduction/ecommerce_platform_scorer_output.json
+     Size      : 4,486 bytes (compressed: 1,322 bytes)
+     SHA-256   : a9eafced34e5d98991e9664da9ce3ff36bb9b41640c77b856b153f2951ef29b5
+     Role      : Machine-Readable Reproducibility Output for individual domain.
+     Contents  : JSON report generated directly by scorer.py: matching_summary, classification_evaluation,
+                 per_class_metrics, structural_integrity, errors_sample, and execution metadata.
+
+[14/42] File Path : reproduction/ev_charging_scorer_output.json
+     Size      : 5,883 bytes (compressed: 1,562 bytes)
+     SHA-256   : e128644c6dddd404e4e1eabcd8f3a50d9731f1c4d6fac285f8ac39560a10da24
+     Role      : Machine-Readable Reproducibility Output for individual domain.
+     Contents  : JSON report generated directly by scorer.py: matching_summary, classification_evaluation,
+                 per_class_metrics, structural_integrity, errors_sample, and execution metadata.
+
+[15/42] File Path : reproduction/hospital_management_scorer_output.json
+     Size      : 5,996 bytes (compressed: 1,457 bytes)
+     SHA-256   : 86d9ef5bba80b393c5f801ba4bc6981be1a2314946150ad9034c829fd9b47a2b
+     Role      : Machine-Readable Reproducibility Output for individual domain.
+     Contents  : JSON report generated directly by scorer.py: matching_summary, classification_evaluation,
+                 per_class_metrics, structural_integrity, errors_sample, and execution metadata.
+
+[16/42] File Path : reproduction/library_management_scorer_output.json
+     Size      : 3,728 bytes (compressed: 1,194 bytes)
+     SHA-256   : a02ac723d130b2c382dca960143fda0288a7b6efdb4c12a42b923d6c0ee634ac
+     Role      : Machine-Readable Reproducibility Output for individual domain.
+     Contents  : JSON report generated directly by scorer.py: matching_summary, classification_evaluation,
+                 per_class_metrics, structural_integrity, errors_sample, and execution metadata.
+
+[17/42] File Path : reproduction/reproduced_summary.json
+     Size      : 26,138 bytes (compressed: 3,773 bytes)
+     SHA-256   : 6c15ad55cbc0720e6d2de1093c47a4476d71baa5f112c3181e1a7513219bb84b
+     Role      : Consolidated Reproducibility Metrics JSON.
+     Contents  : Dict mapping all 5 domain keys to their complete scorer output payloads.
+
+[18/42] File Path : runs/banking_management_fresh_eval_20261013_063036_2b62b57a/pipeline_output.json
+     Size      : 193,567 bytes (compressed: 18,026 bytes)
+     SHA-256   : cf600e114ba840a5adfac5a11dc87bee27ceeaa7253cc30ee2ca995fe25c2c7c
+     Role      : Complete Raw Pipeline Output for run 'banking_management_fresh_eval_20261013_063036_2b62b57a'.
+     Contents  : Top-level keys: 'requirements' (extracted reqs), 'issues' (ambiguities/conflicts),
+                 'clarifications', 'modules' (architecture), 'relations', 'epics', 'features',
+                 'tasks' (with is_ai_suggested, classification_source, confidence, module_id),
+                 'dependencies', 'sprints', 'test_cases', 'traceability', 'source_trust', 'reports', 'logs'.
+
+[19/42] File Path : runs/banking_management_fresh_eval_20261013_063036_2b62b57a/run_meta.json
+     Size      : 805 bytes (compressed: 405 bytes)
+     SHA-256   : 048334378b07baf2b2ece6ae614cb3c55be99466991df2790d9fa92b5956bdd3
+     Role      : Run Metadata File.
+     Contents  : Run UUID, domain key, project title, duration_seconds, provider ('groq'), model,
+                 entity counts, and classification_stats (llm_classified, fallback_classified, domain_rotations).
+
+[20/42] File Path : runs/ecommerce_platform_fresh_eval_20261013_063036_45844d7e/pipeline_output.json
+     Size      : 262,612 bytes (compressed: 22,558 bytes)
+     SHA-256   : 038511ce2becfd0d7048362ab74c7d985190c484f5f371d62b74b0db61a6c11c
+     Role      : Complete Raw Pipeline Output for run 'ecommerce_platform_fresh_eval_20261013_063036_45844d7e'.
+     Contents  : Top-level keys: 'requirements' (extracted reqs), 'issues' (ambiguities/conflicts),
+                 'clarifications', 'modules' (architecture), 'relations', 'epics', 'features',
+                 'tasks' (with is_ai_suggested, classification_source, confidence, module_id),
+                 'dependencies', 'sprints', 'test_cases', 'traceability', 'source_trust', 'reports', 'logs'.
+
+[21/42] File Path : runs/ecommerce_platform_fresh_eval_20261013_063036_45844d7e/run_meta.json
+     Size      : 800 bytes (compressed: 398 bytes)
+     SHA-256   : 69f4557e913232ad797aa717ece826717ca86643e6077c88dcd8a3524013cf14
+     Role      : Run Metadata File.
+     Contents  : Run UUID, domain key, project title, duration_seconds, provider ('groq'), model,
+                 entity counts, and classification_stats (llm_classified, fallback_classified, domain_rotations).
+
+[22/42] File Path : runs/ev_charging_fresh_eval_20261013_063036_9f5c7e88/pipeline_output.json
+     Size      : 402,899 bytes (compressed: 34,039 bytes)
+     SHA-256   : 33c0a7343e7e03912a96451b8ade547d036e39cc9b1f5419344afa6c084d6655
+     Role      : Complete Raw Pipeline Output for run 'ev_charging_fresh_eval_20261013_063036_9f5c7e88'.
+     Contents  : Top-level keys: 'requirements' (extracted reqs), 'issues' (ambiguities/conflicts),
+                 'clarifications', 'modules' (architecture), 'relations', 'epics', 'features',
+                 'tasks' (with is_ai_suggested, classification_source, confidence, module_id),
+                 'dependencies', 'sprints', 'test_cases', 'traceability', 'source_trust', 'reports', 'logs'.
+
+[23/42] File Path : runs/ev_charging_fresh_eval_20261013_063036_9f5c7e88/run_meta.json
+     Size      : 804 bytes (compressed: 416 bytes)
+     SHA-256   : 01aa2f081907862b33e18efb774e0d1acbad76043ccf2457bcad3b6122546041
+     Role      : Run Metadata File.
+     Contents  : Run UUID, domain key, project title, duration_seconds, provider ('groq'), model,
+                 entity counts, and classification_stats (llm_classified, fallback_classified, domain_rotations).
+
+[24/42] File Path : runs/fresh_eval_summary_20261013_063036.json
+     Size      : 26,612 bytes (compressed: 3,667 bytes)
+     SHA-256   : 0b4fb8c3a56871fbb3f933f69d50be66a89d36da3f6f38aff2e13f4a07780264
+     Role      : Authoritative Multi-Domain Run Summary JSON.
+     Contents  : Timestamp '20261013_063036', database hashes before/after, adapter slot states,
+                 per-domain timing, accuracy, macro-F1, matched counts, and error arrays.
+
+[25/42] File Path : runs/hospital_management_fresh_eval_20261013_063036_217ecc14/pipeline_output.json
+     Size      : 813,043 bytes (compressed: 57,353 bytes)
+     SHA-256   : e7bd1918d490dbd4b87c5ee561f40ea5b3353c034569f777cd68778aab2501a4
+     Role      : Complete Raw Pipeline Output for run 'hospital_management_fresh_eval_20261013_063036_217ecc14'.
+     Contents  : Top-level keys: 'requirements' (extracted reqs), 'issues' (ambiguities/conflicts),
+                 'clarifications', 'modules' (architecture), 'relations', 'epics', 'features',
+                 'tasks' (with is_ai_suggested, classification_source, confidence, module_id),
+                 'dependencies', 'sprints', 'test_cases', 'traceability', 'source_trust', 'reports', 'logs'.
+
+[26/42] File Path : runs/hospital_management_fresh_eval_20261013_063036_217ecc14/run_meta.json
+     Size      : 814 bytes (compressed: 404 bytes)
+     SHA-256   : 9cd37599f89b8294ad4b5a083b56b9674b1c5fd66f3b6f8973524f3a0f677961
+     Role      : Run Metadata File.
+     Contents  : Run UUID, domain key, project title, duration_seconds, provider ('groq'), model,
+                 entity counts, and classification_stats (llm_classified, fallback_classified, domain_rotations).
+
+[27/42] File Path : runs/library_management_fresh_eval_20261013_063036_a4e5b94c/pipeline_output.json
+     Size      : 188,212 bytes (compressed: 17,087 bytes)
+     SHA-256   : b29cbd43e451e74cda4a249c9c56424c5539a182bc97f12ea42ea8860580210d
+     Role      : Complete Raw Pipeline Output for run 'library_management_fresh_eval_20261013_063036_a4e5b94c'.
+     Contents  : Top-level keys: 'requirements' (extracted reqs), 'issues' (ambiguities/conflicts),
+                 'clarifications', 'modules' (architecture), 'relations', 'epics', 'features',
+                 'tasks' (with is_ai_suggested, classification_source, confidence, module_id),
+                 'dependencies', 'sprints', 'test_cases', 'traceability', 'source_trust', 'reports', 'logs'.
+
+[28/42] File Path : runs/library_management_fresh_eval_20261013_063036_a4e5b94c/run_meta.json
+     Size      : 805 bytes (compressed: 401 bytes)
+     SHA-256   : b598dd4a03fa77f3756f880ee0ab6ef29ff07132d46f9710664530a5d2b60f44
+     Role      : Run Metadata File.
+     Contents  : Run UUID, domain key, project title, duration_seconds, provider ('groq'), model,
+                 entity counts, and classification_stats (llm_classified, fallback_classified, domain_rotations).
+
+[29/42] File Path : scorer/SHA256_VERIFICATION.txt
+     Size      : 360 bytes (compressed: 201 bytes)
+     SHA-256   : 19671c434d864debfa902a9b8ae8f90a5d79ad36cfff9e96564a1b8a789c07e5
+     Role      : Cryptographic Verification Record of scorer.py.
+     Contents  : Expected vs calculated SHA-256 hash record and verification timestamp.
+
+[30/42] File Path : scorer/__pycache__/scorer.cpython-311.pyc
+     Size      : 24,074 bytes (compressed: 10,717 bytes)
+     SHA-256   : 464caa13e799ebc612959f07b3817c48f242780d4ac69b858f7a4c1a3c9aef51
+     Role      : Compiled Python Bytecode for scorer.
+     Contents  : CPython 3.11 bytecode generated during scorer execution.
+
+[31/42] File Path : scorer/scorer.py
+     Size      : 17,092 bytes (compressed: 4,704 bytes)
+     SHA-256   : b6c599655cc7c8e8fe8550c8e74c2bd13335ff6ec41f859a0354b3932a3655fb
+     Role      : Official Ground-Truth Multi-Project Scorer (Version 3.0).
+     Contents  : CANONICAL_MODULE_MAP, canonicalize(), normalize_text(), compute_similarity(),
+                 global_match_requirements() [Tier 1 exact + Tier 2 partial >= 0.85], and score_run().
+     Validation: SHA-256 b6c599655cc7c8e8fe8550c8e74c2bd13335ff6ec41f859a0354b3932a3655fb.
+
+[32/42] File Path : source_snapshot/backend/app/agents/architecture_agent.py
+     Size      : 47,306 bytes (compressed: 9,036 bytes)
+     SHA-256   : d574765d3c5b18aab32bc23100ec8ad5c29287a836e5fbe065f79ee3abfb0d20
+     Role      : Direct Source Code Snapshot of core ReqPilot AI engine components.
+     Contents  : Python source files required to inspect LLM adapter, orchestrator, task agent,
+                 extraction agent, architecture agent, and workflow endpoints.
+
+[33/42] File Path : source_snapshot/backend/app/agents/extraction_agent.py
+     Size      : 64,987 bytes (compressed: 13,010 bytes)
+     SHA-256   : e9b7a1af03b4d63596e84e8fd86a2c0af9f856da38ba841c8b5b77c233dfa1f2
+     Role      : Direct Source Code Snapshot of core ReqPilot AI engine components.
+     Contents  : Python source files required to inspect LLM adapter, orchestrator, task agent,
+                 extraction agent, architecture agent, and workflow endpoints.
+
+[34/42] File Path : source_snapshot/backend/app/agents/llm_adapter.py
+     Size      : 18,916 bytes (compressed: 4,602 bytes)
+     SHA-256   : ab545188e968ba4b2aec9c5f1c51357ed5bbd69b73182fd0d4418d2cc3b94cf5
+     Role      : Direct Source Code Snapshot of core ReqPilot AI engine components.
+     Contents  : Python source files required to inspect LLM adapter, orchestrator, task agent,
+                 extraction agent, architecture agent, and workflow endpoints.
+
+[35/42] File Path : source_snapshot/backend/app/agents/orchestrator.py
+     Size      : 18,671 bytes (compressed: 3,782 bytes)
+     SHA-256   : abcf1ecddf52ba2ade26cb97b58db5474ec56740e40bb85f72ac5896166f5207
+     Role      : Direct Source Code Snapshot of core ReqPilot AI engine components.
+     Contents  : Python source files required to inspect LLM adapter, orchestrator, task agent,
+                 extraction agent, architecture agent, and workflow endpoints.
+
+[36/42] File Path : source_snapshot/backend/app/agents/task_agent.py
+     Size      : 85,446 bytes (compressed: 15,292 bytes)
+     SHA-256   : cfb588bccd00d46cc141c51b47930f9c4e9e32e6e35a15a4ca34d2c2dcf0c5ca
+     Role      : Direct Source Code Snapshot of core ReqPilot AI engine components.
+     Contents  : Python source files required to inspect LLM adapter, orchestrator, task agent,
+                 extraction agent, architecture agent, and workflow endpoints.
+
+[37/42] File Path : source_snapshot/backend/app/api/workflow.py
+     Size      : 31,184 bytes (compressed: 5,641 bytes)
+     SHA-256   : 4498650603085cfcb3e84b1587cb848acc7fb47d3b9796461eb82282037749e3
+     Role      : Direct Source Code Snapshot of core ReqPilot AI engine components.
+     Contents  : Python source files required to inspect LLM adapter, orchestrator, task agent,
+                 extraction agent, architecture agent, and workflow endpoints.
+
+[38/42] File Path : source_snapshot/backend/app/config.py
+     Size      : 1,732 bytes (compressed: 804 bytes)
+     SHA-256   : 8cdb692b3342ac254b173524037a540bf3b0f993d4db23a6d47cec07c681d220
+     Role      : Direct Source Code Snapshot of core ReqPilot AI engine components.
+     Contents  : Python source files required to inspect LLM adapter, orchestrator, task agent,
+                 extraction agent, architecture agent, and workflow endpoints.
+
+[39/42] File Path : tests/test_adversarial_scorer.py
+     Size      : 14,956 bytes (compressed: 3,515 bytes)
+     SHA-256   : d7aa75cce1afe1d84a9cfcce2140ee20d2c2f82bdd6ad508a271da450b9c7a0f
+     Role      : Automated Test Suite File.
+     Contents  : Pytest test cases covering multi-key rotation, semantic classification fallback,
+                 scorer robustness, and adversarial scorer invariant test cases.
+
+[40/42] File Path : tests/test_groq_multikey_fallback.py
+     Size      : 16,638 bytes (compressed: 3,374 bytes)
+     SHA-256   : db2c52a5282f5c8736d5cc4009e5120c760cbf4a9d1ffe1aa47763eb0c2032be
+     Role      : Automated Test Suite File.
+     Contents  : Pytest test cases covering multi-key rotation, semantic classification fallback,
+                 scorer robustness, and adversarial scorer invariant test cases.
+
+[41/42] File Path : tests/test_scorer_robustness.py
+     Size      : 2,994 bytes (compressed: 962 bytes)
+     SHA-256   : 402a014e0dce08374660ee8c9ad30fae58f7bd0078dbc3e75ff468c6a62a46de
+     Role      : Automated Test Suite File.
+     Contents  : Pytest test cases covering multi-key rotation, semantic classification fallback,
+                 scorer robustness, and adversarial scorer invariant test cases.
+
+[42/42] File Path : tests/test_semantic_classification.py
+     Size      : 10,889 bytes (compressed: 2,294 bytes)
+     SHA-256   : 59f89643c379e8fb10dd431de91e272fec2fb8b0c07620f4bf680dfd36a8030a
+     Role      : Automated Test Suite File.
+     Contents  : Pytest test cases covering multi-key rotation, semantic classification fallback,
+                 scorer robustness, and adversarial scorer invariant test cases.
+
+Suspicious Omissions or Irregularities in Archive:
+- ZERO omissions of required benchmark, code, or test files.
+- Noticeable finding: scorer/__pycache__/scorer.cpython-311.pyc is present in archive; harmless binary artifact.
+- Noticeable finding: The gold references for Hospital Management contain 'UNASSIGNED_OR_NULL' classes for 27 clinical
+  requirements which have no matching candidate module in architecture generation, directly impacting accuracy.
+
+====================================================================================================
+SECTION 2: SOURCE-CODE AUDIT & END-TO-END EXECUTION TRACE
+====================================================================================================
+Detailed inspection of source snapshot files in audit archive:
+
+1. FASTAPI ROUTE & WORKFLOW ORCHESTRATION
+   File: source_snapshot/backend/app/api/workflow.py (1,135 lines)
+   - Endpoint: POST /api/workflow/analyze (Lines 80-245)
+   - Input: AnalyzeRequest containing project_id, optional provider/model, and use_llm flag.
+   - Logic Flow:
+     * Line 95-108: Validates project exists in SQLite DB.
+     * Line 112-137: Retrieves uploaded DocumentChunk records. Raises HTTP 400 if no chunks exist.
+     * Line 144-160: Inserts AIWorkflow database record with status='running'.
+     * Line 172-178: Resolves API keys: checks settings.GROQ_API_KEYS, falls back to settings.GROQ_API_KEY.
+     * Line 181-185: Instantiates WorkflowOrchestrator(api_key=..., provider=..., model=...).
+     * Line 222-227: Calls pipeline_result = await orchestrator.run_full_pipeline(proj_dict, chunk_dicts, doc_filename).
+     * Line 246-370: Scopes and persists generated requirements, issues, modules, tasks, and test cases.
+
+2. WORKFLOW ORCHESTRATOR & AGENT LIFECYCLE
+   File: source_snapshot/backend/app/agents/orchestrator.py (618 lines)
+   - Class: WorkflowOrchestrator
+   - __init__ (Lines 54-80):
+     * Line 60: self.llm = LLMAdapter(api_key=api_key, provider=provider, model=model)
+     * Line 66: self.ingestion_agent = IngestionAgent() [Deterministic file parsing]
+     * Line 67: self.extraction_agent = ExtractionAgent(self.llm) [Hybrid: deterministic baseline + LLM enrichment]
+     * Line 68: self.quality_agent = QualityAgent() [Deterministic 7-dimension heuristic scorer]
+     * Line 69: self.ambiguity_agent = AmbiguityAgent() [Deterministic regex phrase matching]
+     * Line 70: self.conflict_agent = ConflictAgent(self.llm) [LLM or heuristic contradiction detector]
+     * Line 71: self.duplicate_agent = DuplicateAgent() [Deterministic Jaccard similarity matcher]
+     * Line 72: self.clarification_agent = ClarificationAgent() [Deterministic question generator]
+     * Line 73: self.architecture_agent = ArchitectureAgent(self.llm) [CRITICAL AUDIT FINDING: DETERMINISTIC ONLY]
+     * Line 74: self.task_agent = TaskDecompositionAgent(self.llm) [GENUINE LLM CLASSIFICATION]
+     * Line 75: self.estimation_agent = EstimationAgent() [Deterministic story points / hours]
+     * Line 76: self.resource_agent = ResourceMatchingAgent() [Deterministic skill matching]
+     * Line 77: self.scheduling_agent = SchedulingAgent() [Deterministic NetworkX DAG sprint scheduling]
+     * Line 78: self.traceability_agent = TraceabilityAgent() [Deterministic RTM construction]
+     * Line 80: self.report_agent = ReportGenerationAgent() [Deterministic markdown report generator]
+     * Line 95: self.source_trust_verifier = SourceTrustVerifier() [Deterministic ground-truth verifier]
+
+3. ARCHITECTURE GENERATION REALITY CHECK
+   File: source_snapshot/backend/app/agents/architecture_agent.py (1,061 lines)
+   - Class: ArchitectureAgent
+   - Method: generate_architecture(requirements, project_title) (Lines 48-112)
+   - Audit Fact:
+     * Line 73 in orchestrator.py passes self.llm to ArchitectureAgent constructor.
+     * However, generate_architecture() NEVER calls self.llm.generate_json() or any API method.
+     * Lines 70-105: Iterates over deterministic capability rules (MODULE_TEMPLATES, DOMAIN_DETECTION) and
+       synthesizes modules by scanning requirement text against pre-compiled regex patterns.
+     * Conclusion: Architecture generation is 100% deterministic rule-based. Calling it AI-generated is a misnomer.
+
+4. REQUIREMENT EXTRACTION DUAL PASS
+   File: source_snapshot/backend/app/agents/extraction_agent.py (2,173 lines)
+   - Method: extract_requirements(chunks, source_doc_id) (Lines 39-98)
+   - Logic Flow:
+     * Line 74: deterministic_results = self._extract_deterministic(chunks, source_doc_id)
+     * Line 84: If self.llm.api_key is present:
+       - Line 85: llm_results = await self._extract_with_llm(combined_text, source_doc_id)
+       - Line 91: return self._merge_llm_with_deterministic_coverage(llm_results, deterministic_results)
+     * Line 97: Otherwise returns deterministic_results.
+     * Line 110-210: _extract_with_llm runs two-pass extraction: Pass 1 discovers requirement candidates,
+       Pass 2 structures them with JSON schema. Bounded batches of 12,000 characters.
+
+5. TASK DECOMPOSITION & SEMANTIC CLASSIFICATION
+   File: source_snapshot/backend/app/agents/task_agent.py (2,351 lines)
+   - Class: TaskDecompositionAgent
+   - Method: decompose_requirements(requirements, modules) (Lines 615-645)
+   - Method: _classify_requirements_semantic(requirements, modules) (Lines 350-530):
+     * Line 368-372: Guards if not self.llm or not self.llm.api_key.
+     * Line 374-383: Formats candidate modules with ID, Name, Responsibilities.
+     * Line 385: Batch size is 10 requirements per LLM prompt.
+     * Line 405-438: High-precision engineering prompt instructing Groq/LLM to classify each requirement
+       to the single best-fitting candidate architecture module based on functional semantics.
+     * Line 452: response = await self.llm.generate_json(prompt, schema)
+     * Line 470-495: Safety validations:
+       - Validates requirement_id belongs to current batch.
+       - Rejects intra-batch duplicate responses.
+       - Clamps confidence strictly to [0.0, 1.0].
+       - Validates proposed module ID via _resolve_architecture_module_id(proposed_id, modules).
+       - If valid, records is_llm_classified=True, classification_source='llm'.
+       - If invalid or unresolvable, logs warning and falls back to deterministic rule engine.
+     * Line 500-502: Defensive asyncio.sleep(0.5) throttle between batches to respect rate limits.
+     * Lines 649-985: _decompose_internal builds tasks, features, epics, and sets per-task provenance.
+
+Summary Table of Agent Execution Modes:
+| Agent Name               | Uses Live LLM | Uses Heuristic Rules | Fallback Supported | Actual Tested Mode |
+|--------------------------|:-------------:|:--------------------:|:------------------:|:------------------:|
+| IngestionAgent           |      NO       |         YES          |         NO         | Deterministic      |
+| ExtractionAgent          |      YES      |         YES          |        YES         | Hybrid (LLM+Rules) |
+| QualityAgent             |      NO       |         YES          |         NO         | Deterministic      |
+| AmbiguityAgent           |      NO       |         YES          |         NO         | Deterministic      |
+| ConflictAgent            |      YES      |         YES          |        YES         | Heuristic Fallback |
+| DuplicateAgent           |      NO       |         YES          |         NO         | Deterministic      |
+| ClarificationAgent       |      NO       |         YES          |         NO         | Deterministic      |
+| ArchitectureAgent        |      NO       |         YES          |         NO         | 100% Deterministic |
+| TaskDecompositionAgent   |      YES      |         YES          |        YES         | Live LLM Active    |
+| EstimationAgent          |      NO       |         YES          |         NO         | Deterministic      |
+| ResourceMatchingAgent    |      NO       |         YES          |         NO         | Deterministic      |
+| SchedulingAgent          |      NO       |         YES          |         NO         | Deterministic DAG  |
+| TraceabilityAgent        |      NO       |         YES          |         NO         | Deterministic RTM  |
+| SourceTrustVerifier      |      NO       |         YES          |         NO         | Deterministic      |
+| ReportGenerationAgent    |      NO       |         YES          |         NO         | Deterministic      |
+
+====================================================================================================
+SECTION 3: GROQ LLM & MULTI-KEY ROTATION AUDIT
+====================================================================================================
+File: source_snapshot/backend/app/agents/llm_adapter.py (451 lines)
+
+1. KEY LOADING & CONFIGURATION PRECEDENCE
+   - Lines 66-93: Initialization priority:
+     * If api_key argument is passed directly, splits on comma, strips whitespace, deduplicates.
+     * If api_key is None, inspects os.getenv('GROQ_API_KEYS') (plural), then os.getenv('GROQ_API_KEY').
+     * Preserves order of keys and deduplicates using set + list.
+     * Allocates KeySlotState(slot_idx=i, key=k) for each candidate key.
+   - Configured keys loaded in evaluation: 22 keys.
+
+2. THREAD/CONCURRENCY SAFETY
+   - Line 64: self._lock = asyncio.Lock()
+   - Line 125: async with self._lock in _select_next_key_slot().
+   - Guarantees race-free rotation and cooldown updating even when multiple async coroutines make requests.
+
+3. RATE-LIMIT (HTTP 429) & COOLDOWN BEHAVIOR
+   - Lines 171-207: _parse_retry_after(headers):
+     * Checks 'retry-after' header (seconds float).
+     * Checks Groq-specific 'x-ratelimit-reset-tokens' (e.g. '1s', '250ms', '14s').
+     * Checks Groq-specific 'x-ratelimit-reset-requests'.
+     * Fallback default cooldown: 20.0 seconds.
+   - Lines 328-339: On HTTP 429 response:
+     * Updates slot.total_429s += 1, cooldown_until = time.time() + cooldown.
+     * Increments aggregate metrics['rate_limit_events'] += 1 and metrics['key_rotations'] += 1.
+     * Rotates immediately to the next available key slot.
+
+4. HTTP ERROR CLASSIFICATION
+   - HTTP 401 / 403 (Unauthorized / Revoked):
+     * Line 340-348: slot.is_revoked = True, metrics['invalid_key_events'] += 1, key_rotations += 1.
+     * Permanently excludes slot from pool; never retries bad key.
+   - HTTP 400 (Bad Request / Schema Malformed):
+     * Lines 319-327: Halts immediately; does NOT rotate keys. Prevents burning pool on bad queries.
+   - HTTP 500 / 502 / 503 / 504 (Transient Server Error):
+     * Lines 355-368: Retries up to 1 time on the same key slot with exponential backoff before rotating.
+
+5. VERIFIED API USAGE STATISTICS FROM MULTI-DOMAIN EVALUATION
+   - Total API Requests Attempted  : 42 requests
+   - Successful HTTP 200 Responses : 39
+   - Rate-Limit 429 Events         : 1
+   - Total Key Rotations           : 3
+   - Invalid Keys Revoked (401)    : 2 (Slots 5 and 18)
+   - Transient 5xx Errors          : 0
+   - Exhausted Key Pools           : 0
+   - Deterministic Fallback Events : 1 (1 batch in Banking)
+   - Active Available Slots        : 20 / 22
+   - Secrets in Logs or Metrics    : ZERO (Verified zero exposed keys; slot indices only)
+
+====================================================================================================
+SECTION 4: COMPREHENSIVE AUDIT OF ALL FIVE BENCHMARK DOMAINS
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+DOMAIN: EV CHARGING NETWORK MANAGEMENT SYSTEM (ev_charging)
+----------------------------------------------------------------------------------------------------
+Run Directory               : ev_charging_fresh_eval_20261013_063036_9f5c7e88
+Run Identifier              : 9f5c7e88-cb4c-45d6-ae3d-099065ba1276
+Gold Reference Requirement Count : 58
+Predicted Requirement Count      : 58
+Uniquely Matched Requirements    : 58
+Unmatched Predictions            : 0
+Unmatched Gold Requirements      : 0
+Correct Classifications         : 43 / 58
+Classification Accuracy          : 74.14%
+Penalized End-to-End Accuracy    : 74.14% (Denominator = max(pred, gold) = 58)
+Macro Precision                  : 0.6422
+Macro Recall                     : 0.6386
+Macro F1 Score                   : 0.6326
+Total Classification Errors      : 15
+
+Per-Class Metrics Table:
+Class Name                   | TP   | FP   | FN   | Precision  | Recall     | F1        
+-------------------------------------------------------------------------------------
+AUTHENTICATION               | 3    | 1    | 1    | 0.7500     | 0.7500     | 0.7500    
+BOOKING                      | 6    | 0    | 3    | 1.0000     | 0.6667     | 0.8000    
+CHARGING-SESSION             | 4    | 1    | 1    | 0.8000     | 0.8000     | 0.8000    
+CHARGING-STATION             | 7    | 3    | 4    | 0.7000     | 0.6364     | 0.6667    
+DATA                         | 5    | 2    | 2    | 0.7143     | 0.7143     | 0.7143    
+GATEWAY                      | 0    | 0    | 1    | 0.0000     | 0.0000     | 0.0000    
+MAINTENANCE                  | 4    | 4    | 1    | 0.5000     | 0.8000     | 0.6154    
+NOTIFICATION                 | 6    | 0    | 1    | 1.0000     | 0.8571     | 0.9231    
+PAYMENT                      | 4    | 1    | 0    | 0.8000     | 1.0000     | 0.8889    
+REPORTING                    | 4    | 1    | 1    | 0.8000     | 0.8000     | 0.8000    
+SEARCH                       | 0    | 2    | 0    | 0.0000     | 0.0000     | 0.0000    
+
+Confusion Distribution (Top Mismatches):
+   Expected: BOOKING                   -> Predicted: CHARGING-STATION          : 2 requirement(s)
+   Expected: CHARGING-STATION          -> Predicted: SEARCH                    : 2 requirement(s)
+   Expected: CHARGING-SESSION          -> Predicted: PAYMENT                   : 1 requirement(s)
+   Expected: BOOKING                   -> Predicted: CHARGING-SESSION          : 1 requirement(s)
+   Expected: CHARGING-STATION          -> Predicted: MAINTENANCE               : 1 requirement(s)
+   Expected: CHARGING-STATION          -> Predicted: REPORTING                 : 1 requirement(s)
+   Expected: DATA                      -> Predicted: MAINTENANCE               : 1 requirement(s)
+   Expected: MAINTENANCE               -> Predicted: DATA                      : 1 requirement(s)
+   Expected: DATA                      -> Predicted: AUTHENTICATION            : 1 requirement(s)
+   Expected: AUTHENTICATION            -> Predicted: MAINTENANCE               : 1 requirement(s)
+   Expected: NOTIFICATION              -> Predicted: MAINTENANCE               : 1 requirement(s)
+   Expected: REPORTING                 -> Predicted: DATA                      : 1 requirement(s)
+   Expected: GATEWAY                   -> Predicted: CHARGING-STATION          : 1 requirement(s)
+
+Detailed Error Log Table:
+Pred ID  | Gold ID  | Expected           | Predicted          | Source     | Statement Snippet
+----------------------------------------------------------------------------------------------------
+FR-009   | FR-007   | CHARGING-SESSION   | PAYMENT            | llm        | Drivers should be able to view their charging...
+FR-013   | FR-011   | BOOKING            | CHARGING-SESSION   | llm        | Station operators should be able to view acti...
+FR-015   | FR-013   | CHARGING-STATION   | MAINTENANCE        | llm        | Station operators should be able to temporari...
+FR-016   | FR-014   | CHARGING-STATION   | REPORTING          | llm        | Station operators should be able to view stat...
+FR-021   | FR-019   | DATA               | MAINTENANCE        | llm        | Maintenance records should remain available f...
+FR-022   | FR-020   | MAINTENANCE        | DATA               | llm        | Administrator Requirements Administrators sho...
+FR-024   | FR-022   | DATA               | AUTHENTICATION     | llm        | Administrators should be able to suspend acco...
+FR-028   | FR-026   | AUTHENTICATION     | MAINTENANCE        | llm        | Maintenance staff should only access maintena...
+FR-031   | FR-029   | BOOKING            | CHARGING-STATION   | llm        | A charger should become unavailable for new r...
+FR-036   | FR-034   | NOTIFICATION       | MAINTENANCE        | llm        | The system should notify maintenance staff wh...
+FR-050   | FR-048   | BOOKING            | CHARGING-STATION   | llm        | A disabled charger must not accept new reserv...
+FR-051   | FR-049   | REPORTING          | DATA               | llm        | Reporting and Auditability Every reservation,...
+FR-002   | NFR-001  | CHARGING-STATION   | SEARCH             | llm        | Drivers should be able to search charging sta...
+NFR-003  | NFR-005  | CHARGING-STATION   | SEARCH             | llm        | Performance The system should remain responsi...
+NFR-004  | NFR-006  | GATEWAY            | CHARGING-STATION   | llm        | Availability and Reliability The system shoul...
+
+
+----------------------------------------------------------------------------------------------------
+DOMAIN: HOSPITAL MANAGEMENT SYSTEM (hospital_management)
+----------------------------------------------------------------------------------------------------
+Run Directory               : hospital_management_fresh_eval_20261013_063036_217ecc14
+Run Identifier              : 217ecc14-fe6e-40bd-ad12-9cc43abff527
+Gold Reference Requirement Count : 124
+Predicted Requirement Count      : 125
+Uniquely Matched Requirements    : 124
+Unmatched Predictions            : 1
+Unmatched Gold Requirements      : 0
+Correct Classifications         : 63 / 124
+Classification Accuracy          : 50.81%
+Penalized End-to-End Accuracy    : 50.4% (Denominator = max(pred, gold) = 125)
+Macro Precision                  : 0.454
+Macro Recall                     : 0.6272
+Macro F1 Score                   : 0.5093
+Total Classification Errors      : 61
+
+Per-Class Metrics Table:
+Class Name                   | TP   | FP   | FN   | Precision  | Recall     | F1        
+-------------------------------------------------------------------------------------
+APPOINTMENT                  | 0    | 11   | 0    | 0.0000     | 0.0000     | 0.0000    
+AUTHENTICATION               | 7    | 7    | 7    | 0.5000     | 0.5000     | 0.5000    
+BOOKING                      | 7    | 8    | 11   | 0.4667     | 0.3889     | 0.4242    
+DATA                         | 17   | 23   | 5    | 0.4250     | 0.7727     | 0.5484    
+DEPARTMENT                   | 2    | 2    | 0    | 0.5000     | 1.0000     | 0.6667    
+FILE                         | 1    | 1    | 0    | 0.5000     | 1.0000     | 0.6667    
+GATEWAY                      | 0    | 0    | 5    | 0.0000     | 0.0000     | 0.0000    
+NOTIFICATION                 | 9    | 2    | 0    | 0.8182     | 1.0000     | 0.9000    
+PAYMENT                      | 9    | 4    | 4    | 0.6923     | 0.6923     | 0.6923    
+PROFILE                      | 1    | 1    | 0    | 0.5000     | 1.0000     | 0.6667    
+REPORTING                    | 8    | 0    | 2    | 1.0000     | 0.8000     | 0.8889    
+SEARCH                       | 2    | 2    | 0    | 0.5000     | 1.0000     | 0.6667    
+UNASSIGNED_OR_NULL           | 0    | 0    | 27   | 0.0000     | 0.0000     | 0.0000    
+
+Confusion Distribution (Top Mismatches):
+   Expected: UNASSIGNED_OR_NULL        -> Predicted: DATA                      : 16 requirement(s)
+   Expected: BOOKING                   -> Predicted: APPOINTMENT               : 9 requirement(s)
+   Expected: UNASSIGNED_OR_NULL        -> Predicted: AUTHENTICATION            : 4 requirement(s)
+   Expected: AUTHENTICATION            -> Predicted: DATA                      : 3 requirement(s)
+   Expected: UNASSIGNED_OR_NULL        -> Predicted: BOOKING                   : 3 requirement(s)
+   Expected: DATA                      -> Predicted: BOOKING                   : 3 requirement(s)
+   Expected: AUTHENTICATION            -> Predicted: DEPARTMENT                : 2 requirement(s)
+   Expected: UNASSIGNED_OR_NULL        -> Predicted: PAYMENT                   : 2 requirement(s)
+   Expected: PAYMENT                   -> Predicted: DATA                      : 2 requirement(s)
+   Expected: DATA                      -> Predicted: AUTHENTICATION            : 2 requirement(s)
+   Expected: REPORTING                 -> Predicted: PAYMENT                   : 2 requirement(s)
+   Expected: GATEWAY                   -> Predicted: APPOINTMENT               : 2 requirement(s)
+   Expected: PAYMENT                   -> Predicted: NOTIFICATION              : 1 requirement(s)
+   Expected: UNASSIGNED_OR_NULL        -> Predicted: FILE                      : 1 requirement(s)
+   Expected: AUTHENTICATION            -> Predicted: PROFILE                   : 1 requirement(s)
+   Expected: AUTHENTICATION            -> Predicted: BOOKING                   : 1 requirement(s)
+   Expected: BOOKING                   -> Predicted: NOTIFICATION              : 1 requirement(s)
+   Expected: UNASSIGNED_OR_NULL        -> Predicted: SEARCH                    : 1 requirement(s)
+   Expected: PAYMENT                   -> Predicted: AUTHENTICATION            : 1 requirement(s)
+   Expected: BOOKING                   -> Predicted: DATA                      : 1 requirement(s)
+   Expected: GATEWAY                   -> Predicted: BOOKING                   : 1 requirement(s)
+   Expected: GATEWAY                   -> Predicted: SEARCH                    : 1 requirement(s)
+   Expected: GATEWAY                   -> Predicted: DATA                      : 1 requirement(s)
+
+Detailed Error Log Table:
+Pred ID  | Gold ID  | Expected           | Predicted          | Source     | Statement Snippet
+----------------------------------------------------------------------------------------------------
+FR-004   | FR-004   | BOOKING            | APPOINTMENT        | llm        | Patients should be able to view available app...
+FR-007   | FR-007   | BOOKING            | APPOINTMENT        | llm        | Patients should be able to view their upcomin...
+FR-009   | FR-009   | UNASSIGNED_OR_NULL | DATA               | llm        | Patients should be able to view prescriptions...
+FR-013   | FR-013   | PAYMENT            | NOTIFICATION       | llm        | Patients should receive notifications about a...
+FR-015   | FR-015   | BOOKING            | APPOINTMENT        | llm        | Doctors should be able to view their appointm...
+FR-016   | FR-016   | AUTHENTICATION     | DATA               | llm        | Doctors should be able to access the medical ...
+FR-019   | FR-019   | UNASSIGNED_OR_NULL | DATA               | llm        | Doctors should be able to create electronic p...
+FR-020   | FR-020   | UNASSIGNED_OR_NULL | DATA               | llm        | Doctors should be able to modify or cancel pr...
+FR-021   | FR-021   | UNASSIGNED_OR_NULL | BOOKING            | llm        | Doctors should be able to request laboratory ...
+FR-022   | FR-022   | UNASSIGNED_OR_NULL | FILE               | llm        | Doctors should be able to view completed labo...
+FR-023   | FR-023   | AUTHENTICATION     | DATA               | llm        | Reception and Staff Requirements Reception st...
+FR-026   | FR-026   | AUTHENTICATION     | PROFILE            | llm        | Authorized staff should be able to update pat...
+FR-027   | FR-027   | AUTHENTICATION     | DEPARTMENT         | llm        | Authorized staff should be able to admit pati...
+FR-028   | FR-028   | AUTHENTICATION     | DEPARTMENT         | llm        | Authorized staff should be able to record pat...
+FR-029   | FR-029   | UNASSIGNED_OR_NULL | DATA               | llm        | Laboratory Requirements Laboratory staff shou...
+FR-030   | FR-030   | UNASSIGNED_OR_NULL | DATA               | llm        | Laboratory staff should be able to update the...
+FR-032   | FR-032   | AUTHENTICATION     | DATA               | llm        | Laboratory results should become available to...
+FR-033   | FR-033   | UNASSIGNED_OR_NULL | DATA               | llm        | Patients should be able to view their laborat...
+FR-035   | FR-035   | UNASSIGNED_OR_NULL | DATA               | llm        | Pharmacy Requirements Pharmacists should be a...
+FR-037   | FR-037   | UNASSIGNED_OR_NULL | DATA               | llm        | The system should maintain medicine inventory...
+FR-038   | FR-038   | UNASSIGNED_OR_NULL | DATA               | llm        | The system should automatically reduce medici...
+FR-040   | FR-040   | UNASSIGNED_OR_NULL | DATA               | llm        | Expired medicines should not be dispensed....
+FR-042   | FR-042   | UNASSIGNED_OR_NULL | PAYMENT            | llm        | Patients should be able to view outstanding a...
+FR-043   | FR-043   | UNASSIGNED_OR_NULL | PAYMENT            | llm        | The system should calculate the total amount ...
+FR-048   | FR-048   | UNASSIGNED_OR_NULL | DATA               | llm        | Inpatient and Bed Management Hospital staff s...
+FR-049   | FR-049   | AUTHENTICATION     | BOOKING            | llm        | Authorized staff should be able to assign an ...
+FR-050   | FR-050   | UNASSIGNED_OR_NULL | BOOKING            | llm        | The system should prevent an occupied bed fro...
+FR-051   | FR-051   | DATA               | BOOKING            | llm        | Staff should be able to record patient admiss...
+FR-052   | FR-052   | DATA               | BOOKING            | llm        | Staff should be able to record patient transf...
+FR-053   | FR-053   | DATA               | BOOKING            | llm        | Staff should be able to record patient discha...
+FR-056   | FR-056   | UNASSIGNED_OR_NULL | AUTHENTICATION     | llm        | Laboratory staff should only access laborator...
+FR-057   | FR-057   | UNASSIGNED_OR_NULL | AUTHENTICATION     | llm        | Pharmacy staff should only access prescriptio...
+FR-061   | FR-061   | BOOKING            | APPOINTMENT        | llm        | An appointment should be associated with a sp...
+FR-062   | FR-062   | BOOKING            | APPOINTMENT        | llm        | Cancelled appointments should become availabl...
+FR-063   | FR-063   | BOOKING            | APPOINTMENT        | llm        | A rescheduled appointment should update the c...
+FR-068   | FR-068   | BOOKING            | NOTIFICATION       | llm        | The system should send appointment reminders ...
+FR-072   | FR-072   | UNASSIGNED_OR_NULL | SEARCH             | llm        | Patient and doctor searches should return res...
+FR-074   | FR-074   | PAYMENT            | DATA               | llm        | Updates to appointment, bed, laboratory, and ...
+FR-077   | FR-077   | BOOKING            | APPOINTMENT        | llm        | Appointment information should remain consist...
+FR-086   | FR-086   | PAYMENT            | DATA               | llm        | Completed appointments, consultation records,...
+FR-089   | FR-089   | DATA               | AUTHENTICATION     | llm        | Inactive patient accounts should be handled a...
+FR-090   | FR-090   | PAYMENT            | AUTHENTICATION     | llm        | Administrative Requirements Administrators sh...
+FR-091   | FR-091   | UNASSIGNED_OR_NULL | AUTHENTICATION     | llm        | Administrators should be able to assign and m...
+FR-092   | FR-092   | UNASSIGNED_OR_NULL | AUTHENTICATION     | llm        | Administrators should be able to activate or ...
+FR-096   | FR-096   | UNASSIGNED_OR_NULL | BOOKING            | llm        | Important Operational Policies A patient must...
+FR-098   | FR-098   | UNASSIGNED_OR_NULL | DATA               | llm        | A medicine that has expired must not be dispe...
+FR-099   | FR-099   | REPORTING          | PAYMENT            | llm        | A patient payment must not be marked as succe...
+FR-100   | FR-100   | UNASSIGNED_OR_NULL | DATA               | llm        | A laboratory result should only become visibl...
+FR-101   | FR-101   | DATA               | AUTHENTICATION     | llm        | Unauthorized users must not be able to modify...
+FR-102   | FR-102   | BOOKING            | DATA               | llm        | Reporting and Auditability Every appointment ...
+FR-104   | FR-104   | UNASSIGNED_OR_NULL | DATA               | llm        | Prescription creation and dispensing updates ...
+FR-105   | FR-105   | UNASSIGNED_OR_NULL | DATA               | llm        | Laboratory result updates should be traceable...
+FR-106   | FR-106   | REPORTING          | PAYMENT            | llm        | Payment state transitions should have a trace...
+FR-108   | FR-108   | BOOKING            | APPOINTMENT        | llm        | Ambiguous Stakeholder Points The organization...
+FR-109   | FR-109   | BOOKING            | APPOINTMENT        | llm        | The organization has not specified whether mi...
+NFR-001  | NFR-001  | GATEWAY            | APPOINTMENT        | llm        | Doctors should be able to update the availabi...
+NFR-002  | NFR-002  | GATEWAY            | APPOINTMENT        | llm        | Reception staff should be able to view doctor...
+NFR-003  | NFR-003  | GATEWAY            | BOOKING            | llm        | The system should provide current bed availab...
+NFR-006  | NFR-006  | GATEWAY            | SEARCH             | llm        | Performance The system should remain responsi...
+NFR-007  | NFR-007  | GATEWAY            | DATA               | llm        | Availability and Reliability The system shoul...
+NFR-008  | NFR-008  | UNASSIGNED_OR_NULL | DATA               | llm        | The system should support backup and recovery...
+
+
+----------------------------------------------------------------------------------------------------
+DOMAIN: E-COMMERCE PLATFORM (ecommerce_platform)
+----------------------------------------------------------------------------------------------------
+Run Directory               : ecommerce_platform_fresh_eval_20261013_063036_45844d7e
+Run Identifier              : 45844d7e-8c75-4f02-85c4-6d1e756d6401
+Gold Reference Requirement Count : 36
+Predicted Requirement Count      : 37
+Uniquely Matched Requirements    : 36
+Unmatched Predictions            : 1
+Unmatched Gold Requirements      : 0
+Correct Classifications         : 30 / 36
+Classification Accuracy          : 83.33%
+Penalized End-to-End Accuracy    : 81.08% (Denominator = max(pred, gold) = 37)
+Macro Precision                  : 0.7944
+Macro Recall                     : 0.775
+Macro F1 Score                   : 0.7777
+Total Classification Errors      : 6
+
+Per-Class Metrics Table:
+Class Name                   | TP   | FP   | FN   | Precision  | Recall     | F1        
+-------------------------------------------------------------------------------------
+AUTHENTICATION               | 5    | 0    | 1    | 1.0000     | 0.8333     | 0.9091    
+BOOKING                      | 4    | 1    | 1    | 0.8000     | 0.8000     | 0.8000    
+DATA                         | 7    | 2    | 1    | 0.7778     | 0.8750     | 0.8235    
+FILE                         | 0    | 0    | 1    | 0.0000     | 0.0000     | 0.0000    
+NOTIFICATION                 | 4    | 0    | 0    | 1.0000     | 1.0000     | 1.0000    
+PAYMENT                      | 4    | 3    | 1    | 0.5714     | 0.8000     | 0.6667    
+PROFILE                      | 2    | 0    | 0    | 1.0000     | 1.0000     | 1.0000    
+REPORTING                    | 2    | 0    | 1    | 1.0000     | 0.6667     | 0.8000    
+SEARCH                       | 2    | 0    | 0    | 1.0000     | 1.0000     | 1.0000    
+
+Confusion Distribution (Top Mismatches):
+   Expected: DATA                      -> Predicted: BOOKING                   : 1 requirement(s)
+   Expected: PAYMENT                   -> Predicted: DATA                      : 1 requirement(s)
+   Expected: FILE                      -> Predicted: DATA                      : 1 requirement(s)
+   Expected: REPORTING                 -> Predicted: PAYMENT                   : 1 requirement(s)
+   Expected: BOOKING                   -> Predicted: PAYMENT                   : 1 requirement(s)
+   Expected: AUTHENTICATION            -> Predicted: PAYMENT                   : 1 requirement(s)
+
+Detailed Error Log Table:
+Pred ID  | Gold ID  | Expected           | Predicted          | Source     | Statement Snippet
+----------------------------------------------------------------------------------------------------
+FR-020   | FR-019   | DATA               | BOOKING            | llm        | The system should automatically reserve stock...
+FR-021   | FR-020   | PAYMENT            | DATA               | llm        | The system should release reserved stock if p...
+FR-022   | FR-021   | FILE               | DATA               | llm        | Warehouse staff should be able to generate pa...
+FR-026   | FR-025   | REPORTING          | PAYMENT            | llm        | The system should generate tax invoices and i...
+FR-030   | FR-029   | BOOKING            | PAYMENT            | llm        | Support agents should be able to initiate rep...
+NFR-001  | NFR-001  | AUTHENTICATION     | PAYMENT            | llm        | All transactions must enforce PCI-DSS complia...
+
+
+----------------------------------------------------------------------------------------------------
+DOMAIN: BANKING MANAGEMENT SYSTEM (banking_management)
+----------------------------------------------------------------------------------------------------
+Run Directory               : banking_management_fresh_eval_20261013_063036_2b62b57a
+Run Identifier              : 2b62b57a-da93-4130-a13d-7d68d72c0b8a
+Gold Reference Requirement Count : 25
+Predicted Requirement Count      : 26
+Uniquely Matched Requirements    : 25
+Unmatched Predictions            : 1
+Unmatched Gold Requirements      : 0
+Correct Classifications         : 20 / 25
+Classification Accuracy          : 80.0%
+Penalized End-to-End Accuracy    : 76.92% (Denominator = max(pred, gold) = 26)
+Macro Precision                  : 0.8839
+Macro Recall                     : 0.8042
+Macro F1 Score                   : 0.8055
+Total Classification Errors      : 5
+
+Per-Class Metrics Table:
+Class Name                   | TP   | FP   | FN   | Precision  | Recall     | F1        
+-------------------------------------------------------------------------------------
+AUTHENTICATION               | 5    | 1    | 1    | 0.8333     | 0.8333     | 0.8333    
+BOOKING                      | 2    | 1    | 0    | 0.6667     | 1.0000     | 0.8000    
+DATA                         | 3    | 0    | 2    | 1.0000     | 0.6000     | 0.7500    
+FILE                         | 1    | 0    | 1    | 1.0000     | 0.5000     | 0.6667    
+NOTIFICATION                 | 1    | 0    | 1    | 1.0000     | 0.5000     | 0.6667    
+PAYMENT                      | 4    | 3    | 0    | 0.5714     | 1.0000     | 0.7273    
+PROFILE                      | 1    | 0    | 0    | 1.0000     | 1.0000     | 1.0000    
+REPORTING                    | 3    | 0    | 0    | 1.0000     | 1.0000     | 1.0000    
+
+Confusion Distribution (Top Mismatches):
+   Expected: DATA                      -> Predicted: PAYMENT                   : 2 requirement(s)
+   Expected: NOTIFICATION              -> Predicted: AUTHENTICATION            : 1 requirement(s)
+   Expected: FILE                      -> Predicted: BOOKING                   : 1 requirement(s)
+   Expected: AUTHENTICATION            -> Predicted: PAYMENT                   : 1 requirement(s)
+
+Detailed Error Log Table:
+Pred ID  | Gold ID  | Expected           | Predicted          | Source     | Statement Snippet
+----------------------------------------------------------------------------------------------------
+FR-009   | FR-009   | NOTIFICATION       | AUTHENTICATION     | llm        | Customers should be able to report suspicious...
+FR-016   | FR-015   | FILE               | BOOKING            | llm        | Loan officers should be able to review custom...
+FR-019   | FR-018   | DATA               | PAYMENT            | llm        | The system should calculate interest, track m...
+FR-021   | FR-019   | DATA               | PAYMENT            | deterministic_fallback | The system should automatically monitor trans...
+FR-014   | NFR-001  | AUTHENTICATION     | PAYMENT            | llm        | All teller transactions exceeding configured ...
+
+
+----------------------------------------------------------------------------------------------------
+DOMAIN: LIBRARY MANAGEMENT SYSTEM (library_management)
+----------------------------------------------------------------------------------------------------
+Run Directory               : library_management_fresh_eval_20261013_063036_a4e5b94c
+Run Identifier              : a4e5b94c-f52e-4f61-a5ff-e3022a64de09
+Gold Reference Requirement Count : 24
+Predicted Requirement Count      : 25
+Uniquely Matched Requirements    : 24
+Unmatched Predictions            : 1
+Unmatched Gold Requirements      : 0
+Correct Classifications         : 20 / 24
+Classification Accuracy          : 83.33%
+Penalized End-to-End Accuracy    : 80.0% (Denominator = max(pred, gold) = 25)
+Macro Precision                  : 0.8639
+Macro Recall                     : 0.8997
+Macro F1 Score                   : 0.8673
+Total Classification Errors      : 4
+
+Per-Class Metrics Table:
+Class Name                   | TP   | FP   | FN   | Precision  | Recall     | F1        
+-------------------------------------------------------------------------------------
+AUTHENTICATION               | 3    | 0    | 1    | 1.0000     | 0.7500     | 0.8571    
+BOOKING                      | 5    | 1    | 1    | 0.8333     | 0.8333     | 0.8333    
+DATA                         | 5    | 2    | 2    | 0.7143     | 0.7143     | 0.7143    
+NOTIFICATION                 | 1    | 0    | 0    | 1.0000     | 1.0000     | 1.0000    
+PAYMENT                      | 3    | 0    | 0    | 1.0000     | 1.0000     | 1.0000    
+REPORTING                    | 2    | 0    | 0    | 1.0000     | 1.0000     | 1.0000    
+SEARCH                       | 1    | 1    | 0    | 0.5000     | 1.0000     | 0.6667    
+
+Confusion Distribution (Top Mismatches):
+   Expected: DATA                      -> Predicted: SEARCH                    : 1 requirement(s)
+   Expected: AUTHENTICATION            -> Predicted: DATA                      : 1 requirement(s)
+   Expected: DATA                      -> Predicted: BOOKING                   : 1 requirement(s)
+   Expected: BOOKING                   -> Predicted: DATA                      : 1 requirement(s)
+
+Detailed Error Log Table:
+Pred ID  | Gold ID  | Expected           | Predicted          | Source     | Statement Snippet
+----------------------------------------------------------------------------------------------------
+FR-003   | FR-003   | DATA               | SEARCH             | llm        | Patrons should be able to view real-time cata...
+FR-010   | FR-010   | AUTHENTICATION     | DATA               | llm        | Circulation staff should be able to verify pa...
+FR-012   | FR-012   | DATA               | BOOKING            | llm        | Circulation staff should be able to process r...
+FR-021   | FR-020   | BOOKING            | DATA               | llm        | Administrators should be able to configure lo...
+
+
+====================================================================================================
+SECTION 5: OFFICIAL SCORER & GROUND-TRUTH ALGORITHM AUDIT
+====================================================================================================
+Scorer File: scorer/scorer.py (Version 3.0)
+Cryptographic SHA-256 Hash: b6c599655cc7c8e8fe8550c8e74c2bd13335ff6ec41f859a0354b3932a3655fb
+Verification Verdict: Verified Match. Unmodified and intact.
+
+Algorithm Breakdown:
+1. CANONICAL_MODULE_MAP & canonicalize() (Lines 9-36):
+   - Maps 14 canonical categories: AUTHENTICATION, CHARGING-STATION, BOOKING, CHARGING-SESSION,
+     NOTIFICATION, MAINTENANCE, DATA, REPORTING, PAYMENT, GATEWAY, SEARCH, PROFILE, FILE, DEPARTMENT.
+   - Normalizes whitespace, uppercase, and checks substring aliases.
+   - AUDIT FINDING: 'APPOINTMENT' is NOT registered in CANONICAL_MODULE_MAP['BOOKING']. When Hospital
+     Management emitted MOD-APPOINTMENT, it was canonicalized as 'APPOINTMENT' (a new standalone class),
+     penalizing 9 appointment requirements against gold 'BOOKING'.
+
+2. normalize_text() (Lines 38-49):
+   - Converts to lowercase, strips section header prefixes ('requirements', 'management', 'administration', etc.)
+     using positive lookahead for actor nouns ('customers', 'drivers', 'tellors', 'patrons', etc.).
+   - Strips leading 'the system shall' / 'the system should'. Replaces non-alphanumeric with spaces.
+
+3. compute_similarity() (Lines 62-79):
+   - Returns 1.0 if exact match or clean header match (suffix length <= 45 without forbidden verbs).
+   - Context embedding guard: if s1 in s2 or s2 in s1, enforces length ratio min/max >= 0.85, else 0.0.
+   - Token Jaccard: |w1 & w2| / |w1 | w2|; must be >= 0.85, else returns 0.0.
+
+4. global_match_requirements() (Lines 135-270):
+   - Order-Invariant Two-Tier Matching:
+     * Tier 1: Collects all exact matches (similarity == 1.0). Builds bipartite maps.
+       Ambiguous predictions (matching >1 gold) are flagged and excluded from one-to-one pairs.
+       Single best candidates are assigned greedily by sorted gold ID.
+     * Tier 2: Resolves partial matches (similarity >= 0.85) for remaining unassigned requirements.
+   - Unmatched predictions and unmatched gold entries are preserved in separate lists.
+
+5. score_run() & Classification Accuracy Denominator (Lines 272-438):
+   - Accuracy Formula:
+     Accuracy = correct_classifications / valid_matched_denominator
+     where valid_matched_denominator = len(matched_pairs).
+   - CRITICAL DISTINCTION: This metric reflects CLASSIFICATION ACCURACY ON MATCHED REQUIREMENTS.
+   - Unmatched predictions (e.g. 1 extra requirement in Hospital, E-Commerce, Banking, Library) do NOT
+     penalize classification accuracy directly; they appear in matching_summary['unmatched_predictions_count'].
+   - Penalized End-to-End Accuracy = correct_classifications / max(predicted_reqs, gold_reqs).
+
+6. Macro Precision, Recall, and F1 Formulation (Lines 342-378):
+   - Evaluated over all active classes in gold union predicted.
+   - Precision_c = TP_c / (TP_c + FP_c) if (TP_c + FP_c) > 0 else 0.0
+   - Recall_c = TP_c / (TP_c + FN_c) if (TP_c + FN_c) > 0 else 0.0
+   - F1_c = 2 * P * R / (P + R) if (P + R) > 0 else 0.0
+   - Macro metrics are unweighted arithmetic means across all evaluated classes.
+
+====================================================================================================
+SECTION 6: REPRODUCIBILITY & TEST SUITE VERIFICATION
+====================================================================================================
+Environment Specification:
+- OS Platform       : Windows (win32)
+- Python Version    : Python 3.11.9
+- Test Framework    : pytest 9.1.1 (pluggy 1.6.0)
+- Async Plugins     : anyio 4.8.0, pytest-asyncio 1.4.0 (Mode.STRICT)
+- Working Directory : C:\Users\ch.nayanesh reddy\Downloads\ReqPilot_AI_recovered_audited\fsd_pro
+
+Test Execution Command:
+python -m pytest backend/tests evaluation/multi_project/scripts/test_scorer_robustness.py evaluation/multi_project/audit_evidence/test_adversarial_scorer.py
+
+Test Results Breakdown:
+1. test_groq_multikey_fallback.py (16 tests) -> 16 PASSED
+   - test_first_key_succeeds (Mocked HTTP 200)
+   - test_first_key_429_second_key_succeeds (Mocked 429 then 200)
+   - test_multiple_keys_429_later_key_succeeds (Mocked two 429s then 200)
+   - test_all_keys_rate_limited_returns_clean_none (Clean exhaustion)
+   - test_retry_after_header_parsed_sets_cooldown (Cooldown timestamp math)
+   - test_transient_503_retries_on_same_key (Transient 503 attempt limit)
+   - test_invalid_key_401_marked_revoked_and_skipped (Permanent slot revocation)
+   - test_malformed_request_400_halts_without_endless_rotation (HTTP 400 immediate halt)
+   - test_missing_api_keys_produces_clean_failure (Empty key fallback)
+   - test_duplicate_and_whitespace_keys_handled (Trimming & dedup)
+   - test_zero_secrets_in_logs_and_metrics (Log secret scan)
+   - test_concurrent_requests_safe_under_lock (asyncio.gather 10 tasks under lock)
+   - test_semantic_classification_rejects_unknown_module (Rejects hallucinated modules)
+   - test_semantic_classification_rejects_out_of_batch_id (Rejects out-of-batch req IDs)
+   - test_failed_llm_classification_safely_falls_back (Safe deterministic fallback)
+   - test_backward_compatibility_preserved (Single string and None key compatibility)
+2. test_semantic_classification.py (7 tests) -> 7 PASSED
+3. test_agents.py (6 tests) -> 6 PASSED
+4. test_api.py (2 tests) -> 2 PASSED
+5. test_scorer_robustness.py (3 tests) -> 3 PASSED
+6. test_adversarial_scorer.py (19 tests) -> 19 PASSED
+TOTAL: 53 tests collected, 53 passed, 0 failed, 0 skipped. Exit code: 0.
+
+Distinction Between Mocked Tests vs. Live API Execution:
+- The pytest suite exclusively utilizes MOCKED httpx responses to test error state logic safely.
+- Live API execution occurred during the multi-domain evaluation runs (runs/*), where real requests
+  were sent to Groq endpoints, generating real slot cooldowns, HTTP 429 responses, and live classifications.
+
+====================================================================================================
+SECTION 7: SECURITY AUDIT
+====================================================================================================
+Security Checks Performed:
+1. Secret Scan on Archive & Dossier:
+   - Regex pattern: gsk_[a-zA-Z0-9_-]{20,}
+   - Result: ZERO live API keys found. (The only match was the mock string '[MOCK_TEST_KEY_REDACTED]'
+     inside the unit test test_zero_secrets_in_logs_and_metrics which explicitly tests redaction).
+   - Verification: No .env, credentials, or bearer tokens exist in the deliverable archive.
+
+2. Unsafe Logging & Error Handling:
+   - llm_adapter.py formats log messages exclusively with slot index numbers (e.g. 'Groq slot 1 rate limited').
+   - HTTP headers and request bodies are not dumped to stdout/stderr in production mode.
+   - HTTP 401/403 responses permanently revoke slots, preventing credentials from being continuously queried.
+   - HTTP 400 responses halt execution immediately, preventing query loops.
+
+3. Database Protection:
+   - DB Hash Before Evaluation : abc1e7028050e60139969f5dae0633a8851b377cdc841d6180ef7b1a9be566cd
+   - DB Hash After Evaluation  : abc1e7028050e60139969f5dae0633a8851b377cdc841d6180ef7b1a9be566cd
+   - Result: ZERO writes to production database reqpilot.db during benchmark evaluation runs.
+
+====================================================================================================
+SECTION 8: ROOT CAUSE ANALYSIS FOR SUB-90% DOMAINS & RECOMMENDED FIXES
+====================================================================================================
+Detailed breakdown of why each domain scored below 90% and prioritized fixes that generalize:
+
+1. HOSPITAL MANAGEMENT (Reproduced: 50.81% | Gap to 90%: 39.19% | 61 Errors)
+   - Confirmed Root Cause 1: 27 Requirements expected 'UNASSIGNED_OR_NULL'.
+     * The hospital specification includes extensive clinical functionality (electronic prescriptions,
+       lab test orders, radiology results, patient vitals).
+     * The ground truth assigned these 27 requirements to 'UNASSIGNED_OR_NULL'.
+     * The LLM, instructed to map every requirement to the best architectural module, mapped them to
+       'DATA' (16 times) or 'BOOKING' (3 times). This accounts for 27 of 61 errors (44.3% of all errors).
+   - Confirmed Root Cause 2: Architecture emitted 'APPOINTMENT' instead of canonical 'BOOKING'.
+     * ArchitectureAgent synthesized 'MOD-APPOINTMENT' ('Appointment Scheduling Service').
+     * The LLM mapped 9 appointment requirements to 'MOD-APPOINTMENT'.
+     * The official scorer's CANONICAL_MODULE_MAP does not include 'APPOINTMENT' under 'BOOKING'.
+     * Result: 9 requirements were marked as mismatches against gold 'BOOKING'.
+   - Recommended Generalizable Fix:
+     * Update prompt instructions in task_agent.py to allow an explicit 'UNASSIGNED' assignment when
+       a requirement represents domain business logic that has no corresponding service module in candidate list.
+     * In architecture_agent.py, map appointment scheduling capabilities into canonical 'Booking & Scheduling'.
+
+2. EV CHARGING (Reproduced: 74.14% | Gap to 90%: 15.86% | 15 Errors)
+   - Confirmed Root Cause: Boundary Ambiguities in Domain Modules:
+     * 'CHARGING-STATION' vs 'CHARGING-SESSION' vs 'BOOKING' vs 'MAINTENANCE'.
+     * FR-009: Invoicing charging history -> Expected CHARGING-SESSION, Predicted PAYMENT.
+     * FR-013: Operator viewing active reservations -> Expected BOOKING, Predicted CHARGING-SESSION.
+     * FR-015: Operator disabling charger -> Expected CHARGING-STATION, Predicted MAINTENANCE.
+     * FR-016: Station revenue reporting -> Expected CHARGING-STATION, Predicted REPORTING.
+     * FR-031: Charger unavailable on reservation -> Expected BOOKING, Predicted CHARGING-STATION.
+   - Recommended Generalizable Fix:
+     * Provide clear capability descriptions in the prompt: clarify that entity lifecycle operations
+       (disabling, registering, configuring stations) belong to the primary entity service (Charging Station),
+       while reservation state belong to Booking, and real-time charging meters belong to Charging Session.
+
+3. E-COMMERCE PLATFORM (Reproduced: 83.33% | Gap to 90%: 6.67% | 6 Errors)
+   - Confirmed Root Cause: Cross-cutting Order/Inventory/Payment Boundary:
+     * FR-020 (Reserve stock) -> Expected DATA, Predicted BOOKING.
+     * FR-021 (Release stock on failed payment) -> Expected PAYMENT, Predicted DATA.
+     * FR-026 (Generate tax invoice) -> Expected REPORTING, Predicted PAYMENT.
+     * NFR-001 (PCI-DSS compliance) -> Expected AUTHENTICATION, Predicted PAYMENT.
+   - Recommended Generalizable Fix:
+     * Add architectural guidance: compliance and encryption policies belong to AUTHENTICATION/DATA,
+       inventory reservations belong to DATA/INVENTORY, and payment gateway transactions belong to PAYMENT.
+
+4. BANKING MANAGEMENT (Reproduced: 80.00% | Gap to 90%: 10.00% | 5 Errors)
+   - Confirmed Root Cause: Compliance & Interest Processing Boundary:
+     * FR-009 (Suspicious transaction reporting) -> Expected NOTIFICATION, Predicted AUTHENTICATION.
+     * FR-019 (Interest calculation) -> Expected DATA, Predicted PAYMENT.
+     * FR-021 (AML monitoring) -> Expected DATA, Predicted PAYMENT.
+     * FR-014 (Supervisory override) -> Expected AUTHENTICATION, Predicted PAYMENT.
+   - Recommended Generalizable Fix:
+     * Clarify in classification rules that financial calculation batch jobs and ledgers belong to DATA,
+       while authorization gates and supervisory overrides belong to AUTHENTICATION.
+
+5. LIBRARY MANAGEMENT (Reproduced: 83.33% | Gap to 90%: 6.67% | 4 Errors)
+   - Confirmed Root Cause: Catalog Discovery vs Persistent Records:
+     * FR-003 (View real-time availability/shelf location) -> Expected DATA, Predicted SEARCH.
+     * FR-010 (Circulation staff ID verification) -> Expected AUTHENTICATION, Predicted DATA.
+     * FR-012 (Process returns/calculate fines) -> Expected DATA, Predicted BOOKING.
+     * FR-021 (Configure loan duration) -> Expected BOOKING, Predicted DATA.
+   - Recommended Generalizable Fix:
+     * Refine capability definitions so that searching/filtering queries map to SEARCH, but physical
+       item inventory states and ledger policies map to DATA.
+
+====================================================================================================
+SECTION 9: ASSESSMENT AGAINST THE 90% ACCURACY TARGET
+====================================================================================================
+Engineering Target: At least 90.0% independently verified accuracy in EACH of the 5 domains.
+
+Domain Name                  | Current Accuracy   | Target   | Gap to 90%   | Status
+--------------------------------------------------------------------------------
+EV Charging                  | 74.14%             | 90.00%   | -15.86%      | NOT ACHIEVED
+Hospital Management          | 50.81%             | 90.00%   | -39.19%      | NOT ACHIEVED
+E-Commerce Platform          | 83.33%             | 90.00%   | -6.67%        | NOT ACHIEVED
+Banking Management           | 80.00%             | 90.00%   | -10.00%      | NOT ACHIEVED
+Library Management           | 83.33%             | 90.00%   | -6.67%        | NOT ACHIEVED
+--------------------------------------------------------------------------------
+OVERALL VERDICT: FAIL — 0 of 5 domains currently reach the 90.0% acceptance criterion.
+
+Path to 90%+ Across Domains (Improvement 2 Priority Plan):
+1. EV Charging (Target: >= 53/58 correct): Needs +10 corrections. Fixing entity lifecycle mapping
+   (station management vs session tracking vs reservations) easily recovers 10-12 requirements.
+2. Hospital Management (Target: >= 112/124 correct): Needs +49 corrections. Resolving the 27 'UNASSIGNED_OR_NULL'
+   clinical requirements and 9 'APPOINTMENT' synonym mappings recovers 36 requirements immediately,
+   bringing Hospital from 50.81% to ~79.8%. The remaining 13 corrections require department disambiguation.
+3. E-Commerce Platform (Target: >= 33/36 correct): Needs +3 corrections. Resolving PCI-DSS auth mapping
+   and inventory stock reservation recovery brings E-Commerce to 91.67%.
+4. Banking Management (Target: >= 23/25 correct): Needs +3 corrections. Resolving supervisory override
+   to AUTH and interest calculation to DATA brings Banking to 92.00%.
+5. Library Management (Target: >= 22/24 correct): Needs +2 corrections. Resolving shelf location lookup
+   and fine policy configuration brings Library to 91.67%.
+
+====================================================================================================
+SECTION 10: FINAL AUDIT VERDICT & EVIDENCE SUMMARY
+====================================================================================================
+Status of Claims:
+1. Scorer Hash Match          : DIRECTLY OBSERVED & CRYPTOGRAPHICALLY CONFIRMED (PASS)
+2. Domain Reproduction (5/5)  : DIRECTLY OBSERVED & INDEPENDENTLY REPRODUCED (PASS - 100% agreement)
+3. Multi-Key Fallback (16/16) : DIRECTLY OBSERVED & INDEPENDENTLY REPRODUCED (PASS - 16/16 tests pass)
+4. Test Suite Execution       : DIRECTLY OBSERVED (PASS - 53/53 tests pass, exit code 0)
+5. Zero Secret Exposure       : DIRECTLY OBSERVED (PASS - 0 leaked keys in archive)
+6. 90% Accuracy Target        : DIRECTLY OBSERVED (FAIL - All 5 domains currently below 90%)
+
+Deliverable File Record:
+- Dossier File Path : evaluation/multi_project/REQPILOT_COMPLETE_INDEPENDENT_AUDIT.txt
+- Package Zip Path  : reqpilot_independent_audit_package.zip
+====================================================================================================
+                                       END OF AUDIT DOSSIER                                         
+====================================================================================================

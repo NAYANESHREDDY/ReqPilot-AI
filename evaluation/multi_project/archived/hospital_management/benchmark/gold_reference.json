@@ -1,0 +1,1138 @@
+{
+  "project_id": "af3386c4-4e35-4757-bee4-e1ae403f0667",
+  "project_name": "Hospital Management System",
+  "domain": "Healthcare",
+  "version": "2.0.0",
+  "date_frozen": "2026-10-12",
+  "source_document": "specification.docx",
+  "source_document_text": "specification.txt",
+  "total_requirements_in_spec": 124,
+  "expected_module_assignments": {
+    "FR-001": "Authentication & Authorization",
+    "FR-002": "Profile Management",
+    "FR-003": "Search & Discovery",
+    "FR-004": "Booking & Scheduling",
+    "FR-005": "Booking & Scheduling",
+    "FR-006": "Booking & Scheduling",
+    "FR-007": "Booking & Scheduling",
+    "FR-008": "Application Data Store",
+    "FR-009": "UNASSIGNED_OR_NULL",
+    "FR-010": "Application Data Store",
+    "FR-011": "Payment Management",
+    "FR-012": "Payment Management",
+    "FR-013": "Payment Management",
+    "FR-014": "Authentication & Authorization",
+    "FR-015": "Booking & Scheduling",
+    "FR-016": "Authentication & Authorization",
+    "FR-017": "Application Data Store",
+    "FR-018": "Application Data Store",
+    "FR-019": "UNASSIGNED_OR_NULL",
+    "FR-020": "UNASSIGNED_OR_NULL",
+    "FR-021": "UNASSIGNED_OR_NULL",
+    "FR-022": "UNASSIGNED_OR_NULL",
+    "FR-023": "Authentication & Authorization",
+    "FR-024": "Search & Discovery",
+    "FR-025": "Booking & Scheduling",
+    "FR-026": "Authentication & Authorization",
+    "FR-027": "Authentication & Authorization",
+    "FR-028": "Authentication & Authorization",
+    "FR-029": "UNASSIGNED_OR_NULL",
+    "FR-030": "UNASSIGNED_OR_NULL",
+    "FR-031": "Application Data Store",
+    "FR-032": "Authentication & Authorization",
+    "FR-033": "UNASSIGNED_OR_NULL",
+    "FR-034": "Notification Service",
+    "FR-035": "UNASSIGNED_OR_NULL",
+    "FR-036": "Application Data Store",
+    "FR-037": "UNASSIGNED_OR_NULL",
+    "FR-038": "UNASSIGNED_OR_NULL",
+    "FR-039": "Notification Service",
+    "FR-040": "UNASSIGNED_OR_NULL",
+    "FR-041": "Payment Management",
+    "FR-042": "UNASSIGNED_OR_NULL",
+    "FR-043": "UNASSIGNED_OR_NULL",
+    "FR-044": "Payment Management",
+    "FR-045": "Payment Management",
+    "FR-046": "Payment Management",
+    "FR-047": "Payment Management",
+    "FR-048": "UNASSIGNED_OR_NULL",
+    "FR-049": "Authentication & Authorization",
+    "FR-050": "UNASSIGNED_OR_NULL",
+    "FR-051": "Application Data Store",
+    "FR-052": "Application Data Store",
+    "FR-053": "Application Data Store",
+    "FR-054": "Authentication & Authorization",
+    "FR-055": "Authentication & Authorization",
+    "FR-056": "UNASSIGNED_OR_NULL",
+    "FR-057": "UNASSIGNED_OR_NULL",
+    "FR-058": "Authentication & Authorization",
+    "FR-059": "Booking & Scheduling",
+    "FR-060": "Booking & Scheduling",
+    "FR-061": "Booking & Scheduling",
+    "FR-062": "Booking & Scheduling",
+    "FR-063": "Booking & Scheduling",
+    "FR-064": "Application Data Store",
+    "FR-065": "Notification Service",
+    "FR-066": "Notification Service",
+    "FR-067": "Notification Service",
+    "FR-068": "Booking & Scheduling",
+    "FR-069": "Notification Service",
+    "FR-070": "Notification Service",
+    "FR-071": "Notification Service",
+    "FR-072": "UNASSIGNED_OR_NULL",
+    "FR-073": "Booking & Scheduling",
+    "FR-074": "Payment Management",
+    "FR-075": "Application Data Store",
+    "FR-076": "Payment Management",
+    "FR-077": "Booking & Scheduling",
+    "FR-078": "Notification Service",
+    "FR-079": "Reporting & Analytics",
+    "FR-080": "Reporting & Analytics",
+    "FR-081": "Reporting & Analytics",
+    "FR-082": "Reporting & Analytics",
+    "FR-083": "Reporting & Analytics",
+    "FR-084": "Reporting & Analytics",
+    "FR-085": "Application Data Store",
+    "FR-086": "Payment Management",
+    "FR-087": "Authentication & Authorization",
+    "FR-088": "Application Data Store",
+    "FR-089": "Application Data Store",
+    "FR-090": "Payment Management",
+    "FR-091": "UNASSIGNED_OR_NULL",
+    "FR-092": "UNASSIGNED_OR_NULL",
+    "FR-093": "Department",
+    "FR-094": "Application Data Store",
+    "FR-095": "Reporting & Analytics",
+    "FR-096": "UNASSIGNED_OR_NULL",
+    "FR-097": "Booking & Scheduling",
+    "FR-098": "UNASSIGNED_OR_NULL",
+    "FR-099": "Reporting & Analytics",
+    "FR-100": "UNASSIGNED_OR_NULL",
+    "FR-101": "Application Data Store",
+    "FR-102": "Booking & Scheduling",
+    "FR-103": "Application Data Store",
+    "FR-104": "UNASSIGNED_OR_NULL",
+    "FR-105": "UNASSIGNED_OR_NULL",
+    "FR-106": "Reporting & Analytics",
+    "FR-107": "Reporting & Analytics",
+    "FR-108": "Booking & Scheduling",
+    "FR-109": "Booking & Scheduling",
+    "FR-110": "File & Document Management",
+    "FR-111": "Payment Management",
+    "FR-112": "Department",
+    "NFR-001": "API Gateway",
+    "NFR-002": "API Gateway",
+    "NFR-003": "API Gateway",
+    "NFR-004": "Authentication & Authorization",
+    "NFR-005": "Application Data Store",
+    "NFR-006": "API Gateway",
+    "NFR-007": "API Gateway",
+    "NFR-008": "UNASSIGNED_OR_NULL",
+    "NFR-009": "Application Data Store",
+    "NFR-010": "Application Data Store",
+    "NFR-011": "Application Data Store",
+    "NFR-012": "Application Data Store"
+  },
+  "structural_expectations": {
+    "expected_requirements_count": 124,
+    "expected_modules_count": 11,
+    "expected_tasks_count": 124,
+    "expected_tests_count": 124,
+    "expected_traceability_links_count": 248,
+    "expected_reports_count": 5
+  },
+  "requirement_details": {
+    "FR-001": {
+      "statement": "Patient Requirements Patients should be able to register and log in securely.",
+      "summary": "Patient Requirements Patients should be able to register and log...",
+      "canonical": "Authentication & Authorization",
+      "display": "Authentication & Authorization",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-001 in Hospital Management System"
+    },
+    "FR-002": {
+      "statement": "Patients should be able to view and update their personal information.",
+      "summary": "Patients should be able to view and update their personal...",
+      "canonical": "Profile Management",
+      "display": "Profile Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-002 in Hospital Management System"
+    },
+    "FR-003": {
+      "statement": "Patients should be able to search for doctors by department and specialization.",
+      "summary": "Patients should be able to search for doctors by department...",
+      "canonical": "Search & Discovery",
+      "display": "Search & Discovery",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-003 in Hospital Management System"
+    },
+    "FR-004": {
+      "statement": "Patients should be able to view available appointment time slots.",
+      "summary": "Patients should be able to view available appointment time slots.",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-004 in Hospital Management System"
+    },
+    "FR-005": {
+      "statement": "Patients should be able to book an appointment with an available doctor.",
+      "summary": "Patients should be able to book an appointment with an...",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-005 in Hospital Management System"
+    },
+    "FR-006": {
+      "statement": "Patients should be able to cancel or reschedule an appointment according to hospital policies.",
+      "summary": "Patients should be able to cancel or reschedule an appointment...",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-006 in Hospital Management System"
+    },
+    "FR-007": {
+      "statement": "Patients should be able to view their upcoming and previous appointments.",
+      "summary": "Patients should be able to view their upcoming and previous...",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-007 in Hospital Management System"
+    },
+    "FR-008": {
+      "statement": "Patients should be able to view their medical history and previous consultation records.",
+      "summary": "Patients should be able to view their medical history and...",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-008 in Hospital Management System"
+    },
+    "FR-009": {
+      "statement": "Patients should be able to view prescriptions issued by doctors.",
+      "summary": "Patients should be able to view prescriptions issued by doctors.",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-009 in Hospital Management System"
+    },
+    "FR-010": {
+      "statement": "Patients should be able to view available laboratory results associated with their records.",
+      "summary": "Patients should be able to view available laboratory results associated...",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-010 in Hospital Management System"
+    },
+    "FR-011": {
+      "statement": "Patients should be able to view their hospital bills and payment history.",
+      "summary": "Patients should be able to view their hospital bills and...",
+      "canonical": "Payment Management",
+      "display": "Payment Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-011 in Hospital Management System"
+    },
+    "FR-012": {
+      "statement": "Patients should be able to make eligible payments through the online payment system.",
+      "summary": "Patients should be able to make eligible payments through the...",
+      "canonical": "Payment Management",
+      "display": "Payment Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-012 in Hospital Management System"
+    },
+    "FR-013": {
+      "statement": "Patients should receive notifications about appointments, laboratory results, payments, and other relevant hospital activities.",
+      "summary": "Patients should receive notifications about appointments, laboratory results, payments, and...",
+      "canonical": "Payment Management",
+      "display": "Payment Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-013 in Hospital Management System"
+    },
+    "FR-014": {
+      "statement": "Doctor Requirements Doctors should be able to log in securely and access their assigned work areas.",
+      "summary": "Doctor Requirements Doctors should be able to log in securely...",
+      "canonical": "Authentication & Authorization",
+      "display": "Authentication & Authorization",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-014 in Hospital Management System"
+    },
+    "FR-015": {
+      "statement": "Doctors should be able to view their appointment schedules.",
+      "summary": "Doctors should be able to view their appointment schedules.",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-015 in Hospital Management System"
+    },
+    "FR-016": {
+      "statement": "Doctors should be able to access the medical records of patients they are authorized to treat.",
+      "summary": "Doctors should be able to access the medical records of...",
+      "canonical": "Authentication & Authorization",
+      "display": "Authentication & Authorization",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-016 in Hospital Management System"
+    },
+    "FR-017": {
+      "statement": "Doctors should be able to record consultation notes, symptoms, diagnoses, and treatment recommendations.",
+      "summary": "Doctors should be able to record consultation notes, symptoms, diagnoses,...",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-017 in Hospital Management System"
+    },
+    "FR-018": {
+      "statement": "Doctors should be able to record patient allergies and relevant medical conditions.",
+      "summary": "Doctors should be able to record patient allergies and relevant...",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-018 in Hospital Management System"
+    },
+    "FR-019": {
+      "statement": "Doctors should be able to create electronic prescriptions.",
+      "summary": "Doctors should be able to create electronic prescriptions.",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-019 in Hospital Management System"
+    },
+    "FR-020": {
+      "statement": "Doctors should be able to modify or cancel prescriptions before they are dispensed.",
+      "summary": "Doctors should be able to modify or cancel prescriptions before...",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-020 in Hospital Management System"
+    },
+    "FR-021": {
+      "statement": "Doctors should be able to request laboratory tests for patients.",
+      "summary": "Doctors should be able to request laboratory tests for patients.",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-021 in Hospital Management System"
+    },
+    "FR-022": {
+      "statement": "Doctors should be able to view completed laboratory results.",
+      "summary": "Doctors should be able to view completed laboratory results.",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-022 in Hospital Management System"
+    },
+    "FR-023": {
+      "statement": "Reception and Staff Requirements Reception staff should be able to register new patients.",
+      "summary": "Reception and Staff Requirements Reception staff should be able to...",
+      "canonical": "Authentication & Authorization",
+      "display": "Authentication & Authorization",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-023 in Hospital Management System"
+    },
+    "FR-024": {
+      "statement": "Reception staff should be able to search for existing patient records.",
+      "summary": "Reception staff should be able to search for existing patient...",
+      "canonical": "Search & Discovery",
+      "display": "Search & Discovery",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-024 in Hospital Management System"
+    },
+    "FR-025": {
+      "statement": "Reception staff should be able to book, cancel, and reschedule appointments on behalf of patients.",
+      "summary": "Reception staff should be able to book, cancel, and reschedule...",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-025 in Hospital Management System"
+    },
+    "FR-026": {
+      "statement": "Authorized staff should be able to update patient demographic information.",
+      "summary": "Authorized staff should be able to update patient demographic information.",
+      "canonical": "Authentication & Authorization",
+      "display": "Authentication & Authorization",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-026 in Hospital Management System"
+    },
+    "FR-027": {
+      "statement": "Authorized staff should be able to admit patients for inpatient treatment.",
+      "summary": "Authorized staff should be able to admit patients for inpatient...",
+      "canonical": "Authentication & Authorization",
+      "display": "Authentication & Authorization",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-027 in Hospital Management System"
+    },
+    "FR-028": {
+      "statement": "Authorized staff should be able to record patient transfers and discharges.",
+      "summary": "Authorized staff should be able to record patient transfers and...",
+      "canonical": "Authentication & Authorization",
+      "display": "Authentication & Authorization",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-028 in Hospital Management System"
+    },
+    "FR-029": {
+      "statement": "Laboratory Requirements Laboratory staff should be able to view pending laboratory test requests.",
+      "summary": "Laboratory Requirements Laboratory staff should be able to view pending...",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-029 in Hospital Management System"
+    },
+    "FR-030": {
+      "statement": "Laboratory staff should be able to update the status of laboratory tests.",
+      "summary": "Laboratory staff should be able to update the status of...",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-030 in Hospital Management System"
+    },
+    "FR-031": {
+      "statement": "Laboratory staff should be able to record laboratory test results.",
+      "summary": "Laboratory staff should be able to record laboratory test results.",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-031 in Hospital Management System"
+    },
+    "FR-032": {
+      "statement": "Laboratory results should become available to authorized doctors after completion.",
+      "summary": "Laboratory results should become available to authorized doctors after completion.",
+      "canonical": "Authentication & Authorization",
+      "display": "Authentication & Authorization",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-032 in Hospital Management System"
+    },
+    "FR-033": {
+      "statement": "Patients should be able to view their laboratory results after they are released.",
+      "summary": "Patients should be able to view their laboratory results after...",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-033 in Hospital Management System"
+    },
+    "FR-034": {
+      "statement": "Doctors should receive notifications when requested laboratory results become available.",
+      "summary": "Doctors should receive notifications when requested laboratory results become available.",
+      "canonical": "Notification Service",
+      "display": "Notification Service",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-034 in Hospital Management System"
+    },
+    "FR-035": {
+      "statement": "Pharmacy Requirements Pharmacists should be able to view prescriptions submitted for dispensing.",
+      "summary": "Pharmacy Requirements Pharmacists should be able to view prescriptions submitted...",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-035 in Hospital Management System"
+    },
+    "FR-036": {
+      "statement": "Pharmacists should be able to record prescription dispensing status.",
+      "summary": "Pharmacists should be able to record prescription dispensing status.",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-036 in Hospital Management System"
+    },
+    "FR-037": {
+      "statement": "The system should maintain medicine inventory information including medicine name, batch number, quantity, expiry date, and price.",
+      "summary": "The system should maintain medicine inventory information including medicine name,...",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-037 in Hospital Management System"
+    },
+    "FR-038": {
+      "statement": "The system should automatically reduce medicine inventory when a prescription is dispensed.",
+      "summary": "The system should automatically reduce medicine inventory when a prescription...",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-038 in Hospital Management System"
+    },
+    "FR-039": {
+      "statement": "The system should notify pharmacy staff when medicine stock falls below the configured minimum level.",
+      "summary": "The system should notify pharmacy staff when medicine stock falls...",
+      "canonical": "Notification Service",
+      "display": "Notification Service",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-039 in Hospital Management System"
+    },
+    "FR-040": {
+      "statement": "Expired medicines should not be dispensed.",
+      "summary": "Expired medicines should not be dispensed.",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-040 in Hospital Management System"
+    },
+    "FR-041": {
+      "statement": "Billing and Payment Requirements Billing staff should be able to generate bills for consultations, laboratory tests, medicines, procedures, and other hospital services.",
+      "summary": "Billing and Payment Requirements Billing staff should be able to...",
+      "canonical": "Payment Management",
+      "display": "Payment Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-041 in Hospital Management System"
+    },
+    "FR-042": {
+      "statement": "Patients should be able to view outstanding and completed bills.",
+      "summary": "Patients should be able to view outstanding and completed bills.",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-042 in Hospital Management System"
+    },
+    "FR-043": {
+      "statement": "The system should calculate the total amount based on applicable hospital charges.",
+      "summary": "The system should calculate the total amount based on applicable...",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-043 in Hospital Management System"
+    },
+    "FR-044": {
+      "statement": "Patients should be able to make eligible electronic payments.",
+      "summary": "Patients should be able to make eligible electronic payments.",
+      "canonical": "Payment Management",
+      "display": "Payment Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-044 in Hospital Management System"
+    },
+    "FR-045": {
+      "statement": "The system should generate a payment receipt after successful payment.",
+      "summary": "The system should generate a payment receipt after successful payment.",
+      "canonical": "Payment Management",
+      "display": "Payment Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-045 in Hospital Management System"
+    },
+    "FR-046": {
+      "statement": "Payment failures should be recorded without marking the bill as successfully paid.",
+      "summary": "Payment failures should be recorded without marking the bill as...",
+      "canonical": "Payment Management",
+      "display": "Payment Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-046 in Hospital Management System"
+    },
+    "FR-047": {
+      "statement": "The system should maintain payment history for each patient.",
+      "summary": "The system should maintain payment history for each patient.",
+      "canonical": "Payment Management",
+      "display": "Payment Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-047 in Hospital Management System"
+    },
+    "FR-048": {
+      "statement": "Inpatient and Bed Management Hospital staff should be able to view available wards, rooms, and beds.",
+      "summary": "Inpatient and Bed Management Hospital staff should be able to...",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-048 in Hospital Management System"
+    },
+    "FR-049": {
+      "statement": "Authorized staff should be able to assign an available bed to an admitted patient.",
+      "summary": "Authorized staff should be able to assign an available bed...",
+      "canonical": "Authentication & Authorization",
+      "display": "Authentication & Authorization",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-049 in Hospital Management System"
+    },
+    "FR-050": {
+      "statement": "The system should prevent an occupied bed from being assigned to another patient.",
+      "summary": "The system should prevent an occupied bed from being assigned...",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-050 in Hospital Management System"
+    },
+    "FR-051": {
+      "statement": "Staff should be able to record patient admission information.",
+      "summary": "Staff should be able to record patient admission information.",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-051 in Hospital Management System"
+    },
+    "FR-052": {
+      "statement": "Staff should be able to record patient transfers between wards or rooms.",
+      "summary": "Staff should be able to record patient transfers between wards...",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-052 in Hospital Management System"
+    },
+    "FR-053": {
+      "statement": "Staff should be able to record patient discharge information.",
+      "summary": "Staff should be able to record patient discharge information.",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-053 in Hospital Management System"
+    },
+    "FR-054": {
+      "statement": "Patients must only access their own personal information, appointments, medical records, prescriptions, and bills.",
+      "summary": "Patients must only access their own personal information, appointments, medical...",
+      "canonical": "Authentication & Authorization",
+      "display": "Authentication & Authorization",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-054 in Hospital Management System"
+    },
+    "FR-055": {
+      "statement": "Doctors should only access patient records required for their authorized clinical activities.",
+      "summary": "Doctors should only access patient records required for their authorized...",
+      "canonical": "Authentication & Authorization",
+      "display": "Authentication & Authorization",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-055 in Hospital Management System"
+    },
+    "FR-056": {
+      "statement": "Laboratory staff should only access laboratory information required for their assigned work.",
+      "summary": "Laboratory staff should only access laboratory information required for their...",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-056 in Hospital Management System"
+    },
+    "FR-057": {
+      "statement": "Pharmacy staff should only access prescription and inventory information required for pharmacy operations.",
+      "summary": "Pharmacy staff should only access prescription and inventory information required...",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-057 in Hospital Management System"
+    },
+    "FR-058": {
+      "statement": "Access to confidential medical records should be restricted to authorized users.",
+      "summary": "Access to confidential medical records should be restricted to authorized...",
+      "canonical": "Authentication & Authorization",
+      "display": "Authentication & Authorization",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-058 in Hospital Management System"
+    },
+    "FR-059": {
+      "statement": "Appointment and Scheduling Policy A patient should not be able to book an unavailable doctor time slot.",
+      "summary": "Appointment and Scheduling Policy A patient should not be able...",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-059 in Hospital Management System"
+    },
+    "FR-060": {
+      "statement": "The system should prevent two patients from booking the same doctor time slot.",
+      "summary": "The system should prevent two patients from booking the same...",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-060 in Hospital Management System"
+    },
+    "FR-061": {
+      "statement": "An appointment should be associated with a specific patient, doctor, date, and time.",
+      "summary": "An appointment should be associated with a specific patient, doctor,...",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-061 in Hospital Management System"
+    },
+    "FR-062": {
+      "statement": "Cancelled appointments should become available for future booking when applicable.",
+      "summary": "Cancelled appointments should become available for future booking when applicable.",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-062 in Hospital Management System"
+    },
+    "FR-063": {
+      "statement": "A rescheduled appointment should update the corresponding doctor and patient schedules.",
+      "summary": "A rescheduled appointment should update the corresponding doctor and patient...",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-063 in Hospital Management System"
+    },
+    "FR-064": {
+      "statement": "Appointment changes should be recorded for audit purposes.",
+      "summary": "Appointment changes should be recorded for audit purposes.",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-064 in Hospital Management System"
+    },
+    "FR-065": {
+      "statement": "Notifications The system should provide notifications to patients and relevant hospital staff.",
+      "summary": "Notifications The system should provide notifications to patients and relevant...",
+      "canonical": "Notification Service",
+      "display": "Notification Service",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-065 in Hospital Management System"
+    },
+    "FR-066": {
+      "statement": "Email and in-app notifications should be supported.",
+      "summary": "Email and in-app notifications should be supported.",
+      "canonical": "Notification Service",
+      "display": "Notification Service",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-066 in Hospital Management System"
+    },
+    "FR-067": {
+      "statement": "The system should notify patients when an appointment is booked, cancelled, or rescheduled.",
+      "summary": "The system should notify patients when an appointment is booked,...",
+      "canonical": "Notification Service",
+      "display": "Notification Service",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-067 in Hospital Management System"
+    },
+    "FR-068": {
+      "statement": "The system should send appointment reminders before scheduled consultations.",
+      "summary": "The system should send appointment reminders before scheduled consultations.",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-068 in Hospital Management System"
+    },
+    "FR-069": {
+      "statement": "The system should notify doctors when laboratory results become available.",
+      "summary": "The system should notify doctors when laboratory results become available.",
+      "canonical": "Notification Service",
+      "display": "Notification Service",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-069 in Hospital Management System"
+    },
+    "FR-070": {
+      "statement": "The system should notify pharmacy staff when medicine inventory reaches a critical level.",
+      "summary": "The system should notify pharmacy staff when medicine inventory reaches...",
+      "canonical": "Notification Service",
+      "display": "Notification Service",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-070 in Hospital Management System"
+    },
+    "FR-071": {
+      "statement": "The system should notify patients when payments are successfully completed.",
+      "summary": "The system should notify patients when payments are successfully completed.",
+      "canonical": "Notification Service",
+      "display": "Notification Service",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-071 in Hospital Management System"
+    },
+    "FR-072": {
+      "statement": "Patient and doctor searches should return results without unnecessary delay under normal operating conditions.",
+      "summary": "Patient and doctor searches should return results without unnecessary delay...",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-072 in Hospital Management System"
+    },
+    "FR-073": {
+      "statement": "Appointment booking should prevent conflicting appointments under concurrent requests.",
+      "summary": "Appointment booking should prevent conflicting appointments under concurrent requests.",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-073 in Hospital Management System"
+    },
+    "FR-074": {
+      "statement": "Updates to appointment, bed, laboratory, and billing status should be reflected without requiring unnecessary page refreshes.",
+      "summary": "Updates to appointment, bed, laboratory, and billing status should be...",
+      "canonical": "Payment Management",
+      "display": "Payment Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-074 in Hospital Management System"
+    },
+    "FR-075": {
+      "statement": "Patient medical records should remain recoverable after a temporary application failure.",
+      "summary": "Patient medical records should remain recoverable after a temporary application...",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-075 in Hospital Management System"
+    },
+    "FR-076": {
+      "statement": "Billing and payment information should not be lost after a temporary system restart.",
+      "summary": "Billing and payment information should not be lost after a...",
+      "canonical": "Payment Management",
+      "display": "Payment Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-076 in Hospital Management System"
+    },
+    "FR-077": {
+      "statement": "Appointment information should remain consistent after a temporary service interruption.",
+      "summary": "Appointment information should remain consistent after a temporary service interruption.",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-077 in Hospital Management System"
+    },
+    "FR-078": {
+      "statement": "Operational data should not be lost when the notification service is temporarily unavailable.",
+      "summary": "Operational data should not be lost when the notification service...",
+      "canonical": "Notification Service",
+      "display": "Notification Service",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-078 in Hospital Management System"
+    },
+    "FR-079": {
+      "statement": "Reporting Administrators should be able to generate reports for patient registrations, appointments, admissions, discharges, laboratory activity, pharmacy inventory, billing, payments, and hospital operations.",
+      "summary": "Reporting Administrators should be able to generate reports for patient...",
+      "canonical": "Reporting & Analytics",
+      "display": "Reporting & Analytics",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-079 in Hospital Management System"
+    },
+    "FR-080": {
+      "statement": "Doctors should be able to view reports related to their assigned clinical activities.",
+      "summary": "Doctors should be able to view reports related to their...",
+      "canonical": "Reporting & Analytics",
+      "display": "Reporting & Analytics",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-080 in Hospital Management System"
+    },
+    "FR-081": {
+      "statement": "Pharmacy staff should be able to generate medicine inventory and dispensing reports.",
+      "summary": "Pharmacy staff should be able to generate medicine inventory and...",
+      "canonical": "Reporting & Analytics",
+      "display": "Reporting & Analytics",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-081 in Hospital Management System"
+    },
+    "FR-082": {
+      "statement": "Laboratory staff should be able to generate reports for laboratory requests and completed tests.",
+      "summary": "Laboratory staff should be able to generate reports for laboratory...",
+      "canonical": "Reporting & Analytics",
+      "display": "Reporting & Analytics",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-082 in Hospital Management System"
+    },
+    "FR-083": {
+      "statement": "Administrators should be able to generate financial and operational reports.",
+      "summary": "Administrators should be able to generate financial and operational reports.",
+      "canonical": "Reporting & Analytics",
+      "display": "Reporting & Analytics",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-083 in Hospital Management System"
+    },
+    "FR-084": {
+      "statement": "Reports should identify the relevant department, time period, and status information used to produce the reported totals.",
+      "summary": "Reports should identify the relevant department, time period, and status...",
+      "canonical": "Reporting & Analytics",
+      "display": "Reporting & Analytics",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-084 in Hospital Management System"
+    },
+    "FR-085": {
+      "statement": "Data Retention and Privacy Patient medical records should be retained according to the hospital's configured data-retention policy.",
+      "summary": "Data Retention and Privacy Patient medical records should be retained...",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-085 in Hospital Management System"
+    },
+    "FR-086": {
+      "statement": "Completed appointments, consultation records, prescriptions, laboratory results, bills, and payment records should remain available for authorized historical access.",
+      "summary": "Completed appointments, consultation records, prescriptions, laboratory results, bills, and payment...",
+      "canonical": "Payment Management",
+      "display": "Payment Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-086 in Hospital Management System"
+    },
+    "FR-087": {
+      "statement": "Sensitive patient information should only be accessible to authorized users.",
+      "summary": "Sensitive patient information should only be accessible to authorized users.",
+      "canonical": "Authentication & Authorization",
+      "display": "Authentication & Authorization",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-087 in Hospital Management System"
+    },
+    "FR-088": {
+      "statement": "The system should maintain records of important changes made to patient medical information.",
+      "summary": "The system should maintain records of important changes made to...",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-088 in Hospital Management System"
+    },
+    "FR-089": {
+      "statement": "Inactive patient accounts should be handled according to the hospital's configured retention and privacy policy.",
+      "summary": "Inactive patient accounts should be handled according to the hospital's...",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-089 in Hospital Management System"
+    },
+    "FR-090": {
+      "statement": "Administrative Requirements Administrators should be able to manage patients, doctors, nurses, reception staff, laboratory staff, pharmacists, billing staff, and other system users.",
+      "summary": "Administrative Requirements Administrators should be able to manage patients, doctors,...",
+      "canonical": "Payment Management",
+      "display": "Payment Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-090 in Hospital Management System"
+    },
+    "FR-091": {
+      "statement": "Administrators should be able to assign and modify user roles.",
+      "summary": "Administrators should be able to assign and modify user roles.",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-091 in Hospital Management System"
+    },
+    "FR-092": {
+      "statement": "Administrators should be able to activate or deactivate user accounts.",
+      "summary": "Administrators should be able to activate or deactivate user accounts.",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-092 in Hospital Management System"
+    },
+    "FR-093": {
+      "statement": "Administrators should be able to manage hospital departments and services.",
+      "summary": "Administrators should be able to manage hospital departments and services.",
+      "canonical": "Department",
+      "display": "Department",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-093 in Hospital Management System"
+    },
+    "FR-094": {
+      "statement": "Administrators should be able to configure hospital-wide appointment, notification, billing, and data-retention policies.",
+      "summary": "Administrators should be able to configure hospital-wide appointment, notification, billing,...",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-094 in Hospital Management System"
+    },
+    "FR-095": {
+      "statement": "Administrators should have access to authorized operational and financial reports.",
+      "summary": "Administrators should have access to authorized operational and financial reports.",
+      "canonical": "Reporting & Analytics",
+      "display": "Reporting & Analytics",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-095 in Hospital Management System"
+    },
+    "FR-096": {
+      "statement": "Important Operational Policies A patient must not be assigned to an occupied hospital bed.",
+      "summary": "Important Operational Policies A patient must not be assigned to...",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-096 in Hospital Management System"
+    },
+    "FR-097": {
+      "statement": "A doctor time slot must not be assigned to multiple patients for the same appointment period.",
+      "summary": "A doctor time slot must not be assigned to multiple...",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-097 in Hospital Management System"
+    },
+    "FR-098": {
+      "statement": "A medicine that has expired must not be dispensed.",
+      "summary": "A medicine that has expired must not be dispensed.",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-098 in Hospital Management System"
+    },
+    "FR-099": {
+      "statement": "A patient payment must not be marked as successful when the payment provider reports a failure.",
+      "summary": "A patient payment must not be marked as successful when...",
+      "canonical": "Reporting & Analytics",
+      "display": "Reporting & Analytics",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-099 in Hospital Management System"
+    },
+    "FR-100": {
+      "statement": "A laboratory result should only become visible to patients according to the hospital's configured release policy.",
+      "summary": "A laboratory result should only become visible to patients according...",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-100 in Hospital Management System"
+    },
+    "FR-101": {
+      "statement": "Unauthorized users must not be able to modify confidential medical records.",
+      "summary": "Unauthorized users must not be able to modify confidential medical...",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-101 in Hospital Management System"
+    },
+    "FR-102": {
+      "statement": "Reporting and Auditability Every appointment creation, cancellation, and rescheduling operation should have a traceable record.",
+      "summary": "Reporting and Auditability Every appointment creation, cancellation, and rescheduling operation...",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-102 in Hospital Management System"
+    },
+    "FR-103": {
+      "statement": "Medical-record updates should have a traceable record showing the relevant user and operation.",
+      "summary": "Medical-record updates should have a traceable record showing the relevant...",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-103 in Hospital Management System"
+    },
+    "FR-104": {
+      "statement": "Prescription creation and dispensing updates should be traceable.",
+      "summary": "Prescription creation and dispensing updates should be traceable.",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-104 in Hospital Management System"
+    },
+    "FR-105": {
+      "statement": "Laboratory result updates should be traceable.",
+      "summary": "Laboratory result updates should be traceable.",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-105 in Hospital Management System"
+    },
+    "FR-106": {
+      "statement": "Payment state transitions should have a traceable record.",
+      "summary": "Payment state transitions should have a traceable record.",
+      "canonical": "Reporting & Analytics",
+      "display": "Reporting & Analytics",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-106 in Hospital Management System"
+    },
+    "FR-107": {
+      "statement": "Reports should identify the relevant department, activity, and time period used to produce reported totals.",
+      "summary": "Reports should identify the relevant department, activity, and time period...",
+      "canonical": "Reporting & Analytics",
+      "display": "Reporting & Analytics",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-107 in Hospital Management System"
+    },
+    "FR-108": {
+      "statement": "Ambiguous Stakeholder Points The organization has not specified whether patients should be allowed to cancel appointments after a particular time before the consultation.",
+      "summary": "Ambiguous Stakeholder Points The organization has not specified whether patients...",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-108 in Hospital Management System"
+    },
+    "FR-109": {
+      "statement": "The organization has not specified whether missed appointments should automatically be marked as cancelled or no-show.",
+      "summary": "The organization has not specified whether missed appointments should automatically...",
+      "canonical": "Booking & Scheduling",
+      "display": "Booking & Scheduling",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-109 in Hospital Management System"
+    },
+    "FR-110": {
+      "statement": "The organization has not specified whether patients should be able to directly download complete medical records.",
+      "summary": "The organization has not specified whether patients should be able...",
+      "canonical": "File & Document Management",
+      "display": "File & Document Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-110 in Hospital Management System"
+    },
+    "FR-111": {
+      "statement": "The organization has not specified whether online payments should support partial payment of hospital bills.",
+      "summary": "The organization has not specified whether online payments should support...",
+      "canonical": "Payment Management",
+      "display": "Payment Management",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-111 in Hospital Management System"
+    },
+    "FR-112": {
+      "statement": "The organization has not specified whether a patient's medical record can be accessed by doctors from different departments during the same treatment episode.",
+      "summary": "The organization has not specified whether a patient's medical record...",
+      "canonical": "Department",
+      "display": "Department",
+      "type": "functional",
+      "rationale": "Independent specification capability mapping for FR-112 in Hospital Management System"
+    },
+    "NFR-001": {
+      "statement": "Doctors should be able to update the availability of their consultation time slots.",
+      "summary": "Doctors should be able to update the availability of their...",
+      "canonical": "API Gateway",
+      "display": "API Gateway",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-001 in Hospital Management System"
+    },
+    "NFR-002": {
+      "statement": "Reception staff should be able to view doctor availability.",
+      "summary": "Reception staff should be able to view doctor availability.",
+      "canonical": "API Gateway",
+      "display": "API Gateway",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-002 in Hospital Management System"
+    },
+    "NFR-003": {
+      "statement": "The system should provide current bed availability information to authorized staff.",
+      "summary": "The system should provide current bed availability information to authorized...",
+      "canonical": "API Gateway",
+      "display": "API Gateway",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-003 in Hospital Management System"
+    },
+    "NFR-004": {
+      "statement": "Authentication and Security The system should provide secure authentication and role-based access control.",
+      "summary": "Authentication and Security The system should provide secure authentication and...",
+      "canonical": "Authentication & Authorization",
+      "display": "Authentication & Authorization",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-004 in Hospital Management System"
+    },
+    "NFR-005": {
+      "statement": "Administrative actions should be recorded in an audit log.",
+      "summary": "Administrative actions should be recorded in an audit log.",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-005 in Hospital Management System"
+    },
+    "NFR-006": {
+      "statement": "Performance The system should remain responsive when a large number of patients and hospital staff search for records or appointments simultaneously.",
+      "summary": "Performance The system should remain responsive when a large number...",
+      "canonical": "API Gateway",
+      "display": "API Gateway",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-006 in Hospital Management System"
+    },
+    "NFR-007": {
+      "statement": "Availability and Reliability The system should be available 24/7 except during planned maintenance.",
+      "summary": "Availability and Reliability The system should be available 24/7 except...",
+      "canonical": "API Gateway",
+      "display": "API Gateway",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-007 in Hospital Management System"
+    },
+    "NFR-008": {
+      "statement": "The system should support backup and recovery of critical hospital information.",
+      "summary": "The system should support backup and recovery of critical hospital...",
+      "canonical": "UNASSIGNED_OR_NULL",
+      "display": "UNASSIGNED_OR_NULL",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-008 in Hospital Management System"
+    },
+    "NFR-009": {
+      "statement": "Audit logs should be retained according to the configured administrative retention period.",
+      "summary": "Audit logs should be retained according to the configured administrative...",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-009 in Hospital Management System"
+    },
+    "NFR-010": {
+      "statement": "Administrative actions should be traceable through audit records.",
+      "summary": "Administrative actions should be traceable through audit records.",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-010 in Hospital Management System"
+    },
+    "NFR-011": {
+      "statement": "Important administrative policy changes should be recorded in the audit log.",
+      "summary": "Important administrative policy changes should be recorded in the audit...",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-011 in Hospital Management System"
+    },
+    "NFR-012": {
+      "statement": "The organization has not specified whether inactive patient accounts should be anonymized or permanently deleted after the configured retention period.",
+      "summary": "The organization has not specified whether inactive patient accounts should...",
+      "canonical": "Application Data Store",
+      "display": "Application Data Store",
+      "type": "non_functional",
+      "rationale": "Independent specification capability mapping for NFR-012 in Hospital Management System"
+    }
+  }
+}

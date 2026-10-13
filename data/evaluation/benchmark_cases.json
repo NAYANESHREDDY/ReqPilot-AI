@@ -1,0 +1,46 @@
+{
+  "benchmark_suite": "ReqPilot Requirements Benchmark v1.0",
+  "domain": "Software Engineering Requirements Evaluation",
+  "test_cases": [
+    {
+      "id": "TC-AMB-01",
+      "category": "ambiguity",
+      "text": "The patient dashboard should be intuitive and fast.",
+      "expected_ambiguities": ["intuitive", "fast"],
+      "expected_severity": "medium",
+      "ground_truth_question": "What maximum response time and usability standards are required?"
+    },
+    {
+      "id": "TC-AMB-02",
+      "category": "ambiguity",
+      "text": "The checkout system must provide flexible payment options soon after launch.",
+      "expected_ambiguities": ["flexible", "soon"],
+      "expected_severity": "medium",
+      "ground_truth_question": "What exact payment gateways and release timeline define this?"
+    },
+    {
+      "id": "TC-CONF-01",
+      "category": "conflict",
+      "statement_a": "Users can cancel an appointment at any time without fee.",
+      "statement_b": "Appointments cancelled within 24 hours are non-refundable and forfeit the deposit.",
+      "conflict_type": "temporal_cancellation_contradiction",
+      "severity": "high"
+    },
+    {
+      "id": "TC-CONF-02",
+      "category": "conflict",
+      "statement_a": "Only system administrators can delete customer records.",
+      "statement_b": "Customers can delete their profile and associated records at will under GDPR.",
+      "conflict_type": "authorization_contradiction",
+      "severity": "high"
+    },
+    {
+      "id": "TC-DUP-01",
+      "category": "duplicate",
+      "statement_a": "The system shall send an email confirmation upon successful registration.",
+      "statement_b": "An email confirmation must be dispatched to the user immediately after account creation.",
+      "expected_similarity": 0.88,
+      "recommendation": "merge"
+    }
+  ]
+}

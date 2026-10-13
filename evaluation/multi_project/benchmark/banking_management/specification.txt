@@ -1,0 +1,33 @@
+BANKING MANAGEMENT SYSTEM
+STAKEHOLDER REQUIREMENTS
+1. System Overview
+The financial institution requires an enterprise-grade Core Banking and Customer Portal Management System for retail customers, loan officers, tellers, compliance auditors, and system administrators.
+2. Customer Banking Requirements
+Customers should be able to register, complete initial KYC verification, and log in with multi-factor authentication.
+Customers should be able to view account balances and real-time transaction history for savings and checking accounts.
+Customers should be able to initiate domestic fund transfers between internal accounts and to external beneficiaries.
+Customers should be able to schedule recurring standing instructions and future-dated payments.
+Customers should be able to apply for personal, vehicle, or mortgage loans online.
+Customers should be able to download monthly account statements and tax certificates in PDF format.
+Customers should be able to request debit card activation, temporary card freezing, and daily spending limit adjustments.
+Customers should receive instantaneous SMS and push notifications for all debits, credits, and security alerts.
+Customers should be able to report suspicious transactions or compromised credentials immediately.
+3. Teller and Branch Staff Requirements
+Tellers should be able to log in securely using terminal authorization and biometric credentials.
+Tellers should be able to process cash deposits and cash withdrawals against customer accounts.
+Tellers should be able to verify customer signatures, photo identity documents, and account status.
+Tellers should be able to issue cashier checks and process inter-branch account adjustments.
+All teller transactions exceeding configured threshold amounts must require mandatory supervisory override.
+Tellers should perform end-of-day cash drawer balancing and generate teller reconciliation reports.
+4. Loan Management and Underwriting
+Loan officers should be able to review customer loan applications, credit scores, and uploaded income proofs.
+Loan officers should be able to calculate debt-to-income ratios and generate proposed repayment schedules.
+Loan officers should be able to approve, reject, or refer loan applications according to credit policy guidelines.
+The system should calculate interest, track monthly installment payments, and flag delinquent accounts.
+5. Compliance, Security and Auditing
+The system should enforce role-based access control and strict separation of duties across all banking operations.
+All transactions must be immutably recorded in a tamper-resistant financial ledger.
+The system should automatically monitor transactions against AML (Anti-Money Laundering) rule thresholds.
+The system should flag high-value or suspicious patterns and generate regulatory compliance reports.
+All administrative changes, security policy updates, and manual ledger adjustments must be recorded in an audit trail.
+Customer financial records and account balances must be protected with strong database encryption at rest and in transit.

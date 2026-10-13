@@ -1,0 +1,26 @@
+{
+  "run_id": "575c3d99-e7cf-4d05-a3f0-182bab9f1f03",
+  "domain_key": "hospital_management",
+  "project_title": "Hospital Management System",
+  "timestamp": "2026-10-12T17:21:26.842635",
+  "duration_seconds": 2.249161,
+  "llm_enabled": true,
+  "provider": "groq",
+  "model": "llama-3.3-70b-versatile",
+  "llm_attempted": true,
+  "llm_extraction_succeeded": false,
+  "fallback_used": true,
+  "original_db_hash_before": "abc1e7028050e60139969f5dae0633a8851b377cdc841d6180ef7b1a9be566cd",
+  "original_db_hash_after": "abc1e7028050e60139969f5dae0633a8851b377cdc841d6180ef7b1a9be566cd",
+  "original_db_unchanged": true,
+  "input_file": "evaluation\\multi_project\\benchmark\\hospital_management\\specification.docx",
+  "counts": {
+    "chunks": 1,
+    "requirements": 124,
+    "modules": 11,
+    "relations": 21,
+    "tasks": 124,
+    "test_cases": 124,
+    "reports": 5
+  }
+}

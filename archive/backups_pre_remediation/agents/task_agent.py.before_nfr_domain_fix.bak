@@ -1,0 +1,1779 @@
+from typing import List, Dict, Any, Optional
+import re
+
+
+class TaskDecompositionAgent:
+    """
+    Requirement-driven Task Decomposition Agent.
+
+    Pipeline:
+
+        Requirement
+             ↓
+        Capability scoring
+             ↓
+        Epic
+             ↓
+        Feature
+             ↓
+        Task
+             ↓
+        Subtasks
+
+    Classification gives highest importance to structured requirement
+    fields (action / target_object / summary) and lower importance to
+    free-form description text.
+
+    This prevents incidental words such as "order" in a payment
+    description from incorrectly classifying the requirement as an
+    order-management task.
+    """
+
+    CAPABILITY_RULES = [
+        {
+            "key": "authentication",
+            "epic_key": "authentication",
+            "patterns": [
+                r"\blog[\s-]*in\b",
+                r"\blog[\s-]*out\b",
+                r"\bsign[\s-]*in\b",
+                r"\bsign[\s-]*up\b",
+                r"\bauthenticat\w*\b",
+                r"\bauthoriz\w*\b",
+                r"\bpassword\w*\b",
+                r"\bcredential\w*\b",
+                r"\bpermission\w*\b",
+                r"\brole[- ]based\b",
+                r"\baccess control\b",
+                r"\bregistration\b",
+                r"\bregister\w*\b",
+                r"\bcreate account\b",
+                r"\baccount creation\b",
+                r"\bauthentication session\b",
+                r"\buser session\b",
+                r"\bsession timeout\b",
+                r"\bpassword recovery\b",
+                r"\bforgot password\b",
+                r"\breset password\b",
+            ],
+            "epic_title": "Authentication & Access Management",
+            "feature_title": "Authentication & Authorization",
+            "module_id": "MOD-AUTHENTICATION",
+            "base_hours": 10,
+            "base_points": 3,
+        },
+        {
+            "key": "search",
+            "epic_key": "discovery",
+            "patterns": [
+                r"\bsearch\b",
+                r"\bsearching\b",
+                r"\bfilter\w*\b",
+                r"\bquery\b",
+                r"\bdiscover\w*\b",
+                r"\bfind\b",
+            ],
+            "epic_title": "Search & Discovery",
+            "feature_title": "Search & Filtering",
+            "module_id": "MOD-SEARCH",
+            "base_hours": 8,
+            "base_points": 3,
+        },
+        {
+            "key": "cart",
+            "epic_key": "commerce",
+            "patterns": [
+                r"\bshopping cart\b",
+                r"\bcart\b",
+                r"\badd to cart\b",
+                r"\bremove from cart\b",
+            ],
+            "epic_title": "Commerce & Order Management",
+            "feature_title": "Cart Management",
+            "module_id": "MOD-CART",
+            "base_hours": 8,
+            "base_points": 3,
+        },
+        {
+            "key": "order",
+            "epic_key": "commerce",
+            "patterns": [
+                r"\border\w*\b",
+                r"\bpurchase\w*\b",
+                r"\bcheckout\b",
+            ],
+            "epic_title": "Commerce & Order Management",
+            "feature_title": "Order Management",
+            "module_id": "MOD-ORDER",
+            "base_hours": 12,
+            "base_points": 3,
+        },
+        {
+            "key": "payment",
+            "epic_key": "commerce",
+            "patterns": [
+                r"\bpayment\w*\b",
+                r"\bpay\b",
+                r"\bpaid\b",
+                r"\btransaction\w*\b",
+                r"\brefund\w*\b",
+                r"\bbilling\b",
+                r"\binvoice\w*\b",
+            ],
+            "epic_title": "Commerce & Order Management",
+            "feature_title": "Payment Processing",
+            "module_id": "MOD-PAYMENT",
+            "base_hours": 14,
+            "base_points": 5,
+        },
+        {
+            "key": "notification",
+            "epic_key": "communication",
+            "patterns": [
+                r"\bnotif\w*\b",
+                r"\balert\w*\b",
+                r"\bremind\w*\b",
+                r"\bemail\w*\b",
+                r"\bsms\b",
+                r"\bpush notification\b",
+            ],
+            "epic_title": "Notifications & Communication",
+            "feature_title": "Notifications",
+            "module_id": "MOD-NOTIFICATION",
+            "base_hours": 6,
+            "base_points": 2,
+        },
+        {
+            "key": "booking",
+            "epic_key": "scheduling",
+            "patterns": [
+                r"\bbook\w*\b",
+                r"\breserv\w*\b",
+                r"\bappointment\w*\b",
+                r"\bschedul\w*\b",
+            ],
+            "epic_title": "Booking & Scheduling",
+            "feature_title": "Booking & Scheduling",
+            "module_id": "MOD-BOOKING",
+            "base_hours": 12,
+            "base_points": 3,
+        },
+        {
+            "key": "attendance",
+            "epic_key": "attendance",
+            "patterns": [
+                r"\battendance\b",
+                r"\battendances\b",
+                r"\babsent\b",
+                r"\babsence\b",
+                r"\bpresent\b",
+            ],
+            "epic_title": "Attendance Management",
+            "feature_title": "Attendance Tracking",
+            "module_id": "MOD-ATTENDANCE",
+            "base_hours": 10,
+            "base_points": 3,
+        },
+        {
+            "key": "reporting",
+            "epic_key": "reporting",
+            "patterns": [
+                r"\breport\w*\b",
+                r"\banalytics\b",
+                r"\banaly[sz]\w*\b",
+                r"\bstatistics\b",
+                r"\bmetrics\b",
+            ],
+            "epic_title": "Reporting & Analytics",
+            "feature_title": "Reporting & Analytics",
+            "module_id": "MOD-REPORTING",
+            "base_hours": 10,
+            "base_points": 3,
+        },
+        {
+            "key": "dashboard",
+            "epic_key": "dashboard",
+            "feature_key": "dashboard",
+            "epic_title": "Dashboard",
+            "feature_title": "Dashboard Functionality",
+            "patterns": [
+                r"\bdashboard\b",
+                r"\bhome screen\b",
+                r"\blanding page\b",
+            ],
+            "module_id": "MOD-DASHBOARD",
+            "base_hours": 8,
+            "base_points": 3,
+        },
+        {
+            "key": "profile",
+            "epic_key": "user-management",
+            "patterns": [
+                r"\bprofile\w*\b",
+                r"\buser details\b",
+                r"\buser information\b",
+                r"\bpersonal information\b",
+            ],
+            "epic_title": "User & Profile Management",
+            "feature_title": "Profile Management",
+            "module_id": "MOD-PROFILE",
+            "base_hours": 8,
+            "base_points": 3,
+        },
+                {
+            "key": "file",
+            "epic_key": "documents",
+            "patterns": [
+                r"\bupload\w*\b",
+                r"\bdownload\w*\b",
+                r"\bfile\w*\b",
+                r"\bdocument\w*\b",
+                r"\battachment\w*\b",
+            ],
+            "epic_title": "File & Document Management",
+            "feature_title": "File Management",
+            "module_id": "MOD-FILE",
+            "base_hours": 8,
+            "base_points": 3,
+        },
+
+        # --------------------------------------------------------------
+        # EV / Charging-domain capabilities
+        # These are vocabulary-driven and activate only when the
+        # requirement contains matching charging-domain evidence.
+        # --------------------------------------------------------------
+
+        {
+            "key": "charging_station",
+            "epic_key": "charging-station",
+            "patterns": [
+                r"\bcharging station\w*\b",
+                r"\bstation operator\w*\b",
+                r"\bcharger identifier\w*\b",
+                r"\bconnector type\w*\b",
+                r"\bcharging speed\w*\b",
+                r"\bstation-specific pricing\b",
+                r"\bstation utilization\b",
+                r"\bcharger availability\b",
+                r"\bcharger operating hour\w*\b",
+                r"\bcharging station registration\b",
+                r"\bmanage charging station\w*\b",
+                r"\bregister charging station\w*\b",
+                r"\breal[- ]time charger[- ]status\b",
+                r"\bcharger[- ]status\b",
+                r"\bcharger status\b",
+                r"\bmanually disabled\b",
+                r"\bdisable\w*.*\bcharger\b",
+            ],
+            "epic_title": "Charging Station Management",
+            "feature_title": "Charging Station Management",
+            "module_id": "MOD-CHARGING-STATION",
+            "base_hours": 12,
+            "base_points": 3,
+        },
+
+        {
+            "key": "charging_session",
+            "epic_key": "charging-session",
+            "patterns": [
+                r"\bcharging session\w*\b",
+                r"\bstart charging\b",
+                r"\bcharging session status\b",
+                r"\benergy consumed\b",
+                r"\bcharging history\b",
+                r"\bcharging-session state\b",
+            ],
+            "epic_title": "Charging Session Management",
+            "feature_title": "Charging Session Management",
+            "module_id": "MOD-CHARGING-SESSION",
+            "base_hours": 12,
+            "base_points": 3,
+        },
+
+        {
+            "key": "maintenance",
+            "epic_key": "maintenance",
+            "patterns": [
+                r"\bmaintenance request\w*\b",
+                r"\bmaintenance staff\b",
+                r"\bmaintenance assignment\w*\b",
+                r"\bcharger fault\w*\b",
+                r"\bfaulty charger\w*\b",
+                r"\brepair action\w*\b",
+                r"\binspection result\w*\b",
+                r"\bmaintenance schedule\w*\b",
+                r"\bcharger maintenance\b",
+                r"\bdisable.*maintenance\b",
+                r"\bmaintenance.*charger\b",
+                r"\bmaintenance.*station\b",
+            ],
+            "epic_title": "Maintenance Management",
+            "feature_title": "Maintenance Management",
+            "module_id": "MOD-MAINTENANCE",
+            "base_hours": 10,
+            "base_points": 3,
+        },
+    ]
+
+    def decompose_requirements(
+        self,
+        requirements,
+        modules=None,
+    ) -> Dict[str, Any]:
+
+        epics = []
+        features = []
+        tasks = []
+        dependencies = []
+
+        epic_map = {}
+        feature_map = {}
+
+        task_counter = 1
+
+        for req in requirements:
+
+            req_id = req.get("id")
+
+            if not req_id:
+                continue
+
+            classification = self._classify_requirement(req)
+
+            logical_module_id = classification.get("module_id")
+
+            # ------------------------------------------------------
+            # First try the classifier's module against the actual
+            # architecture.
+            # ------------------------------------------------------
+            resolved_module_id = self._resolve_architecture_module_id(
+                logical_module_id,
+                modules or [],
+            )
+
+            # ------------------------------------------------------
+            # Semantic fallback when the classifier's logical module
+            # is not represented by the current architecture.
+            #
+            # This covers both:
+            #   - synthetic MOD-DOMAIN-* classifications
+            #   - known generic capabilities such as MOD-SEARCH
+            #     that are absent from the current architecture
+            # ------------------------------------------------------
+            if resolved_module_id is None:
+                semantic_text = " ".join(
+                    [
+                        self._field_text(req.get("summary")),
+                        self._field_text(req.get("description")),
+                        self._field_text(req.get("target_object")),
+                        self._field_text(req.get("action")),
+                    ]
+                ).lower()
+
+                fallback_module_id = None
+
+                # Account authorization / suspension
+                if re.search(
+                    r"\b(?:suspend|suspension|authorization|authoriz|"
+                    r"access control|access restriction|permission)\w*\b",
+                    semantic_text,
+                    re.IGNORECASE,
+                ):
+                    fallback_module_id = "MOD-AUTHENTICATION"
+
+                # Persistent records, audit logs, anonymization, retention
+                elif re.search(
+                    r"\b(?:audit|audit log|records?|anonymiz\w*|"
+                    r"retention|retain\w*|data storage|data store)\b",
+                    semantic_text,
+                    re.IGNORECASE,
+                ):
+                    fallback_module_id = "MOD-DATA"
+
+                # Cross-cutting system quality characteristics
+                elif re.search(
+                    r"\b(?:performance|responsive|responsiveness|"
+                    r"availability|reliability|scalability|"
+                    r"uptime|response time)\b",
+                    semantic_text,
+                    re.IGNORECASE,
+                ):
+                    fallback_module_id = "MOD-GATEWAY"
+
+                if fallback_module_id:
+                    resolved_module_id = self._resolve_architecture_module_id(
+                        fallback_module_id,
+                        modules or [],
+                    )
+
+            
+
+            classification = {
+                **classification,
+                "module_id": resolved_module_id,
+            }
+
+            epic_key = classification["epic_key"]
+            feature_key = classification["feature_key"]
+
+            # ------------------------------------------------------
+            # Epic
+            # ------------------------------------------------------
+
+            if epic_key not in epic_map:
+
+                epic_id = f"EPIC-{len(epic_map) + 1:02d}"
+
+                epic = {
+                    "id": epic_id,
+                    "title": classification["epic_title"],
+                    "description": classification[
+                        "epic_description"
+                    ],
+                }
+
+                epic_map[epic_key] = epic
+                epics.append(epic)
+
+            epic = epic_map[epic_key]
+
+            # ------------------------------------------------------
+            # Feature
+            # ------------------------------------------------------
+
+            feature_identity = (
+                f"{epic_key}:{feature_key}"
+            )
+
+            if feature_identity not in feature_map:
+
+                feature_id = (
+                    f"FEAT-{len(feature_map) + 1:02d}"
+                )
+
+                feature = {
+                    "id": feature_id,
+                    "epic_id": epic["id"],
+                    "title": classification[
+                        "feature_title"
+                    ],
+                    "description": classification[
+                        "feature_description"
+                    ],
+                }
+
+                feature_map[
+                    feature_identity
+                ] = feature
+
+                features.append(feature)
+
+            feature = feature_map[
+                feature_identity
+            ]
+
+            # ------------------------------------------------------
+            # Task
+            # ------------------------------------------------------
+
+            task_id = (
+                f"TASK-{task_counter:03d}"
+            )
+
+            task_counter += 1
+
+            complexity = self._estimate_complexity(
+                req,
+                classification,
+            )
+
+            hours, points = self._estimate_effort(
+                classification,
+                complexity,
+            )
+
+            priority = self._normalize_priority(
+                req.get("priority")
+            )
+
+            acceptance = req.get(
+                "acceptance_criteria"
+            )
+
+            if not acceptance:
+                acceptance = [
+                    f"Requirement {req_id} is implemented.",
+                    "The documented acceptance conditions are satisfied.",
+                    "Relevant automated tests pass.",
+                ]
+
+            task = {
+                "id": task_id,
+                "epic_id": epic["id"],
+                "feature_id": feature["id"],
+                "requirement_id": req_id,
+                "module_id": classification[
+                    "module_id"
+                ],
+                "required_skills": self._derive_required_skills(
+                    classification,
+                    modules or [],
+                ),
+                "title": self._task_title(
+                    req,
+                    classification,
+                ),
+                "description": self._task_description(
+                    req,
+                    classification,
+                ),
+                "complexity": complexity,
+                "estimated_hours": hours,
+                "story_points": points,
+                "priority": priority,
+                "status": "todo",
+                "assignee_name": "Unassigned",
+                "sprint_name": self._sprint_for_task(
+                    task_counter
+                ),
+                "subtasks": self._generate_subtasks(
+                    req
+                ),
+                "acceptance_criteria": acceptance,
+                "depends_on": [],
+            }
+
+            tasks.append(task)
+
+        self._generate_dependencies(
+            tasks,
+            dependencies,
+        )
+
+        return {
+            "epics": epics,
+            "features": features,
+            "tasks": tasks,
+            "dependencies": dependencies,
+        }
+
+        # ================================================================
+    # Classification
+    # ================================================================
+
+    def _classify_requirement(
+        self,
+        req: Dict[str, Any],
+    ) -> Dict[str, Any]:
+
+        summary = self._field_text(
+            req.get("summary")
+        )
+
+        action = self._field_text(
+            req.get("action")
+        )
+
+        target = self._field_text(
+            req.get("target_object")
+        )
+
+        description = self._field_text(
+            req.get("description")
+        )
+
+        req_type = self._field_text(
+            req.get("req_type")
+        ).lower().strip()
+
+        normalized_summary = summary.lower()
+        normalized_description = description.lower()
+
+        cross_domain_text = (
+            normalized_summary
+            + " "
+            + normalized_description
+        )
+
+        # --------------------------------------------------------------
+        # Cross-cutting semantic preclassification.
+        #
+        # These rules execute before capability scoring because some
+        # system-level requirements do not match a domain capability
+        # strongly enough to enter the normal semantic-disambiguation
+        # branch.
+        # --------------------------------------------------------------
+
+        # Data/audit/retention/anonymization/account-governance concerns.
+        cross_cutting_data_requirement = (
+            (
+                re.search(
+                    r"\b(?:audit log|audit logs|audit purposes?|"
+                    r"retention|retained|anonymiz(?:e|ed|ation))\b",
+                    cross_domain_text,
+                    re.IGNORECASE,
+                )
+                and re.search(
+                    r"\b(?:record(?:s|ed)?|available|retained|"
+                    r"retention|anonymiz(?:e|ed|ation)|restore|"
+                    r"restored|administrative actions?)\b",
+                    cross_domain_text,
+                    re.IGNORECASE,
+                )
+            )
+            or (
+                re.search(
+                    r"\b(?:maintenance records?|audit logs?)\b",
+                    cross_domain_text,
+                    re.IGNORECASE,
+                )
+                and re.search(
+                    r"\b(?:audit|retention|retained|available)\b",
+                    cross_domain_text,
+                    re.IGNORECASE,
+                )
+            )
+            or (
+                re.search(
+                    r"\b(?:account|accounts)\b",
+                    cross_domain_text,
+                    re.IGNORECASE,
+                )
+                and re.search(
+                    r"\b(?:anonymiz(?:e|ed|ation)|retention|"
+                    r"retained|suspend|suspension)\b",
+                    cross_domain_text,
+                    re.IGNORECASE,
+                )
+            )
+            or (
+                re.search(
+                    r"\b(?:not specified|unspecified|unclear)\b",
+                    cross_domain_text,
+                    re.IGNORECASE,
+                )
+                and re.search(
+                    r"\b(?:account|accounts|restore|restored|"
+                    r"anonymized)\b",
+                    cross_domain_text,
+                    re.IGNORECASE,
+                )
+            )
+        )
+
+        if cross_cutting_data_requirement:
+            return {
+                "key": "data-management",
+                "epic_key": "data-management",
+                "feature_key": "data-management",
+                "epic_title": "Data Management",
+                "epic_description": (
+                    "Implementation of requirements related to "
+                    "application data management."
+                ),
+                "feature_title": "Data Management",
+                "feature_description": (
+                    "Deliver functionality required for "
+                    "application data management."
+                ),
+                "module_id": "MOD-DATA",
+                "base_hours": 8,
+                "base_points": 3,
+                "known_capability": True,
+            }
+
+        # System-level performance requirements.
+        system_performance_requirement = (
+            req_type == "non_functional"
+            and re.search(
+                r"\b(?:performance|responsive|response time|"
+                r"latency|throughput|concurrent|simultaneously)\b",
+                cross_domain_text,
+                re.IGNORECASE,
+            )
+        )
+
+        # System-level availability/reliability requirements.
+        system_availability_requirement = (
+            req_type == "non_functional"
+            and re.search(
+                r"\b(?:availability|reliability|available|"
+                r"24/7|uptime|planned maintenance)\b",
+                cross_domain_text,
+                re.IGNORECASE,
+            )
+        )
+
+        if (
+            system_performance_requirement
+            or system_availability_requirement
+        ):
+            return {
+                "key": "system-gateway",
+                "epic_key": "system-gateway",
+                "feature_key": "system-gateway",
+                "epic_title": "System Gateway",
+                "epic_description": (
+                    "Implementation of system-level gateway "
+                    "and operational requirements."
+                ),
+                "feature_title": "System Gateway",
+                "feature_description": (
+                    "Deliver system-level performance and "
+                    "availability functionality."
+                ),
+                "module_id": "MOD-GATEWAY",
+                "base_hours": 8,
+                "base_points": 3,
+                "known_capability": True,
+            }
+
+        # Structured fields receive stronger weights.
+        scores = []
+
+        for rule in self.CAPABILITY_RULES:
+
+            score = 0
+
+            # Target object is the strongest evidence.
+            for pattern in rule["patterns"]:
+                if re.search(
+                    pattern,
+                    target,
+                    re.IGNORECASE,
+                ):
+                    score += 10
+
+            # Action is also strong evidence.
+            for pattern in rule["patterns"]:
+                if re.search(
+                    pattern,
+                    action,
+                    re.IGNORECASE,
+                ):
+                    score += 8
+
+            # Summary is strong but slightly weaker.
+            for pattern in rule["patterns"]:
+                if re.search(
+                    pattern,
+                    summary,
+                    re.IGNORECASE,
+                ):
+                    score += 6
+
+            # Description is weak evidence.
+            for pattern in rule["patterns"]:
+                if re.search(
+                    pattern,
+                    description,
+                    re.IGNORECASE,
+                ):
+                    score += 1
+
+            if score > 0:
+                scores.append(
+                    (score, rule)
+                )
+
+        if scores:
+
+            scores.sort(
+                key=lambda item: (
+                    item[0],
+                    item[1]["base_points"],
+                ),
+                reverse=True,
+            )
+
+            # ----------------------------------------------------------
+            # Semantic disambiguation
+            # ----------------------------------------------------------
+
+            normalized_action = action.lower().strip()
+            normalized_summary = summary.lower()
+            normalized_description = description.lower()
+
+            # ----------------------------------------------------------
+            # Cross-domain data retention / auditability.
+            #
+            # Requirements covering retention of multiple domain records
+            # are data-management concerns even when incidental payment
+            # terms such as "invoice" are present.
+            #
+            # Requirements describing traceable records across multiple
+            # operational domains are reporting/auditability concerns,
+            # even when "payment state" is one of the covered domains.
+            # ----------------------------------------------------------
+
+            cross_domain_text = (
+                normalized_summary
+                + " "
+                + normalized_description
+            )
+
+            cross_domain_retention = (
+                re.search(
+                    r"\b(?:retention|retain(?:ed|ing)?|retained)\b",
+                    cross_domain_text,
+                    re.IGNORECASE,
+                )
+                and re.search(
+                    r"\b(?:audit|auditing|auditability|reporting)\b",
+                    cross_domain_text,
+                    re.IGNORECASE,
+                )
+                and re.search(
+                    r"\b(?:charging sessions?|reservations?|"
+                    r"maintenance records?|invoices?|"
+                    r"multiple domain|all records?)\b",
+                    cross_domain_text,
+                    re.IGNORECASE,
+                )
+            )
+
+            cross_domain_auditability = (
+                re.search(
+                    r"\b(?:auditability|audit|traceable record|"
+                    r"traceable records|traceability)\b",
+                    cross_domain_text,
+                    re.IGNORECASE,
+                )
+                and re.search(
+                    r"\b(?:reservation|charging[- ]session|"
+                    r"payment|maintenance|administrative|"
+                    r"state transition|state transitions)\b",
+                    cross_domain_text,
+                    re.IGNORECASE,
+                )
+                and re.search(
+                    r"\b(?:every|each|all|traceable|"
+                    r"state transition|state transitions)\b",
+                    cross_domain_text,
+                    re.IGNORECASE,
+                )
+            )
+
+            if cross_domain_retention:
+                data_rule = next(
+                    (
+                        rule
+                        for rule in self.CAPABILITY_RULES
+                        if rule["key"] == "file"
+                    ),
+                    None,
+                )
+
+                # Data Store is an architecture concern rather than a
+                # generic file-management capability. Return a synthetic
+                # classification that resolves to the existing
+                # Application Data Store architecture module.
+                return {
+                    "key": "data-retention",
+                    "epic_key": "data-management",
+                    "feature_key": "data-retention",
+                    "epic_title": "Data Management",
+                    "epic_description": (
+                        "Implementation of requirements related to "
+                        "application data management."
+                    ),
+                    "feature_title": "Data Retention",
+                    "feature_description": (
+                        "Deliver functionality required for data "
+                        "retention and auditability."
+                    ),
+                    "module_id": "MOD-DATA",
+                    "base_hours": 10,
+                    "base_points": 3,
+                    "known_capability": True,
+                }
+
+            if cross_domain_auditability:
+                reporting_rule = next(
+                    (
+                        rule
+                        for rule in self.CAPABILITY_RULES
+                        if rule["key"] == "reporting"
+                    ),
+                    None,
+                )
+
+                if reporting_rule:
+                    best_rule = reporting_rule
+
+                    return {
+                        "key": best_rule["key"],
+                        "epic_key": best_rule["epic_key"],
+                        "feature_key": best_rule["key"],
+                        "epic_title": best_rule["epic_title"],
+                        "epic_description": (
+                            f"Implementation of requirements related to "
+                            f"{best_rule['epic_title'].lower()}."
+                        ),
+                        "feature_title": best_rule["feature_title"],
+                        "feature_description": (
+                            f"Deliver functionality required for "
+                            f"{best_rule['feature_title'].lower()}."
+                        ),
+                        "module_id": best_rule["module_id"],
+                        "base_hours": best_rule["base_hours"],
+                        "base_points": best_rule["base_points"],
+                        "known_capability": True,
+                    }
+
+            # ----------------------------------------------------------
+            # Operational fault/issue reporting is a maintenance action.
+            #
+            # Phrases such as "report a faulty charger" or
+            # "report a station issue" describe submitting an operational
+            # fault, not generating/consuming an analytical report.
+            # Keep this narrow so genuine reporting requirements continue
+            # to use the Reporting capability.
+            # ----------------------------------------------------------
+
+            operational_fault_reporting = re.search(
+                r"\breport\b[^.\n]{0,80}"
+                r"\b(?:faulty charger|charger fault|charger issue|"
+                r"station issue|station fault|charging fault|"
+                r"charging issue|charger problem|station problem)\b",
+                normalized_summary + " " + normalized_description,
+                re.IGNORECASE,
+            )
+
+            if operational_fault_reporting:
+                maintenance_rule = next(
+                    (
+                        item[1]
+                        for item in scores
+                        if item[1]["key"] == "maintenance"
+                    ),
+                    None,
+                )
+
+                if maintenance_rule:
+                    best_rule = maintenance_rule
+
+                    return {
+                        "key": best_rule["key"],
+                        "epic_key": best_rule["epic_key"],
+                        "feature_key": best_rule["key"],
+                        "epic_title": best_rule["epic_title"],
+                        "epic_description": (
+                            f"Implementation of requirements related to "
+                            f"{best_rule['epic_title'].lower()}."
+                        ),
+                        "feature_title": best_rule["feature_title"],
+                        "feature_description": (
+                            f"Deliver functionality required for "
+                            f"{best_rule['feature_title'].lower()}."
+                        ),
+                        "module_id": best_rule["module_id"],
+                        "base_hours": best_rule["base_hours"],
+                        "base_points": best_rule["base_points"],
+                        "known_capability": True,
+                    }
+
+            # ----------------------------------------------------------
+            # Explicit notification intent.
+            #
+            # A requirement whose actual action is "notify" should not
+            # be classified as Reporting merely because its target is
+            # represented as "reports".
+            # ----------------------------------------------------------
+
+            if (
+                re.search(
+                    r"\b(notify|notifies|notified|notifying|notification|notifications)\b",
+                    normalized_action,
+                )
+                and any(
+                    item[1]["key"] == "notification"
+                    for item in scores
+                )
+            ):
+                notification_rule = next(
+                    item[1]
+                    for item in scores
+                    if item[1]["key"] == "notification"
+                )
+
+                reporting_only_report_target = (
+                    re.search(
+                        r"^\s*reports?\s*$",
+                        target,
+                        re.IGNORECASE,
+                    )
+                    and not re.search(
+                        r"\bgenerate|view|create|produce|analytics|statistics|metrics\b",
+                        normalized_action + " " + normalized_summary,
+                        re.IGNORECASE,
+                    )
+                )
+
+                if reporting_only_report_target:
+                    best_rule = notification_rule
+                else:
+                    best_rule = scores[0][1]
+
+            # ----------------------------------------------------------
+            # Explicit access-control intent.
+            #
+            # Requirements stating that a user can "only access"
+            # their own records are authorization requirements even if
+            # the generic capability scorer has no authentication hit.
+            # ----------------------------------------------------------
+
+            elif re.search(
+                r"\b(only access|access control|access restriction)\b"
+                r"|\bown (?:data|records|reservations|sessions|invoices|history)\b",
+                normalized_summary + " " + normalized_description,
+                re.IGNORECASE,
+            ):
+                authentication_rule = next(
+                    (
+                        rule
+                        for rule in self.CAPABILITY_RULES
+                        if rule["key"] == "authentication"
+                    ),
+                    None,
+                )
+
+                if authentication_rule:
+                    best_rule = authentication_rule
+                else:
+                    best_rule = scores[0][1]
+
+            else:
+                best_rule = scores[0][1]
+
+            return {
+                "key": best_rule["key"],
+                "epic_key": best_rule["epic_key"],
+                "feature_key": best_rule["key"],
+                "epic_title": best_rule["epic_title"],
+                "epic_description": (
+                    f"Implementation of requirements related to "
+                    f"{best_rule['epic_title'].lower()}."
+                ),
+                "feature_title": best_rule["feature_title"],
+                "feature_description": (
+                    f"Deliver functionality required for "
+                    f"{best_rule['feature_title'].lower()}."
+                ),
+                "module_id": best_rule["module_id"],
+                "base_hours": best_rule["base_hours"],
+                "base_points": best_rule["base_points"],
+                "known_capability": True,
+            }
+
+        # ----------------------------------------------------------
+        # Generic domain requirement.
+        # ----------------------------------------------------------
+
+        concept = self._generic_concept(
+            req
+        )
+
+        if concept:
+
+            slug = self._slug(
+                concept
+            )
+
+            return {
+                "key": f"domain-{slug}",
+                "epic_key": f"domain-{slug}",
+                "feature_key": f"domain-{slug}",
+                "epic_title": (
+                    f"{self._title_case(concept)} Management"
+                ),
+                "epic_description": (
+                    f"Implementation of application functionality "
+                    f"related to {concept}."
+                ),
+                "feature_title": (
+                    f"{self._title_case(concept)} Operations"
+                ),
+                "feature_description": (
+                    f"Implement operations required for {concept}."
+                ),
+                "module_id": (
+                    f"MOD-DOMAIN-{slug.upper()}"
+                ),
+                "base_hours": 8,
+                "base_points": 3,
+                "known_capability": False,
+            }
+
+        # ----------------------------------------------------------
+        # Last-resort general functionality.
+        # ----------------------------------------------------------
+
+        return {
+            "key": "general-application",
+            "epic_key": "general-application",
+            "feature_key": "general-functionality",
+            "epic_title": "Application Functionality",
+            "epic_description": (
+                "Implementation of application functionality "
+                "identified in the requirements."
+            ),
+            "feature_title": "General Application Functionality",
+            "feature_description": (
+                "Implement requirement-specific behavior."
+            ),
+            "module_id": "MOD-DATA",
+            "base_hours": 8,
+            "base_points": 3,
+            "known_capability": False,
+        }
+
+    # ================================================================
+    # Architecture module resolution
+    # ================================================================
+
+    def _resolve_architecture_module_id(
+        self,
+        logical_module_id: Optional[str],
+        modules: List[Dict[str, Any]],
+    ) -> Optional[str]:
+        """
+        Resolve a logical classifier module ID (e.g. "MOD-AUTHENTICATION")
+        to the actual project-scoped architecture module ID supplied by
+        the architecture agent (e.g. "3B669A31-MOD-AUTHENTICATION").
+
+        This NEVER fabricates an architecture module. If no real module
+        can be matched, it returns None.
+        """
+
+        if not logical_module_id:
+            return None
+
+        if not modules:
+            return None
+
+        logical_module_id = str(logical_module_id).strip()
+
+        if not logical_module_id:
+            return None
+
+        # A) Exact ID match.
+        for module in modules:
+            actual_id = str(module.get("id") or "").strip()
+            if actual_id and actual_id == logical_module_id:
+                return actual_id
+
+        # B) Project-scoped ID match: actual ID ends with
+        # "-<logical_module_id>" (e.g. "3B669A31-MOD-AUTHENTICATION"
+        # for logical "MOD-AUTHENTICATION").
+        suffix = f"-{logical_module_id}"
+        for module in modules:
+            actual_id = str(module.get("id") or "").strip()
+            if actual_id and actual_id.upper().endswith(suffix.upper()):
+                return actual_id
+
+        # C) Reasonable normalized module-name fallback.
+        name_part = logical_module_id
+        if name_part.upper().startswith("MOD-"):
+            name_part = name_part[4:]
+        if name_part.upper().startswith("DOMAIN-"):
+            name_part = name_part[len("DOMAIN-"):]
+
+        normalized_logical = self._normalize_module_text(name_part)
+
+        if normalized_logical and len(normalized_logical) >= 3:
+            for module in modules:
+                name = module.get("name")
+                if not name:
+                    continue
+
+                normalized_name = self._normalize_module_text(
+                    str(name)
+                )
+
+                if not normalized_name:
+                    continue
+
+                if (
+                    normalized_logical == normalized_name
+                    or normalized_logical in normalized_name
+                    or normalized_name in normalized_logical
+                ):
+                    actual_id = str(module.get("id") or "").strip()
+                    if actual_id:
+                        return actual_id
+
+        # F) No real architecture module matches.
+        return None
+
+    @staticmethod
+    def _normalize_module_text(value: str) -> str:
+        return re.sub(r"[^a-z0-9]", "", value.lower())
+
+    @staticmethod
+    def _logical_module_suffix(module_id: Optional[str]) -> str:
+        """
+        Reduce a possibly project-scoped module ID (e.g.
+        "3B669A31-MOD-ORDER") to its logical suffix ("MOD-ORDER") for
+        dependency comparisons. Plain logical IDs pass through unchanged.
+        """
+
+        if not module_id:
+            return ""
+
+        module_id = str(module_id).strip().upper()
+
+        match = re.search(r"(MOD-[A-Z0-9\-]+)$", module_id)
+
+        if match:
+            return match.group(1)
+
+        return module_id
+
+    # ================================================================
+    # Generic concept
+    # ================================================================
+
+    def _generic_concept(
+        self,
+        req: Dict[str, Any],
+    ) -> str:
+
+        target = self._field_text(
+            req.get("target_object")
+        )
+
+        if not target:
+            return ""
+
+        target = re.sub(
+            r"^(the|a|an|their|his|her|our|your)\s+",
+            "",
+            target,
+            flags=re.IGNORECASE,
+        )
+
+        target = re.sub(
+            r"\s+(for|from|with|by|in|on|at|to|of|and|or)\s+.*$",
+            "",
+            target,
+            flags=re.IGNORECASE,
+        )
+
+        target = re.sub(
+            r"[.,;:!?()\[\]{}]",
+            "",
+            target,
+        )
+
+        target = re.sub(
+            r"\s+",
+            " ",
+            target,
+        ).strip()
+
+        if not target:
+            return ""
+
+        if len(target.split()) > 4:
+            return ""
+
+        return target
+
+    # ================================================================
+    # Task details
+    # ================================================================
+
+    def _task_title(
+        self,
+        req: Dict[str, Any],
+        classification: Dict[str, Any],
+    ) -> str:
+
+        summary = self._field_text(
+            req.get("summary")
+        )
+
+        if summary:
+            return f"Implement: {summary}"
+
+        return (
+            f"Implement {classification['feature_title']}"
+        )
+
+    def _task_description(
+        self,
+        req: Dict[str, Any],
+        classification: Dict[str, Any],
+    ) -> str:
+
+        req_id = req.get(
+            "id",
+            "requirement",
+        )
+
+        summary = self._field_text(
+            req.get("summary")
+        )
+
+        return (
+            f"Implement the behavior specified by "
+            f"{req_id}: {summary}. "
+            f"This work belongs to the "
+            f"{classification['feature_title']} feature "
+            f"and uses architecture module "
+            f"{classification['module_id']}."
+        )
+
+    @staticmethod
+    def _generate_subtasks(
+        req: Dict[str, Any],
+    ) -> List[str]:
+
+        target = str(
+            req.get("target_object")
+            or "the required functionality"
+        ).strip()
+
+        return [
+            f"Define or update the data model for {target}",
+            f"Implement application logic for {target}",
+            f"Expose the required API behavior for {target}",
+            "Implement relevant frontend or integration behavior",
+            f"Write automated tests for requirement {req.get('id', '')}",
+        ]
+
+    # ================================================================
+    # Estimation
+    # ================================================================
+
+    def _estimate_complexity(
+        self,
+        req: Dict[str, Any],
+        classification: Dict[str, Any],
+    ) -> str:
+
+        text = self._field_text(
+            req.get("summary")
+        ).lower()
+
+        description = self._field_text(
+            req.get("description")
+        ).lower()
+
+        combined = (
+            f"{text} {description}"
+        )
+
+        integration_terms = [
+            "external",
+            "third-party",
+            "gateway",
+            "webhook",
+            "integration",
+            "real-time",
+            "concurrent",
+            "synchron",
+        ]
+
+        complexity_score = 0
+
+        complexity_score += sum(
+            1
+            for term in integration_terms
+            if term in combined
+        ) * 2
+
+        operation_terms = [
+            "create",
+            "update",
+            "delete",
+            "search",
+            "filter",
+            "process",
+            "calculate",
+            "upload",
+            "download",
+            "notify",
+        ]
+
+        complexity_score += sum(
+            1
+            for term in operation_terms
+            if re.search(
+                rf"\b{re.escape(term)}\w*\b",
+                combined,
+            )
+        )
+
+        if complexity_score >= 5:
+            return "high"
+
+        if complexity_score >= 2:
+            return "medium"
+
+        return "low"
+
+    @staticmethod
+    def _estimate_effort(
+        classification: Dict[str, Any],
+        complexity: str,
+    ):
+
+        base_hours = classification[
+            "base_hours"
+        ]
+
+        base_points = classification[
+            "base_points"
+        ]
+
+        if complexity == "high":
+            return (
+                float(base_hours + 6),
+                max(5, base_points),
+            )
+
+        if complexity == "medium":
+            return (
+                float(base_hours),
+                max(3, base_points),
+            )
+
+        return (
+            float(round(base_hours * 0.7, 1)),
+            min(3, max(1, base_points)),
+        )
+
+    # ================================================================
+    # Dependencies
+    # ================================================================
+
+    def _generate_dependencies(
+        self,
+        tasks: List[Dict[str, Any]],
+        dependencies: List[Dict[str, Any]],
+    ) -> None:
+
+        # Cart -> Order
+        for task in tasks:
+
+            task_module = self._logical_module_suffix(
+                task["module_id"]
+            )
+
+            if task_module == "MOD-ORDER":
+
+                prerequisite = self._previous_task(
+                    tasks,
+                    task["id"],
+                    {"MOD-CART"},
+                )
+
+                if prerequisite:
+                    self._add_dependency(
+                        task,
+                        prerequisite,
+                        dependencies,
+                    )
+
+            # Order -> Payment
+            elif task_module == "MOD-PAYMENT":
+
+                prerequisite = self._previous_task(
+                    tasks,
+                    task["id"],
+                    {"MOD-ORDER"},
+                )
+
+                if prerequisite:
+                    self._add_dependency(
+                        task,
+                        prerequisite,
+                        dependencies,
+                    )
+
+            # Operational capability -> notification
+            elif task_module == "MOD-NOTIFICATION":
+
+                prerequisite = self._previous_task(
+                    tasks,
+                    task["id"],
+                    {
+                        "MOD-ORDER",
+                        "MOD-PAYMENT",
+                        "MOD-BOOKING",
+                        "MOD-ATTENDANCE",
+                    },
+                )
+
+                if prerequisite:
+                    self._add_dependency(
+                        task,
+                        prerequisite,
+                        dependencies,
+                    )
+
+    @classmethod
+    def _previous_task(
+        cls,
+        tasks: List[Dict[str, Any]],
+        current_id: str,
+        module_ids: set,
+    ):
+
+        current_number = int(
+            current_id.split("-")[1]
+        )
+
+        for task in tasks:
+            task_number = int(
+                task["id"].split("-")[1]
+            )
+
+            if task_number >= current_number:
+                continue
+
+            if cls._logical_module_suffix(
+                task["module_id"]
+            ) in module_ids:
+                return task
+
+        return None
+
+    @staticmethod
+    def _add_dependency(
+        task: Dict[str, Any],
+        prerequisite: Dict[str, Any],
+        dependencies: List[Dict[str, Any]],
+    ):
+
+        if prerequisite["id"] in task["depends_on"]:
+            return
+
+        task["depends_on"].append(
+            prerequisite["id"]
+        )
+
+        dependencies.append(
+            {
+                "task_id": task["id"],
+                "depends_on_task_id": prerequisite["id"],
+                "dependency_type": "blocks",
+            }
+        )
+
+    # ================================================================
+    # Utilities
+    # ================================================================
+
+    @staticmethod
+    def _field_text(
+        value: Any,
+    ) -> str:
+
+        if value is None:
+            return ""
+
+        if isinstance(value, list):
+            return " ".join(
+                str(item)
+                for item in value
+            )
+
+        if isinstance(value, dict):
+            return " ".join(
+                str(item)
+                for item in value.values()
+            )
+
+        return re.sub(
+            r"\s+",
+            " ",
+            str(value),
+        ).strip()
+
+    @staticmethod
+    def _normalize_priority(
+        priority: Any,
+    ) -> str:
+
+        value = str(
+            priority or "medium"
+        ).lower().strip()
+
+        if value in {
+            "critical",
+            "high",
+            "medium",
+            "low",
+        }:
+            return value
+
+        return "medium"
+
+    @staticmethod
+    def _sprint_for_task(
+        task_number: int,
+    ) -> str:
+
+        if task_number <= 6:
+            return "Sprint 1"
+
+        if task_number <= 12:
+            return "Sprint 2"
+
+        return "Sprint 3"
+
+    @staticmethod
+    def _slug(
+        value: str,
+    ) -> str:
+
+        return re.sub(
+            r"[^a-z0-9]+",
+            "-",
+            value.lower(),
+        ).strip("-")
+
+    @staticmethod
+    def _title_case(
+        value: str,
+    ) -> str:
+
+        return " ".join(
+            word.capitalize()
+            for word in value.split()
+        )
+
+    def _derive_required_skills(
+        self,
+        classification: Dict[str, Any],
+        modules: List[Dict[str, Any]],
+    ) -> List[str]:
+        """
+        Derive required skills from the architecture module associated
+        with the task.
+
+        Skills are based only on evidence explicitly present in:
+        - module name
+        - tech_stack
+        - responsibilities
+
+        No domain-specific technology is invented.
+        """
+
+        module_id = classification.get("module_id")
+
+        if not module_id or not modules:
+            return []
+
+        module = next(
+            (
+                module
+                for module in modules
+                if str(module.get("id")) == str(module_id)
+            ),
+            None,
+        )
+
+        if not module:
+            return []
+
+        evidence_parts: List[str] = []
+
+        name = module.get("name")
+        if name:
+            evidence_parts.append(str(name))
+
+        tech_stack = module.get("tech_stack")
+        if tech_stack:
+            evidence_parts.append(str(tech_stack))
+
+        responsibilities = module.get("responsibilities")
+
+        if isinstance(responsibilities, list):
+            evidence_parts.extend(
+                str(item)
+                for item in responsibilities
+                if item
+            )
+        elif responsibilities:
+            evidence_parts.append(
+                str(responsibilities)
+            )
+
+        evidence = " ".join(evidence_parts).lower()
+
+        skills: List[str] = []
+
+        def add(skill: str) -> None:
+            if skill not in skills:
+                skills.append(skill)
+
+        # Technical capabilities explicitly supported
+        # by architecture evidence.
+
+        if (
+            "api" in evidence
+            or "endpoint" in evidence
+            or "application api" in evidence
+        ):
+            add("API Development")
+
+        if (
+            "relational" in evidence
+            or "database" in evidence
+            or "data access" in evidence
+            or "data store" in evidence
+        ):
+            add("Relational Database")
+
+        if (
+            "authentication" in evidence
+            or "authorization" in evidence
+            or "credentials" in evidence
+            or "access control" in evidence
+        ):
+            add("Authentication & Authorization")
+
+        if (
+            "notification" in evidence
+            or "alert" in evidence
+            or "email" in evidence
+            or "message" in evidence
+        ):
+            add("Notification Systems")
+
+        if (
+            "gateway" in evidence
+            or "reverse proxy" in evidence
+        ):
+            add("API Gateway")
+
+        if (
+            "search" in evidence
+            or "filter" in evidence
+        ):
+            add("Search & Filtering")
+
+        if (
+            "payment" in evidence
+            or "transaction" in evidence
+        ):
+            add("Payment Processing")
+
+        if (
+            "report" in evidence
+            or "analytics" in evidence
+        ):
+            add("Reporting & Analytics")
+
+        if (
+            "file" in evidence
+            or "document" in evidence
+            or "upload" in evidence
+        ):
+            add("File & Document Management")
+
+        return skills

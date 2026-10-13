@@ -1,0 +1,150 @@
+{
+  "run_id": "d1f0a831-7ead-43bd-8803-c213b54d3539",
+  "domain_key": "library_management",
+  "project_title": "Library Management System",
+  "timestamp": "2026-10-13T21:25:46.432825",
+  "llm_enabled": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": false,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "matching_summary": {
+    "predicted_requirements_count": 25,
+    "reference_requirements_count": 24,
+    "uniquely_matched_count": 24,
+    "unmatched_predictions_count": 1,
+    "ambiguous_predictions_count": 0,
+    "duplicate_gold_matches_count": 0,
+    "unmatched_reference_count": 0
+  },
+  "classification_evaluation": {
+    "valid_matched_denominator": 24,
+    "correct_classifications": 19,
+    "accuracy": 0.7917,
+    "penalized_end_to_end_accuracy": 0.76,
+    "macro_precision": 0.8259,
+    "macro_recall": 0.7723,
+    "macro_f1": 0.7907,
+    "per_class_metrics": {
+      "AUTHENTICATION": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571
+      },
+      "BOOKING": {
+        "tp": 6,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8571,
+        "recall": 1.0,
+        "f1": 0.9231
+      },
+      "CATALOGING & COLLECTION MANAGEMENT": {
+        "tp": 0,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "DATA": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 4,
+        "precision": 0.75,
+        "recall": 0.4286,
+        "f1": 0.5455
+      },
+      "NOTIFICATION": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "PAYMENT": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "REPORTING": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "SEARCH": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "errors_sample": [
+      {
+        "pred_id": "FR-010",
+        "gold_id": "FR-010",
+        "summary": "Circulation staff verify patron status, hold privileges, and fines",
+        "expected": "AUTHENTICATION",
+        "predicted": "DATA"
+      },
+      {
+        "pred_id": "FR-012",
+        "gold_id": "FR-012",
+        "summary": "Circulation staff should be able to process returned items, inspect...",
+        "expected": "DATA",
+        "predicted": "BOOKING"
+      },
+      {
+        "pred_id": "FR-016",
+        "gold_id": "FR-016",
+        "summary": "Cataloging and Collection Management Catalogers should be able to add...",
+        "expected": "DATA",
+        "predicted": "CATALOGING & COLLECTION MANAGEMENT"
+      },
+      {
+        "pred_id": "FR-017",
+        "gold_id": "FR-017",
+        "summary": "Catalogers should be able to manage inventory copies, track lost...",
+        "expected": "DATA",
+        "predicted": "CATALOGING & COLLECTION MANAGEMENT"
+      },
+      {
+        "pred_id": "FR-019",
+        "gold_id": "FR-019",
+        "summary": "Catalogers should be able to conduct periodic physical inventory audits...",
+        "expected": "DATA",
+        "predicted": "CATALOGING & COLLECTION MANAGEMENT"
+      }
+    ],
+    "total_errors": 5
+  },
+  "structural_integrity": {
+    "total_requirements": 25,
+    "requirements_with_tasks": 25,
+    "requirements_without_tasks": 0,
+    "task_coverage_pct": 100.0,
+    "total_modules": 10,
+    "total_relations": 26,
+    "total_tasks": 25,
+    "total_test_cases": 25,
+    "untested_requirements_count": 0,
+    "traceability_matrix_rows": 25
+  },
+  "unsupported_metrics_declared": [
+    "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+    "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+    "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+  ]
+}

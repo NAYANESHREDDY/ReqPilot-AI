@@ -1,0 +1,713 @@
+{
+  "ev_charging": {
+    "run_id": "1c57d2e2-509c-48d3-848c-1fd3453a0e48",
+    "domain_key": "ev_charging",
+    "project_title": "EV Charging Station Management System",
+    "timestamp": "2026-10-12T17:14:12.517675",
+    "llm_enabled": true,
+    "llm_extraction_succeeded": true,
+    "fallback_used": false,
+    "provider": "groq",
+    "model": "openai/gpt-oss-120b",
+    "matching_summary": {
+      "predicted_requirements_count": 58,
+      "reference_requirements_count": 58,
+      "uniquely_matched_count": 58,
+      "unmatched_predictions_count": 0,
+      "ambiguous_predictions_count": 0,
+      "duplicate_gold_matches_count": 0,
+      "unmatched_reference_count": 0
+    },
+    "classification_evaluation": {
+      "valid_matched_denominator": 58,
+      "correct_classifications": 58,
+      "accuracy": 1.0,
+      "penalized_end_to_end_accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "per_class_metrics": {
+        "AUTHENTICATION": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "BOOKING": {
+          "tp": 9,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "CHARGING-SESSION": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "CHARGING-STATION": {
+          "tp": 11,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "DATA": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "GATEWAY": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "MAINTENANCE": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "NOTIFICATION": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "PAYMENT": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "REPORTING": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "errors_sample": [],
+      "total_errors": 0
+    },
+    "structural_integrity": {
+      "total_requirements": 58,
+      "requirements_with_tasks": 58,
+      "requirements_without_tasks": 0,
+      "task_coverage_pct": 100.0,
+      "total_modules": 11,
+      "total_relations": 23,
+      "total_tasks": 58,
+      "total_test_cases": 58,
+      "untested_requirements_count": 0,
+      "traceability_matrix_rows": 58
+    },
+    "unsupported_metrics_declared": [
+      "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+      "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+      "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+    ]
+  },
+  "ecommerce_platform": {
+    "run_id": "1e2d6f1a-9e01-4031-82fc-d55c2ef7289f",
+    "domain_key": "ecommerce_platform",
+    "project_title": "E-Commerce Platform",
+    "timestamp": "2026-10-12T17:14:44.471114",
+    "llm_enabled": true,
+    "llm_extraction_succeeded": false,
+    "fallback_used": true,
+    "provider": "groq",
+    "model": "openai/gpt-oss-120b",
+    "matching_summary": {
+      "predicted_requirements_count": 37,
+      "reference_requirements_count": 36,
+      "uniquely_matched_count": 36,
+      "unmatched_predictions_count": 1,
+      "ambiguous_predictions_count": 0,
+      "duplicate_gold_matches_count": 0,
+      "unmatched_reference_count": 0
+    },
+    "classification_evaluation": {
+      "valid_matched_denominator": 36,
+      "correct_classifications": 16,
+      "accuracy": 0.4444,
+      "penalized_end_to_end_accuracy": 0.4324,
+      "macro_precision": 0.3762,
+      "macro_recall": 0.3194,
+      "macro_f1": 0.3356,
+      "per_class_metrics": {
+        "AUTHENTICATION": {
+          "tp": 4,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.8,
+          "recall": 0.6667,
+          "f1": 0.7273
+        },
+        "BOOKING": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "CART MANAGEMENT": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "DATA": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "FILE": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "GATEWAY": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "NOTIFICATION": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "ORDER MANAGEMENT": {
+          "tp": 0,
+          "fp": 9,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "PAYMENT": {
+          "tp": 5,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.7143,
+          "recall": 1.0,
+          "f1": 0.8333
+        },
+        "PROFILE": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "REPORTING": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.6667,
+          "f1": 0.8
+        },
+        "SEARCH": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667
+        }
+      },
+      "errors_sample": [
+        {
+          "pred_id": "NFR-001",
+          "gold_id": "FR-003",
+          "summary": "Customers should be able to view real-time product details, specifications,...",
+          "expected": "DATA",
+          "predicted": "GATEWAY"
+        },
+        {
+          "pred_id": "FR-004",
+          "gold_id": "FR-004",
+          "summary": "Customers should be able to add products to a persistent...",
+          "expected": "BOOKING",
+          "predicted": "CART MANAGEMENT"
+        },
+        {
+          "pred_id": "FR-005",
+          "gold_id": "FR-005",
+          "summary": "Customers should be able to save items to a personal...",
+          "expected": "PROFILE",
+          "predicted": "ORDER MANAGEMENT"
+        },
+        {
+          "pred_id": "FR-006",
+          "gold_id": "FR-006",
+          "summary": "Customers should be able to proceed through a multi-step checkout...",
+          "expected": "BOOKING",
+          "predicted": "ORDER MANAGEMENT"
+        },
+        {
+          "pred_id": "FR-009",
+          "gold_id": "FR-009",
+          "summary": "Customers should be able to view their complete order history...",
+          "expected": "DATA",
+          "predicted": "ORDER MANAGEMENT"
+        },
+        {
+          "pred_id": "FR-010",
+          "gold_id": "FR-010",
+          "summary": "Customers should be able to request an order cancellation or...",
+          "expected": "BOOKING",
+          "predicted": "ORDER MANAGEMENT"
+        },
+        {
+          "pred_id": "FR-011",
+          "gold_id": "FR-011",
+          "summary": "Customers should be able to submit product reviews and star...",
+          "expected": "PROFILE",
+          "predicted": "ORDER MANAGEMENT"
+        },
+        {
+          "pred_id": "FR-013",
+          "gold_id": "FR-013",
+          "summary": "Vendors should be able to create, update, and manage their...",
+          "expected": "DATA",
+          "predicted": "UNASSIGNED"
+        },
+        {
+          "pred_id": "FR-014",
+          "gold_id": "FR-014",
+          "summary": "Vendors should be able to set base prices, promotional discounts,...",
+          "expected": "DATA",
+          "predicted": "UNASSIGNED"
+        },
+        {
+          "pred_id": "FR-016",
+          "gold_id": "FR-016",
+          "summary": "Vendors should be able to view pending orders and acknowledge...",
+          "expected": "BOOKING",
+          "predicted": "ORDER MANAGEMENT"
+        }
+      ],
+      "total_errors": 20
+    },
+    "structural_integrity": {
+      "total_requirements": 37,
+      "requirements_with_tasks": 37,
+      "requirements_without_tasks": 0,
+      "task_coverage_pct": 100.0,
+      "total_modules": 11,
+      "total_relations": 23,
+      "total_tasks": 37,
+      "total_test_cases": 37,
+      "untested_requirements_count": 0,
+      "traceability_matrix_rows": 37
+    },
+    "unsupported_metrics_declared": [
+      "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+      "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+      "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+    ]
+  },
+  "banking_management": {
+    "run_id": "ba26cb8e-814b-44d7-bf55-3e7e3e7f9f44",
+    "domain_key": "banking_management",
+    "project_title": "Banking Management System",
+    "timestamp": "2026-10-12T17:17:13.132526",
+    "llm_enabled": true,
+    "llm_extraction_succeeded": true,
+    "fallback_used": false,
+    "provider": "groq",
+    "model": "openai/gpt-oss-120b",
+    "matching_summary": {
+      "predicted_requirements_count": 25,
+      "reference_requirements_count": 25,
+      "uniquely_matched_count": 25,
+      "unmatched_predictions_count": 0,
+      "ambiguous_predictions_count": 0,
+      "duplicate_gold_matches_count": 0,
+      "unmatched_reference_count": 0
+    },
+    "classification_evaluation": {
+      "valid_matched_denominator": 25,
+      "correct_classifications": 9,
+      "accuracy": 0.36,
+      "penalized_end_to_end_accuracy": 0.36,
+      "macro_precision": 0.5,
+      "macro_recall": 0.3583,
+      "macro_f1": 0.3979,
+      "per_class_metrics": {
+        "AUTHENTICATION": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667
+        },
+        "BOOKING": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "DATA": {
+          "tp": 1,
+          "fp": 2,
+          "fn": 4,
+          "precision": 0.3333,
+          "recall": 0.2,
+          "f1": 0.25
+        },
+        "FILE": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.6667,
+          "recall": 1.0,
+          "f1": 0.8
+        },
+        "NOTIFICATION": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667
+        },
+        "PAYMENT": {
+          "tp": 0,
+          "fp": 6,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "PROFILE": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "REPORTING": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.6667,
+          "f1": 0.8
+        }
+      },
+      "errors_sample": [
+        {
+          "pred_id": "FR-002",
+          "gold_id": "FR-002",
+          "summary": "View account balances and transaction history",
+          "expected": "DATA",
+          "predicted": "PAYMENT"
+        },
+        {
+          "pred_id": "FR-003",
+          "gold_id": "FR-003",
+          "summary": "Initiate domestic fund transfers",
+          "expected": "PAYMENT",
+          "predicted": "UNASSIGNED"
+        },
+        {
+          "pred_id": "FR-004",
+          "gold_id": "FR-004",
+          "summary": "Customers should be able to schedule recurring standing instructions and...",
+          "expected": "PAYMENT",
+          "predicted": "BOOKING"
+        },
+        {
+          "pred_id": "FR-005",
+          "gold_id": "FR-005",
+          "summary": "Online loan application for personal, vehicle, or mortgage loans",
+          "expected": "BOOKING",
+          "predicted": "UNASSIGNED"
+        },
+        {
+          "pred_id": "FR-007",
+          "gold_id": "FR-007",
+          "summary": "Debit card activation, temporary freeze, and limit adjustments",
+          "expected": "PROFILE",
+          "predicted": "DATA"
+        },
+        {
+          "pred_id": "FR-009",
+          "gold_id": "FR-009",
+          "summary": "Report suspicious transactions or compromised credentials",
+          "expected": "NOTIFICATION",
+          "predicted": "PAYMENT"
+        },
+        {
+          "pred_id": "FR-011",
+          "gold_id": "FR-011",
+          "summary": "Tellers should be able to process cash deposits and cash...",
+          "expected": "PAYMENT",
+          "predicted": "UNASSIGNED"
+        },
+        {
+          "pred_id": "FR-012",
+          "gold_id": "FR-012",
+          "summary": "Tellers should be able to verify customer signatures, photo identity...",
+          "expected": "AUTHENTICATION",
+          "predicted": "FILE"
+        },
+        {
+          "pred_id": "FR-013",
+          "gold_id": "FR-013",
+          "summary": "Tellers should be able to issue cashier checks and process...",
+          "expected": "PAYMENT",
+          "predicted": "UNASSIGNED"
+        },
+        {
+          "pred_id": "FR-017",
+          "gold_id": "FR-016",
+          "summary": "Loan officers should be able to calculate debt-to-income ratios and...",
+          "expected": "REPORTING",
+          "predicted": "BOOKING"
+        }
+      ],
+      "total_errors": 16
+    },
+    "structural_integrity": {
+      "total_requirements": 25,
+      "requirements_with_tasks": 25,
+      "requirements_without_tasks": 0,
+      "task_coverage_pct": 100.0,
+      "total_modules": 8,
+      "total_relations": 15,
+      "total_tasks": 25,
+      "total_test_cases": 25,
+      "untested_requirements_count": 0,
+      "traceability_matrix_rows": 25
+    },
+    "unsupported_metrics_declared": [
+      "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+      "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+      "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+    ]
+  },
+  "library_management": {
+    "run_id": "037fa230-720d-4216-98b5-a417d7c023e4",
+    "domain_key": "library_management",
+    "project_title": "Library Management System",
+    "timestamp": "2026-10-12T17:20:17.121585",
+    "llm_enabled": true,
+    "llm_extraction_succeeded": false,
+    "fallback_used": true,
+    "provider": "groq",
+    "model": "openai/gpt-oss-120b",
+    "matching_summary": {
+      "predicted_requirements_count": 24,
+      "reference_requirements_count": 24,
+      "uniquely_matched_count": 24,
+      "unmatched_predictions_count": 0,
+      "ambiguous_predictions_count": 0,
+      "duplicate_gold_matches_count": 0,
+      "unmatched_reference_count": 0
+    },
+    "classification_evaluation": {
+      "valid_matched_denominator": 24,
+      "correct_classifications": 16,
+      "accuracy": 0.6667,
+      "penalized_end_to_end_accuracy": 0.6667,
+      "macro_precision": 0.7778,
+      "macro_recall": 0.6151,
+      "macro_f1": 0.6679,
+      "per_class_metrics": {
+        "AUTHENTICATION": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571
+        },
+        "BOOKING": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.8333,
+          "f1": 0.9091
+        },
+        "DATA": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 5,
+          "precision": 1.0,
+          "recall": 0.2857,
+          "f1": 0.4444
+        },
+        "GATEWAY": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "NOTIFICATION": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "ORDER MANAGEMENT": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "PAYMENT": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.6667,
+          "f1": 0.8
+        },
+        "REPORTING": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "SEARCH": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "errors_sample": [
+        {
+          "pred_id": "NFR-001",
+          "gold_id": "FR-003",
+          "summary": "Patrons should be able to view real-time catalog availability, shelf...",
+          "expected": "DATA",
+          "predicted": "GATEWAY"
+        },
+        {
+          "pred_id": "FR-004",
+          "gold_id": "FR-005",
+          "summary": "Patrons should be able to view their active borrowed items,...",
+          "expected": "DATA",
+          "predicted": "UNASSIGNED"
+        },
+        {
+          "pred_id": "FR-008",
+          "gold_id": "FR-009",
+          "summary": "Patrons should be able to submit purchase recommendations or inter-library...",
+          "expected": "BOOKING",
+          "predicted": "ORDER MANAGEMENT"
+        },
+        {
+          "pred_id": "FR-009",
+          "gold_id": "FR-010",
+          "summary": "Circulation Desk Staff Requirements Circulation staff should be able to...",
+          "expected": "AUTHENTICATION",
+          "predicted": "UNASSIGNED"
+        },
+        {
+          "pred_id": "FR-011",
+          "gold_id": "FR-012",
+          "summary": "Circulation staff should be able to process returned items, inspect...",
+          "expected": "DATA",
+          "predicted": "UNASSIGNED"
+        },
+        {
+          "pred_id": "FR-012",
+          "gold_id": "FR-013",
+          "summary": "The system should automatically calculate late fees for overdue returned...",
+          "expected": "PAYMENT",
+          "predicted": "UNASSIGNED"
+        },
+        {
+          "pred_id": "FR-016",
+          "gold_id": "FR-017",
+          "summary": "Catalogers should be able to manage inventory copies, track lost...",
+          "expected": "DATA",
+          "predicted": "UNASSIGNED"
+        },
+        {
+          "pred_id": "FR-018",
+          "gold_id": "FR-019",
+          "summary": "Catalogers should be able to conduct periodic physical inventory audits...",
+          "expected": "DATA",
+          "predicted": "UNASSIGNED"
+        }
+      ],
+      "total_errors": 8
+    },
+    "structural_integrity": {
+      "total_requirements": 24,
+      "requirements_with_tasks": 24,
+      "requirements_without_tasks": 0,
+      "task_coverage_pct": 100.0,
+      "total_modules": 10,
+      "total_relations": 21,
+      "total_tasks": 24,
+      "total_test_cases": 24,
+      "untested_requirements_count": 0,
+      "traceability_matrix_rows": 24
+    },
+    "unsupported_metrics_declared": [
+      "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+      "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+      "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+    ]
+  }
+}

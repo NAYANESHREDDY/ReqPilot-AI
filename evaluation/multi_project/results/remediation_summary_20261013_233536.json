@@ -1,0 +1,143 @@
+{
+  "timestamp": "20261013_233536",
+  "domains": {
+    "ev_charging": {
+      "run_id": "24a6e63b-72ee-4339-9d33-1b9e88ae0d70",
+      "domain_key": "ev_charging",
+      "project_title": "EV Charging Network Management System",
+      "timestamp": "2026-10-13T23:36:25.554176",
+      "llm_enabled": true,
+      "llm_extraction_succeeded": true,
+      "fallback_used": false,
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "matching_summary": {
+        "predicted_requirements_count": 58,
+        "reference_requirements_count": 58,
+        "uniquely_matched_count": 58,
+        "unmatched_predictions_count": 0,
+        "ambiguous_predictions_count": 0,
+        "duplicate_gold_matches_count": 0,
+        "unmatched_reference_count": 0
+      },
+      "classification_evaluation": {
+        "valid_matched_denominator": 58,
+        "correct_classifications": 57,
+        "accuracy": 0.9828,
+        "penalized_end_to_end_accuracy": 0.9828,
+        "macro_precision": 0.9875,
+        "macro_recall": 0.98,
+        "macro_f1": 0.9822,
+        "per_class_metrics": {
+          "AUTHENTICATION": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "BOOKING": {
+            "tp": 9,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "CHARGING-SESSION": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "CHARGING-STATION": {
+            "tp": 11,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "DATA": {
+            "tp": 7,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.875,
+            "recall": 1.0,
+            "f1": 0.9333
+          },
+          "GATEWAY": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "MAINTENANCE": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "NOTIFICATION": {
+            "tp": 7,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "PAYMENT": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "REPORTING": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8889
+          }
+        },
+        "errors_sample": [
+          {
+            "pred_id": "FR-051",
+            "gold_id": "FR-049",
+            "summary": "Reporting and Auditability Every reservation, charging-session state transition, payment state...",
+            "expected": "REPORTING",
+            "predicted": "DATA"
+          }
+        ],
+        "total_errors": 1
+      },
+      "structural_integrity": {
+        "total_requirements": 58,
+        "requirements_with_tasks": 58,
+        "requirements_without_tasks": 0,
+        "task_coverage_pct": 100.0,
+        "total_modules": 12,
+        "total_relations": 38,
+        "total_tasks": 58,
+        "total_test_cases": 58,
+        "untested_requirements_count": 0,
+        "traceability_matrix_rows": 58
+      },
+      "unsupported_metrics_declared": [
+        "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+        "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+        "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "timestamp": "20261013_211519",
+  "domains": {
+    "banking_management": {
+      "run_id": "1fa3ab39-32be-47f8-b4f4-c6f082e11611",
+      "domain_key": "banking_management",
+      "project_title": "Banking Management System",
+      "timestamp": "2026-10-13T21:15:47.640133",
+      "llm_enabled": true,
+      "llm_extraction_succeeded": true,
+      "fallback_used": false,
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "matching_summary": {
+        "predicted_requirements_count": 25,
+        "reference_requirements_count": 25,
+        "uniquely_matched_count": 25,
+        "unmatched_predictions_count": 0,
+        "ambiguous_predictions_count": 0,
+        "duplicate_gold_matches_count": 0,
+        "unmatched_reference_count": 0
+      },
+      "classification_evaluation": {
+        "valid_matched_denominator": 25,
+        "correct_classifications": 17,
+        "accuracy": 0.68,
+        "penalized_end_to_end_accuracy": 0.68,
+        "macro_precision": 0.6815,
+        "macro_recall": 0.5889,
+        "macro_f1": 0.5827,
+        "per_class_metrics": {
+          "AUTHENTICATION": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.6667,
+            "f1": 0.8
+          },
+          "BOOKING": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "DATA": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8889
+          },
+          "FILE": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667
+          },
+          "LOAN MANAGEMENT": {
+            "tp": 0,
+            "fp": 5,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "NOTIFICATION": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "PAYMENT": {
+            "tp": 4,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "f1": 0.8889
+          },
+          "PROFILE": {
+            "tp": 1,
+            "fp": 2,
+            "fn": 0,
+            "precision": 0.3333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          "REPORTING": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.3333,
+            "f1": 0.5
+          }
+        },
+        "errors_sample": [
+          {
+            "pred_id": "FR-001",
+            "gold_id": "FR-001",
+            "summary": "Customer registration, KYC, and MFA login",
+            "expected": "AUTHENTICATION",
+            "predicted": "PROFILE"
+          },
+          {
+            "pred_id": "FR-005",
+            "gold_id": "FR-005",
+            "summary": "Apply for loans online",
+            "expected": "BOOKING",
+            "predicted": "LOAN MANAGEMENT"
+          },
+          {
+            "pred_id": "FR-012",
+            "gold_id": "FR-012",
+            "summary": "Verify customer identity documents",
+            "expected": "AUTHENTICATION",
+            "predicted": "PROFILE"
+          },
+          {
+            "pred_id": "FR-015",
+            "gold_id": "FR-014",
+            "summary": "End\u2011of\u2011day cash drawer balancing and reconciliation",
+            "expected": "REPORTING",
+            "predicted": "PAYMENT"
+          },
+          {
+            "pred_id": "FR-016",
+            "gold_id": "FR-015",
+            "summary": "Loan Management and Underwriting Loan officers should be able to...",
+            "expected": "FILE",
+            "predicted": "LOAN MANAGEMENT"
+          },
+          {
+            "pred_id": "FR-017",
+            "gold_id": "FR-016",
+            "summary": "Loan officers should be able to calculate debt-to-income ratios and...",
+            "expected": "REPORTING",
+            "predicted": "LOAN MANAGEMENT"
+          },
+          {
+            "pred_id": "FR-018",
+            "gold_id": "FR-017",
+            "summary": "Loan officers should be able to approve, reject, or refer...",
+            "expected": "BOOKING",
+            "predicted": "LOAN MANAGEMENT"
+          },
+          {
+            "pred_id": "FR-019",
+            "gold_id": "FR-018",
+            "summary": "The system should calculate interest, track monthly installment payments, and...",
+            "expected": "DATA",
+            "predicted": "LOAN MANAGEMENT"
+          }
+        ],
+        "total_errors": 8
+      },
+      "structural_integrity": {
+        "total_requirements": 25,
+        "requirements_with_tasks": 25,
+        "requirements_without_tasks": 0,
+        "task_coverage_pct": 100.0,
+        "total_modules": 9,
+        "total_relations": 24,
+        "total_tasks": 25,
+        "total_test_cases": 25,
+        "untested_requirements_count": 0,
+        "traceability_matrix_rows": 25
+      },
+      "unsupported_metrics_declared": [
+        "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+        "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+        "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+      ]
+    }
+  }
+}

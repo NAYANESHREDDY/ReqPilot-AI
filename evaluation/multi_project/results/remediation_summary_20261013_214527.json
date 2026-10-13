@@ -1,0 +1,178 @@
+{
+  "timestamp": "20261013_214527",
+  "domains": {
+    "ev_charging": {
+      "run_id": "78273e32-6b85-48f1-a841-4f8d43a1b63b",
+      "domain_key": "ev_charging",
+      "project_title": "EV Charging Network Management System",
+      "timestamp": "2026-10-13T21:46:18.124917",
+      "llm_enabled": true,
+      "llm_extraction_succeeded": true,
+      "fallback_used": true,
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "matching_summary": {
+        "predicted_requirements_count": 58,
+        "reference_requirements_count": 58,
+        "uniquely_matched_count": 58,
+        "unmatched_predictions_count": 0,
+        "ambiguous_predictions_count": 0,
+        "duplicate_gold_matches_count": 0,
+        "unmatched_reference_count": 0
+      },
+      "classification_evaluation": {
+        "valid_matched_denominator": 58,
+        "correct_classifications": 52,
+        "accuracy": 0.8966,
+        "penalized_end_to_end_accuracy": 0.8966,
+        "macro_precision": 0.8883,
+        "macro_recall": 0.8979,
+        "macro_f1": 0.8855,
+        "per_class_metrics": {
+          "AUTHENTICATION": {
+            "tp": 3,
+            "fp": 3,
+            "fn": 1,
+            "precision": 0.5,
+            "recall": 0.75,
+            "f1": 0.6
+          },
+          "BOOKING": {
+            "tp": 9,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "CHARGING-SESSION": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "CHARGING-STATION": {
+            "tp": 11,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "DATA": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 4,
+            "precision": 0.75,
+            "recall": 0.4286,
+            "f1": 0.5455
+          },
+          "GATEWAY": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "MAINTENANCE": {
+            "tp": 4,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1": 0.8
+          },
+          "NOTIFICATION": {
+            "tp": 7,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "PAYMENT": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "REPORTING": {
+            "tp": 5,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.8333,
+            "recall": 1.0,
+            "f1": 0.9091
+          }
+        },
+        "errors_sample": [
+          {
+            "pred_id": "FR-022",
+            "gold_id": "FR-020",
+            "summary": "Administrator Requirements Administrators should manage drivers, operators, maintenance staff, stations,...",
+            "expected": "MAINTENANCE",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-024",
+            "gold_id": "FR-022",
+            "summary": "Administrators should be able to suspend accounts that violate system...",
+            "expected": "DATA",
+            "predicted": "AUTHENTICATION"
+          },
+          {
+            "pred_id": "FR-028",
+            "gold_id": "FR-026",
+            "summary": "Maintenance staff should only access maintenance requests assigned to them...",
+            "expected": "AUTHENTICATION",
+            "predicted": "MAINTENANCE"
+          },
+          {
+            "pred_id": "FR-048",
+            "gold_id": "FR-046",
+            "summary": "Inactive driver accounts should be anonymized after three years unless...",
+            "expected": "DATA",
+            "predicted": "AUTHENTICATION"
+          },
+          {
+            "pred_id": "FR-053",
+            "gold_id": "FR-051",
+            "summary": "The organization has not specified whether anonymized driver accounts can...",
+            "expected": "DATA",
+            "predicted": "AUTHENTICATION"
+          },
+          {
+            "pred_id": "NFR-005",
+            "gold_id": "NFR-007",
+            "summary": "Audit logs should be retained according to the configured administrative...",
+            "expected": "DATA",
+            "predicted": "REPORTING"
+          }
+        ],
+        "total_errors": 6
+      },
+      "structural_integrity": {
+        "total_requirements": 58,
+        "requirements_with_tasks": 58,
+        "requirements_without_tasks": 0,
+        "task_coverage_pct": 100.0,
+        "total_modules": 11,
+        "total_relations": 18,
+        "total_tasks": 58,
+        "total_test_cases": 58,
+        "untested_requirements_count": 0,
+        "traceability_matrix_rows": 58
+      },
+      "unsupported_metrics_declared": [
+        "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+        "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+        "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+      ]
+    }
+  }
+}

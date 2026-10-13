@@ -1,0 +1,134 @@
+{
+  "timestamp": "20261013_211711",
+  "domains": {
+    "banking_management": {
+      "run_id": "a762b2f1-1956-44bb-9ab4-a2048d9e1072",
+      "domain_key": "banking_management",
+      "project_title": "Banking Management System",
+      "timestamp": "2026-10-13T21:17:46.926420",
+      "llm_enabled": true,
+      "llm_extraction_succeeded": true,
+      "fallback_used": false,
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "matching_summary": {
+        "predicted_requirements_count": 26,
+        "reference_requirements_count": 25,
+        "uniquely_matched_count": 25,
+        "unmatched_predictions_count": 1,
+        "ambiguous_predictions_count": 0,
+        "duplicate_gold_matches_count": 0,
+        "unmatched_reference_count": 0
+      },
+      "classification_evaluation": {
+        "valid_matched_denominator": 25,
+        "correct_classifications": 23,
+        "accuracy": 0.92,
+        "penalized_end_to_end_accuracy": 0.8846,
+        "macro_precision": 0.8958,
+        "macro_recall": 0.9167,
+        "macro_f1": 0.8803,
+        "per_class_metrics": {
+          "AUTHENTICATION": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.8333,
+            "f1": 0.9091
+          },
+          "BOOKING": {
+            "tp": 2,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.6667,
+            "recall": 1.0,
+            "f1": 0.8
+          },
+          "DATA": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "FILE": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667
+          },
+          "NOTIFICATION": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "PAYMENT": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "PROFILE": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667
+          },
+          "REPORTING": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "errors_sample": [
+          {
+            "pred_id": "FR-001",
+            "gold_id": "FR-001",
+            "summary": "Customer registration, KYC verification, and MFA login",
+            "expected": "AUTHENTICATION",
+            "predicted": "PROFILE"
+          },
+          {
+            "pred_id": "FR-016",
+            "gold_id": "FR-015",
+            "summary": "Loan Management and Underwriting Loan officers should be able to...",
+            "expected": "FILE",
+            "predicted": "BOOKING"
+          }
+        ],
+        "total_errors": 2
+      },
+      "structural_integrity": {
+        "total_requirements": 26,
+        "requirements_with_tasks": 26,
+        "requirements_without_tasks": 0,
+        "task_coverage_pct": 100.0,
+        "total_modules": 10,
+        "total_relations": 21,
+        "total_tasks": 26,
+        "total_test_cases": 26,
+        "untested_requirements_count": 0,
+        "traceability_matrix_rows": 26
+      },
+      "unsupported_metrics_declared": [
+        "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+        "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+        "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+      ]
+    }
+  }
+}

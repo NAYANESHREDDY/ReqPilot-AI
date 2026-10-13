@@ -1,0 +1,177 @@
+{
+  "timestamp": "20261013_193534",
+  "domains": {
+    "ecommerce_platform": {
+      "run_id": "00a46087-246d-4596-bba3-129c4154d415",
+      "domain_key": "ecommerce_platform",
+      "project_title": "E-Commerce Platform",
+      "timestamp": "2026-10-13T19:36:12.381535",
+      "llm_enabled": true,
+      "llm_extraction_succeeded": true,
+      "fallback_used": false,
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "matching_summary": {
+        "predicted_requirements_count": 37,
+        "reference_requirements_count": 36,
+        "uniquely_matched_count": 36,
+        "unmatched_predictions_count": 1,
+        "ambiguous_predictions_count": 0,
+        "duplicate_gold_matches_count": 0,
+        "unmatched_reference_count": 0
+      },
+      "classification_evaluation": {
+        "valid_matched_denominator": 36,
+        "correct_classifications": 29,
+        "accuracy": 0.8056,
+        "penalized_end_to_end_accuracy": 0.7838,
+        "macro_precision": 0.6488,
+        "macro_recall": 0.7361,
+        "macro_f1": 0.6828,
+        "per_class_metrics": {
+          "AUTHENTICATION": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "BOOKING": {
+            "tp": 5,
+            "fp": 3,
+            "fn": 0,
+            "precision": 0.625,
+            "recall": 1.0,
+            "f1": 0.7692
+          },
+          "DATA": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 3,
+            "precision": 0.7143,
+            "recall": 0.625,
+            "f1": 0.6667
+          },
+          "FILE": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "NOTIFICATION": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "PAYMENT": {
+            "tp": 5,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.8333,
+            "recall": 1.0,
+            "f1": 0.9091
+          },
+          "PROFILE": {
+            "tp": 2,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.6667,
+            "recall": 1.0,
+            "f1": 0.8
+          },
+          "REPORTING": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "SEARCH": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "errors_sample": [
+          {
+            "pred_id": "FR-010",
+            "gold_id": "FR-009",
+            "summary": "View order history and shipment tracking",
+            "expected": "DATA",
+            "predicted": "PROFILE"
+          },
+          {
+            "pred_id": "FR-018",
+            "gold_id": "FR-017",
+            "summary": "Vendors should be able to view sales analytics, revenue breakdowns,...",
+            "expected": "REPORTING",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-020",
+            "gold_id": "FR-019",
+            "summary": "The system should automatically reserve stock items when an order...",
+            "expected": "DATA",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-022",
+            "gold_id": "FR-021",
+            "summary": "Warehouse staff should be able to generate packing slips, assign...",
+            "expected": "FILE",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-023",
+            "gold_id": "FR-022",
+            "summary": "Warehouse staff should be able to dispatch packages and update...",
+            "expected": "DATA",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-026",
+            "gold_id": "FR-025",
+            "summary": "The system should generate tax invoices and itemized receipts for...",
+            "expected": "REPORTING",
+            "predicted": "PAYMENT"
+          },
+          {
+            "pred_id": "FR-032",
+            "gold_id": "FR-031",
+            "summary": "Administrators should have access to platform-wide financial audit trails, fraud...",
+            "expected": "REPORTING",
+            "predicted": "DATA"
+          }
+        ],
+        "total_errors": 7
+      },
+      "structural_integrity": {
+        "total_requirements": 37,
+        "requirements_with_tasks": 37,
+        "requirements_without_tasks": 0,
+        "task_coverage_pct": 100.0,
+        "total_modules": 8,
+        "total_relations": 12,
+        "total_tasks": 37,
+        "total_test_cases": 37,
+        "untested_requirements_count": 0,
+        "traceability_matrix_rows": 37
+      },
+      "unsupported_metrics_declared": [
+        "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+        "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+        "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,147 @@
+import unittest, sys
+sys.path.append('evaluation/multi_project/scripts')
+from scorer import match_prediction_to_gold, canonicalize
+
+class ScorerAdversarialAuditTests(unittest.TestCase):
+    def setUp(self):
+        self.gold_base = {
+            'REF-01': {'statement': 'Drivers should be able to register and log in securely.', 'summary': 'Driver login', 'canonical': 'AUTHENTICATION'},
+            'REF-02': {'statement': 'Drivers should be able to reserve an available charging slot before arriving.', 'summary': 'Reserve slot', 'canonical': 'BOOKING'},
+            'REF-03': {'statement': 'The system shall maintain an immutable audit log of all transactions.', 'summary': 'Audit log', 'canonical': 'DATA'}
+        }
+
+    def test_case_01_unrelated_statement_same_id(self):
+        pred = {'id': 'REF-01', 'source_excerpt': 'Drone delivery quadcopters must automatically calibrate wind resistance sensors.', 'summary': 'Drone calibration'}
+        gid, status = match_prediction_to_gold(pred, self.gold_base)
+        self.assertEqual(status, 'UNMATCHED')
+        self.assertIsNone(gid)
+
+    def test_case_02_reordered_renumbered_ids(self):
+        pred = {'id': 'NEW-ID-999', 'source_excerpt': 'Drivers should be able to reserve an available charging slot before arriving.', 'summary': 'Reserve charging slot'}
+        gid, status = match_prediction_to_gold(pred, self.gold_base)
+        self.assertEqual(status, 'UNIQUE_MATCH')
+        self.assertEqual(gid, 'REF-02')
+
+    def test_case_03_generic_substring_shared_by_multiple_gold(self):
+        gold = {
+            'G-A': {'statement': 'The system shall provide notifications to users upon completion.', 'summary': 'Notification A'},
+            'G-B': {'statement': 'The system shall provide notifications to operators upon fault.', 'summary': 'Notification B'}
+        }
+        pred = {'id': 'P-1', 'source_excerpt': 'The system shall provide notifications to all registered stakeholders.', 'summary': 'Notification'}
+        gid, status = match_prediction_to_gold(pred, gold)
+        self.assertIn(status, ['AMBIGUOUS_MATCH', 'UNMATCHED'])
+
+    def test_case_04_duplicate_predictions_same_gold(self):
+        gold = {'G-1': {'statement': 'Customers should be able to pay for orders securely using net banking.', 'summary': 'Net banking', 'canonical': 'PAYMENT'}}
+        pred1 = {'id': 'P-1', 'source_excerpt': 'Customers should be able to pay for orders securely using net banking.', 'summary': 'Pay'}
+        pred2 = {'id': 'P-2', 'source_excerpt': 'Customers should be able to pay for orders securely using net banking.', 'summary': 'Pay copy'}
+        g1, s1 = match_prediction_to_gold(pred1, gold)
+        g2, s2 = match_prediction_to_gold(pred2, gold)
+        self.assertEqual(s1, 'UNIQUE_MATCH')
+        self.assertEqual(s2, 'UNIQUE_MATCH')
+        self.assertEqual(g1, g2)
+
+    def test_case_05_similar_gold_distinct_meanings(self):
+        gold = {
+            'G-START': {'statement': 'Drivers should receive notifications when a charging session starts.', 'summary': 'Start alert'},
+            'G-STOP': {'statement': 'Drivers should receive notifications when a charging session completes.', 'summary': 'Complete alert'}
+        }
+        pred_start = {'id': 'P-1', 'source_excerpt': 'Drivers should receive notifications when a charging session starts.', 'summary': 'Start alert'}
+        gid, status = match_prediction_to_gold(pred_start, gold)
+        self.assertEqual(status, 'UNIQUE_MATCH')
+        self.assertEqual(gid, 'G-START')
+
+    def test_case_06_matching_wording_wrong_module(self):
+        gold = {'G-AUTH': {'statement': 'Patients should be able to register and log in securely.', 'summary': 'Login', 'canonical': 'AUTHENTICATION'}}
+        pred = {'id': 'P-1', 'source_excerpt': 'Patients should be able to register and log in securely.', 'summary': 'Login'}
+        gid, status = match_prediction_to_gold(pred, gold)
+        self.assertEqual(status, 'UNIQUE_MATCH')
+        pred_module = canonicalize('PAYMENT')
+        gold_module = canonicalize(gold[gid]['canonical'])
+        self.assertNotEqual(pred_module, gold_module)
+
+    def test_case_07_gold_with_no_prediction(self):
+        gold = {
+            'G-1': {'statement': 'Patients should be able to register and log in securely.', 'summary': 'Login'},
+            'G-2': {'statement': 'Patients should be able to order prescription refills directly.', 'summary': 'Refill'}
+        }
+        pred_list = [{'id': 'P-1', 'source_excerpt': 'Patients should be able to register and log in securely.', 'summary': 'Login'}]
+        assigned_gold = set()
+        for p in pred_list:
+            gid, st = match_prediction_to_gold(p, gold)
+            if st == 'UNIQUE_MATCH':
+                assigned_gold.add(gid)
+        unmatched_gold = [gid for gid in gold if gid not in assigned_gold]
+        self.assertIn('G-2', unmatched_gold)
+
+    def test_case_08_one_unmatched_prediction(self):
+        pred = {'id': 'P-X', 'source_excerpt': 'Completely novel telemetry requirement for quantum flux capacitors.', 'summary': 'Novel req'}
+        gid, status = match_prediction_to_gold(pred, self.gold_base)
+        self.assertEqual(status, 'UNMATCHED')
+
+    def test_case_09_duplicate_gold_statements(self):
+        duplicate_gold = {
+            'G-DUP1': {'statement': 'System must support multi-factor authentication.', 'summary': 'MFA'},
+            'G-DUP2': {'statement': 'System must support multi-factor authentication.', 'summary': 'MFA copy'}
+        }
+        pred = {'id': 'P-1', 'source_excerpt': 'System must support multi-factor authentication.', 'summary': 'MFA'}
+        gid, status = match_prediction_to_gold(pred, duplicate_gold)
+        self.assertEqual(status, 'AMBIGUOUS_MATCH')
+
+    def test_case_10_empty_or_missing_source_excerpts(self):
+        pred_empty = {'id': 'P-EMPTY', 'source_excerpt': '', 'description': '', 'summary': ''}
+        gid, status = match_prediction_to_gold(pred_empty, self.gold_base)
+        self.assertEqual(status, 'UNMATCHED')
+        self.assertIsNone(gid)
+
+    def test_case_11_greedy_order_competition_reveals_sequential_vulnerability(self):
+        # When an earlier prediction is a partial substring and a later prediction is an exact match,
+        # greedy evaluation locks the gold assignment to the first prediction encountered.
+        gold = {'G-AUDIT': {'statement': 'System shall maintain immutable audit logs of all security actions for seven years.', 'summary': 'Audit log full', 'canonical': 'DATA'}}
+        pred_partial = {'id': 'P-01', 'source_excerpt': 'maintain immutable audit logs of all security actions', 'summary': 'Audit partial'}
+        pred_exact = {'id': 'P-02', 'source_excerpt': 'System shall maintain immutable audit logs of all security actions for seven years.', 'summary': 'Audit exact'}
+        
+        # Pred partial claims G-AUDIT if processed first
+        g1, s1 = match_prediction_to_gold(pred_partial, gold)
+        self.assertEqual(s1, 'UNIQUE_MATCH')
+        self.assertEqual(g1, 'G-AUDIT')
+        
+        # Pred exact also matches G-AUDIT
+        g2, s2 = match_prediction_to_gold(pred_exact, gold)
+        self.assertEqual(s2, 'UNIQUE_MATCH')
+        self.assertEqual(g2, 'G-AUDIT')
+        
+        # Simulating sequential greedy allocation:
+        assigned = set()
+        assigned.add(g1)
+        # If G-AUDIT is already assigned, pred_exact is flagged as duplicate
+        is_duplicate = (g2 in assigned)
+        self.assertTrue(is_duplicate, "Greedy matching locks out exact match when partial match appears earlier")
+
+    def test_case_12_similar_requirements_different_meanings(self):
+        # Two distinct requirements sharing common prefix phrasing must be flagged AMBIGUOUS_MATCH
+        gold = {
+            'G-ADMIN-MFA': {'statement': 'System shall enforce multi-factor authentication for administrative accounts.', 'summary': 'Admin MFA', 'canonical': 'SECURITY'},
+            'G-TRANS-MFA': {'statement': 'System shall enforce multi-factor authentication for high-value financial transfers.', 'summary': 'Transfer MFA', 'canonical': 'PAYMENT'}
+        }
+        pred_generic = {'id': 'P-GEN', 'source_excerpt': 'System shall enforce multi-factor authentication.', 'summary': 'Generic MFA'}
+        gid, status = match_prediction_to_gold(pred_generic, gold)
+        self.assertIn(status, ['AMBIGUOUS_MATCH', 'UNMATCHED'])
+        self.assertIsNone(gid, "Generic common prefix must not arbitrarily assign to either module")
+
+    def test_case_13_substring_overlap_without_semantic_equivalence(self):
+        # Demonstrates that substring containment (gt in pt) can cause context-embedding false matches
+        gold_timeout = {'G-SESS': {'statement': 'The system shall terminate user sessions after 15 minutes of inactivity.', 'summary': 'Session timeout', 'canonical': 'SECURITY'}}
+        pred_warning = {
+            'id': 'P-WARN',
+            'source_excerpt': 'The system shall display a warning popup 2 minutes before the system shall terminate user sessions after 15 minutes of inactivity.',
+            'summary': 'Session warning popup'
+        }
+        gid, status = match_prediction_to_gold(pred_warning, gold_timeout)
+        # Documents that gt in pt triggers UNIQUE_MATCH even though P-WARN is a UI notification requirement
+        self.assertEqual(status, 'UNIQUE_MATCH')
+        self.assertEqual(gid, 'G-SESS')
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
+

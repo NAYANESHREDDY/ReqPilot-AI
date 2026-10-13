@@ -1,0 +1,407 @@
+import uuid
+from datetime import datetime
+
+from sqlalchemy import (
+    Column, String, Text, Integer, Float, Boolean, DateTime,
+    ForeignKey, JSON
+)
+from sqlalchemy.orm import relationship
+
+from .database import Base
+
+
+def generate_uuid() -> str:
+    return str(uuid.uuid4())
+
+
+class Project(Base):
+    __tablename__ = "projects"
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    title = Column(String(255), nullable=False)
+    description = Column(Text, nullable=True)
+    domain = Column(String(100), nullable=True)
+    status = Column(String(50), nullable=True)
+    health_score = Column(Float, nullable=True)
+    created_by = Column(String(36), ForeignKey("users.id"), nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    updated_at = Column(DateTime, nullable=True)
+
+    requirements = relationship("Requirement", back_populates="project", cascade="all, delete-orphan")
+    tasks = relationship("Task", back_populates="project", cascade="all, delete-orphan")
+    sprints = relationship("Sprint", back_populates="project", cascade="all, delete-orphan")
+    team_members = relationship("TeamMember", back_populates="project", cascade="all, delete-orphan")
+    documents = relationship("Document", back_populates="project", cascade="all, delete-orphan")
+    architecture_modules = relationship("ArchitectureModule", back_populates="project", cascade="all, delete-orphan")
+    architecture_relations = relationship("ArchitectureRelation", back_populates="project", cascade="all, delete-orphan")
+    change_requests = relationship("ChangeRequest", back_populates="project", cascade="all, delete-orphan")
+    clarification_questions = relationship("ClarificationQuestion", back_populates="project", cascade="all, delete-orphan")
+    audit_logs = relationship("AuditLog", back_populates="project", cascade="all, delete-orphan")
+    traceability_links = relationship("TraceabilityLink", back_populates="project", cascade="all, delete-orphan")
+    test_cases = relationship("TestCase", back_populates="project", cascade="all, delete-orphan")
+    epics = relationship("Epic", back_populates="project", cascade="all, delete-orphan")
+    features = relationship("Feature", back_populates="project", cascade="all, delete-orphan")
+    reports = relationship("Report", back_populates="project", cascade="all, delete-orphan")
+    workflows = relationship("AIWorkflow", back_populates="project", cascade="all, delete-orphan")
+
+
+class Requirement(Base):
+    __tablename__ = "requirements"
+    id = Column(String(50), primary_key=True, default=generate_uuid)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    req_type = Column(String(50), nullable=True)
+    summary = Column(String(500), nullable=False)
+    description = Column(Text, nullable=True)
+    actor = Column(String(100), nullable=True)
+    action = Column(String(150), nullable=True)
+    target_object = Column(String(150), nullable=True)
+    preconditions = Column(Text, nullable=True)
+    expected_outcome = Column(Text, nullable=True)
+    acceptance_criteria = Column(JSON, nullable=True)
+    priority = Column(String(50), nullable=True)
+    status = Column(String(50), nullable=True)
+    quality_score = Column(Float, nullable=True)
+    quality_breakdown = Column(JSON, nullable=True)
+    confidence = Column(Float, nullable=True)
+    is_ai_suggested = Column(Boolean, nullable=True)
+    version = Column(Integer, nullable=True)
+    source_id = Column(String(100), nullable=True)
+    source_page = Column(Integer, nullable=True)
+    source_excerpt = Column(Text, nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    updated_at = Column(DateTime, nullable=True)
+
+    project = relationship("Project", back_populates="requirements")
+    issues = relationship("RequirementIssue", back_populates="requirement", cascade="all, delete-orphan")
+    versions = relationship("RequirementVersion", back_populates="requirement", cascade="all, delete-orphan")
+    clarifications = relationship("ClarificationQuestion", back_populates="requirement")
+    tasks = relationship("Task", back_populates="requirement")
+    traceability_links = relationship("TraceabilityLink", back_populates="requirement")
+    test_cases = relationship("TestCase", back_populates="requirement")
+    change_requests = relationship("ChangeRequest", back_populates="requirement")
+
+
+class RequirementIssue(Base):
+    __tablename__ = "requirement_issues"
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    requirement_id = Column(String(50), ForeignKey("requirements.id"), nullable=True)
+    conflict_with_id = Column(String(50), nullable=True)
+    issue_type = Column(String(50), nullable=False)
+    title = Column(String(255), nullable=False)
+    description = Column(Text, nullable=False)
+    detected_phrase = Column(String(255), nullable=True)
+    severity = Column(String(50), nullable=True)
+    confidence = Column(Float, nullable=True)
+    status = Column(String(50), nullable=True)
+    resolution_note = Column(Text, nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    project = relationship("Project")
+    requirement = relationship("Requirement", back_populates="issues")
+
+
+class RequirementVersion(Base):
+    __tablename__ = "requirement_versions"
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    requirement_id = Column(String(50), ForeignKey("requirements.id"), nullable=False)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    version_num = Column(Integer, nullable=False)
+    summary = Column(String(500), nullable=False)
+    description = Column(Text, nullable=True)
+    changed_by = Column(String(255), nullable=True)
+    change_reason = Column(String(500), nullable=True)
+    snapshot_json = Column(JSON, nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    requirement = relationship("Requirement", back_populates="versions")
+    project = relationship("Project")
+
+
+class ClarificationQuestion(Base):
+    __tablename__ = "clarification_questions"
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    requirement_id = Column(String(50), ForeignKey("requirements.id"), nullable=True)
+    question = Column(Text, nullable=False)
+    rationale = Column(Text, nullable=True)
+    priority = Column(String(50), nullable=True)
+    suggested_options = Column(JSON, nullable=True)
+    answer = Column(Text, nullable=True)
+    answered_by = Column(String(255), nullable=True)
+    status = Column(String(50), nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    answered_at = Column(DateTime, nullable=True)
+    requirement = relationship("Requirement", back_populates="clarifications")
+    project = relationship("Project", back_populates="clarification_questions")
+
+
+class ArchitectureModule(Base):
+    __tablename__ = "architecture_modules"
+    id = Column(String(50), primary_key=True, default=generate_uuid)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    name = Column(String(255), nullable=False)
+    description = Column(Text, nullable=True)
+    module_type = Column(String(50), nullable=True)
+    tech_stack = Column(String(255), nullable=True)
+    responsibilities = Column(JSON, nullable=True)
+    api_endpoints = Column(JSON, nullable=True)
+    pos_x = Column(Float, nullable=True)
+    pos_y = Column(Float, nullable=True)
+    is_ai_suggested = Column(Boolean, nullable=True)
+    status = Column(String(50), nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    project = relationship("Project", back_populates="architecture_modules")
+    outgoing_relations = relationship("ArchitectureRelation", foreign_keys="ArchitectureRelation.source_module_id", back_populates="source_module")
+    incoming_relations = relationship("ArchitectureRelation", foreign_keys="ArchitectureRelation.target_module_id", back_populates="target_module")
+    tasks = relationship("Task", back_populates="architecture_module")
+
+
+class ArchitectureRelation(Base):
+    __tablename__ = "architecture_relations"
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    source_module_id = Column(String(50), ForeignKey("architecture_modules.id"), nullable=False)
+    target_module_id = Column(String(50), ForeignKey("architecture_modules.id"), nullable=False)
+    relation_type = Column(String(50), nullable=True)
+    description = Column(String(255), nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    project = relationship("Project", back_populates="architecture_relations")
+    source_module = relationship("ArchitectureModule", foreign_keys=[source_module_id], back_populates="outgoing_relations")
+    target_module = relationship("ArchitectureModule", foreign_keys=[target_module_id], back_populates="incoming_relations")
+
+
+class Epic(Base):
+    __tablename__ = "epics"
+    id = Column(String(50), primary_key=True, default=generate_uuid)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    title = Column(String(255), nullable=False)
+    description = Column(Text, nullable=True)
+    status = Column(String(50), nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    project = relationship("Project", back_populates="epics")
+    tasks = relationship("Task", back_populates="epic")
+    features = relationship("Feature", back_populates="epic")
+
+
+class Feature(Base):
+    __tablename__ = "features"
+    id = Column(String(50), primary_key=True, default=generate_uuid)
+    epic_id = Column(String(50), ForeignKey("epics.id"), nullable=False)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    title = Column(String(255), nullable=False)
+    description = Column(Text, nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    epic = relationship("Epic", back_populates="features")
+    project = relationship("Project", back_populates="features")
+    tasks = relationship("Task", back_populates="feature")
+
+
+class Sprint(Base):
+    __tablename__ = "sprints"
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    name = Column(String(100), nullable=False)
+    goal = Column(Text, nullable=True)
+    start_date = Column(String(50), nullable=True)
+    end_date = Column(String(50), nullable=True)
+    capacity_points = Column(Integer, nullable=True)
+    status = Column(String(50), nullable=True)
+    project = relationship("Project", back_populates="sprints")
+    #tasks = relationship("Task", back_populates="sprint")
+
+
+class Task(Base):
+    __tablename__ = "tasks"
+    id = Column(String(50), primary_key=True, default=generate_uuid)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    epic_id = Column(String(50), ForeignKey("epics.id"), nullable=True)
+    feature_id = Column(String(50), ForeignKey("features.id"), nullable=True)
+    requirement_id = Column(String(50), ForeignKey("requirements.id"), nullable=True)
+    module_id = Column(String(50), ForeignKey("architecture_modules.id"), nullable=True)
+    title = Column(String(255), nullable=False)
+    description = Column(Text, nullable=True)
+    complexity = Column(String(50), nullable=True)
+    estimated_hours = Column(Float, nullable=True)
+    story_points = Column(Integer, nullable=True)
+    priority = Column(String(50), nullable=True)
+    status = Column(String(50), nullable=True)
+    assignee_name = Column(String(255), nullable=True)
+    sprint_name = Column(String(100), nullable=True)
+    subtasks = Column(JSON, nullable=True)
+    acceptance_criteria = Column(JSON, nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    updated_at = Column(DateTime, nullable=True)
+    project = relationship("Project", back_populates="tasks")
+    epic = relationship("Epic", back_populates="tasks")
+    feature = relationship("Feature", back_populates="tasks")
+    requirement = relationship("Requirement", back_populates="tasks")
+    architecture_module = relationship("ArchitectureModule", back_populates="tasks")
+    dependencies = relationship("TaskDependency", foreign_keys="TaskDependency.task_id", back_populates="task")
+    dependents = relationship("TaskDependency", foreign_keys="TaskDependency.depends_on_task_id", back_populates="depends_on_task")
+    test_cases = relationship("TestCase", back_populates="task")
+
+
+class TaskDependency(Base):
+    __tablename__ = "task_dependencies"
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    task_id = Column(String(50), ForeignKey("tasks.id"), nullable=False)
+    depends_on_task_id = Column(String(50), ForeignKey("tasks.id"), nullable=False)
+    dependency_type = Column(String(50), nullable=True)
+    task = relationship("Task", foreign_keys=[task_id], back_populates="dependencies")
+    depends_on_task = relationship("Task", foreign_keys=[depends_on_task_id], back_populates="dependents")
+
+
+class Document(Base):
+    __tablename__ = "documents"
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    filename = Column(String(255), nullable=False)
+    file_type = Column(String(50), nullable=False)
+    file_size = Column(Integer, nullable=True)
+    storage_path = Column(String(500), nullable=False)
+    status = Column(String(50), nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    project = relationship("Project", back_populates="documents")
+    chunks = relationship("DocumentChunk", back_populates="document", cascade="all, delete-orphan")
+
+
+class DocumentChunk(Base):
+    __tablename__ = "document_chunks"
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    document_id = Column(String(36), ForeignKey("documents.id"), nullable=False)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    chunk_index = Column(Integer, nullable=True)
+    section_title = Column(String(255), nullable=True)
+    page_number = Column(Integer, nullable=True)
+    content = Column(Text, nullable=False)
+    token_count = Column(Integer, nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    document = relationship("Document", back_populates="chunks")
+    project = relationship("Project")
+
+
+class ChangeRequest(Base):
+    __tablename__ = "change_requests"
+    id = Column(String(50), primary_key=True, default=generate_uuid)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    requirement_id = Column(String(50), ForeignKey("requirements.id"), nullable=False)
+    title = Column(String(255), nullable=False)
+    description = Column(Text, nullable=False)
+    proposed_summary = Column(String(500), nullable=True)
+    proposed_description = Column(Text, nullable=True)
+    risk_level = Column(String(50), nullable=True)
+    schedule_impact = Column(String(50), nullable=True)
+    status = Column(String(50), nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    project = relationship("Project", back_populates="change_requests")
+    requirement = relationship("Requirement", back_populates="change_requests")
+    impact_items = relationship("ImpactItem", back_populates="change_request", cascade="all, delete-orphan")
+
+
+class ImpactItem(Base):
+    __tablename__ = "impact_items"
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    change_request_id = Column(String(50), ForeignKey("change_requests.id"), nullable=False)
+    artifact_type = Column(String(50), nullable=False)
+    artifact_id = Column(String(50), nullable=False)
+    artifact_name = Column(String(255), nullable=False)
+    impact_description = Column(Text, nullable=False)
+    severity = Column(String(50), nullable=True)
+    change_request = relationship("ChangeRequest", back_populates="impact_items")
+
+
+class TestCase(Base):
+    __tablename__ = "test_cases"
+    id = Column(String(50), primary_key=True, default=generate_uuid)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    requirement_id = Column(String(50), ForeignKey("requirements.id"), nullable=False)
+    task_id = Column(String(50), ForeignKey("tasks.id"), nullable=True)
+    title = Column(String(255), nullable=False)
+    test_type = Column(String(50), nullable=True)
+    preconditions = Column(Text, nullable=True)
+    steps = Column(JSON, nullable=True)
+    expected_result = Column(Text, nullable=False)
+    status = Column(String(50), nullable=True)
+    project = relationship("Project", back_populates="test_cases")
+    requirement = relationship("Requirement", back_populates="test_cases")
+    task = relationship("Task", back_populates="test_cases")
+
+
+class TraceabilityLink(Base):
+    __tablename__ = "traceability_links"
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    source_id = Column(String(100), nullable=True)
+    requirement_id = Column(String(50), ForeignKey("requirements.id"), nullable=False)
+    module_id = Column(String(50), nullable=True)
+    task_id = Column(String(50), nullable=True)
+    test_id = Column(String(50), nullable=True)
+    status = Column(String(50), nullable=True)
+    project = relationship("Project", back_populates="traceability_links")
+    requirement = relationship("Requirement", back_populates="traceability_links")
+
+
+class TeamMember(Base):
+    __tablename__ = "team_members"
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    name = Column(String(255), nullable=False)
+    email = Column(String(255), nullable=True)
+    role = Column(String(100), nullable=True)
+    capacity_hours_per_week = Column(Float, nullable=True)
+    current_load_pct = Column(Float, nullable=True)
+    skills = Column(JSON, nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    project = relationship("Project", back_populates="team_members")
+
+
+class User(Base):
+    __tablename__ = "users"
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    email = Column(String(255), nullable=False, unique=True)
+    full_name = Column(String(255), nullable=False)
+    hashed_password = Column(String(255), nullable=False)
+    role = Column(String(50), nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    projects = relationship("Project", foreign_keys="Project.created_by")
+    #audit_logs = relationship("AuditLog", back_populates="user")
+
+
+class AuditLog(Base):
+    __tablename__ = "audit_logs"
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    user_name = Column(String(255), nullable=True)
+    action = Column(String(100), nullable=False)
+    entity_type = Column(String(50), nullable=False)
+    entity_id = Column(String(50), nullable=False)
+    details = Column(Text, nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    #user = relationship("User", back_populates="audit_logs")
+    project = relationship("Project", back_populates="audit_logs")
+
+
+class AIWorkflow(Base):
+    __tablename__ = "ai_workflows"
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    workflow_type = Column(String(100), nullable=True)
+    status = Column(String(50), nullable=True)
+    current_step = Column(String(100), nullable=True)
+    current_step_index = Column(Integer, nullable=True)
+    total_steps = Column(Integer, nullable=True)
+    progress_pct = Column(Float, nullable=True)
+    log_messages = Column(JSON, nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    completed_at = Column(DateTime, nullable=True)
+    project = relationship("Project", back_populates="workflows")
+
+
+class Report(Base):
+    __tablename__ = "reports"
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    project_id = Column(String(36), ForeignKey("projects.id"), nullable=False)
+    report_type = Column(String(50), nullable=False)
+    title = Column(String(255), nullable=False)
+    content_markdown = Column(Text, nullable=False)
+    content_json = Column(JSON, nullable=True)
+    created_at = Column(DateTime, nullable=True)
+    project = relationship("Project", back_populates="reports")

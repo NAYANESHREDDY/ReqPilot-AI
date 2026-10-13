@@ -1,0 +1,26 @@
+{
+  "run_id": "1e2d6f1a-9e01-4031-82fc-d55c2ef7289f",
+  "domain_key": "ecommerce_platform",
+  "project_title": "E-Commerce Platform",
+  "timestamp": "2026-10-12T17:14:44.471114",
+  "duration_seconds": 0.466307,
+  "llm_enabled": true,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "llm_attempted": true,
+  "llm_extraction_succeeded": false,
+  "fallback_used": true,
+  "original_db_hash_before": "abc1e7028050e60139969f5dae0633a8851b377cdc841d6180ef7b1a9be566cd",
+  "original_db_hash_after": "abc1e7028050e60139969f5dae0633a8851b377cdc841d6180ef7b1a9be566cd",
+  "original_db_unchanged": true,
+  "input_file": "evaluation\\multi_project\\benchmark\\ecommerce_platform\\specification.docx",
+  "counts": {
+    "chunks": 1,
+    "requirements": 37,
+    "modules": 11,
+    "relations": 23,
+    "tasks": 37,
+    "test_cases": 37,
+    "reports": 5
+  }
+}

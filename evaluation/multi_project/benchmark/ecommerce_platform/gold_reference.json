@@ -1,0 +1,268 @@
+{
+  "project_name": "E-Commerce Platform",
+  "domain": "E-Commerce / Retail / Marketplace",
+  "version": "1.0.0",
+  "date_frozen": "2026-10-12",
+  "source_document": "specification.docx",
+  "source_document_text": "specification.txt",
+  "total_requirements_evaluated": 36,
+  "expected_module_assignments": {
+    "FR-001": "AUTHENTICATION",
+    "FR-002": "SEARCH",
+    "FR-003": "DATA",
+    "FR-004": "BOOKING",
+    "FR-005": "PROFILE",
+    "FR-006": "BOOKING",
+    "FR-007": "PAYMENT",
+    "FR-008": "NOTIFICATION",
+    "FR-009": "DATA",
+    "FR-010": "BOOKING",
+    "FR-011": "PROFILE",
+    "FR-012": "AUTHENTICATION",
+    "FR-013": "DATA",
+    "FR-014": "DATA",
+    "FR-015": "NOTIFICATION",
+    "FR-016": "BOOKING",
+    "FR-017": "REPORTING",
+    "FR-018": "DATA",
+    "FR-019": "DATA",
+    "FR-020": "PAYMENT",
+    "FR-021": "FILE",
+    "FR-022": "DATA",
+    "FR-023": "NOTIFICATION",
+    "FR-024": "PAYMENT",
+    "NFR-001": "AUTHENTICATION",
+    "FR-025": "REPORTING",
+    "FR-026": "PAYMENT",
+    "FR-027": "PAYMENT",
+    "FR-028": "SEARCH",
+    "FR-029": "BOOKING",
+    "FR-030": "AUTHENTICATION",
+    "FR-031": "REPORTING",
+    "NFR-002": "AUTHENTICATION",
+    "NFR-003": "AUTHENTICATION",
+    "FR-032": "NOTIFICATION",
+    "NFR-004": "DATA"
+  },
+  "requirement_details": {
+    "FR-001": {
+      "statement": "Customers should be able to register and log in securely.",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "functional"
+    },
+    "FR-002": {
+      "statement": "Customers should be able to search and filter products by category, brand, price range, and rating.",
+      "canonical": "SEARCH",
+      "display": "Search & Discovery",
+      "type": "functional"
+    },
+    "FR-003": {
+      "statement": "Customers should be able to view real-time product details, specifications, customer reviews, and stock availability.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional"
+    },
+    "FR-004": {
+      "statement": "Customers should be able to add products to a persistent shopping cart and modify item quantities.",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional"
+    },
+    "FR-005": {
+      "statement": "Customers should be able to save items to a personal wishlist for future purchase.",
+      "canonical": "PROFILE",
+      "display": "Profile Management",
+      "type": "functional"
+    },
+    "FR-006": {
+      "statement": "Customers should be able to proceed through a multi-step checkout selecting delivery address and shipping options.",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional"
+    },
+    "FR-007": {
+      "statement": "Customers should be able to pay for orders securely using credit cards, digital wallets, or net banking.",
+      "canonical": "PAYMENT",
+      "display": "Payment Management",
+      "type": "functional"
+    },
+    "FR-008": {
+      "statement": "Customers should receive immediate email and SMS confirmation upon successful order placement.",
+      "canonical": "NOTIFICATION",
+      "display": "Notification Service",
+      "type": "functional"
+    },
+    "FR-009": {
+      "statement": "Customers should be able to view their complete order history and real-time shipment tracking status.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional"
+    },
+    "FR-010": {
+      "statement": "Customers should be able to request an order cancellation or return within the eligible return window.",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional"
+    },
+    "FR-011": {
+      "statement": "Customers should be able to submit product reviews and star ratings after receiving their order.",
+      "canonical": "PROFILE",
+      "display": "Profile Management",
+      "type": "functional"
+    },
+    "FR-012": {
+      "statement": "Vendors should be able to register, verify their business profile, and log in securely.",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "functional"
+    },
+    "FR-013": {
+      "statement": "Vendors should be able to create, update, and manage their product catalog listings.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional"
+    },
+    "FR-014": {
+      "statement": "Vendors should be able to set base prices, promotional discounts, and SKU inventory quantities.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional"
+    },
+    "FR-015": {
+      "statement": "Vendors should receive notifications when new orders containing their items are placed.",
+      "canonical": "NOTIFICATION",
+      "display": "Notification Service",
+      "type": "functional"
+    },
+    "FR-016": {
+      "statement": "Vendors should be able to view pending orders and acknowledge fulfillment readiness.",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional"
+    },
+    "FR-017": {
+      "statement": "Vendors should be able to view sales analytics, revenue breakdowns, and settlement reports.",
+      "canonical": "REPORTING",
+      "display": "Reporting & Analytics",
+      "type": "functional"
+    },
+    "FR-018": {
+      "statement": "Warehouse staff should be able to manage inventory stock levels across regional warehouses.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional"
+    },
+    "FR-019": {
+      "statement": "The system should automatically reserve stock items when an order checkout begins.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional"
+    },
+    "FR-020": {
+      "statement": "The system should release reserved stock if payment is not completed within 15 minutes.",
+      "canonical": "PAYMENT",
+      "display": "Payment Management",
+      "type": "functional"
+    },
+    "FR-021": {
+      "statement": "Warehouse staff should be able to generate packing slips, assign barcode labels, and mark orders as packed.",
+      "canonical": "FILE",
+      "display": "File & Document Management",
+      "type": "functional"
+    },
+    "FR-022": {
+      "statement": "Warehouse staff should be able to dispatch packages and update carrier tracking numbers.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "functional"
+    },
+    "FR-023": {
+      "statement": "The system should notify inventory managers when stock for any SKU falls below safety threshold.",
+      "canonical": "NOTIFICATION",
+      "display": "Notification Service",
+      "type": "functional"
+    },
+    "FR-024": {
+      "statement": "The system should integrate with payment gateways for authorized card processing and refund disbursement.",
+      "canonical": "PAYMENT",
+      "display": "Payment Management",
+      "type": "functional"
+    },
+    "NFR-001": {
+      "statement": "All transactions must enforce PCI-DSS compliant tokenization and never store raw card numbers.",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "non_functional"
+    },
+    "FR-025": {
+      "statement": "The system should generate tax invoices and itemized receipts for every completed order.",
+      "canonical": "REPORTING",
+      "display": "Reporting & Analytics",
+      "type": "functional"
+    },
+    "FR-026": {
+      "statement": "The system should process refunds automatically when a customer return request is approved.",
+      "canonical": "PAYMENT",
+      "display": "Payment Management",
+      "type": "functional"
+    },
+    "FR-027": {
+      "statement": "Payment failures or gateway timeouts should be recorded and prompt the customer to retry without duplicating orders.",
+      "canonical": "PAYMENT",
+      "display": "Payment Management",
+      "type": "functional"
+    },
+    "FR-028": {
+      "statement": "Support agents should be able to look up customer accounts, orders, and delivery timelines.",
+      "canonical": "SEARCH",
+      "display": "Search & Discovery",
+      "type": "functional"
+    },
+    "FR-029": {
+      "statement": "Support agents should be able to initiate replacement requests or manual coupon credits.",
+      "canonical": "BOOKING",
+      "display": "Booking & Scheduling",
+      "type": "functional"
+    },
+    "FR-030": {
+      "statement": "Administrators should be able to manage user roles, merchant approvals, category taxonomies, and fee structures.",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "functional"
+    },
+    "FR-031": {
+      "statement": "Administrators should have access to platform-wide financial audit trails, fraud flags, and operational analytics.",
+      "canonical": "REPORTING",
+      "display": "Reporting & Analytics",
+      "type": "functional"
+    },
+    "NFR-002": {
+      "statement": "The system should enforce role-based access control across shoppers, merchants, warehouse staff, and admins.",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "non_functional"
+    },
+    "NFR-003": {
+      "statement": "Customers and merchants must only have access to their own data and transaction histories.",
+      "canonical": "AUTHENTICATION",
+      "display": "Authentication & Authorization",
+      "type": "non_functional"
+    },
+    "FR-032": {
+      "statement": "The notification service should dispatch real-time alerts for order confirmation, shipping updates, and refunds.",
+      "canonical": "NOTIFICATION",
+      "display": "Notification Service",
+      "type": "functional"
+    },
+    "NFR-004": {
+      "statement": "All security-sensitive operations including password resets and financial adjustments should be logged in an audit trail.",
+      "canonical": "DATA",
+      "display": "Application Data Store",
+      "type": "non_functional"
+    }
+  },
+  "structural_expectations": {
+    "expected_requirements_count": 36
+  }
+}

@@ -1,0 +1,32 @@
+LIBRARY MANAGEMENT SYSTEM
+STAKEHOLDER REQUIREMENTS
+1. System Overview
+The academic and municipal library network requires a centralized web-based Library Management System for library patrons, circulation desk staff, cataloging librarians, and chief administrators.
+2. Patron and Member Requirements
+Patrons should be able to register for a library membership card and log in securely.
+Patrons should be able to search the Online Public Access Catalog (OPAC) by title, author, ISBN, subject, and keyword.
+Patrons should be able to view real-time catalog availability, shelf location, and call numbers.
+Patrons should be able to reserve or place a hold on currently checked-out or in-transit books.
+Patrons should be able to view their active borrowed items, due dates, renewal counts, and reading history.
+Patrons should be able to renew eligible borrowed books online before the scheduled due date.
+Patrons should be able to view outstanding late return fines and make electronic fee payments.
+Patrons should receive automated notification alerts for upcoming due dates, available hold arrivals, and overdue notices.
+Patrons should be able to submit purchase recommendations or inter-library loan requests for missing titles.
+3. Circulation Desk Staff Requirements
+Circulation staff should be able to verify patron membership status, active hold privileges, and fine balances.
+Circulation staff should be able to check out physical materials by scanning patron cards and book barcodes.
+Circulation staff should be able to process returned items, inspect material condition, and return items to inventory.
+The system should automatically calculate late fees for overdue returned items based on membership policy rules.
+Circulation staff should be able to collect in-person fine payments and print receipt slips.
+Circulation staff should be able to manage physical reservations and notify patrons when reserved books are staged on hold shelves.
+4. Cataloging and Collection Management
+Catalogers should be able to add new bibliographic records, assign Dewey Decimal / Library of Congress classifications, and print barcode labels.
+Catalogers should be able to manage inventory copies, track lost or damaged materials, and decommission obsolete items.
+The system should track circulation frequency and generate collection utilization reports.
+Catalogers should be able to conduct periodic physical inventory audits using barcode scanners.
+5. Administration and Security
+The system should provide secure role-based access control separating patrons, circulation staff, catalogers, and administrators.
+Patrons must only access their own borrowing history, reservation queues, and personal information.
+Administrators should be able to configure loan durations, maximum borrowing limits, renewal rules, and fine rate schedules.
+Administrators should be able to generate operational reports on patron membership, circulation velocity, and fine collections.
+All configuration updates and administrative overrides must be preserved in a system audit log.

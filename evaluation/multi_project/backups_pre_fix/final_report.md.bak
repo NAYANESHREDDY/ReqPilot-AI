@@ -1,0 +1,90 @@
+# Multi-Project Ground-Truth Evaluation Report for ReqPilot AI
+
+**Author**: ReqPilot Evaluation Harness & Research Auditor
+**Date**: October 12, 2026
+**Status**: Completed Cross-Domain Evaluation
+**Evaluated Pipeline**: ReqPilot AI Multi-Agent Architecture (WorkflowOrchestrator)
+
+---
+
+## 1. Executive Summary
+
+This evaluation establishes a reproducible, multi-project benchmark measuring how accurately ReqPilot AI agrees with independently established domain ground-truth references across five distinct software requirements domains:
+1. **EV Charging Station Management System** (CleanTech / Smart Transportation)
+2. **Hospital Management System** (Healthcare / Clinical Operations)
+3. **E-Commerce Platform** (Retail / Multi-vendor Marketplace)
+4. **Banking Management System** (FinTech / Core Banking)
+5. **Library Management System** (Education / Information Science)
+
+### Key Findings
+1. **Pipeline Execution & LLM Status**:
+   - **EV Charging Station Management System**: Ran with LLM enabled (groq / openai/gpt-oss-120b). LLM extraction succeeded and enriched requirements (FR-001 through FR-008).
+   - **Banking Management System**: Ran with LLM enabled (groq / openai/gpt-oss-120b). LLM extraction succeeded and enriched requirements (FR-001 through FR-008).
+   - **Hospital Management, E-Commerce, Library Management**: LLM was requested, but due to Groq on-demand tier Token-Per-Minute (TPM) quota limits (HTTP 429), the orchestrator automatically engaged the deterministic fallback engine as designed. These runs are reported as **LLM Rate-Limited (429) -> Fallback** rather than falsely claimed as successful LLM runs.
+2. **Database Integrity**:
+   - The primary production database (backend/reqpilot.db) remained **100% untouched** (SHA-256 hash verified identical before and after all runs: abc1e7028050e601...).
+3. **Structural Integrity vs. Semantic Accuracy**:
+   - Across all 5 projects, structural integrity was **100.0%**: every extracted requirement generated an actionable task, complete architectural traceability was maintained, and valid test cases were generated.
+   - Semantic agreement against independent references ranged between **18.97% and 78.23%**, demonstrating that deterministic heuristic classifications differ significantly when matching fine-grained capability boundaries versus broader domain taxonomies.
+
+---
+
+## 2. Cross-Project Summary Metrics
+
+| Domain | Project Title | Run ID | Status | Reqs | Correct | Accuracy | Macro Prec | Macro Rec | Macro F1 | Task Coverage | Modules | Relations |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| ev_charging | EV Charging Station Management System | 1c57d2e2 | Real LLM Run (Groq) | 58 | 11 | 18.97% | 0.1890 | 0.1875 | 0.1882 | 100.0% | 11 | 23 |
+| hospital_management | Hospital Management System | 4046c3ca | LLM Rate-Limited (429) -> Fallback | 124 | 97 | 78.23% | 0.9167 | 0.9167 | 0.9167 | 100.0% | 11 | 21 |
+| ecommerce_platform | E-Commerce Platform | 1e2d6f1a | LLM Rate-Limited (429) -> Fallback | 37 | 12 | 32.43% | 0.2387 | 0.2292 | 0.2289 | 100.0% | 11 | 23 |
+| banking_management | Banking Management System | ba26cb8e | Real LLM Run (Groq) | 25 | 8 | 32.00% | 0.4583 | 0.3187 | 0.3625 | 100.0% | 8 | 15 |
+| library_management | Library Management System | 037fa230 | LLM Rate-Limited (429) -> Fallback | 24 | 7 | 29.17% | 0.3741 | 0.2937 | 0.3195 | 100.0% | 10 | 21 |
+
+---
+
+## 3. Detailed Project Analysis
+
+### 3.1 EV Charging Station Management System (ev_charging)
+- **Status**: Genuine LLM-Enabled Run (groq / openai/gpt-oss-120b).
+- **Accuracy**: 18.97% (11/58 correct vs frozen reference).
+- **Analysis**: In the initial 8 requirements enriched by LLM (FR-001 - FR-008), the LLM generated generalized summaries (e.g., Search charging stations by criteria rather than the exact raw text Drivers should be able to search charging stations...). This shifted task decomposition scoring toward CHARGING-STATION management rather than BOOKING, highlighting how semantic abstraction in LLMs can decouple keyword-based downstream classifier heuristics.
+
+### 3.2 Hospital Management System (hospital_management)
+- **Status**: LLM Rate-Limited (HTTP 429) -> Deterministic Engine Fallback.
+- **Accuracy**: 78.23% (97/124 correct vs frozen reference).
+- **Analysis**: High agreement on standard capabilities (Booking & Scheduling for appointments, Authentication & Authorization for role portals). The 27 errors correspond exactly to specialized clinical sub-domains (Laboratory Management, Pharmacy Dispensation) where generic enterprise capability classifiers do not have dedicated domain nouns and default to UNASSIGNED_OR_NULL.
+
+### 3.3 E-Commerce Platform (ecommerce_platform)
+- **Status**: LLM Rate-Limited (HTTP 429) -> Deterministic Engine Fallback.
+- **Accuracy**: 32.43% (12/37 correct vs frozen reference).
+- **Analysis**: The pipeline accurately recognized Payment Management and Authentication & Authorization, but classified cart management, stock reservation, and wishlist operations as Application Data Store rather than transactional Booking / Reservation sessions.
+
+### 3.4 Banking Management System (banking_management)
+- **Status**: Genuine LLM-Enabled Run (groq / openai/gpt-oss-120b).
+- **Accuracy**: 32.00% (8/25 correct vs frozen reference).
+- **Analysis**: High precision on Payment Management (fund transfers, bill payments) and Notification Service (SMS alerts). Misses occurred where regulatory audit logging was assigned to Application Data Store instead of a dedicated compliance module.
+
+### 3.5 Library Management System (library_management)
+- **Status**: LLM Rate-Limited (HTTP 429) -> Deterministic Engine Fallback.
+- **Accuracy**: 29.17% (7/24 correct vs frozen reference).
+- **Analysis**: Strong alignment on OPAC discovery (Search & Discovery) and patron credentials (Authentication). Holds and renewals were classified under Data Store rather than Booking & Scheduling.
+
+---
+
+## 4. Declared Non-Evaluated Metrics & Limitations
+
+1. **Semantic Test Step Execution**: NOT EVALUATED. ReqPilot generates test case descriptions and expected results, but does not execute live automated test runners against running application code.
+2. **Code-Level Traceability Integrity**: NOT EVALUATED. Requirements trace to architecture modules, tasks, and test cases, but not to concrete code AST repositories.
+3. **Specification Universality**: References are specification-derived benchmarks representing defensible architectural decompositions; they do not represent absolute or single-truth ontologies.
+4. **API Quota Constraints**: Groq free/on-demand tier imposes an 8,000 TPM limit on large models (openai/gpt-oss-120b), causing burst batch requests to trigger HTTP 429 and engage ReqPilot built-in fallback engine.
+
+---
+
+## 5. Deliverables & Reproducibility Guide
+
+All artifacts are version-controlled and frozen under evaluation/multi_project/:
+- benchmark/: Ground-truth references, source specifications, and PROVENANCE.md documentation.
+- manifest.json: Cryptographic SHA-256 hashes verifying that references were frozen before evaluation.
+- runs/: Raw immutable pipeline outputs and run metadata.
+- reports/: Individual project evaluation reports in GitHub Markdown.
+- results/: summary.csv, summary.json, and this final_report.md.
+- scripts/: Fully automated verification, execution, and scoring scripts.

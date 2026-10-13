@@ -1,0 +1,8 @@
+Official Scorer SHA-256 Verification Record
+===========================================
+File: scorer.py
+Path: audit_output/scorer/scorer.py
+Expected Hash: b6c599655cc7c8e8fe8550c8e74c2bd13335ff6ec41f859a0354b3932a3655fb
+Calculated Hash: b6c599655cc7c8e8fe8550c8e74c2bd13335ff6ec41f859a0354b3932a3655fb
+Match Status: MATCH
+Verification Date: 2026-10-13

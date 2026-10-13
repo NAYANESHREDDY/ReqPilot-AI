@@ -1,0 +1,209 @@
+{
+  "run_id": "d8605d8e-a832-4d90-b8b2-26b0c8275675",
+  "domain_key": "ev_charging",
+  "project_title": "EV Charging Network Management System",
+  "timestamp": "2026-10-13T18:50:01.928473",
+  "llm_enabled": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": false,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "matching_summary": {
+    "predicted_requirements_count": 59,
+    "reference_requirements_count": 58,
+    "uniquely_matched_count": 58,
+    "unmatched_predictions_count": 1,
+    "ambiguous_predictions_count": 0,
+    "duplicate_gold_matches_count": 0,
+    "unmatched_reference_count": 0
+  },
+  "classification_evaluation": {
+    "valid_matched_denominator": 58,
+    "correct_classifications": 33,
+    "accuracy": 0.569,
+    "penalized_end_to_end_accuracy": 0.5593,
+    "macro_precision": 0.5486,
+    "macro_recall": 0.5821,
+    "macro_f1": 0.5587,
+    "per_class_metrics": {
+      "AUTHENTICATION": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8889
+      },
+      "BOOKING": {
+        "tp": 8,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8889,
+        "recall": 0.8889,
+        "f1": 0.8889
+      },
+      "CHARGING-SESSION": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.8889
+      },
+      "CHARGING-STATION": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 11,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "DATA": {
+        "tp": 6,
+        "fp": 5,
+        "fn": 1,
+        "precision": 0.5455,
+        "recall": 0.8571,
+        "f1": 0.6667
+      },
+      "GATEWAY": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "MAINTENANCE": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "NOTIFICATION": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.8571,
+        "f1": 0.9231
+      },
+      "PAYMENT": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8889
+      },
+      "REPORTING": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "STATION & CHARGER MANAGEMENT": {
+        "tp": 0,
+        "fp": 17,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "errors_sample": [
+      {
+        "pred_id": "FR-009",
+        "gold_id": "FR-007",
+        "summary": "View charging history and invoices",
+        "expected": "CHARGING-SESSION",
+        "predicted": "PAYMENT"
+      },
+      {
+        "pred_id": "FR-010",
+        "gold_id": "FR-008",
+        "summary": "Report faulty charger or station issue",
+        "expected": "MAINTENANCE",
+        "predicted": "STATION & CHARGER MANAGEMENT"
+      },
+      {
+        "pred_id": "FR-011",
+        "gold_id": "FR-009",
+        "summary": "Station Operator Requirements Station operators should be able to register...",
+        "expected": "CHARGING-STATION",
+        "predicted": "STATION & CHARGER MANAGEMENT"
+      },
+      {
+        "pred_id": "FR-012",
+        "gold_id": "FR-010",
+        "summary": "Station operators should be able to configure charger identifiers, connector...",
+        "expected": "CHARGING-STATION",
+        "predicted": "STATION & CHARGER MANAGEMENT"
+      },
+      {
+        "pred_id": "FR-014",
+        "gold_id": "FR-012",
+        "summary": "Station operators should be able to set station-specific pricing rules.",
+        "expected": "CHARGING-STATION",
+        "predicted": "STATION & CHARGER MANAGEMENT"
+      },
+      {
+        "pred_id": "FR-015",
+        "gold_id": "FR-013",
+        "summary": "Station operators should be able to temporarily disable a charger...",
+        "expected": "CHARGING-STATION",
+        "predicted": "STATION & CHARGER MANAGEMENT"
+      },
+      {
+        "pred_id": "FR-016",
+        "gold_id": "FR-014",
+        "summary": "Station operators should be able to view station utilization and...",
+        "expected": "CHARGING-STATION",
+        "predicted": "STATION & CHARGER MANAGEMENT"
+      },
+      {
+        "pred_id": "FR-017",
+        "gold_id": "FR-015",
+        "summary": "Maintenance Requirements Maintenance staff should be able to view assigned...",
+        "expected": "MAINTENANCE",
+        "predicted": "STATION & CHARGER MANAGEMENT"
+      },
+      {
+        "pred_id": "FR-018",
+        "gold_id": "FR-016",
+        "summary": "Maintenance staff should be able to update the status of...",
+        "expected": "MAINTENANCE",
+        "predicted": "STATION & CHARGER MANAGEMENT"
+      },
+      {
+        "pred_id": "FR-019",
+        "gold_id": "FR-017",
+        "summary": "Maintenance staff should record inspection results and repair actions.",
+        "expected": "MAINTENANCE",
+        "predicted": "STATION & CHARGER MANAGEMENT"
+      }
+    ],
+    "total_errors": 25
+  },
+  "structural_integrity": {
+    "total_requirements": 59,
+    "requirements_with_tasks": 59,
+    "requirements_without_tasks": 0,
+    "task_coverage_pct": 100.0,
+    "total_modules": 8,
+    "total_relations": 12,
+    "total_tasks": 59,
+    "total_test_cases": 59,
+    "untested_requirements_count": 0,
+    "traceability_matrix_rows": 59
+  },
+  "unsupported_metrics_declared": [
+    "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+    "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+    "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+  ]
+}

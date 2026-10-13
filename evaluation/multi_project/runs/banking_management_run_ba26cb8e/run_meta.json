@@ -1,0 +1,26 @@
+{
+  "run_id": "ba26cb8e-814b-44d7-bf55-3e7e3e7f9f44",
+  "domain_key": "banking_management",
+  "project_title": "Banking Management System",
+  "timestamp": "2026-10-12T17:17:13.132526",
+  "duration_seconds": 15.199409,
+  "llm_enabled": true,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "llm_attempted": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": false,
+  "original_db_hash_before": "abc1e7028050e60139969f5dae0633a8851b377cdc841d6180ef7b1a9be566cd",
+  "original_db_hash_after": "abc1e7028050e60139969f5dae0633a8851b377cdc841d6180ef7b1a9be566cd",
+  "original_db_unchanged": true,
+  "input_file": "evaluation\\multi_project\\benchmark\\banking_management\\specification.docx",
+  "counts": {
+    "chunks": 1,
+    "requirements": 25,
+    "modules": 8,
+    "relations": 15,
+    "tasks": 25,
+    "test_cases": 25,
+    "reports": 5
+  }
+}

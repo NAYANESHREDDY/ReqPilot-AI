@@ -1,0 +1,324 @@
+import uuid
+from datetime import datetime
+from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy import select, delete
+
+from backend.app.database import get_db
+from backend.app.models import (
+    Project, Document, DocumentChunk, Requirement, RequirementIssue,
+    ClarificationQuestion, ArchitectureModule, ArchitectureRelation,
+    Epic, Feature, Task, TaskDependency, TestCase, Report, AIWorkflow
+)
+from backend.app.schemas import AnalyzeRequest, WorkflowStatusResponse
+from backend.app.agents.orchestrator import WorkflowOrchestrator
+from backend.app.config import settings
+
+router = APIRouter(tags=["workflow"])
+
+@router.post("/api/projects/{project_id}/analyze")
+async def trigger_analysis(
+    project_id: str,
+    req_body: AnalyzeRequest,
+    db: AsyncSession = Depends(get_db)
+):
+    # Fetch project
+    p_res = await db.execute(select(Project).where(Project.id == project_id))
+    project = p_res.scalars().first()
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+    # Fetch document chunks
+    c_res = await db.execute(
+        select(DocumentChunk).where(DocumentChunk.project_id == project_id).order_by(DocumentChunk.chunk_index)
+    )
+    chunks = c_res.scalars().all()
+
+    # If no chunks exist, create a default synthesized chunk from project description
+    chunk_dicts = []
+    doc_filename = "Project_Scope.txt"
+    if chunks:
+        doc_filename = "Uploaded_Specification.pdf"
+        chunk_dicts = [
+            {
+                "chunk_index": c.chunk_index,
+                "section_title": c.section_title,
+                "page_number": c.page_number,
+                "content": c.content,
+                "token_count": c.token_count,
+            }
+            for c in chunks
+        ]
+    else:
+        chunk_dicts = [{
+            "chunk_index": 1,
+            "section_title": "Project Description",
+            "page_number": 1,
+            "content": f"{project.title}. {project.description}. The platform must be fast, secure, scalable, and easy to use.",
+            "token_count": 40,
+        }]
+
+    # Create Workflow record
+    wf_id = str(uuid.uuid4())
+    workflow = AIWorkflow(
+        id=wf_id,
+        project_id=project_id,
+        workflow_type="full_pipeline",
+        status="running",
+        current_step="Executing Multi-Agent Orchestrator",
+        current_step_index=1,
+        total_steps=7,
+        progress_pct=15.0,
+        log_messages=["Started multi-agent requirements analysis."],
+        created_at=datetime.utcnow()
+    )
+    db.add(workflow)
+    await db.flush()
+
+    # Determine API key based on selected provider
+    provider = req_body.provider or "gemini"
+    default_keys = {
+        "gemini": settings.GEMINI_API_KEY,
+        "openai": settings.OPENAI_API_KEY,
+        "groq": settings.GROQ_API_KEY,
+    }
+    api_key = req_body.api_key or default_keys.get(provider, "")
+    model = req_body.model or (settings.GROQ_MODEL if provider == "groq" else None)
+    orchestrator = WorkflowOrchestrator(
+        api_key=api_key if req_body.use_llm else "",
+        provider=provider,
+        model=model,
+    )
+
+    proj_dict = {
+        "id": project.id,
+        "title": project.title,
+        "description": project.description,
+        "domain": project.domain,
+    }
+
+    # Execute orchestrator pipeline
+    pipeline_result = await orchestrator.run_full_pipeline(proj_dict, chunk_dicts, doc_filename)
+
+    # Clean old generated data for clean re-analysis
+    await db.execute(delete(RequirementIssue).where(RequirementIssue.project_id == project_id))
+    await db.execute(delete(ClarificationQuestion).where(ClarificationQuestion.project_id == project_id))
+    await db.execute(delete(ArchitectureRelation).where(ArchitectureRelation.project_id == project_id))
+    await db.execute(delete(ArchitectureModule).where(ArchitectureModule.project_id == project_id))
+    await db.execute(delete(TaskDependency).where(TaskDependency.task_id.in_(
+        select(Task.id).where(Task.project_id == project_id)
+    )))
+    await db.execute(delete(Task).where(Task.project_id == project_id))
+    await db.execute(delete(Feature).where(Feature.project_id == project_id))
+    await db.execute(delete(Epic).where(Epic.project_id == project_id))
+    await db.execute(delete(TestCase).where(TestCase.project_id == project_id))
+    await db.execute(delete(Report).where(Report.project_id == project_id))
+    await db.execute(delete(Requirement).where(Requirement.project_id == project_id))
+
+    # Persist Requirements
+    req_objs = []
+    for r in pipeline_result["requirements"]:
+        req_objs.append(Requirement(
+            id=r["id"],
+            project_id=project_id,
+            req_type=r["req_type"],
+            summary=r["summary"],
+            description=r["description"],
+            actor=r["actor"],
+            action=r["action"],
+            target_object=r["target_object"],
+            preconditions=r.get("preconditions", ""),
+            expected_outcome=r.get("expected_outcome", ""),
+            acceptance_criteria=r.get("acceptance_criteria", []),
+            priority=r.get("priority", "medium"),
+            status=r.get("status", "needs_review"),
+            quality_score=r.get("quality_score", 80.0),
+            quality_breakdown=r.get("quality_breakdown", {}),
+            confidence=r.get("confidence", 0.90),
+            is_ai_suggested=r.get("is_ai_suggested", False),
+            version=1,
+            source_id=r.get("source_id", "DOC-001"),
+            source_page=r.get("source_page", 1),
+            source_excerpt=r.get("source_excerpt", ""),
+        ))
+    db.add_all(req_objs)
+
+    # Persist Issues
+    issue_objs = []
+    for iss in pipeline_result["issues"]:
+        issue_objs.append(RequirementIssue(
+            id=str(uuid.uuid4()),
+            project_id=project_id,
+            requirement_id=iss.get("requirement_id"),
+            conflict_with_id=iss.get("conflict_with_id"),
+            issue_type=iss["issue_type"],
+            title=iss["title"],
+            description=iss["description"],
+            detected_phrase=iss.get("detected_phrase", ""),
+            severity=iss.get("severity", "medium"),
+            confidence=iss.get("confidence", 0.85),
+            status="open",
+        ))
+    db.add_all(issue_objs)
+
+    # Persist Clarifications
+    clarif_objs = []
+    for q in pipeline_result["clarifications"]:
+        clarif_objs.append(ClarificationQuestion(
+            id=str(uuid.uuid4()),
+            project_id=project_id,
+            requirement_id=q.get("requirement_id"),
+            question=q["question"],
+            rationale=q.get("rationale", ""),
+            priority=q.get("priority", "medium"),
+            suggested_options=q.get("suggested_options", []),
+            status="pending",
+        ))
+    db.add_all(clarif_objs)
+
+    # Persist Architecture Modules
+    mod_objs = []
+    for m in pipeline_result["modules"]:
+        mod_objs.append(ArchitectureModule(
+            id=m["id"],
+            project_id=project_id,
+            name=m["name"],
+            description=m.get("description", ""),
+            module_type=m.get("module_type", "service"),
+            tech_stack=m.get("tech_stack", ""),
+            responsibilities=m.get("responsibilities", []),
+            api_endpoints=m.get("api_endpoints", []),
+            pos_x=m.get("pos_x", 100.0),
+            pos_y=m.get("pos_y", 100.0),
+            is_ai_suggested=m.get("is_ai_suggested", True),
+            status=m.get("status", "approved"),
+        ))
+    db.add_all(mod_objs)
+    await db.flush()
+
+    # Persist Architecture Relations
+    rel_objs = []
+    for rel in pipeline_result["relations"]:
+        rel_objs.append(ArchitectureRelation(
+            id=str(uuid.uuid4()),
+            project_id=project_id,
+            source_module_id=rel["source_module_id"],
+            target_module_id=rel["target_module_id"],
+            relation_type=rel.get("relation_type", "calls"),
+            description=rel.get("description", ""),
+        ))
+    db.add_all(rel_objs)
+
+    # Persist Epics & Features
+    for epic in pipeline_result["epics"]:
+        db.add(Epic(
+            id=epic["id"],
+            project_id=project_id,
+            title=epic["title"],
+            description=epic.get("description", ""),
+            status="in_progress"
+        ))
+    await db.flush()
+
+    for feat in pipeline_result["features"]:
+        db.add(Feature(
+            id=feat["id"],
+            epic_id=feat["epic_id"],
+            project_id=project_id,
+            title=feat["title"],
+            description=feat.get("description", "")
+        ))
+    await db.flush()
+
+    # Persist Tasks
+    for t in pipeline_result["tasks"]:
+        db.add(Task(
+            id=t["id"],
+            project_id=project_id,
+            epic_id=t.get("epic_id"),
+            feature_id=t.get("feature_id"),
+            requirement_id=t.get("requirement_id"),
+            module_id=t.get("module_id"),
+            title=t["title"],
+            description=t.get("description", ""),
+            complexity=t.get("complexity", "medium"),
+            estimated_hours=t.get("estimated_hours", 8.0),
+            story_points=t.get("story_points", 3),
+            priority=t.get("priority", "medium"),
+            status="todo",
+            assignee_name=t.get("assignee_name", "Unassigned"),
+            sprint_name=t.get("sprint_name", "Sprint 1"),
+            subtasks=t.get("subtasks", []),
+            acceptance_criteria=t.get("acceptance_criteria", []),
+        ))
+    await db.flush()
+
+    # Persist Task Dependencies
+    for dep in pipeline_result["dependencies"]:
+        db.add(TaskDependency(
+            id=str(uuid.uuid4()),
+            task_id=dep["task_id"],
+            depends_on_task_id=dep["depends_on_task_id"],
+            dependency_type=dep.get("dependency_type", "blocks")
+        ))
+
+    # Persist Test Cases
+    for tc in pipeline_result["test_cases"]:
+        db.add(TestCase(
+            id=tc["id"],
+            project_id=project_id,
+            requirement_id=tc["requirement_id"],
+            title=tc["title"],
+            test_type=tc.get("test_type", "integration"),
+            preconditions=tc.get("preconditions", ""),
+            steps=tc.get("steps", []),
+            expected_result=tc.get("expected_result", ""),
+            status="not_run"
+        ))
+
+    # Persist Reports
+    for rep in pipeline_result["reports"]:
+        db.add(Report(
+            id=str(uuid.uuid4()),
+            project_id=project_id,
+            report_type=rep["report_type"],
+            title=rep["title"],
+            content_markdown=rep["content_markdown"],
+            created_at=datetime.utcnow()
+        ))
+
+    workflow.status = "completed"
+    workflow.progress_pct = 100.0
+    workflow.current_step = "Analysis Complete"
+    workflow.log_messages = pipeline_result["logs"]
+    workflow.completed_at = datetime.utcnow()
+
+    await db.commit()
+
+    return {
+        "status": "success",
+        "workflow_id": wf_id,
+        "extracted_requirements": len(pipeline_result["requirements"]),
+        "detected_issues": len(pipeline_result["issues"]),
+        "generated_modules": len(pipeline_result["modules"]),
+        "generated_tasks": len(pipeline_result["tasks"]),
+        "generated_reports": len(pipeline_result["reports"]),
+        "logs": pipeline_result["logs"],
+    }
+
+@router.get("/api/workflows/{id}", response_model=WorkflowStatusResponse)
+async def get_workflow_status(id: str, db: AsyncSession = Depends(get_db)):
+    result = await db.execute(select(AIWorkflow).where(AIWorkflow.id == id))
+    wf = result.scalars().first()
+    if not wf:
+        raise HTTPException(status_code=404, detail="Workflow not found")
+    return {
+        "id": wf.id,
+        "project_id": wf.project_id,
+        "status": wf.status,
+        "current_step": wf.current_step,
+        "current_step_index": wf.current_step_index,
+        "total_steps": wf.total_steps,
+        "progress_pct": wf.progress_pct,
+        "log_messages": wf.log_messages or [],
+    }

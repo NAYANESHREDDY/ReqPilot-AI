@@ -1,0 +1,198 @@
+{
+  "timestamp": "20261013_185510",
+  "domains": {
+    "ecommerce_platform": {
+      "run_id": "f2ac6860-2396-4bac-97e6-d1ea73911172",
+      "domain_key": "ecommerce_platform",
+      "project_title": "E-Commerce Platform",
+      "timestamp": "2026-10-13T18:55:48.961260",
+      "llm_enabled": true,
+      "llm_extraction_succeeded": true,
+      "fallback_used": false,
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "matching_summary": {
+        "predicted_requirements_count": 37,
+        "reference_requirements_count": 36,
+        "uniquely_matched_count": 36,
+        "unmatched_predictions_count": 1,
+        "ambiguous_predictions_count": 0,
+        "duplicate_gold_matches_count": 0,
+        "unmatched_reference_count": 0
+      },
+      "classification_evaluation": {
+        "valid_matched_denominator": 36,
+        "correct_classifications": 19,
+        "accuracy": 0.5278,
+        "penalized_end_to_end_accuracy": 0.5135,
+        "macro_precision": 0.3155,
+        "macro_recall": 0.4167,
+        "macro_f1": 0.3429,
+        "per_class_metrics": {
+          "AUTHENTICATION": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "BOOKING": {
+            "tp": 5,
+            "fp": 12,
+            "fn": 0,
+            "precision": 0.2941,
+            "recall": 1.0,
+            "f1": 0.4545
+          },
+          "DATA": {
+            "tp": 6,
+            "fp": 5,
+            "fn": 2,
+            "precision": 0.5455,
+            "recall": 0.75,
+            "f1": 0.6316
+          },
+          "FILE": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "NOTIFICATION": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "PAYMENT": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 5,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "PROFILE": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "REPORTING": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "SEARCH": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "errors_sample": [
+          {
+            "pred_id": "FR-005",
+            "gold_id": "FR-005",
+            "summary": "Personal wishlist",
+            "expected": "PROFILE",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-007",
+            "gold_id": "FR-007",
+            "summary": "Secure payment options",
+            "expected": "PAYMENT",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-008",
+            "gold_id": "FR-008",
+            "summary": "Order placement confirmation notifications",
+            "expected": "NOTIFICATION",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-011",
+            "gold_id": "FR-011",
+            "summary": "Customers should be able to submit product reviews and star...",
+            "expected": "PROFILE",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-015",
+            "gold_id": "FR-015",
+            "summary": "Vendors should receive notifications when new orders containing their items...",
+            "expected": "NOTIFICATION",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-017",
+            "gold_id": "FR-017",
+            "summary": "Vendors should be able to view sales analytics, revenue breakdowns,...",
+            "expected": "REPORTING",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-019",
+            "gold_id": "FR-019",
+            "summary": "The system should automatically reserve stock items when an order...",
+            "expected": "DATA",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-020",
+            "gold_id": "FR-020",
+            "summary": "The system should release reserved stock if payment is not...",
+            "expected": "PAYMENT",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-021",
+            "gold_id": "FR-021",
+            "summary": "Warehouse staff should be able to generate packing slips, assign...",
+            "expected": "FILE",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-022",
+            "gold_id": "FR-022",
+            "summary": "Warehouse staff should be able to dispatch packages and update...",
+            "expected": "DATA",
+            "predicted": "BOOKING"
+          }
+        ],
+        "total_errors": 17
+      },
+      "structural_integrity": {
+        "total_requirements": 37,
+        "requirements_with_tasks": 37,
+        "requirements_without_tasks": 0,
+        "task_coverage_pct": 100.0,
+        "total_modules": 5,
+        "total_relations": 6,
+        "total_tasks": 37,
+        "total_test_cases": 37,
+        "untested_requirements_count": 0,
+        "traceability_matrix_rows": 37
+      },
+      "unsupported_metrics_declared": [
+        "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+        "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+        "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+      ]
+    }
+  }
+}

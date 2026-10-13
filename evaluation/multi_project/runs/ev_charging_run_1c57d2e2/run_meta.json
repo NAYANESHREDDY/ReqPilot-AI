@@ -1,0 +1,26 @@
+{
+  "run_id": "1c57d2e2-509c-48d3-848c-1fd3453a0e48",
+  "domain_key": "ev_charging",
+  "project_title": "EV Charging Station Management System",
+  "timestamp": "2026-10-12T17:14:12.517675",
+  "duration_seconds": 13.191288,
+  "llm_enabled": true,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "llm_attempted": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": false,
+  "original_db_hash_before": "abc1e7028050e60139969f5dae0633a8851b377cdc841d6180ef7b1a9be566cd",
+  "original_db_hash_after": "abc1e7028050e60139969f5dae0633a8851b377cdc841d6180ef7b1a9be566cd",
+  "original_db_unchanged": true,
+  "input_file": "evaluation\\multi_project\\benchmark\\ev_charging\\specification.docx",
+  "counts": {
+    "chunks": 1,
+    "requirements": 58,
+    "modules": 11,
+    "relations": 23,
+    "tasks": 58,
+    "test_cases": 58,
+    "reports": 5
+  }
+}

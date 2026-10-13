@@ -1,0 +1,27 @@
+{
+  "run_id": "15cff56d-1bee-479a-87aa-fd42ea70b7e4",
+  "domain_key": "held_out_logistics",
+  "project_title": "Warehouse Logistics & Fleet Dispatch System",
+  "timestamp": "2026-10-13T18:48:53.494041",
+  "duration_seconds": 29.59,
+  "llm_enabled": true,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "llm_attempted": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": false,
+  "input_file": "C:\\Users\\ch.nayanesh reddy\\Downloads\\ReqPilot_AI_recovered_audited\\fsd_pro\\evaluation\\multi_project\\benchmark\\held_out_logistics\\specification.docx",
+  "counts": {
+    "chunks": 7,
+    "requirements": 21,
+    "modules": 9,
+    "relations": 23,
+    "tasks": 21
+  },
+  "classification_stats": {
+    "llm_classified": 21,
+    "fallback_classified": 0,
+    "domain_rotations": 1,
+    "domain_api_successes": 6
+  }
+}

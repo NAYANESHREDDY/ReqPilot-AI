@@ -1,0 +1,29 @@
+{
+  "run_id": "25cd3676-23fb-4764-ad14-77033ab297f2",
+  "domain_key": "hospital_management",
+  "project_title": "Hospital Management System",
+  "timestamp": "2026-10-13T23:32:17.806995",
+  "duration_seconds": 73.13,
+  "llm_enabled": true,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "llm_attempted": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": false,
+  "input_file": "evaluation/multi_project/benchmark/hospital_management/specification.docx",
+  "counts": {
+    "chunks": 1,
+    "requirements": 125,
+    "modules": 10,
+    "relations": 24,
+    "tasks": 125,
+    "test_cases": 125,
+    "reports": 5
+  },
+  "classification_stats": {
+    "llm_classified": 125,
+    "fallback_classified": 0,
+    "domain_rotations": 11,
+    "domain_api_successes": 17
+  }
+}

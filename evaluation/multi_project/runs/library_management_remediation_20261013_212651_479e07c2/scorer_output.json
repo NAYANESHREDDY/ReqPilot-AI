@@ -1,0 +1,165 @@
+{
+  "run_id": "479e07c2-573a-40cb-9883-f120bc815899",
+  "domain_key": "library_management",
+  "project_title": "Library Management System",
+  "timestamp": "2026-10-13T21:27:24.931850",
+  "llm_enabled": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": false,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "matching_summary": {
+    "predicted_requirements_count": 25,
+    "reference_requirements_count": 24,
+    "uniquely_matched_count": 24,
+    "unmatched_predictions_count": 1,
+    "ambiguous_predictions_count": 0,
+    "duplicate_gold_matches_count": 0,
+    "unmatched_reference_count": 0
+  },
+  "classification_evaluation": {
+    "valid_matched_denominator": 24,
+    "correct_classifications": 18,
+    "accuracy": 0.75,
+    "penalized_end_to_end_accuracy": 0.72,
+    "macro_precision": 0.746,
+    "macro_recall": 0.668,
+    "macro_f1": 0.6918,
+    "per_class_metrics": {
+      "ACQUISITION MANAGEMENT": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "AUTHENTICATION": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571
+      },
+      "BOOKING": {
+        "tp": 5,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.7143,
+        "recall": 0.8333,
+        "f1": 0.7692
+      },
+      "CATALOG & COLLECTION MANAGEMENT": {
+        "tp": 0,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "DATA": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.4286,
+        "f1": 0.6
+      },
+      "NOTIFICATION": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "PAYMENT": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "REPORTING": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "SEARCH": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "errors_sample": [
+      {
+        "pred_id": "FR-009",
+        "gold_id": "FR-009",
+        "summary": "Patrons can submit purchase recommendations or inter-library loan requests",
+        "expected": "BOOKING",
+        "predicted": "ACQUISITION MANAGEMENT"
+      },
+      {
+        "pred_id": "FR-010",
+        "gold_id": "FR-010",
+        "summary": "Circulation Desk Staff Requirements Circulation staff should be able to...",
+        "expected": "AUTHENTICATION",
+        "predicted": "BOOKING"
+      },
+      {
+        "pred_id": "FR-012",
+        "gold_id": "FR-012",
+        "summary": "Circulation staff should be able to process returned items, inspect...",
+        "expected": "DATA",
+        "predicted": "BOOKING"
+      },
+      {
+        "pred_id": "FR-016",
+        "gold_id": "FR-016",
+        "summary": "Cataloging and Collection Management Catalogers should be able to add...",
+        "expected": "DATA",
+        "predicted": "CATALOG & COLLECTION MANAGEMENT"
+      },
+      {
+        "pred_id": "FR-017",
+        "gold_id": "FR-017",
+        "summary": "Catalogers should be able to manage inventory copies, track lost...",
+        "expected": "DATA",
+        "predicted": "CATALOG & COLLECTION MANAGEMENT"
+      },
+      {
+        "pred_id": "FR-019",
+        "gold_id": "FR-019",
+        "summary": "Catalogers should be able to conduct periodic physical inventory audits...",
+        "expected": "DATA",
+        "predicted": "CATALOG & COLLECTION MANAGEMENT"
+      }
+    ],
+    "total_errors": 6
+  },
+  "structural_integrity": {
+    "total_requirements": 25,
+    "requirements_with_tasks": 25,
+    "requirements_without_tasks": 0,
+    "task_coverage_pct": 100.0,
+    "total_modules": 11,
+    "total_relations": 30,
+    "total_tasks": 25,
+    "total_test_cases": 25,
+    "untested_requirements_count": 0,
+    "traceability_matrix_rows": 25
+  },
+  "unsupported_metrics_declared": [
+    "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+    "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+    "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+  ]
+}

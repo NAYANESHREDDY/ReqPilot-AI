@@ -1,0 +1,979 @@
+{
+  "evaluation_timestamp": "20261013_063036",
+  "database_hash_before": "abc1e7028050e60139969f5dae0633a8851b377cdc841d6180ef7b1a9be566cd",
+  "database_hash_after": "abc1e7028050e60139969f5dae0633a8851b377cdc841d6180ef7b1a9be566cd",
+  "database_unchanged": true,
+  "total_groq_keys_loaded": 22,
+  "adapter_final_metrics": {
+    "successful_requests": 39,
+    "rate_limit_events": 1,
+    "key_rotations": 3,
+    "invalid_key_events": 2,
+    "transient_server_errors": 0,
+    "exhausted_key_pools": 0,
+    "final_llm_failures": 1,
+    "deterministic_fallbacks": 1,
+    "provider": "groq",
+    "model": "openai/gpt-oss-120b",
+    "total_slots": 22,
+    "available_slots": 20,
+    "cooling_slots": 0,
+    "revoked_slots": 2,
+    "slot_summary": [
+      {
+        "slot_idx": 0,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 3,
+        "total_successes": 3,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 1,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 1,
+        "total_429s": 1
+      },
+      {
+        "slot_idx": 2,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 2,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 3,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 2,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 4,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 2,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 5,
+        "available": false,
+        "is_revoked": true,
+        "remaining_cooldown": 0.0,
+        "total_requests": 1,
+        "total_successes": 0,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 6,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 2,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 7,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 2,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 8,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 2,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 9,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 2,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 10,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 2,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 11,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 2,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 12,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 2,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 13,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 2,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 14,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 2,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 15,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 2,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 16,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 1,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 17,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 2,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 18,
+        "available": false,
+        "is_revoked": true,
+        "remaining_cooldown": 0.0,
+        "total_requests": 1,
+        "total_successes": 0,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 19,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 2,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 20,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 2,
+        "total_429s": 0
+      },
+      {
+        "slot_idx": 21,
+        "available": true,
+        "is_revoked": false,
+        "remaining_cooldown": 0.0,
+        "total_requests": 2,
+        "total_successes": 2,
+        "total_429s": 0
+      }
+    ]
+  },
+  "domain_results": {
+    "ev_charging": {
+      "run_dir": "ev_charging_fresh_eval_20261013_063036_9f5c7e88",
+      "run_id": "9f5c7e88-cb4c-45d6-ae3d-099065ba1276",
+      "duration_seconds": 38.89,
+      "predicted_count": 58,
+      "gold_count": 58,
+      "matched_count": 58,
+      "unmatched_pred": 0,
+      "unmatched_gold": 0,
+      "llm_tasks": 58,
+      "fallback_tasks": 0,
+      "domain_rotations": 2,
+      "domain_api_successes": 8,
+      "accuracy": 0.7414,
+      "accuracy_pct": 74.14,
+      "macro_f1": 0.6326,
+      "macro_precision": 0.6422,
+      "macro_recall": 0.6386,
+      "correct_classifications": 43,
+      "valid_matched_denominator": 58,
+      "errors": [
+        {
+          "pred_id": "FR-009",
+          "gold_id": "FR-007",
+          "summary": "Drivers can view their charging history and invoices",
+          "expected": "CHARGING-SESSION",
+          "predicted": "PAYMENT"
+        },
+        {
+          "pred_id": "FR-013",
+          "gold_id": "FR-011",
+          "summary": "Station operators can view active reservations and charging sessions",
+          "expected": "BOOKING",
+          "predicted": "CHARGING-SESSION"
+        },
+        {
+          "pred_id": "FR-015",
+          "gold_id": "FR-013",
+          "summary": "Station operators can temporarily disable a charger for maintenance",
+          "expected": "CHARGING-STATION",
+          "predicted": "MAINTENANCE"
+        },
+        {
+          "pred_id": "FR-016",
+          "gold_id": "FR-014",
+          "summary": "Station operators can view station utilization and revenue reports",
+          "expected": "CHARGING-STATION",
+          "predicted": "REPORTING"
+        },
+        {
+          "pred_id": "FR-021",
+          "gold_id": "FR-019",
+          "summary": "Maintenance records should remain available for audit purposes.",
+          "expected": "DATA",
+          "predicted": "MAINTENANCE"
+        },
+        {
+          "pred_id": "FR-022",
+          "gold_id": "FR-020",
+          "summary": "Administrator Requirements Administrators should manage drivers, operators, maintenance staff, stations,...",
+          "expected": "MAINTENANCE",
+          "predicted": "DATA"
+        },
+        {
+          "pred_id": "FR-024",
+          "gold_id": "FR-022",
+          "summary": "Administrators should be able to suspend accounts that violate system...",
+          "expected": "DATA",
+          "predicted": "AUTHENTICATION"
+        },
+        {
+          "pred_id": "FR-028",
+          "gold_id": "FR-026",
+          "summary": "Maintenance staff should only access maintenance requests assigned to them...",
+          "expected": "AUTHENTICATION",
+          "predicted": "MAINTENANCE"
+        },
+        {
+          "pred_id": "FR-031",
+          "gold_id": "FR-029",
+          "summary": "A charger should become unavailable for new reservations when a...",
+          "expected": "BOOKING",
+          "predicted": "CHARGING-STATION"
+        },
+        {
+          "pred_id": "FR-036",
+          "gold_id": "FR-034",
+          "summary": "The system should notify maintenance staff when a charger reports...",
+          "expected": "NOTIFICATION",
+          "predicted": "MAINTENANCE"
+        }
+      ],
+      "per_class": {
+        "AUTHENTICATION": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75
+        },
+        "BOOKING": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.6667,
+          "f1": 0.8
+        },
+        "CHARGING-SESSION": {
+          "tp": 4,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1": 0.8
+        },
+        "CHARGING-STATION": {
+          "tp": 7,
+          "fp": 3,
+          "fn": 4,
+          "precision": 0.7,
+          "recall": 0.6364,
+          "f1": 0.6667
+        },
+        "DATA": {
+          "tp": 5,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.7143,
+          "recall": 0.7143,
+          "f1": 0.7143
+        },
+        "GATEWAY": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "MAINTENANCE": {
+          "tp": 4,
+          "fp": 4,
+          "fn": 1,
+          "precision": 0.5,
+          "recall": 0.8,
+          "f1": 0.6154
+        },
+        "NOTIFICATION": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.8571,
+          "f1": 0.9231
+        },
+        "PAYMENT": {
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.8889
+        },
+        "REPORTING": {
+          "tp": 4,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1": 0.8
+        },
+        "SEARCH": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "hospital_management": {
+      "run_dir": "hospital_management_fresh_eval_20261013_063036_217ecc14",
+      "run_id": "217ecc14-fe6e-40bd-ad12-9cc43abff527",
+      "duration_seconds": 60.25,
+      "predicted_count": 125,
+      "gold_count": 124,
+      "matched_count": 124,
+      "unmatched_pred": 1,
+      "unmatched_gold": 0,
+      "llm_tasks": 125,
+      "fallback_tasks": 0,
+      "domain_rotations": 1,
+      "domain_api_successes": 16,
+      "accuracy": 0.5081,
+      "accuracy_pct": 50.81,
+      "macro_f1": 0.5093,
+      "macro_precision": 0.454,
+      "macro_recall": 0.6272,
+      "correct_classifications": 63,
+      "valid_matched_denominator": 124,
+      "errors": [
+        {
+          "pred_id": "FR-004",
+          "gold_id": "FR-004",
+          "summary": "Patient view available appointment slots",
+          "expected": "BOOKING",
+          "predicted": "APPOINTMENT"
+        },
+        {
+          "pred_id": "FR-007",
+          "gold_id": "FR-007",
+          "summary": "Patient view upcoming and past appointments",
+          "expected": "BOOKING",
+          "predicted": "APPOINTMENT"
+        },
+        {
+          "pred_id": "FR-009",
+          "gold_id": "FR-009",
+          "summary": "Patient view prescriptions issued by doctors",
+          "expected": "UNASSIGNED_OR_NULL",
+          "predicted": "DATA"
+        },
+        {
+          "pred_id": "FR-013",
+          "gold_id": "FR-013",
+          "summary": "Patient receive notifications about hospital activities",
+          "expected": "PAYMENT",
+          "predicted": "NOTIFICATION"
+        },
+        {
+          "pred_id": "FR-015",
+          "gold_id": "FR-015",
+          "summary": "Doctor view appointment schedules",
+          "expected": "BOOKING",
+          "predicted": "APPOINTMENT"
+        },
+        {
+          "pred_id": "FR-016",
+          "gold_id": "FR-016",
+          "summary": "Doctor access authorized patient medical records",
+          "expected": "AUTHENTICATION",
+          "predicted": "DATA"
+        },
+        {
+          "pred_id": "FR-019",
+          "gold_id": "FR-019",
+          "summary": "Doctors should be able to create electronic prescriptions.",
+          "expected": "UNASSIGNED_OR_NULL",
+          "predicted": "DATA"
+        },
+        {
+          "pred_id": "FR-020",
+          "gold_id": "FR-020",
+          "summary": "Doctors should be able to modify or cancel prescriptions before...",
+          "expected": "UNASSIGNED_OR_NULL",
+          "predicted": "DATA"
+        },
+        {
+          "pred_id": "FR-021",
+          "gold_id": "FR-021",
+          "summary": "Doctors should be able to request laboratory tests for patients.",
+          "expected": "UNASSIGNED_OR_NULL",
+          "predicted": "BOOKING"
+        },
+        {
+          "pred_id": "FR-022",
+          "gold_id": "FR-022",
+          "summary": "Doctors should be able to view completed laboratory results.",
+          "expected": "UNASSIGNED_OR_NULL",
+          "predicted": "FILE"
+        }
+      ],
+      "per_class": {
+        "APPOINTMENT": {
+          "tp": 0,
+          "fp": 11,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "AUTHENTICATION": {
+          "tp": 7,
+          "fp": 7,
+          "fn": 7,
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5
+        },
+        "BOOKING": {
+          "tp": 7,
+          "fp": 8,
+          "fn": 11,
+          "precision": 0.4667,
+          "recall": 0.3889,
+          "f1": 0.4242
+        },
+        "DATA": {
+          "tp": 17,
+          "fp": 23,
+          "fn": 5,
+          "precision": 0.425,
+          "recall": 0.7727,
+          "f1": 0.5484
+        },
+        "DEPARTMENT": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667
+        },
+        "FILE": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667
+        },
+        "GATEWAY": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "NOTIFICATION": {
+          "tp": 9,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.8182,
+          "recall": 1.0,
+          "f1": 0.9
+        },
+        "PAYMENT": {
+          "tp": 9,
+          "fp": 4,
+          "fn": 4,
+          "precision": 0.6923,
+          "recall": 0.6923,
+          "f1": 0.6923
+        },
+        "PROFILE": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667
+        },
+        "REPORTING": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.8889
+        },
+        "SEARCH": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667
+        },
+        "UNASSIGNED_OR_NULL": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 27,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "ecommerce_platform": {
+      "run_dir": "ecommerce_platform_fresh_eval_20261013_063036_45844d7e",
+      "run_id": "45844d7e-8c75-4f02-85c4-6d1e756d6401",
+      "duration_seconds": 28.17,
+      "predicted_count": 37,
+      "gold_count": 36,
+      "matched_count": 36,
+      "unmatched_pred": 1,
+      "unmatched_gold": 0,
+      "llm_tasks": 37,
+      "fallback_tasks": 0,
+      "domain_rotations": 0,
+      "domain_api_successes": 6,
+      "accuracy": 0.8333,
+      "accuracy_pct": 83.33,
+      "macro_f1": 0.7777,
+      "macro_precision": 0.7944,
+      "macro_recall": 0.775,
+      "correct_classifications": 30,
+      "valid_matched_denominator": 36,
+      "errors": [
+        {
+          "pred_id": "FR-020",
+          "gold_id": "FR-019",
+          "summary": "The system should automatically reserve stock items when an order...",
+          "expected": "DATA",
+          "predicted": "BOOKING"
+        },
+        {
+          "pred_id": "FR-021",
+          "gold_id": "FR-020",
+          "summary": "The system should release reserved stock if payment is not...",
+          "expected": "PAYMENT",
+          "predicted": "DATA"
+        },
+        {
+          "pred_id": "FR-022",
+          "gold_id": "FR-021",
+          "summary": "Warehouse staff should be able to generate packing slips, assign...",
+          "expected": "FILE",
+          "predicted": "DATA"
+        },
+        {
+          "pred_id": "FR-026",
+          "gold_id": "FR-025",
+          "summary": "The system should generate tax invoices and itemized receipts for...",
+          "expected": "REPORTING",
+          "predicted": "PAYMENT"
+        },
+        {
+          "pred_id": "FR-030",
+          "gold_id": "FR-029",
+          "summary": "Support agents should be able to initiate replacement requests or...",
+          "expected": "BOOKING",
+          "predicted": "PAYMENT"
+        },
+        {
+          "pred_id": "NFR-001",
+          "gold_id": "NFR-001",
+          "summary": "All transactions must enforce PCI-DSS compliant tokenization and never store...",
+          "expected": "AUTHENTICATION",
+          "predicted": "PAYMENT"
+        }
+      ],
+      "per_class": {
+        "AUTHENTICATION": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.8333,
+          "f1": 0.9091
+        },
+        "BOOKING": {
+          "tp": 4,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1": 0.8
+        },
+        "DATA": {
+          "tp": 7,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.7778,
+          "recall": 0.875,
+          "f1": 0.8235
+        },
+        "FILE": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "NOTIFICATION": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "PAYMENT": {
+          "tp": 4,
+          "fp": 3,
+          "fn": 1,
+          "precision": 0.5714,
+          "recall": 0.8,
+          "f1": 0.6667
+        },
+        "PROFILE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "REPORTING": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.6667,
+          "f1": 0.8
+        },
+        "SEARCH": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "banking_management": {
+      "run_dir": "banking_management_fresh_eval_20261013_063036_2b62b57a",
+      "run_id": "2b62b57a-da93-4130-a13d-7d68d72c0b8a",
+      "duration_seconds": 24.13,
+      "predicted_count": 26,
+      "gold_count": 25,
+      "matched_count": 25,
+      "unmatched_pred": 1,
+      "unmatched_gold": 0,
+      "llm_tasks": 20,
+      "fallback_tasks": 6,
+      "domain_rotations": 0,
+      "domain_api_successes": 4,
+      "accuracy": 0.8,
+      "accuracy_pct": 80.0,
+      "macro_f1": 0.8055,
+      "macro_precision": 0.8839,
+      "macro_recall": 0.8042,
+      "correct_classifications": 20,
+      "valid_matched_denominator": 25,
+      "errors": [
+        {
+          "pred_id": "FR-009",
+          "gold_id": "FR-009",
+          "summary": "Report suspicious transactions or compromised credentials",
+          "expected": "NOTIFICATION",
+          "predicted": "AUTHENTICATION"
+        },
+        {
+          "pred_id": "FR-016",
+          "gold_id": "FR-015",
+          "summary": "Loan Management and Underwriting Loan officers should be able to...",
+          "expected": "FILE",
+          "predicted": "BOOKING"
+        },
+        {
+          "pred_id": "FR-019",
+          "gold_id": "FR-018",
+          "summary": "The system should calculate interest, track monthly installment payments, and...",
+          "expected": "DATA",
+          "predicted": "PAYMENT"
+        },
+        {
+          "pred_id": "FR-021",
+          "gold_id": "FR-019",
+          "summary": "The system should automatically monitor transactions against AML (Anti-Money Laundering)...",
+          "expected": "DATA",
+          "predicted": "PAYMENT"
+        },
+        {
+          "pred_id": "FR-014",
+          "gold_id": "NFR-001",
+          "summary": "All teller transactions exceeding configured threshold amounts must require mandatory...",
+          "expected": "AUTHENTICATION",
+          "predicted": "PAYMENT"
+        }
+      ],
+      "per_class": {
+        "AUTHENTICATION": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.8333,
+          "recall": 0.8333,
+          "f1": 0.8333
+        },
+        "BOOKING": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.6667,
+          "recall": 1.0,
+          "f1": 0.8
+        },
+        "DATA": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.75
+        },
+        "FILE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667
+        },
+        "NOTIFICATION": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667
+        },
+        "PAYMENT": {
+          "tp": 4,
+          "fp": 3,
+          "fn": 0,
+          "precision": 0.5714,
+          "recall": 1.0,
+          "f1": 0.7273
+        },
+        "PROFILE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "REPORTING": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "library_management": {
+      "run_dir": "library_management_fresh_eval_20261013_063036_a4e5b94c",
+      "run_id": "a4e5b94c-f52e-4f61-a5ff-e3022a64de09",
+      "duration_seconds": 22.27,
+      "predicted_count": 25,
+      "gold_count": 24,
+      "matched_count": 24,
+      "unmatched_pred": 1,
+      "unmatched_gold": 0,
+      "llm_tasks": 25,
+      "fallback_tasks": 0,
+      "domain_rotations": 0,
+      "domain_api_successes": 5,
+      "accuracy": 0.8333,
+      "accuracy_pct": 83.33,
+      "macro_f1": 0.8673,
+      "macro_precision": 0.8639,
+      "macro_recall": 0.8997,
+      "correct_classifications": 20,
+      "valid_matched_denominator": 24,
+      "errors": [
+        {
+          "pred_id": "FR-003",
+          "gold_id": "FR-003",
+          "summary": "Patrons view real-time availability, shelf location, and call numbers",
+          "expected": "DATA",
+          "predicted": "SEARCH"
+        },
+        {
+          "pred_id": "FR-010",
+          "gold_id": "FR-010",
+          "summary": "Circulation Desk Staff Requirements Circulation staff should be able to...",
+          "expected": "AUTHENTICATION",
+          "predicted": "DATA"
+        },
+        {
+          "pred_id": "FR-012",
+          "gold_id": "FR-012",
+          "summary": "Circulation staff should be able to process returned items, inspect...",
+          "expected": "DATA",
+          "predicted": "BOOKING"
+        },
+        {
+          "pred_id": "FR-021",
+          "gold_id": "FR-020",
+          "summary": "Administrators should be able to configure loan durations, maximum borrowing...",
+          "expected": "BOOKING",
+          "predicted": "DATA"
+        }
+      ],
+      "per_class": {
+        "AUTHENTICATION": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571
+        },
+        "BOOKING": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.8333,
+          "recall": 0.8333,
+          "f1": 0.8333
+        },
+        "DATA": {
+          "tp": 5,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.7143,
+          "recall": 0.7143,
+          "f1": 0.7143
+        },
+        "NOTIFICATION": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "PAYMENT": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "REPORTING": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "SEARCH": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667
+        }
+      }
+    }
+  }
+}

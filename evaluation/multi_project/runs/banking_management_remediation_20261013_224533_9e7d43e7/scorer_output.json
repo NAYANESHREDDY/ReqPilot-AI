@@ -1,0 +1,193 @@
+{
+  "run_id": "9e7d43e7-a366-4c92-8fa8-bf59723e50d0",
+  "domain_key": "banking_management",
+  "project_title": "Banking Management System",
+  "timestamp": "2026-10-13T22:46:08.170177",
+  "llm_enabled": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": false,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "matching_summary": {
+    "predicted_requirements_count": 26,
+    "reference_requirements_count": 25,
+    "uniquely_matched_count": 25,
+    "unmatched_predictions_count": 1,
+    "ambiguous_predictions_count": 0,
+    "duplicate_gold_matches_count": 0,
+    "unmatched_reference_count": 0
+  },
+  "classification_evaluation": {
+    "valid_matched_denominator": 25,
+    "correct_classifications": 15,
+    "accuracy": 0.6,
+    "penalized_end_to_end_accuracy": 0.5769,
+    "macro_precision": 0.7222,
+    "macro_recall": 0.6185,
+    "macro_f1": 0.5926,
+    "per_class_metrics": {
+      "AUTHENTICATION": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.3333,
+        "f1": 0.5
+      },
+      "BOOKING": {
+        "tp": 2,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667
+      },
+      "CORE TRANSACTION PROCESSING": {
+        "tp": 0,
+        "fp": 5,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "DATA": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 3,
+        "precision": 0.6667,
+        "recall": 0.4,
+        "f1": 0.5
+      },
+      "FILE": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667
+      },
+      "NOTIFICATION": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "PAYMENT": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "PROFILE": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.3333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "REPORTING": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333,
+        "f1": 0.5
+      }
+    },
+    "errors_sample": [
+      {
+        "pred_id": "FR-001",
+        "gold_id": "FR-001",
+        "summary": "Customer registration, KYC verification, and MFA login",
+        "expected": "AUTHENTICATION",
+        "predicted": "PROFILE"
+      },
+      {
+        "pred_id": "FR-011",
+        "gold_id": "FR-012",
+        "summary": "Tellers should be able to verify customer signatures, photo identity...",
+        "expected": "AUTHENTICATION",
+        "predicted": "PROFILE"
+      },
+      {
+        "pred_id": "FR-015",
+        "gold_id": "FR-015",
+        "summary": "Loan Management and Underwriting Loan officers should be able to...",
+        "expected": "FILE",
+        "predicted": "BOOKING"
+      },
+      {
+        "pred_id": "FR-016",
+        "gold_id": "FR-016",
+        "summary": "Loan officers should be able to calculate debt-to-income ratios and...",
+        "expected": "REPORTING",
+        "predicted": "BOOKING"
+      },
+      {
+        "pred_id": "FR-018",
+        "gold_id": "FR-018",
+        "summary": "The system should calculate interest, track monthly installment payments, and...",
+        "expected": "DATA",
+        "predicted": "CORE TRANSACTION PROCESSING"
+      },
+      {
+        "pred_id": "FR-020",
+        "gold_id": "FR-019",
+        "summary": "The system should automatically monitor transactions against AML (Anti-Money Laundering)...",
+        "expected": "DATA",
+        "predicted": "CORE TRANSACTION PROCESSING"
+      },
+      {
+        "pred_id": "FR-021",
+        "gold_id": "FR-020",
+        "summary": "The system should flag high-value or suspicious patterns and generate...",
+        "expected": "REPORTING",
+        "predicted": "CORE TRANSACTION PROCESSING"
+      },
+      {
+        "pred_id": "FR-013",
+        "gold_id": "NFR-001",
+        "summary": "All teller transactions exceeding configured threshold amounts must require mandatory...",
+        "expected": "AUTHENTICATION",
+        "predicted": "CORE TRANSACTION PROCESSING"
+      },
+      {
+        "pred_id": "FR-019",
+        "gold_id": "NFR-003",
+        "summary": "All transactions must be immutably recorded in a tamper-resistant financial...",
+        "expected": "DATA",
+        "predicted": "CORE TRANSACTION PROCESSING"
+      },
+      {
+        "pred_id": "NFR-004",
+        "gold_id": "NFR-005",
+        "summary": "Customer financial records and account balances must be protected with...",
+        "expected": "AUTHENTICATION",
+        "predicted": "DATA"
+      }
+    ],
+    "total_errors": 10
+  },
+  "structural_integrity": {
+    "total_requirements": 26,
+    "requirements_with_tasks": 26,
+    "requirements_without_tasks": 0,
+    "task_coverage_pct": 100.0,
+    "total_modules": 10,
+    "total_relations": 22,
+    "total_tasks": 26,
+    "total_test_cases": 26,
+    "untested_requirements_count": 0,
+    "traceability_matrix_rows": 26
+  },
+  "unsupported_metrics_declared": [
+    "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+    "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+    "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+  ]
+}

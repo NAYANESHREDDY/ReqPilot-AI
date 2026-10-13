@@ -1,0 +1,811 @@
+{
+  "timestamp": "20261013_171309",
+  "domains": {
+    "ev_charging": {
+      "run_id": "2bdff434-51ef-4518-ae60-f47b885d629b",
+      "domain_key": "ev_charging",
+      "project_title": "EV Charging Network Management System",
+      "timestamp": "2026-10-13T17:13:48.807219",
+      "llm_enabled": true,
+      "llm_extraction_succeeded": true,
+      "fallback_used": false,
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "matching_summary": {
+        "predicted_requirements_count": 58,
+        "reference_requirements_count": 58,
+        "uniquely_matched_count": 58,
+        "unmatched_predictions_count": 0,
+        "ambiguous_predictions_count": 0,
+        "duplicate_gold_matches_count": 0,
+        "unmatched_reference_count": 0
+      },
+      "classification_evaluation": {
+        "valid_matched_denominator": 58,
+        "correct_classifications": 49,
+        "accuracy": 0.8448,
+        "penalized_end_to_end_accuracy": 0.8448,
+        "macro_precision": 0.7964,
+        "macro_recall": 0.792,
+        "macro_f1": 0.7902,
+        "per_class_metrics": {
+          "AUTHENTICATION": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.75,
+            "recall": 0.75,
+            "f1": 0.75
+          },
+          "BOOKING": {
+            "tp": 7,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.7778,
+            "f1": 0.875
+          },
+          "CHARGING-SESSION": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "CHARGING-STATION": {
+            "tp": 8,
+            "fp": 1,
+            "fn": 3,
+            "precision": 0.8889,
+            "recall": 0.7273,
+            "f1": 0.8
+          },
+          "DATA": {
+            "tp": 6,
+            "fp": 2,
+            "fn": 1,
+            "precision": 0.75,
+            "recall": 0.8571,
+            "f1": 0.8
+          },
+          "GATEWAY": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "MAINTENANCE": {
+            "tp": 4,
+            "fp": 3,
+            "fn": 1,
+            "precision": 0.5714,
+            "recall": 0.8,
+            "f1": 0.6667
+          },
+          "NOTIFICATION": {
+            "tp": 7,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "PAYMENT": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "REPORTING": {
+            "tp": 4,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1": 0.8
+          },
+          "SEARCH": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "errors_sample": [
+          {
+            "pred_id": "FR-015",
+            "gold_id": "FR-013",
+            "summary": "Station operators should be able to temporarily disable a charger...",
+            "expected": "CHARGING-STATION",
+            "predicted": "MAINTENANCE"
+          },
+          {
+            "pred_id": "FR-016",
+            "gold_id": "FR-014",
+            "summary": "Station operators should be able to view station utilization and...",
+            "expected": "CHARGING-STATION",
+            "predicted": "REPORTING"
+          },
+          {
+            "pred_id": "FR-022",
+            "gold_id": "FR-020",
+            "summary": "Administrator Requirements Administrators should manage drivers, operators, maintenance staff, stations,...",
+            "expected": "MAINTENANCE",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-024",
+            "gold_id": "FR-022",
+            "summary": "Administrators should be able to suspend accounts that violate system...",
+            "expected": "DATA",
+            "predicted": "AUTHENTICATION"
+          },
+          {
+            "pred_id": "FR-028",
+            "gold_id": "FR-026",
+            "summary": "Maintenance staff should only access maintenance requests assigned to them...",
+            "expected": "AUTHENTICATION",
+            "predicted": "MAINTENANCE"
+          },
+          {
+            "pred_id": "FR-031",
+            "gold_id": "FR-029",
+            "summary": "A charger should become unavailable for new reservations when a...",
+            "expected": "BOOKING",
+            "predicted": "MAINTENANCE"
+          },
+          {
+            "pred_id": "FR-050",
+            "gold_id": "FR-048",
+            "summary": "A disabled charger must not accept new reservations.",
+            "expected": "BOOKING",
+            "predicted": "CHARGING-STATION"
+          },
+          {
+            "pred_id": "FR-051",
+            "gold_id": "FR-049",
+            "summary": "Reporting and Auditability Every reservation, charging-session state transition, payment state...",
+            "expected": "REPORTING",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "NFR-003",
+            "gold_id": "NFR-005",
+            "summary": "Performance The system should remain responsive when thousands of drivers...",
+            "expected": "CHARGING-STATION",
+            "predicted": "SEARCH"
+          }
+        ],
+        "total_errors": 9
+      },
+      "structural_integrity": {
+        "total_requirements": 58,
+        "requirements_with_tasks": 58,
+        "requirements_without_tasks": 0,
+        "task_coverage_pct": 100.0,
+        "total_modules": 11,
+        "total_relations": 23,
+        "total_tasks": 58,
+        "total_test_cases": 58,
+        "untested_requirements_count": 0,
+        "traceability_matrix_rows": 58
+      },
+      "unsupported_metrics_declared": [
+        "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+        "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+        "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+      ]
+    },
+    "hospital_management": {
+      "run_id": "c649e8ae-e2af-4067-998b-a4b940585f44",
+      "domain_key": "hospital_management",
+      "project_title": "Hospital Management System",
+      "timestamp": "2026-10-13T17:14:55.974006",
+      "llm_enabled": true,
+      "llm_extraction_succeeded": true,
+      "fallback_used": false,
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "matching_summary": {
+        "predicted_requirements_count": 125,
+        "reference_requirements_count": 124,
+        "uniquely_matched_count": 124,
+        "unmatched_predictions_count": 1,
+        "ambiguous_predictions_count": 0,
+        "duplicate_gold_matches_count": 0,
+        "unmatched_reference_count": 0
+      },
+      "classification_evaluation": {
+        "valid_matched_denominator": 124,
+        "correct_classifications": 75,
+        "accuracy": 0.6048,
+        "penalized_end_to_end_accuracy": 0.6,
+        "macro_precision": 0.7141,
+        "macro_recall": 0.7071,
+        "macro_f1": 0.6636,
+        "per_class_metrics": {
+          "AUTHENTICATION": {
+            "tp": 8,
+            "fp": 9,
+            "fn": 6,
+            "precision": 0.4706,
+            "recall": 0.5714,
+            "f1": 0.5161
+          },
+          "BOOKING": {
+            "tp": 16,
+            "fp": 8,
+            "fn": 2,
+            "precision": 0.6667,
+            "recall": 0.8889,
+            "f1": 0.7619
+          },
+          "DATA": {
+            "tp": 20,
+            "fp": 24,
+            "fn": 2,
+            "precision": 0.4545,
+            "recall": 0.9091,
+            "f1": 0.6061
+          },
+          "DEPARTMENT": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667
+          },
+          "FILE": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "GATEWAY": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 4,
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333
+          },
+          "NOTIFICATION": {
+            "tp": 9,
+            "fp": 3,
+            "fn": 0,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571
+          },
+          "PAYMENT": {
+            "tp": 8,
+            "fp": 3,
+            "fn": 5,
+            "precision": 0.7273,
+            "recall": 0.6154,
+            "f1": 0.6667
+          },
+          "PROFILE": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "REPORTING": {
+            "tp": 8,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8889
+          },
+          "SEARCH": {
+            "tp": 2,
+            "fp": 2,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667
+          },
+          "UNASSIGNED_OR_NULL": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 27,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "errors_sample": [
+          {
+            "pred_id": "FR-009",
+            "gold_id": "FR-009",
+            "summary": "Patient view prescriptions issued by doctors",
+            "expected": "UNASSIGNED_OR_NULL",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-013",
+            "gold_id": "FR-013",
+            "summary": "Patient receive notifications about hospital activities",
+            "expected": "PAYMENT",
+            "predicted": "NOTIFICATION"
+          },
+          {
+            "pred_id": "FR-016",
+            "gold_id": "FR-016",
+            "summary": "Doctors should be able to access the medical records of...",
+            "expected": "AUTHENTICATION",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-019",
+            "gold_id": "FR-019",
+            "summary": "Doctors should be able to create electronic prescriptions.",
+            "expected": "UNASSIGNED_OR_NULL",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-020",
+            "gold_id": "FR-020",
+            "summary": "Doctors should be able to modify or cancel prescriptions before...",
+            "expected": "UNASSIGNED_OR_NULL",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-021",
+            "gold_id": "FR-021",
+            "summary": "Doctors should be able to request laboratory tests for patients.",
+            "expected": "UNASSIGNED_OR_NULL",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-022",
+            "gold_id": "FR-022",
+            "summary": "Doctors should be able to view completed laboratory results.",
+            "expected": "UNASSIGNED_OR_NULL",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-023",
+            "gold_id": "FR-023",
+            "summary": "Reception and Staff Requirements Reception staff should be able to...",
+            "expected": "AUTHENTICATION",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-026",
+            "gold_id": "FR-026",
+            "summary": "Authorized staff should be able to update patient demographic information.",
+            "expected": "AUTHENTICATION",
+            "predicted": "DATA"
+          },
+          {
+            "pred_id": "FR-027",
+            "gold_id": "FR-027",
+            "summary": "Authorized staff should be able to admit patients for inpatient...",
+            "expected": "AUTHENTICATION",
+            "predicted": "DATA"
+          }
+        ],
+        "total_errors": 49
+      },
+      "structural_integrity": {
+        "total_requirements": 125,
+        "requirements_with_tasks": 125,
+        "requirements_without_tasks": 0,
+        "task_coverage_pct": 100.0,
+        "total_modules": 11,
+        "total_relations": 21,
+        "total_tasks": 125,
+        "total_test_cases": 125,
+        "untested_requirements_count": 0,
+        "traceability_matrix_rows": 125
+      },
+      "unsupported_metrics_declared": [
+        "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+        "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+        "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+      ]
+    },
+    "ecommerce_platform": {
+      "run_id": "aa1dc005-6802-4ce2-99a0-5d2ba0bedd11",
+      "domain_key": "ecommerce_platform",
+      "project_title": "E-Commerce Platform",
+      "timestamp": "2026-10-13T17:15:26.403373",
+      "llm_enabled": true,
+      "llm_extraction_succeeded": true,
+      "fallback_used": false,
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "matching_summary": {
+        "predicted_requirements_count": 37,
+        "reference_requirements_count": 36,
+        "uniquely_matched_count": 36,
+        "unmatched_predictions_count": 1,
+        "ambiguous_predictions_count": 0,
+        "duplicate_gold_matches_count": 0,
+        "unmatched_reference_count": 0
+      },
+      "classification_evaluation": {
+        "valid_matched_denominator": 36,
+        "correct_classifications": 34,
+        "accuracy": 0.9444,
+        "penalized_end_to_end_accuracy": 0.9189,
+        "macro_precision": 0.9676,
+        "macro_recall": 0.9491,
+        "macro_f1": 0.9538,
+        "per_class_metrics": {
+          "AUTHENTICATION": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "BOOKING": {
+            "tp": 5,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.8333,
+            "recall": 1.0,
+            "f1": 0.9091
+          },
+          "DATA": {
+            "tp": 7,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.875,
+            "recall": 0.875,
+            "f1": 0.875
+          },
+          "FILE": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "NOTIFICATION": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "PAYMENT": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "PROFILE": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "REPORTING": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.6667,
+            "f1": 0.8
+          },
+          "SEARCH": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "errors_sample": [
+          {
+            "pred_id": "FR-019",
+            "gold_id": "FR-019",
+            "summary": "The system should automatically reserve stock items when an order...",
+            "expected": "DATA",
+            "predicted": "BOOKING"
+          },
+          {
+            "pred_id": "FR-031",
+            "gold_id": "FR-031",
+            "summary": "Administrators should have access to platform-wide financial audit trails, fraud...",
+            "expected": "REPORTING",
+            "predicted": "DATA"
+          }
+        ],
+        "total_errors": 2
+      },
+      "structural_integrity": {
+        "total_requirements": 37,
+        "requirements_with_tasks": 37,
+        "requirements_without_tasks": 0,
+        "task_coverage_pct": 100.0,
+        "total_modules": 10,
+        "total_relations": 20,
+        "total_tasks": 37,
+        "total_test_cases": 37,
+        "untested_requirements_count": 0,
+        "traceability_matrix_rows": 37
+      },
+      "unsupported_metrics_declared": [
+        "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+        "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+        "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+      ]
+    },
+    "banking_management": {
+      "run_id": "11f228c8-5b46-47ed-ae3e-790c14d05164",
+      "domain_key": "banking_management",
+      "project_title": "Banking Management System",
+      "timestamp": "2026-10-13T17:15:54.283583",
+      "llm_enabled": true,
+      "llm_extraction_succeeded": true,
+      "fallback_used": true,
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "matching_summary": {
+        "predicted_requirements_count": 26,
+        "reference_requirements_count": 25,
+        "uniquely_matched_count": 25,
+        "unmatched_predictions_count": 1,
+        "ambiguous_predictions_count": 0,
+        "duplicate_gold_matches_count": 0,
+        "unmatched_reference_count": 0
+      },
+      "classification_evaluation": {
+        "valid_matched_denominator": 25,
+        "correct_classifications": 23,
+        "accuracy": 0.92,
+        "penalized_end_to_end_accuracy": 0.8846,
+        "macro_precision": 0.95,
+        "macro_recall": 0.9542,
+        "macro_f1": 0.9497,
+        "per_class_metrics": {
+          "AUTHENTICATION": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.8333,
+            "f1": 0.9091
+          },
+          "BOOKING": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "DATA": {
+            "tp": 4,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1": 0.8
+          },
+          "FILE": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "NOTIFICATION": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "PAYMENT": {
+            "tp": 4,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "f1": 0.8889
+          },
+          "PROFILE": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "REPORTING": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "errors_sample": [
+          {
+            "pred_id": "FR-020",
+            "gold_id": "FR-019",
+            "summary": "The system should automatically monitor transactions against AML (Anti-Money Laundering)...",
+            "expected": "DATA",
+            "predicted": "PAYMENT"
+          },
+          {
+            "pred_id": "NFR-004",
+            "gold_id": "NFR-005",
+            "summary": "Customer financial records and account balances must be protected with...",
+            "expected": "AUTHENTICATION",
+            "predicted": "DATA"
+          }
+        ],
+        "total_errors": 2
+      },
+      "structural_integrity": {
+        "total_requirements": 26,
+        "requirements_with_tasks": 26,
+        "requirements_without_tasks": 0,
+        "task_coverage_pct": 100.0,
+        "total_modules": 9,
+        "total_relations": 18,
+        "total_tasks": 26,
+        "total_test_cases": 26,
+        "untested_requirements_count": 0,
+        "traceability_matrix_rows": 26
+      },
+      "unsupported_metrics_declared": [
+        "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+        "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+        "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+      ]
+    },
+    "library_management": {
+      "run_id": "546b9b06-3571-401f-9631-724e93eb51f0",
+      "domain_key": "library_management",
+      "project_title": "Library Management System",
+      "timestamp": "2026-10-13T17:16:18.020413",
+      "llm_enabled": true,
+      "llm_extraction_succeeded": true,
+      "fallback_used": false,
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "matching_summary": {
+        "predicted_requirements_count": 24,
+        "reference_requirements_count": 24,
+        "uniquely_matched_count": 24,
+        "unmatched_predictions_count": 0,
+        "ambiguous_predictions_count": 0,
+        "duplicate_gold_matches_count": 0,
+        "unmatched_reference_count": 0
+      },
+      "classification_evaluation": {
+        "valid_matched_denominator": 24,
+        "correct_classifications": 22,
+        "accuracy": 0.9167,
+        "penalized_end_to_end_accuracy": 0.9167,
+        "macro_precision": 0.9082,
+        "macro_recall": 0.9592,
+        "macro_f1": 0.9176,
+        "per_class_metrics": {
+          "AUTHENTICATION": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "BOOKING": {
+            "tp": 6,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.8571,
+            "recall": 1.0,
+            "f1": 0.9231
+          },
+          "DATA": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.7143,
+            "f1": 0.8333
+          },
+          "NOTIFICATION": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "PAYMENT": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "REPORTING": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "SEARCH": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667
+          }
+        },
+        "errors_sample": [
+          {
+            "pred_id": "FR-003",
+            "gold_id": "FR-003",
+            "summary": "View real-time availability",
+            "expected": "DATA",
+            "predicted": "SEARCH"
+          },
+          {
+            "pred_id": "FR-012",
+            "gold_id": "FR-012",
+            "summary": "Circulation staff should be able to process returned items, inspect...",
+            "expected": "DATA",
+            "predicted": "BOOKING"
+          }
+        ],
+        "total_errors": 2
+      },
+      "structural_integrity": {
+        "total_requirements": 24,
+        "requirements_with_tasks": 24,
+        "requirements_without_tasks": 0,
+        "task_coverage_pct": 100.0,
+        "total_modules": 10,
+        "total_relations": 21,
+        "total_tasks": 24,
+        "total_test_cases": 24,
+        "untested_requirements_count": 0,
+        "traceability_matrix_rows": 24
+      },
+      "unsupported_metrics_declared": [
+        "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+        "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+        "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+      ]
+    }
+  }
+}

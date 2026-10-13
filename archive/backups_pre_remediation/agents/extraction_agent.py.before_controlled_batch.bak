@@ -1,0 +1,1150 @@
+import re
+from typing import List, Dict, Any
+
+from backend.app.agents.llm_adapter import LLMAdapter
+
+
+class ExtractionAgent:
+    """Requirement Extraction Agent.
+
+    Hybrid requirement extraction agent.
+
+    LLM mode:
+        Uses a two-pass process:
+
+        Pass 1:
+            Identify genuine requirement-bearing statements across the
+            complete document.
+
+        Pass 2:
+            Convert those candidates into structured software requirements.
+
+    Deterministic mode:
+        Uses the rule-based fallback when no LLM is configured or when
+        the LLM extraction process fails.
+
+    Design priorities:
+        1. Requirement quality
+        2. Source fidelity
+        3. Document coverage
+        4. Meaningful requirement boundaries
+        5. Zero hallucination
+        6. Accurate provenance
+    """
+
+    def __init__(self, llm_adapter: LLMAdapter):
+        self.llm = llm_adapter
+
+    async def extract_requirements(
+        self,
+        chunks: List[Dict[str, Any]],
+        source_doc_id: str
+    ) -> List[Dict[str, Any]]:
+
+        # -------------------------------------------------------------
+        # Build complete source context.
+        # -------------------------------------------------------------
+        valid_chunks = [
+            chunk
+            for chunk in chunks
+            if chunk.get("content")
+        ]
+
+        combined_text = "\n\n".join(
+            [
+                (
+                    f"[Page {chunk.get('page_number', 1)}]\n"
+                    f"{chunk.get('content', '')}"
+                )
+                for chunk in valid_chunks
+            ]
+        )
+
+        # -------------------------------------------------------------
+        # REAL LLM EXTRACTION
+        # -------------------------------------------------------------
+        if self.llm.api_key:
+            llm_results = await self._extract_with_llm(
+                combined_text,
+                source_doc_id
+            )
+
+            if llm_results:
+                return llm_results
+
+        # -------------------------------------------------------------
+        # DETERMINISTIC FALLBACK
+        # -------------------------------------------------------------
+        return self._extract_deterministic(
+            chunks,
+            source_doc_id
+        )
+
+    # =================================================================
+    # TWO-PASS LLM EXTRACTION
+    # =================================================================
+
+    async def _extract_with_llm(
+        self,
+        text: str,
+        source_doc_id: str
+    ) -> List[Dict[str, Any]]:
+        """Two-pass source-grounded LLM extraction.
+
+        Pass 1 identifies requirement candidates across the complete
+        document.
+
+        Pass 2 converts the candidates into structured requirements.
+
+        No target requirement count is imposed.
+        """
+
+        safe_text = self.llm.sanitize_untrusted_input(
+            text[:16000]
+        )
+
+        # =============================================================
+        # PASS 1: REQUIREMENT COVERAGE DISCOVERY
+        # =============================================================
+
+        discovery_prompt = f"""
+You are a senior software requirements analyst.
+
+Analyze the COMPLETE software requirements document below.
+
+Your first task is NOT to create detailed structured requirements.
+
+Your task is to identify the genuine requirement-bearing statements
+contained throughout the document.
+
+Read the entire document before answering.
+
+============================================================
+OBJECTIVE
+============================================================
+
+Find the meaningful software requirements in ALL sections of the
+document.
+
+Look for requirements describing:
+
+- functional capabilities
+- user actions
+- system behavior
+- authentication
+- authorization
+- registration
+- verification
+- profile management
+- password management
+- session management
+- notifications
+- data handling
+- security
+- privacy
+- API/interface behavior
+- performance
+- availability
+- reliability
+- scalability
+- usability
+- compliance
+- other explicit software constraints
+
+Do NOT assume that every document will contain every category.
+
+============================================================
+DO NOT EXTRACT DOCUMENT NOISE
+============================================================
+
+Do NOT return:
+
+- document title
+- project name
+- section headings
+- table-of-contents entries
+- page labels
+- author information
+- general background
+- introductory context
+- explanatory prose without a concrete system obligation
+
+============================================================
+MEANINGFUL REQUIREMENT BOUNDARIES
+============================================================
+
+Use meaningful engineering boundaries.
+
+Do NOT split a coherent capability simply because multiple clauses
+appear in the same sentence.
+
+For example:
+
+"A new user should be able to create an account using an email address
+and password. The email address must be unique."
+
+can be treated as one coherent registration requirement because the
+uniqueness rule is part of account registration.
+
+However, clearly independent capabilities should remain separate.
+
+For example:
+
+- account registration
+- email verification
+- user authentication
+- dashboard access
+- profile management
+- password recovery
+- session timeout
+
+should normally be identified as separate requirements.
+
+============================================================
+SOURCE GROUNDING
+============================================================
+
+Every candidate MUST be directly supported by the source.
+
+Do NOT invent requirements.
+
+For every candidate provide:
+
+- a concise candidate summary
+- the exact verbatim source excerpt
+- the page number
+
+The source excerpt MUST be copied exactly from the document.
+
+Do not paraphrase source_excerpt.
+
+============================================================
+COVERAGE
+============================================================
+
+IMPORTANT:
+
+Continue through the ENTIRE document.
+
+Do not stop after finding the first few requirements.
+
+Inspect later sections such as Security, API, Performance, Privacy,
+Data Protection, and Non-Functional Requirements if they exist.
+
+Do NOT optimize for a specific number.
+
+The correct number is whatever the document genuinely supports.
+
+============================================================
+DOCUMENT
+============================================================
+
+{safe_text}
+"""
+
+        discovery_schema = """{
+  "candidates": [
+    {
+      "summary": "Short description of the requirement",
+      "source_page": 2,
+      "source_excerpt": "Exact verbatim requirement text from the document"
+    }
+  ]
+}
+
+Rules:
+
+- Return only genuine requirements.
+- Do not return headings or project descriptions.
+- Do not target a particular number of candidates.
+- Do not duplicate candidates.
+- Preserve meaningful requirement boundaries.
+- source_excerpt MUST be verbatim.
+- source_page MUST correspond to source_excerpt.
+"""
+
+        discovery_data = await self.llm.generate_json(
+            discovery_prompt,
+            discovery_schema
+        )
+
+        if not discovery_data:
+            return []
+
+        candidates = discovery_data.get(
+            "candidates",
+            []
+        )
+
+        if not isinstance(candidates, list):
+            return []
+
+        # -------------------------------------------------------------
+        # Clean and validate discovery candidates.
+        # -------------------------------------------------------------
+        clean_candidates = []
+
+        for candidate in candidates:
+
+            if not isinstance(candidate, dict):
+                continue
+
+            summary = str(
+                candidate.get("summary", "")
+            ).strip()
+
+            excerpt = str(
+                candidate.get("source_excerpt", "")
+            ).strip()
+
+            page = self._safe_page_number(
+                candidate.get("source_page")
+            )
+
+            if not summary or not excerpt:
+                continue
+
+            # Only retain candidates whose excerpt actually exists
+            # in the supplied source text.
+            if not self._source_excerpt_exists(
+                excerpt,
+                text
+            ):
+                continue
+
+            clean_candidates.append(
+                {
+                    "summary": summary,
+                    "source_page": page,
+                    "source_excerpt": excerpt,
+                }
+            )
+
+        if not clean_candidates:
+            return []
+
+        # -------------------------------------------------------------
+        # Remove exact duplicate candidates.
+        # -------------------------------------------------------------
+        unique_candidates = []
+        seen_excerpts = set()
+
+        for candidate in clean_candidates:
+
+            key = self._normalize_for_match(
+                candidate["source_excerpt"]
+            )
+
+            if key in seen_excerpts:
+                continue
+
+            seen_excerpts.add(key)
+            unique_candidates.append(candidate)
+
+        # =============================================================
+        # PASS 2: STRUCTURED REQUIREMENT EXTRACTION
+        # =============================================================
+
+        candidate_text = "\n\n".join(
+            [
+                (
+                    f"Candidate {index + 1}:\n"
+                    f"Summary: {candidate['summary']}\n"
+                    f"Page: {candidate['source_page']}\n"
+                    f"Exact Source: {candidate['source_excerpt']}"
+                )
+                for index, candidate
+                in enumerate(unique_candidates)
+            ]
+        )
+
+        structured_prompt = f"""
+You are a senior software requirements engineer.
+
+You are given:
+
+1. The original software requirements document.
+2. A coverage-first list of requirement candidates discovered from the
+   complete document.
+
+Your task is to convert the candidates into high-quality structured
+software requirements.
+
+============================================================
+MOST IMPORTANT RULE
+============================================================
+
+Preserve the requirement meaning from the source.
+
+Do NOT invent behavior.
+
+Do NOT add implementation details that are not present in the source.
+
+Do NOT add assumptions merely to make the requirement appear more
+complete.
+
+============================================================
+CANDIDATE COVERAGE
+============================================================
+
+Process the candidates below carefully.
+
+Normally produce one structured requirement for each genuine candidate.
+
+You may reject a candidate ONLY when it is clearly:
+
+- document noise
+- a heading
+- a duplicate
+- background information
+- not actually a software requirement
+
+Do not discard a valid candidate simply because it is short.
+
+Do not merge clearly independent capabilities.
+
+============================================================
+REQUIREMENT BOUNDARIES
+============================================================
+
+Preserve meaningful engineering boundaries.
+
+Do not artificially split coherent requirements.
+
+Do not artificially merge independent capabilities.
+
+============================================================
+REQUIREMENT TYPE
+============================================================
+
+Use ONLY:
+
+"functional"
+"non_functional"
+
+Use "functional" for system capabilities and behavior.
+
+Use "non_functional" for:
+
+- security
+- API/interface constraints
+- performance
+- availability
+- reliability
+- scalability
+- usability
+- privacy
+- compliance
+- other quality or technical constraints
+
+============================================================
+STRUCTURED FIELDS
+============================================================
+
+For every valid requirement produce:
+
+summary:
+A concise meaningful requirement title.
+
+description:
+A faithful description of the requirement.
+
+actor:
+The actor explicitly supported by the source.
+Use "System" when system behavior is described without a human actor.
+
+action:
+The primary action.
+
+target_object:
+The entity/resource affected by the action.
+
+preconditions:
+Only conditions supported by the source.
+DO NOT automatically invent authentication or authorization.
+
+expected_outcome:
+Only the outcome supported by the source.
+
+acceptance_criteria:
+Concise Given/When/Then criteria.
+
+Acceptance criteria MUST NOT introduce new behavior.
+
+priority:
+Choose high, medium, or low based on the wording and importance
+expressed by the source.
+
+confidence:
+A value from 0.0 to 1.0 reflecting confidence that the extracted
+requirement is directly supported by the source.
+
+============================================================
+PROVENANCE
+============================================================
+
+source_page MUST come from the candidate.
+
+source_excerpt MUST be copied EXACTLY from the candidate.
+
+Do NOT rewrite source_excerpt.
+
+Do NOT paraphrase source_excerpt.
+
+============================================================
+QUALITY OVER QUANTITY
+============================================================
+
+Do not attempt to reach a target requirement count.
+
+Do not create extra requirements to increase the count.
+
+Do not remove valid requirements to decrease the count.
+
+The correct output is the set of genuine requirements supported by
+the document.
+
+============================================================
+ORIGINAL DOCUMENT
+============================================================
+
+{safe_text}
+
+============================================================
+DISCOVERED REQUIREMENT CANDIDATES
+============================================================
+
+{candidate_text}
+"""
+
+        structured_schema = """{
+  "requirements": [
+    {
+      "id": "FR-001",
+      "req_type": "functional",
+      "summary": "Short meaningful requirement title",
+      "description": "Faithful requirement description",
+      "actor": "User",
+      "action": "create",
+      "target_object": "account",
+      "preconditions": "",
+      "expected_outcome": "Account is created according to the source requirement",
+      "acceptance_criteria": [
+        "Given the source-supported precondition, When the source-supported action occurs, Then the source-supported outcome occurs"
+      ],
+      "priority": "medium",
+      "confidence": 0.95,
+      "source_page": 2,
+      "source_excerpt": "Exact verbatim source text"
+    }
+  ]
+}
+
+STRICT RULES:
+
+- Use only functional or non_functional.
+- Do not invent requirements.
+- Do not invent implementation details.
+- Do not invent preconditions.
+- Do not invent outcomes.
+- Do not invent acceptance behavior.
+- Do not duplicate requirements.
+- Preserve meaningful requirement boundaries.
+- source_excerpt MUST be verbatim.
+- source_page MUST correspond to source_excerpt.
+- Do not target a particular requirement count.
+"""
+
+        structured_data = await self.llm.generate_json(
+            structured_prompt,
+            structured_schema
+        )
+
+        if not structured_data:
+            return []
+
+        results = structured_data.get(
+            "requirements",
+            []
+        )
+
+        if not isinstance(results, list):
+            return []
+
+        # =============================================================
+        # VALIDATE STRUCTURED RESULTS
+        # =============================================================
+
+        validated_results = []
+
+        for requirement in results:
+
+            if not isinstance(requirement, dict):
+                continue
+
+            required_fields = [
+                "req_type",
+                "summary",
+                "description",
+                "actor",
+                "action",
+                "target_object",
+                "preconditions",
+                "expected_outcome",
+                "acceptance_criteria",
+                "priority",
+                "confidence",
+                "source_page",
+                "source_excerpt",
+            ]
+
+            if not all(
+                field in requirement
+                for field in required_fields
+            ):
+                continue
+
+            # ---------------------------------------------------------
+            # Normalize type
+            # ---------------------------------------------------------
+            req_type = str(
+                requirement.get("req_type", "")
+            ).strip().lower()
+
+            if req_type == "functional":
+                requirement["req_type"] = "functional"
+            else:
+                requirement["req_type"] = "non_functional"
+
+            # ---------------------------------------------------------
+            # Normalize text fields
+            # ---------------------------------------------------------
+            for field in [
+                "summary",
+                "description",
+                "actor",
+                "action",
+                "target_object",
+                "preconditions",
+                "expected_outcome",
+                "source_excerpt",
+            ]:
+                requirement[field] = str(
+                    requirement.get(field, "")
+                ).strip()
+
+            if not requirement["summary"]:
+                continue
+
+            if not requirement["description"]:
+                continue
+
+            if not requirement["source_excerpt"]:
+                continue
+
+            # ---------------------------------------------------------
+            # Validate source excerpt against ORIGINAL document.
+            #
+            # This is critical: the LLM is not trusted to preserve
+            # provenance merely because it was instructed to do so.
+            # ---------------------------------------------------------
+            if not self._source_excerpt_exists(
+                requirement["source_excerpt"],
+                text
+            ):
+                continue
+
+            # ---------------------------------------------------------
+            # Normalize page
+            # ---------------------------------------------------------
+            requirement["source_page"] = self._safe_page_number(
+                requirement.get("source_page")
+            )
+
+            # ---------------------------------------------------------
+            # Normalize acceptance criteria
+            # ---------------------------------------------------------
+            acceptance = requirement.get(
+                "acceptance_criteria",
+                []
+            )
+
+            if isinstance(acceptance, str):
+                acceptance = [acceptance]
+
+            if not isinstance(acceptance, list):
+                acceptance = []
+
+            requirement["acceptance_criteria"] = [
+                str(item).strip()
+                for item in acceptance
+                if str(item).strip()
+            ]
+
+            # ---------------------------------------------------------
+            # Normalize priority
+            # ---------------------------------------------------------
+            priority = str(
+                requirement.get("priority", "medium")
+            ).strip().lower()
+
+            if priority not in {
+                "high",
+                "medium",
+                "low",
+            }:
+                priority = "medium"
+
+            requirement["priority"] = priority
+
+            # ---------------------------------------------------------
+            # Normalize confidence
+            # ---------------------------------------------------------
+            try:
+                confidence = float(
+                    requirement.get(
+                        "confidence",
+                        0.5
+                    )
+                )
+            except (TypeError, ValueError):
+                confidence = 0.5
+
+            requirement["confidence"] = max(
+                0.0,
+                min(1.0, confidence)
+            )
+
+            # ---------------------------------------------------------
+            # Application-controlled provenance and metadata.
+            # ---------------------------------------------------------
+            requirement["source_id"] = source_doc_id
+            requirement["status"] = "needs_review"
+            requirement["is_ai_suggested"] = True
+
+            validated_results.append(
+                requirement
+            )
+
+        # =============================================================
+        # EXACT DUPLICATE REMOVAL
+        # =============================================================
+
+        unique_results = []
+        seen = set()
+
+        for requirement in validated_results:
+
+            key = (
+                requirement["req_type"],
+                self._normalize_for_match(
+                    requirement["source_excerpt"]
+                ),
+            )
+
+            if key in seen:
+                continue
+
+            seen.add(key)
+            unique_results.append(requirement)
+
+        # =============================================================
+        # STABLE APPLICATION-OWNED IDS
+        # =============================================================
+
+        functional_counter = 1
+        nfr_counter = 1
+
+        for requirement in unique_results:
+
+            if requirement["req_type"] == "functional":
+
+                requirement["id"] = (
+                    f"FR-{functional_counter:03d}"
+                )
+
+                functional_counter += 1
+
+            else:
+
+                requirement["id"] = (
+                    f"NFR-{nfr_counter:03d}"
+                )
+
+                nfr_counter += 1
+
+        return unique_results
+
+    # =================================================================
+    # SOURCE VALIDATION
+    # =================================================================
+
+    @staticmethod
+    def _normalize_for_match(text: str) -> str:
+        """Normalize whitespace for source matching."""
+
+        return re.sub(
+            r"\s+",
+            " ",
+            str(text)
+        ).strip().lower()
+
+    def _source_excerpt_exists(
+        self,
+        excerpt: str,
+        source_text: str
+    ) -> bool:
+        """Check whether an LLM-produced excerpt exists in the source.
+
+        Exact whitespace-normalized matching is used first.
+
+        A conservative normalized comparison is then attempted so that
+        line wrapping or PDF extraction whitespace does not cause a
+        legitimate excerpt to be rejected.
+        """
+
+        if not excerpt or not source_text:
+            return False
+
+        # Direct match.
+        if excerpt in source_text:
+            return True
+
+        # Whitespace-normalized match.
+        normalized_excerpt = self._normalize_for_match(
+            excerpt
+        )
+
+        normalized_source = self._normalize_for_match(
+            source_text
+        )
+
+        return normalized_excerpt in normalized_source
+
+    # =================================================================
+    # PAGE NORMALIZATION
+    # =================================================================
+
+    @staticmethod
+    def _safe_page_number(value: Any) -> int:
+
+        try:
+            page = int(value)
+
+            if page > 0:
+                return page
+
+        except (TypeError, ValueError):
+            pass
+
+        return 1
+
+    # =================================================================
+    # DETERMINISTIC FALLBACK
+    # =================================================================
+
+    def _extract_deterministic(
+        self,
+        chunks: List[Dict[str, Any]],
+        source_doc_id: str
+    ) -> List[Dict[str, Any]]:
+
+        extracted = []
+
+        fr_counter = 1
+        nfr_counter = 1
+
+        for chunk in chunks:
+
+            page = chunk.get(
+                "page_number",
+                1
+            )
+
+            content = chunk.get(
+                "content",
+                ""
+            )
+
+            sentences = self._split_sentences(
+                content
+            )
+
+            for sentence in sentences:
+
+                sentence_clean = sentence.strip()
+
+                if len(sentence_clean) < 15:
+                    continue
+
+                req_info = self._analyze_sentence(
+                    sentence_clean
+                )
+
+                if not req_info:
+                    continue
+
+                is_nfr = req_info["is_nfr"]
+
+                if is_nfr:
+
+                    req_id = (
+                        f"NFR-{nfr_counter:03d}"
+                    )
+
+                    nfr_counter += 1
+                    req_type = "non_functional"
+
+                else:
+
+                    req_id = (
+                        f"FR-{fr_counter:03d}"
+                    )
+
+                    fr_counter += 1
+                    req_type = "functional"
+
+                extracted.append(
+                    {
+                        "id": req_id,
+                        "req_type": req_type,
+                        "summary": req_info["summary"],
+                        "description": sentence_clean,
+                        "actor": req_info["actor"],
+                        "action": req_info["action"],
+                        "target_object": req_info["target_object"],
+                        "preconditions": req_info[
+                            "preconditions"
+                        ],
+                        "expected_outcome": req_info[
+                            "expected_outcome"
+                        ],
+                        "acceptance_criteria": req_info[
+                            "acceptance_criteria"
+                        ],
+                        "priority": req_info["priority"],
+                        "status": "needs_review",
+                        "confidence": req_info["confidence"],
+                        "is_ai_suggested": False,
+                        "source_id": source_doc_id,
+                        "source_page": page,
+                        "source_excerpt": sentence_clean,
+                    }
+                )
+
+        return extracted
+
+    # =================================================================
+    # DETERMINISTIC SENTENCE SPLITTING
+    # =================================================================
+
+    def _split_sentences(
+        self,
+        text: str
+    ) -> List[str]:
+
+        lines = re.split(
+            r"\n+|(?<=[.!?])\s+",
+            text
+        )
+
+        result = []
+
+        for line in lines:
+
+            cleaned = re.sub(
+                r"^[-*•\d\.\)]+\s*",
+                "",
+                line
+            ).strip()
+
+            if cleaned:
+                result.append(cleaned)
+
+        return result
+
+    # =================================================================
+    # DETERMINISTIC SENTENCE ANALYSIS
+    # =================================================================
+
+    def _analyze_sentence(
+        self,
+        sentence: str
+    ) -> Dict[str, Any]:
+
+        lower = sentence.lower()
+
+        # -------------------------------------------------------------
+        # NFR indicators
+        # -------------------------------------------------------------
+        nfr_indicators = [
+            "response time",
+            "latency",
+            "concurrent users",
+            "uptime",
+            "availability",
+            "security",
+            "encryption",
+            "throughput",
+            "scalable",
+            "ssl",
+            "tls",
+            "fast",
+            "compliant",
+            "backup",
+            "data protection",
+            "performance",
+            "plaintext",
+            "hashing",
+            "audit record",
+            "audit log",
+            "validated on the server",
+            "http status",
+            "json format",
+            "rest api",
+            "rest apis",
+        ]
+
+        is_nfr = any(
+            indicator in lower
+            for indicator in nfr_indicators
+        )
+
+        # -------------------------------------------------------------
+        # Requirement indicators
+        # -------------------------------------------------------------
+        modal_patterns = [
+            (
+                r"\b("
+                r"must|shall|should|needs? to|can|will|"
+                r"is required to|ought to|allows?|enables?|provides?"
+                r")\b"
+            ),
+            (
+                r"\b("
+                r"support|manage|generate|view|track|create|"
+                r"update|delete|cancel|book|pay|notify|authenticate"
+                r")\b"
+            ),
+        ]
+
+        has_requirement_pattern = any(
+            re.search(
+                pattern,
+                lower
+            )
+            for pattern in modal_patterns
+        )
+
+        if (
+            not has_requirement_pattern
+            and len(sentence) < 30
+        ):
+            return None
+
+        # -------------------------------------------------------------
+        # Actor
+        # -------------------------------------------------------------
+        actor = "System"
+
+        actor_match = re.search(
+            (
+                r"\b("
+                r"student|tutor|admin|administrator|user|customer|"
+                r"client|manager|patient|doctor|visitor"
+                r")\b"
+            ),
+            lower
+        )
+
+        if actor_match:
+            actor = (
+                actor_match
+                .group(1)
+                .capitalize()
+            )
+
+        # -------------------------------------------------------------
+        # Priority
+        # -------------------------------------------------------------
+        priority = "medium"
+
+        if any(
+            word in lower
+            for word in [
+                "must",
+                "critical",
+                "mandatory",
+                "essential",
+                "secure",
+                "immediately",
+            ]
+        ):
+            priority = "high"
+
+        elif any(
+            word in lower
+            for word in [
+                "optional",
+                "nice to have",
+                "future",
+                "secondary",
+            ]
+        ):
+            priority = "low"
+
+        # -------------------------------------------------------------
+        # Conservative deterministic fields
+        # -------------------------------------------------------------
+        action = "perform operation"
+        target_obj = "system component"
+
+        words = sentence.split()
+
+        if len(words) > 3:
+
+            summary = " ".join(
+                words[:8]
+            )
+
+            if not summary.endswith("."):
+                summary += "..."
+
+        else:
+            summary = sentence
+
+        acceptance_criteria = [
+            (
+                f"Given the {actor.lower()} "
+                f"is authenticated and authorized"
+            ),
+            (
+                f"When the requirement "
+                f"'{summary}' is triggered"
+            ),
+            (
+                "Then the expected outcome "
+                "should be verified without error"
+            ),
+        ]
+
+        return {
+            "is_nfr": is_nfr,
+            "summary": summary,
+            "actor": actor,
+            "action": action,
+            "target_object": target_obj,
+            "preconditions": (
+                f"{actor} has appropriate authorization and state"
+            ),
+            "expected_outcome": (
+                "Operation successfully executed and recorded"
+            ),
+            "acceptance_criteria": acceptance_criteria,
+            "priority": priority,
+            "confidence": (
+                0.92
+                if has_requirement_pattern
+                else 0.80
+            ),
+        }

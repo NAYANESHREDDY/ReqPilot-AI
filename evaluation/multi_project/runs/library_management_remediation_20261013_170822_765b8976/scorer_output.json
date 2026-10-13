@@ -1,0 +1,128 @@
+{
+  "run_id": "765b8976-5469-4508-9525-4163212a5426",
+  "domain_key": "library_management",
+  "project_title": "Library Management System",
+  "timestamp": "2026-10-13T17:08:46.349513",
+  "llm_enabled": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": false,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "matching_summary": {
+    "predicted_requirements_count": 24,
+    "reference_requirements_count": 24,
+    "uniquely_matched_count": 24,
+    "unmatched_predictions_count": 0,
+    "ambiguous_predictions_count": 0,
+    "duplicate_gold_matches_count": 0,
+    "unmatched_reference_count": 0
+  },
+  "classification_evaluation": {
+    "valid_matched_denominator": 24,
+    "correct_classifications": 21,
+    "accuracy": 0.875,
+    "penalized_end_to_end_accuracy": 0.875,
+    "macro_precision": 0.9082,
+    "macro_recall": 0.9235,
+    "macro_f1": 0.9071,
+    "per_class_metrics": {
+      "AUTHENTICATION": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571
+      },
+      "BOOKING": {
+        "tp": 6,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8571,
+        "recall": 1.0,
+        "f1": 0.9231
+      },
+      "DATA": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.8333,
+        "recall": 0.7143,
+        "f1": 0.7692
+      },
+      "NOTIFICATION": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "PAYMENT": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "REPORTING": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      "SEARCH": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "errors_sample": [
+      {
+        "pred_id": "FR-010",
+        "gold_id": "FR-010",
+        "summary": "Circulation Desk Staff Requirements Circulation staff should be able to...",
+        "expected": "AUTHENTICATION",
+        "predicted": "DATA"
+      },
+      {
+        "pred_id": "FR-012",
+        "gold_id": "FR-012",
+        "summary": "Circulation staff should be able to process returned items, inspect...",
+        "expected": "DATA",
+        "predicted": "BOOKING"
+      },
+      {
+        "pred_id": "NFR-002",
+        "gold_id": "NFR-003",
+        "summary": "All configuration updates and administrative overrides must be preserved in...",
+        "expected": "DATA",
+        "predicted": "REPORTING"
+      }
+    ],
+    "total_errors": 3
+  },
+  "structural_integrity": {
+    "total_requirements": 24,
+    "requirements_with_tasks": 24,
+    "requirements_without_tasks": 0,
+    "task_coverage_pct": 100.0,
+    "total_modules": 9,
+    "total_relations": 18,
+    "total_tasks": 24,
+    "total_test_cases": 24,
+    "untested_requirements_count": 0,
+    "traceability_matrix_rows": 24
+  },
+  "unsupported_metrics_declared": [
+    "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+    "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+    "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+  ]
+}

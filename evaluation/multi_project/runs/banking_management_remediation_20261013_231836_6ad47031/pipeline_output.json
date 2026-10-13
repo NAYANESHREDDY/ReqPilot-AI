@@ -1,0 +1,3826 @@
+{
+  "requirements": [
+    {
+      "id": "FR-001",
+      "req_type": "functional",
+      "summary": "Customers register, complete KYC, and log in with multi-factor authentication",
+      "description": "Customers should be able to register, complete initial KYC verification, and log in with multi-factor authentication.",
+      "actor": "Customers",
+      "action": "register, complete KYC verification, and log in",
+      "target_object": "their account",
+      "preconditions": "",
+      "expected_outcome": "Customers are registered, KYC verified, and can access the system using multi-factor authentication.",
+      "acceptance_criteria": [
+        "Given a prospective customer, When they register, complete initial KYC verification, and log in with multi-factor authentication, Then they gain access to the system."
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Customer Banking Requirements Customers should be able to register, complete initial KYC verification, and log in with multi-factor authentication.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-002",
+      "req_type": "functional",
+      "summary": "Customers view balances and real-time transaction history for savings and checking accounts",
+      "description": "Customers should be able to view account balances and real-time transaction history for savings and checking accounts.",
+      "actor": "Customers",
+      "action": "view",
+      "target_object": "account balances and real-time transaction history for savings and checking accounts",
+      "preconditions": "",
+      "expected_outcome": "Customers see up-to-date balances and transaction details for their savings and checking accounts.",
+      "acceptance_criteria": [
+        "Given a logged\u2011in customer, When they request to view balances and transaction history for savings or checking accounts, Then the system displays the current balances and real\u2011time transaction history."
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Customers should be able to view account balances and real-time transaction history for savings and checking accounts.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 90.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 75.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-003",
+      "req_type": "functional",
+      "summary": "Customers initiate domestic fund transfers between internal accounts and external beneficiaries",
+      "description": "Customers should be able to initiate domestic fund transfers between internal accounts and to external beneficiaries.",
+      "actor": "Customers",
+      "action": "initiate",
+      "target_object": "domestic fund transfers between internal accounts and external beneficiaries",
+      "preconditions": "",
+      "expected_outcome": "Domestic fund transfers are created and processed as requested.",
+      "acceptance_criteria": [
+        "Given a logged\u2011in customer, When they initiate a domestic fund transfer between internal accounts or to an external beneficiary, Then the system creates the transfer request for processing."
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Customers should be able to initiate domestic fund transfers between internal accounts and to external beneficiaries.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-004",
+      "req_type": "functional",
+      "summary": "Customers schedule recurring standing instructions and future\u2011dated payments",
+      "description": "Customers should be able to schedule recurring standing instructions and future-dated payments.",
+      "actor": "Customers",
+      "action": "schedule",
+      "target_object": "recurring standing instructions and future\u2011dated payments",
+      "preconditions": "",
+      "expected_outcome": "Scheduled instructions are stored and will be executed on the defined dates.",
+      "acceptance_criteria": [
+        "Given a logged\u2011in customer, When they schedule a recurring standing instruction or a future\u2011dated payment, Then the system records the schedule and will execute the payment on the specified dates."
+      ],
+      "priority": "medium",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Customers should be able to schedule recurring standing instructions and future-dated payments.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-005",
+      "req_type": "functional",
+      "summary": "Customers apply for personal, vehicle, or mortgage loans online",
+      "description": "Customers should be able to apply for personal, vehicle, or mortgage loans online.",
+      "actor": "Customers",
+      "action": "apply",
+      "target_object": "personal, vehicle, or mortgage loans via the online portal",
+      "preconditions": "",
+      "expected_outcome": "Loan applications are submitted electronically for processing.",
+      "acceptance_criteria": [
+        "Given a logged\u2011in customer, When they submit an application for a personal, vehicle, or mortgage loan online, Then the system records the application for review."
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Customers should be able to apply for personal, vehicle, or mortgage loans online.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-006",
+      "req_type": "functional",
+      "summary": "Customers download monthly account statements and tax certificates in PDF format",
+      "description": "Customers should be able to download monthly account statements and tax certificates in PDF format.",
+      "actor": "Customers",
+      "action": "download",
+      "target_object": "monthly account statements and tax certificates (PDF)",
+      "preconditions": "",
+      "expected_outcome": "PDF files of statements and certificates are provided to the customer.",
+      "acceptance_criteria": [
+        "Given a logged\u2011in customer, When they request a monthly account statement or tax certificate, Then the system provides the document as a downloadable PDF."
+      ],
+      "priority": "medium",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Customers should be able to download monthly account statements and tax certificates in PDF format.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-007",
+      "req_type": "functional",
+      "summary": "Customers request debit card activation, temporary freezing, and daily spending limit adjustments",
+      "description": "Customers should be able to request debit card activation, temporary card freezing, and daily spending limit adjustments.",
+      "actor": "Customers",
+      "action": "request",
+      "target_object": "debit card activation, temporary freezing, and daily spending limit adjustments",
+      "preconditions": "",
+      "expected_outcome": "Requested card actions are processed and reflected in the account.",
+      "acceptance_criteria": [
+        "Given a logged\u2011in customer, When they request activation, temporary freeze, or a change to the daily spending limit of their debit card, Then the system processes the request and updates the card status or limit accordingly."
+      ],
+      "priority": "medium",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Customers should be able to request debit card activation, temporary card freezing, and daily spending limit adjustments.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-008",
+      "req_type": "functional",
+      "summary": "Customers receive instantaneous SMS and push notifications for all debits, credits, and security alerts",
+      "description": "Customers should receive instantaneous SMS and push notifications for all debits, credits, and security alerts.",
+      "actor": "System",
+      "action": "send",
+      "target_object": "SMS and push notifications for debits, credits, and security alerts",
+      "preconditions": "",
+      "expected_outcome": "Customers are promptly notified of each transaction and security event.",
+      "acceptance_criteria": [
+        "Given a transaction or security event affecting a customer, When the event occurs, Then the system sends an instantaneous SMS and push notification to the customer."
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Customers should receive instantaneous SMS and push notifications for all debits, credits, and security alerts.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 87.5,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 75.0,
+        "consistency": 90.0,
+        "testability": 95.0,
+        "feasibility": 40.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-009",
+      "req_type": "functional",
+      "summary": "Customers report suspicious transactions or compromised credentials immediately",
+      "description": "Customers should be able to report suspicious transactions or compromised credentials immediately.",
+      "actor": "Customers",
+      "action": "report",
+      "target_object": "suspicious transactions or compromised credentials",
+      "preconditions": "",
+      "expected_outcome": "Reports are recorded and trigger appropriate investigation workflows.",
+      "acceptance_criteria": [
+        "Given a logged\u2011in customer, When they report a suspicious transaction or compromised credential, Then the system records the report and initiates the investigation process."
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Customers should be able to report suspicious transactions or compromised credentials immediately.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-010",
+      "req_type": "functional",
+      "summary": "Tellers log in securely using terminal authorization and biometric credentials",
+      "description": "Tellers should be able to log in securely using terminal authorization and biometric credentials.",
+      "actor": "Tellers",
+      "action": "log in securely",
+      "target_object": "banking terminals using authorization and biometric credentials",
+      "preconditions": "",
+      "expected_outcome": "Tellers gain authenticated access to the terminal.",
+      "acceptance_criteria": [
+        "Given a teller at a terminal, When they provide terminal authorization and biometric credentials, Then the system authenticates them and grants access."
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Teller and Branch Staff Requirements Tellers should be able to log in securely using terminal authorization and biometric credentials.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 91.0,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 85.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-011",
+      "req_type": "functional",
+      "summary": "Tellers process cash deposits and withdrawals against customer accounts",
+      "description": "Tellers should be able to process cash deposits and cash withdrawals against customer accounts.",
+      "actor": "Tellers",
+      "action": "process",
+      "target_object": "cash deposits and withdrawals for customer accounts",
+      "preconditions": "",
+      "expected_outcome": "Deposits increase and withdrawals decrease the respective account balances.",
+      "acceptance_criteria": [
+        "Given a teller, When they process a cash deposit or withdrawal for a customer account, Then the system updates the account balance accordingly."
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "Tellers should be able to process cash deposits and cash withdrawals against customer accounts.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-012",
+      "req_type": "functional",
+      "summary": "Tellers should be able to verify customer signatures, photo identity...",
+      "description": "Tellers should be able to verify customer signatures, photo identity documents, and account status.",
+      "actor": "Customer",
+      "action": "perform operation",
+      "target_object": "account",
+      "preconditions": "",
+      "expected_outcome": "Tellers should be able to verify customer signatures, photo identity documents, and account status.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "Tellers should be able to verify customer signatures, photo identity documents, and account status.",
+      "quality_score": 95.5,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 95.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-013",
+      "req_type": "functional",
+      "summary": "Tellers should be able to issue cashier checks and process...",
+      "description": "Tellers should be able to issue cashier checks and process inter-branch account adjustments.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "account",
+      "preconditions": "",
+      "expected_outcome": "Tellers should be able to issue cashier checks and process inter-branch account adjustments.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "Tellers should be able to issue cashier checks and process inter-branch account adjustments.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-014",
+      "req_type": "functional",
+      "summary": "All teller transactions exceeding configured threshold amounts must require mandatory...",
+      "description": "All teller transactions exceeding configured threshold amounts must require mandatory supervisory override.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "All teller transactions exceeding configured threshold amounts must require mandatory supervisory override.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "high",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "All teller transactions exceeding configured threshold amounts must require mandatory supervisory override.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-015",
+      "req_type": "functional",
+      "summary": "Tellers should perform end-of-day cash drawer balancing and generate teller...",
+      "description": "Tellers should perform end-of-day cash drawer balancing and generate teller reconciliation reports.",
+      "actor": "System",
+      "action": "generate",
+      "target_object": "reports",
+      "preconditions": "",
+      "expected_outcome": "Tellers should perform end-of-day cash drawer balancing and generate teller reconciliation reports.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "Tellers should perform end-of-day cash drawer balancing and generate teller reconciliation reports.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-016",
+      "req_type": "functional",
+      "summary": "Loan Management and Underwriting Loan officers should be able to...",
+      "description": "Loan Management and Underwriting Loan officers should be able to review customer loan applications, credit scores, and uploaded income proofs.",
+      "actor": "Customer",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "Loan Management and Underwriting Loan officers should be able to review customer loan applications, credit scores, and uploaded income proofs.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "Loan Management and Underwriting Loan officers should be able to review customer loan applications, credit scores, and uploaded income proofs.",
+      "quality_score": 90.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 75.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-017",
+      "req_type": "functional",
+      "summary": "Loan officers should be able to calculate debt-to-income ratios and...",
+      "description": "Loan officers should be able to calculate debt-to-income ratios and generate proposed repayment schedules.",
+      "actor": "System",
+      "action": "generate",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "Loan officers should be able to calculate debt-to-income ratios and generate proposed repayment schedules.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "Loan officers should be able to calculate debt-to-income ratios and generate proposed repayment schedules.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-018",
+      "req_type": "functional",
+      "summary": "Loan officers should be able to approve, reject, or refer...",
+      "description": "Loan officers should be able to approve, reject, or refer loan applications according to credit policy guidelines.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "Loan officers should be able to approve, reject, or refer loan applications according to credit policy guidelines.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "Loan officers should be able to approve, reject, or refer loan applications according to credit policy guidelines.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-019",
+      "req_type": "functional",
+      "summary": "The system should calculate interest, track monthly installment payments, and...",
+      "description": "The system should calculate interest, track monthly installment payments, and flag delinquent accounts.",
+      "actor": "System",
+      "action": "track",
+      "target_object": "accounts",
+      "preconditions": "",
+      "expected_outcome": "The system should calculate interest, track monthly installment payments, and flag delinquent accounts.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "The system should calculate interest, track monthly installment payments, and flag delinquent accounts.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "NFR-001",
+      "req_type": "non_functional",
+      "summary": "Compliance, Security and Auditing The system should enforce role-based access...",
+      "description": "Compliance, Security and Auditing The system should enforce role-based access control and strict separation of duties across all banking operations.",
+      "actor": "System",
+      "action": "access",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "Compliance, Security and Auditing The system should enforce role-based access control and strict separation of duties across all banking operations.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "Compliance, Security and Auditing The system should enforce role-based access control and strict separation of duties across all banking operations.",
+      "quality_score": 90.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 75.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-020",
+      "req_type": "functional",
+      "summary": "All transactions must be immutably recorded in a tamper-resistant financial...",
+      "description": "All transactions must be immutably recorded in a tamper-resistant financial ledger.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "All transactions must be immutably recorded in a tamper-resistant financial ledger.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "high",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "All transactions must be immutably recorded in a tamper-resistant financial ledger.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-021",
+      "req_type": "functional",
+      "summary": "The system should automatically monitor transactions against AML (Anti-Money Laundering)...",
+      "description": "The system should automatically monitor transactions against AML (Anti-Money Laundering) rule thresholds.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "The system should automatically monitor transactions against AML (Anti-Money Laundering) rule thresholds.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "The system should automatically monitor transactions against AML (Anti-Money Laundering) rule thresholds.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-022",
+      "req_type": "functional",
+      "summary": "The system should flag high-value or suspicious patterns and generate...",
+      "description": "The system should flag high-value or suspicious patterns and generate regulatory compliance reports.",
+      "actor": "System",
+      "action": "generate",
+      "target_object": "reports",
+      "preconditions": "",
+      "expected_outcome": "The system should flag high-value or suspicious patterns and generate regulatory compliance reports.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "medium",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "The system should flag high-value or suspicious patterns and generate regulatory compliance reports.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "NFR-002",
+      "req_type": "non_functional",
+      "summary": "All administrative changes, security policy updates, and manual ledger adjustments...",
+      "description": "All administrative changes, security policy updates, and manual ledger adjustments must be recorded in an audit trail.",
+      "actor": "System",
+      "action": "perform operation",
+      "target_object": "system behavior",
+      "preconditions": "",
+      "expected_outcome": "All administrative changes, security policy updates, and manual ledger adjustments must be recorded in an audit trail.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "high",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "All administrative changes, security policy updates, and manual ledger adjustments must be recorded in an audit trail.",
+      "quality_score": 93.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 95.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "NFR-003",
+      "req_type": "non_functional",
+      "summary": "Customer financial records and account balances must be protected with...",
+      "description": "Customer financial records and account balances must be protected with strong database encryption at rest and in transit.",
+      "actor": "Customer",
+      "action": "perform operation",
+      "target_object": "account",
+      "preconditions": "",
+      "expected_outcome": "Customer financial records and account balances must be protected with strong database encryption at rest and in transit.",
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "priority": "high",
+      "status": "needs_review",
+      "confidence": 0.9,
+      "is_ai_suggested": false,
+      "source_id": "specification.docx",
+      "source_page": 3,
+      "source_excerpt": "Customer financial records and account balances must be protected with strong database encryption at rest and in transit.",
+      "quality_score": 90.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 75.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    },
+    {
+      "id": "FR-023",
+      "req_type": "functional",
+      "summary": "Provide enterprise-grade core banking and portal system for all stakeholder groups",
+      "description": "The financial institution requires an enterprise-grade Core Banking and Customer Portal Management System for retail customers, loan officers, tellers, compliance auditors, and system administrators.",
+      "actor": "System",
+      "action": "provide",
+      "target_object": "Core Banking and Customer Portal Management System",
+      "preconditions": "",
+      "expected_outcome": "Enterprise-grade system available to retail customers, loan officers, tellers, compliance auditors, and system administrators.",
+      "acceptance_criteria": [
+        "Given the need for a banking platform, When the system is deployed, Then an enterprise-grade Core Banking and Customer Portal Management System is available to retail customers, loan officers, tellers, compliance auditors, and system administrators."
+      ],
+      "priority": "high",
+      "confidence": 1.0,
+      "source_page": 3,
+      "source_excerpt": "The financial institution requires an enterprise-grade Core Banking and Customer Portal Management System for retail customers, loan officers, tellers, compliance auditors, and system administrators.",
+      "source_id": "specification.docx",
+      "status": "needs_review",
+      "is_ai_suggested": true,
+      "quality_score": 90.2,
+      "quality_breakdown": {
+        "completeness": 100.0,
+        "clarity": 100.0,
+        "atomicity": 75.0,
+        "consistency": 90.0,
+        "testability": 80.0,
+        "feasibility": 90.0,
+        "traceability": 100.0
+      }
+    }
+  ],
+  "issues": [
+    {
+      "requirement_id": "NFR-003",
+      "issue_type": "ambiguity",
+      "title": "Ambiguous specification: 'protected'",
+      "description": "The term 'protected' is subjective and lacks measurable engineering verification criteria.",
+      "detected_phrase": "protected",
+      "severity": "high",
+      "confidence": 0.88,
+      "question": "What encryption standards (e.g., AES-256, TLS 1.3), authentication mechanisms (MFA, OAuth2), and compliance policies are required?",
+      "suggested_options": [
+        "TLS 1.3 in transit + AES-256 at rest",
+        "OAuth2 / JWT with RBAC",
+        "SOC2 / GDPR compliance"
+      ]
+    }
+  ],
+  "clarifications": [
+    {
+      "requirement_id": "NFR-003",
+      "question": "What encryption standards (e.g., AES-256, TLS 1.3), authentication mechanisms (MFA, OAuth2), and compliance policies are required?",
+      "rationale": "Clarifying ambiguous phrase: 'protected'",
+      "priority": "high",
+      "suggested_options": [
+        "TLS 1.3 in transit + AES-256 at rest",
+        "OAuth2 / JWT with RBAC",
+        "SOC2 / GDPR compliance"
+      ],
+      "status": "pending"
+    }
+  ],
+  "modules": [
+    {
+      "id": "MOD-GATEWAY",
+      "name": "API Gateway",
+      "description": "Provides a common entry point for the application services derived from the software requirements.",
+      "module_type": "gateway",
+      "tech_stack": "API gateway / reverse proxy",
+      "responsibilities": [
+        "Route API requests",
+        "Apply common request controls"
+      ],
+      "api_endpoints": [
+        "/api/*"
+      ],
+      "pos_x": 400.0,
+      "pos_y": 50.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-AUTHENTICATION",
+      "name": "Authentication & Authorization",
+      "description": "Manages user credentials, multi\u2011factor authentication, biometric verification and role\u2011based access control for customers and tellers.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Validate credentials",
+        "Issue security tokens",
+        "Enforce RBAC",
+        "Support MFA and biometric login"
+      ],
+      "api_endpoints": [
+        "/api/authentication",
+        "/api/authentication/{id}"
+      ],
+      "pos_x": 150.0,
+      "pos_y": 180.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-PROFILE",
+      "name": "Profile Management",
+      "description": "Handles customer onboarding, KYC data, personal settings and card service preferences.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Register and maintain customer profiles",
+        "Store and verify KYC information",
+        "Manage card activation and limit settings"
+      ],
+      "api_endpoints": [
+        "/api/profile",
+        "/api/profile/{id}"
+      ],
+      "pos_x": 400.0,
+      "pos_y": 180.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-PAYMENT",
+      "name": "Payment Management",
+      "description": "Processes all monetary movements including transfers, deposits, withdrawals, card limits and transaction thresholds.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Execute fund transfers",
+        "Process cash deposits/withdrawals",
+        "Enforce transaction limits",
+        "Calculate interest and installments"
+      ],
+      "api_endpoints": [
+        "/api/payment",
+        "/api/payment/{id}"
+      ],
+      "pos_x": 650.0,
+      "pos_y": 180.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-BOOKING",
+      "name": "Booking & Scheduling",
+      "description": "Manages loan applications, underwriting workflow and recurring/future\u2011dated payment scheduling.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Accept loan applications",
+        "Perform underwriting calculations",
+        "Schedule recurring payments",
+        "Approve or reject loan requests"
+      ],
+      "api_endpoints": [
+        "/api/booking",
+        "/api/booking/{id}"
+      ],
+      "pos_x": 150.0,
+      "pos_y": 350.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-NOTIFICATION",
+      "name": "Notification Service",
+      "description": "Delivers real\u2011time SMS, push and email alerts for transaction events, security warnings and AML monitoring.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Send transaction alerts",
+        "Publish security and AML notifications",
+        "Support configurable notification channels"
+      ],
+      "api_endpoints": [
+        "/api/notification",
+        "/api/notification/{id}"
+      ],
+      "pos_x": 400.0,
+      "pos_y": 350.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-FILE",
+      "name": "File & Document Management",
+      "description": "Provides secure storage and retrieval of customer statements, tax certificates and generated report PDFs.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Store PDF statements",
+        "Serve downloadable documents",
+        "Maintain audit\u2011ready file versioning"
+      ],
+      "api_endpoints": [
+        "/api/file",
+        "/api/file/{id}"
+      ],
+      "pos_x": 650.0,
+      "pos_y": 350.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-REPORTING",
+      "name": "Reporting & Analytics",
+      "description": "Generates operational, compliance and AML reports, and supplies data for dashboards and audit trails.",
+      "module_type": "service",
+      "tech_stack": "Application API + relational data access",
+      "responsibilities": [
+        "Produce end\u2011of\u2011day teller reports",
+        "Generate AML and high\u2011value transaction alerts",
+        "Aggregate loan and payment metrics"
+      ],
+      "api_endpoints": [
+        "/api/reporting",
+        "/api/reporting/{id}"
+      ],
+      "pos_x": 150.0,
+      "pos_y": 520.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    },
+    {
+      "id": "MOD-DATA",
+      "name": "Application Data Store",
+      "description": "Provides persistent storage for entities and records required by the analyzed software requirements.",
+      "module_type": "database",
+      "tech_stack": "Relational database",
+      "responsibilities": [
+        "Persist application entities",
+        "Maintain data consistency",
+        "Support application data retrieval"
+      ],
+      "api_endpoints": [],
+      "pos_x": 400.0,
+      "pos_y": 500.0,
+      "is_ai_suggested": true,
+      "status": "approved"
+    }
+  ],
+  "relations": [
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-AUTHENTICATION",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-PROFILE",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-PAYMENT",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-BOOKING",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-NOTIFICATION",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-FILE",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-GATEWAY",
+      "target_module_id": "MOD-REPORTING",
+      "relation_type": "routes_to",
+      "description": "Gateway routes external requests to this service."
+    },
+    {
+      "source_module_id": "MOD-AUTHENTICATION",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Authentication & Authorization persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-PROFILE",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Profile Management persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-PAYMENT",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Payment Management persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-BOOKING",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Booking & Scheduling persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-NOTIFICATION",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Notification Service persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-FILE",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "File & Document Management persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-REPORTING",
+      "target_module_id": "MOD-DATA",
+      "relation_type": "persists_to",
+      "description": "Reporting & Analytics persists state to application data store."
+    },
+    {
+      "source_module_id": "MOD-AUTHENTICATION",
+      "target_module_id": "MOD-PROFILE",
+      "relation_type": "calls",
+      "description": "Authentication service validates credentials before profile data is accessed."
+    },
+    {
+      "source_module_id": "MOD-PROFILE",
+      "target_module_id": "MOD-REPORTING",
+      "relation_type": "publishes_to",
+      "description": "Profile changes (e.g., KYC updates) are emitted as audit events for reporting."
+    },
+    {
+      "source_module_id": "MOD-PAYMENT",
+      "target_module_id": "MOD-NOTIFICATION",
+      "relation_type": "publishes_to",
+      "description": "Successful or failed payment transactions trigger real\u2011time notifications."
+    },
+    {
+      "source_module_id": "MOD-BOOKING",
+      "target_module_id": "MOD-PAYMENT",
+      "relation_type": "calls",
+      "description": "Loan disbursement and scheduled recurring payments are executed via the payment service."
+    },
+    {
+      "source_module_id": "MOD-BOOKING",
+      "target_module_id": "MOD-NOTIFICATION",
+      "relation_type": "publishes_to",
+      "description": "Loan application status changes and scheduled payment confirmations are sent as alerts."
+    },
+    {
+      "source_module_id": "MOD-REPORTING",
+      "target_module_id": "MOD-PAYMENT",
+      "relation_type": "reads_from",
+      "description": "Reporting service reads transaction data from payment service for compliance and analytics."
+    },
+    {
+      "source_module_id": "MOD-REPORTING",
+      "target_module_id": "MOD-BOOKING",
+      "relation_type": "reads_from",
+      "description": "Loan and scheduling data are consumed to produce loan performance reports."
+    },
+    {
+      "source_module_id": "MOD-REPORTING",
+      "target_module_id": "MOD-FILE",
+      "relation_type": "calls",
+      "description": "Generated reports are persisted as PDF documents via the file service."
+    }
+  ],
+  "epics": [
+    {
+      "id": "EPIC-01",
+      "title": "Authentication & Access Management",
+      "description": "Implementation of capabilities related to authentication & access management."
+    },
+    {
+      "id": "EPIC-02",
+      "title": "Data Management & Storage",
+      "description": "Implementation of capabilities related to data management & storage."
+    },
+    {
+      "id": "EPIC-03",
+      "title": "Commerce & Order Management",
+      "description": "Implementation of capabilities related to commerce & order management."
+    },
+    {
+      "id": "EPIC-04",
+      "title": "Booking & Scheduling",
+      "description": "Implementation of capabilities related to booking & scheduling."
+    },
+    {
+      "id": "EPIC-05",
+      "title": "File & Document Management",
+      "description": "Implementation of capabilities related to file & document management."
+    },
+    {
+      "id": "EPIC-06",
+      "title": "User & Profile Management",
+      "description": "Implementation of capabilities related to user & profile management."
+    },
+    {
+      "id": "EPIC-07",
+      "title": "Notifications & Communication",
+      "description": "Implementation of capabilities related to notifications & communication."
+    },
+    {
+      "id": "EPIC-08",
+      "title": "Reporting & Analytics",
+      "description": "Implementation of capabilities related to reporting & analytics."
+    }
+  ],
+  "features": [
+    {
+      "id": "FEAT-01",
+      "epic_id": "EPIC-01",
+      "title": "Authentication & Authorization",
+      "description": "Implement authentication & authorization."
+    },
+    {
+      "id": "FEAT-02",
+      "epic_id": "EPIC-02",
+      "title": "Data Persistence",
+      "description": "Implement data persistence."
+    },
+    {
+      "id": "FEAT-03",
+      "epic_id": "EPIC-03",
+      "title": "Payment Processing",
+      "description": "Implement payment processing."
+    },
+    {
+      "id": "FEAT-04",
+      "epic_id": "EPIC-04",
+      "title": "Booking & Scheduling",
+      "description": "Implement booking & scheduling."
+    },
+    {
+      "id": "FEAT-05",
+      "epic_id": "EPIC-05",
+      "title": "File Management",
+      "description": "Implement file management."
+    },
+    {
+      "id": "FEAT-06",
+      "epic_id": "EPIC-06",
+      "title": "Profile Management",
+      "description": "Implement profile management."
+    },
+    {
+      "id": "FEAT-07",
+      "epic_id": "EPIC-07",
+      "title": "Notifications",
+      "description": "Implement notifications."
+    },
+    {
+      "id": "FEAT-08",
+      "epic_id": "EPIC-08",
+      "title": "Reporting & Analytics",
+      "description": "Implement reporting & analytics."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "epic_id": "EPIC-01",
+      "feature_id": "FEAT-01",
+      "requirement_id": "FR-001",
+      "module_id": "MOD-AUTHENTICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Authentication & Authorization"
+      ],
+      "title": "Implement: Customers register, complete KYC, and log in with multi-factor authentication",
+      "description": "Implement the behavior specified by FR-001: Customers register, complete KYC, and log in with multi-factor authentication. This work belongs to the Authentication & Authorization feature and uses architecture module MOD-AUTHENTICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for their account",
+        "Implement application logic for their account",
+        "Expose the required API behavior for their account",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-001"
+      ],
+      "acceptance_criteria": [
+        "Given a prospective customer, When they register, complete initial KYC verification, and log in with multi-factor authentication, Then they gain access to the system."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.96,
+      "classification_reasoning": "Handles customer registration, KYC verification and MFA login.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-002",
+      "epic_id": "EPIC-02",
+      "feature_id": "FEAT-02",
+      "requirement_id": "FR-002",
+      "module_id": "MOD-DATA",
+      "required_skills": [
+        "Relational Database"
+      ],
+      "title": "Implement: Customers view balances and real-time transaction history for savings and checking accounts",
+      "description": "Implement the behavior specified by FR-002: Customers view balances and real-time transaction history for savings and checking accounts. This work belongs to the Data Persistence feature and uses architecture module MOD-DATA.",
+      "complexity": "medium",
+      "estimated_hours": 12.0,
+      "story_points": 3,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for account balances and real-time transaction history for savings and checking accounts",
+        "Implement application logic for account balances and real-time transaction history for savings and checking accounts",
+        "Expose the required API behavior for account balances and real-time transaction history for savings and checking accounts",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-002"
+      ],
+      "acceptance_criteria": [
+        "Given a logged\u2011in customer, When they request to view balances and transaction history for savings or checking accounts, Then the system displays the current balances and real\u2011time transaction history."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.94,
+      "classification_reasoning": "Provides read\u2011only access to account balances and transaction history stored in the data store.",
+      "estimate_min_hours": 9.0,
+      "estimate_max_hours": 15.0,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-003",
+      "epic_id": "EPIC-03",
+      "feature_id": "FEAT-03",
+      "requirement_id": "FR-003",
+      "module_id": "MOD-PAYMENT",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Payment Processing"
+      ],
+      "title": "Implement: Customers initiate domestic fund transfers between internal accounts and external beneficiaries",
+      "description": "Implement the behavior specified by FR-003: Customers initiate domestic fund transfers between internal accounts and external beneficiaries. This work belongs to the Payment Processing feature and uses architecture module MOD-PAYMENT.",
+      "complexity": "medium",
+      "estimated_hours": 12.0,
+      "story_points": 3,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for domestic fund transfers between internal accounts and external beneficiaries",
+        "Implement application logic for domestic fund transfers between internal accounts and external beneficiaries",
+        "Expose the required API behavior for domestic fund transfers between internal accounts and external beneficiaries",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-003"
+      ],
+      "acceptance_criteria": [
+        "Given a logged\u2011in customer, When they initiate a domestic fund transfer between internal accounts or to an external beneficiary, Then the system creates the transfer request for processing."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.95,
+      "classification_reasoning": "Executes domestic fund transfers, a core payment function.",
+      "estimate_min_hours": 9.0,
+      "estimate_max_hours": 15.0,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-004",
+      "epic_id": "EPIC-03",
+      "feature_id": "FEAT-03",
+      "requirement_id": "FR-004",
+      "module_id": "MOD-PAYMENT",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Payment Processing"
+      ],
+      "title": "Implement: Customers schedule recurring standing instructions and future\u2011dated payments",
+      "description": "Implement the behavior specified by FR-004: Customers schedule recurring standing instructions and future\u2011dated payments. This work belongs to the Payment Processing feature and uses architecture module MOD-PAYMENT.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for recurring standing instructions and future\u2011dated payments",
+        "Implement application logic for recurring standing instructions and future\u2011dated payments",
+        "Expose the required API behavior for recurring standing instructions and future\u2011dated payments",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-004"
+      ],
+      "acceptance_criteria": [
+        "Given a logged\u2011in customer, When they schedule a recurring standing instruction or a future\u2011dated payment, Then the system records the schedule and will execute the payment on the specified dates."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.94,
+      "classification_reasoning": "Schedules recurring and future\u2011dated payments, which are payment\u2011management capabilities.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-005",
+      "epic_id": "EPIC-04",
+      "feature_id": "FEAT-04",
+      "requirement_id": "FR-005",
+      "module_id": "MOD-BOOKING",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Payment Processing"
+      ],
+      "title": "Implement: Customers apply for personal, vehicle, or mortgage loans online",
+      "description": "Implement the behavior specified by FR-005: Customers apply for personal, vehicle, or mortgage loans online. This work belongs to the Booking & Scheduling feature and uses architecture module MOD-BOOKING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for personal, vehicle, or mortgage loans via the online portal",
+        "Implement application logic for personal, vehicle, or mortgage loans via the online portal",
+        "Expose the required API behavior for personal, vehicle, or mortgage loans via the online portal",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-005"
+      ],
+      "acceptance_criteria": [
+        "Given a logged\u2011in customer, When they submit an application for a personal, vehicle, or mortgage loan online, Then the system records the application for review."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.95,
+      "classification_reasoning": "Enables loan application and underwriting, fitting the booking & scheduling domain.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-006",
+      "epic_id": "EPIC-05",
+      "feature_id": "FEAT-05",
+      "requirement_id": "FR-006",
+      "module_id": "MOD-FILE",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "File & Document Management"
+      ],
+      "title": "Implement: Customers download monthly account statements and tax certificates in PDF format",
+      "description": "Implement the behavior specified by FR-006: Customers download monthly account statements and tax certificates in PDF format. This work belongs to the File Management feature and uses architecture module MOD-FILE.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for monthly account statements and tax certificates (PDF)",
+        "Implement application logic for monthly account statements and tax certificates (PDF)",
+        "Expose the required API behavior for monthly account statements and tax certificates (PDF)",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-006"
+      ],
+      "acceptance_criteria": [
+        "Given a logged\u2011in customer, When they request a monthly account statement or tax certificate, Then the system provides the document as a downloadable PDF."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.96,
+      "classification_reasoning": "Manages downloadable PDF statements and tax certificates as documents.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-007",
+      "epic_id": "EPIC-06",
+      "feature_id": "FEAT-06",
+      "requirement_id": "FR-007",
+      "module_id": "MOD-PROFILE",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "File & Document Management"
+      ],
+      "title": "Implement: Customers request debit card activation, temporary freezing, and daily spending limit adjustments",
+      "description": "Implement the behavior specified by FR-007: Customers request debit card activation, temporary freezing, and daily spending limit adjustments. This work belongs to the Profile Management feature and uses architecture module MOD-PROFILE.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for debit card activation, temporary freezing, and daily spending limit adjustments",
+        "Implement application logic for debit card activation, temporary freezing, and daily spending limit adjustments",
+        "Expose the required API behavior for debit card activation, temporary freezing, and daily spending limit adjustments",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-007"
+      ],
+      "acceptance_criteria": [
+        "Given a logged\u2011in customer, When they request activation, temporary freeze, or a change to the daily spending limit of their debit card, Then the system processes the request and updates the card status or limit accordingly."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.95,
+      "classification_reasoning": "Controls debit\u2011card activation, freezing and limit settings within profile management.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-008",
+      "epic_id": "EPIC-07",
+      "feature_id": "FEAT-07",
+      "requirement_id": "FR-008",
+      "module_id": "MOD-NOTIFICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Notification Systems",
+        "Payment Processing"
+      ],
+      "title": "Implement: Customers receive instantaneous SMS and push notifications for all debits, credits, and security alerts",
+      "description": "Implement the behavior specified by FR-008: Customers receive instantaneous SMS and push notifications for all debits, credits, and security alerts. This work belongs to the Notifications feature and uses architecture module MOD-NOTIFICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 3",
+      "subtasks": [
+        "Define or update the data model for SMS and push notifications for debits, credits, and security alerts",
+        "Implement application logic for SMS and push notifications for debits, credits, and security alerts",
+        "Expose the required API behavior for SMS and push notifications for debits, credits, and security alerts",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-008"
+      ],
+      "acceptance_criteria": [
+        "Given a transaction or security event affecting a customer, When the event occurs, Then the system sends an instantaneous SMS and push notification to the customer."
+      ],
+      "depends_on": [
+        "TASK-003"
+      ],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.96,
+      "classification_reasoning": "Sends real\u2011time SMS and push alerts for transactions and security events.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-009",
+      "epic_id": "EPIC-07",
+      "feature_id": "FEAT-07",
+      "requirement_id": "FR-009",
+      "module_id": "MOD-NOTIFICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Notification Systems",
+        "Payment Processing"
+      ],
+      "title": "Implement: Customers report suspicious transactions or compromised credentials immediately",
+      "description": "Implement the behavior specified by FR-009: Customers report suspicious transactions or compromised credentials immediately. This work belongs to the Notifications feature and uses architecture module MOD-NOTIFICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 3",
+      "subtasks": [
+        "Define or update the data model for suspicious transactions or compromised credentials",
+        "Implement application logic for suspicious transactions or compromised credentials",
+        "Expose the required API behavior for suspicious transactions or compromised credentials",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-009"
+      ],
+      "acceptance_criteria": [
+        "Given a logged\u2011in customer, When they report a suspicious transaction or compromised credential, Then the system records the report and initiates the investigation process."
+      ],
+      "depends_on": [
+        "TASK-003"
+      ],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.94,
+      "classification_reasoning": "Reports of suspicious activity trigger notification alerts to the system.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-010",
+      "epic_id": "EPIC-01",
+      "feature_id": "FEAT-01",
+      "requirement_id": "FR-010",
+      "module_id": "MOD-AUTHENTICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Authentication & Authorization"
+      ],
+      "title": "Implement: Tellers log in securely using terminal authorization and biometric credentials",
+      "description": "Implement the behavior specified by FR-010: Tellers log in securely using terminal authorization and biometric credentials. This work belongs to the Authentication & Authorization feature and uses architecture module MOD-AUTHENTICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for banking terminals using authorization and biometric credentials",
+        "Implement application logic for banking terminals using authorization and biometric credentials",
+        "Expose the required API behavior for banking terminals using authorization and biometric credentials",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-010"
+      ],
+      "acceptance_criteria": [
+        "Given a teller at a terminal, When they provide terminal authorization and biometric credentials, Then the system authenticates them and grants access."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.96,
+      "classification_reasoning": "Secures teller login with biometric and terminal authorization, an authentication concern.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-011",
+      "epic_id": "EPIC-03",
+      "feature_id": "FEAT-03",
+      "requirement_id": "FR-011",
+      "module_id": "MOD-PAYMENT",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Payment Processing"
+      ],
+      "title": "Implement: Tellers process cash deposits and withdrawals against customer accounts",
+      "description": "Implement the behavior specified by FR-011: Tellers process cash deposits and withdrawals against customer accounts. This work belongs to the Payment Processing feature and uses architecture module MOD-PAYMENT.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for cash deposits and withdrawals for customer accounts",
+        "Implement application logic for cash deposits and withdrawals for customer accounts",
+        "Expose the required API behavior for cash deposits and withdrawals for customer accounts",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-011"
+      ],
+      "acceptance_criteria": [
+        "Given a teller, When they process a cash deposit or withdrawal for a customer account, Then the system updates the account balance accordingly."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.96,
+      "classification_reasoning": "Cash deposits and withdrawals are core payment operations.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-012",
+      "epic_id": "EPIC-01",
+      "feature_id": "FEAT-01",
+      "requirement_id": "FR-012",
+      "module_id": "MOD-AUTHENTICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Authentication & Authorization"
+      ],
+      "title": "Implement: Tellers should be able to verify customer signatures, photo identity...",
+      "description": "Implement the behavior specified by FR-012: Tellers should be able to verify customer signatures, photo identity.... This work belongs to the Authentication & Authorization feature and uses architecture module MOD-AUTHENTICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for account",
+        "Implement application logic for account",
+        "Expose the required API behavior for account",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-012"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.94,
+      "classification_reasoning": "Signature and photo ID verification are access\u2011control and identity validation functions.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-013",
+      "epic_id": "EPIC-03",
+      "feature_id": "FEAT-03",
+      "requirement_id": "FR-013",
+      "module_id": "MOD-PAYMENT",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Payment Processing"
+      ],
+      "title": "Implement: Tellers should be able to issue cashier checks and process...",
+      "description": "Implement the behavior specified by FR-013: Tellers should be able to issue cashier checks and process.... This work belongs to the Payment Processing feature and uses architecture module MOD-PAYMENT.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 1",
+      "subtasks": [
+        "Define or update the data model for account",
+        "Implement application logic for account",
+        "Expose the required API behavior for account",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-013"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.95,
+      "classification_reasoning": "Issuing cashier checks and inter\u2011branch adjustments are payment\u2011related transactions.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-014",
+      "epic_id": "EPIC-01",
+      "feature_id": "FEAT-01",
+      "requirement_id": "FR-014",
+      "module_id": "MOD-AUTHENTICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Authentication & Authorization"
+      ],
+      "title": "Implement: All teller transactions exceeding configured threshold amounts must require mandatory...",
+      "description": "Implement the behavior specified by FR-014: All teller transactions exceeding configured threshold amounts must require mandatory.... This work belongs to the Authentication & Authorization feature and uses architecture module MOD-AUTHENTICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-014"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.93,
+      "classification_reasoning": "Supervisory override for high\u2011value transactions is an authorization rule.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-015",
+      "epic_id": "EPIC-08",
+      "feature_id": "FEAT-08",
+      "requirement_id": "FR-015",
+      "module_id": "MOD-REPORTING",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Notification Systems",
+        "Payment Processing",
+        "Reporting & Analytics"
+      ],
+      "title": "Implement: Tellers should perform end-of-day cash drawer balancing and generate teller...",
+      "description": "Implement the behavior specified by FR-015: Tellers should perform end-of-day cash drawer balancing and generate teller.... This work belongs to the Reporting & Analytics feature and uses architecture module MOD-REPORTING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for reports",
+        "Implement application logic for reports",
+        "Expose the required API behavior for reports",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-015"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.95,
+      "classification_reasoning": "Generating end\u2011of\u2011day reconciliation reports is a reporting capability.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-016",
+      "epic_id": "EPIC-05",
+      "feature_id": "FEAT-05",
+      "requirement_id": "FR-016",
+      "module_id": "MOD-FILE",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "File & Document Management"
+      ],
+      "title": "Implement: Loan Management and Underwriting Loan officers should be able to...",
+      "description": "Implement the behavior specified by FR-016: Loan Management and Underwriting Loan officers should be able to.... This work belongs to the File Management feature and uses architecture module MOD-FILE.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-016"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.94,
+      "classification_reasoning": "Reviewing loan applications and uploaded income proofs involves document management.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-017",
+      "epic_id": "EPIC-08",
+      "feature_id": "FEAT-08",
+      "requirement_id": "FR-017",
+      "module_id": "MOD-REPORTING",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Notification Systems",
+        "Payment Processing",
+        "Reporting & Analytics"
+      ],
+      "title": "Implement: Loan officers should be able to calculate debt-to-income ratios and...",
+      "description": "Implement the behavior specified by FR-017: Loan officers should be able to calculate debt-to-income ratios and.... This work belongs to the Reporting & Analytics feature and uses architecture module MOD-REPORTING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-017"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.92,
+      "classification_reasoning": "Debt\u2011to\u2011income calculations and repayment schedule generation are analytical/reporting functions.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-018",
+      "epic_id": "EPIC-04",
+      "feature_id": "FEAT-04",
+      "requirement_id": "FR-018",
+      "module_id": "MOD-BOOKING",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Payment Processing"
+      ],
+      "title": "Implement: Loan officers should be able to approve, reject, or refer...",
+      "description": "Implement the behavior specified by FR-018: Loan officers should be able to approve, reject, or refer.... This work belongs to the Booking & Scheduling feature and uses architecture module MOD-BOOKING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-018"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.93,
+      "classification_reasoning": "Approving or rejecting loan applications is part of loan underwriting/scheduling.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-019",
+      "epic_id": "EPIC-02",
+      "feature_id": "FEAT-02",
+      "requirement_id": "FR-019",
+      "module_id": "MOD-DATA",
+      "required_skills": [
+        "Relational Database"
+      ],
+      "title": "Implement: The system should calculate interest, track monthly installment payments, and...",
+      "description": "Implement the behavior specified by FR-019: The system should calculate interest, track monthly installment payments, and.... This work belongs to the Data Persistence feature and uses architecture module MOD-DATA.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for accounts",
+        "Implement application logic for accounts",
+        "Expose the required API behavior for accounts",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-019"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.95,
+      "classification_reasoning": "Interest calculation, installment tracking, and delinquency flags are data\u2011store business rules.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-020",
+      "epic_id": "EPIC-01",
+      "feature_id": "FEAT-01",
+      "requirement_id": "NFR-001",
+      "module_id": "MOD-AUTHENTICATION",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Authentication & Authorization"
+      ],
+      "title": "Implement: Compliance, Security and Auditing The system should enforce role-based access...",
+      "description": "Implement the behavior specified by NFR-001: Compliance, Security and Auditing The system should enforce role-based access.... This work belongs to the Authentication & Authorization feature and uses architecture module MOD-AUTHENTICATION.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement NFR-001"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.97,
+      "classification_reasoning": "Role\u2011based access control and separation of duties are core authentication/authorization concerns.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-021",
+      "epic_id": "EPIC-02",
+      "feature_id": "FEAT-02",
+      "requirement_id": "FR-020",
+      "module_id": "MOD-DATA",
+      "required_skills": [
+        "Relational Database"
+      ],
+      "title": "Implement: All transactions must be immutably recorded in a tamper-resistant financial...",
+      "description": "Implement the behavior specified by FR-020: All transactions must be immutably recorded in a tamper-resistant financial.... This work belongs to the Data Persistence feature and uses architecture module MOD-DATA.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-020"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.96,
+      "classification_reasoning": "Immutable transaction recording is a core data persistence responsibility handled by the Application Data Store.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-022",
+      "epic_id": "EPIC-02",
+      "feature_id": "FEAT-02",
+      "requirement_id": "FR-021",
+      "module_id": "MOD-DATA",
+      "required_skills": [
+        "Relational Database"
+      ],
+      "title": "Implement: The system should automatically monitor transactions against AML (Anti-Money Laundering)...",
+      "description": "Implement the behavior specified by FR-021: The system should automatically monitor transactions against AML (Anti-Money Laundering).... This work belongs to the Data Persistence feature and uses architecture module MOD-DATA.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-021"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.94,
+      "classification_reasoning": "Automatic AML rule monitoring operates on transaction data and belongs to the data layer that enforces ledger thresholds.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-023",
+      "epic_id": "EPIC-08",
+      "feature_id": "FEAT-08",
+      "requirement_id": "FR-022",
+      "module_id": "MOD-REPORTING",
+      "required_skills": [
+        "API Development",
+        "Relational Database",
+        "Notification Systems",
+        "Payment Processing",
+        "Reporting & Analytics"
+      ],
+      "title": "Implement: The system should flag high-value or suspicious patterns and generate...",
+      "description": "Implement the behavior specified by FR-022: The system should flag high-value or suspicious patterns and generate.... This work belongs to the Reporting & Analytics feature and uses architecture module MOD-REPORTING.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "medium",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for reports",
+        "Implement application logic for reports",
+        "Expose the required API behavior for reports",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-022"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.95,
+      "classification_reasoning": "Flagging suspicious patterns and generating regulatory compliance reports is primarily a reporting and analytics function.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-024",
+      "epic_id": "EPIC-02",
+      "feature_id": "FEAT-02",
+      "requirement_id": "NFR-002",
+      "module_id": "MOD-DATA",
+      "required_skills": [
+        "Relational Database"
+      ],
+      "title": "Implement: All administrative changes, security policy updates, and manual ledger adjustments...",
+      "description": "Implement the behavior specified by NFR-002: All administrative changes, security policy updates, and manual ledger adjustments.... This work belongs to the Data Persistence feature and uses architecture module MOD-DATA.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for system behavior",
+        "Implement application logic for system behavior",
+        "Expose the required API behavior for system behavior",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement NFR-002"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.97,
+      "classification_reasoning": "Recording administrative changes and ledger adjustments in an audit trail is a data\u2011store audit\u2011log responsibility.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-025",
+      "epic_id": "EPIC-02",
+      "feature_id": "FEAT-02",
+      "requirement_id": "NFR-003",
+      "module_id": "MOD-DATA",
+      "required_skills": [
+        "Relational Database"
+      ],
+      "title": "Implement: Customer financial records and account balances must be protected with...",
+      "description": "Implement the behavior specified by NFR-003: Customer financial records and account balances must be protected with.... This work belongs to the Data Persistence feature and uses architecture module MOD-DATA.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 2",
+      "subtasks": [
+        "Define or update the data model for account",
+        "Implement application logic for account",
+        "Expose the required API behavior for account",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement NFR-003"
+      ],
+      "acceptance_criteria": [
+        "Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.96,
+      "classification_reasoning": "Encryption of financial records and balances at rest/in transit is a data\u2011security concern managed by the Application Data Store.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    },
+    {
+      "id": "TASK-026",
+      "epic_id": "EPIC-02",
+      "feature_id": "FEAT-02",
+      "requirement_id": "FR-023",
+      "module_id": "MOD-DATA",
+      "required_skills": [
+        "Relational Database"
+      ],
+      "title": "Implement: Provide enterprise-grade core banking and portal system for all stakeholder groups",
+      "description": "Implement the behavior specified by FR-023: Provide enterprise-grade core banking and portal system for all stakeholder groups. This work belongs to the Data Persistence feature and uses architecture module MOD-DATA.",
+      "complexity": "low",
+      "estimated_hours": 6.0,
+      "story_points": 2,
+      "priority": "high",
+      "status": "todo",
+      "assignee_name": "Unassigned",
+      "sprint_name": "Sprint 3",
+      "subtasks": [
+        "Define or update the data model for Core Banking and Customer Portal Management System",
+        "Implement application logic for Core Banking and Customer Portal Management System",
+        "Expose the required API behavior for Core Banking and Customer Portal Management System",
+        "Implement relevant frontend or integration behavior",
+        "Write automated tests for requirement FR-023"
+      ],
+      "acceptance_criteria": [
+        "Given the need for a banking platform, When the system is deployed, Then an enterprise-grade Core Banking and Customer Portal Management System is available to retail customers, loan officers, tellers, compliance auditors, and system administrators."
+      ],
+      "depends_on": [],
+      "is_ai_suggested": true,
+      "classification_source": "llm",
+      "confidence": 0.9,
+      "classification_reasoning": "Providing the overall core banking and portal system hinges on the central data repository that underpins all stakeholder functions.",
+      "estimate_min_hours": 4.8,
+      "estimate_max_hours": 7.2,
+      "estimate_confidence": "deterministic baseline"
+    }
+  ],
+  "dependencies": [
+    {
+      "task_id": "TASK-008",
+      "depends_on_task_id": "TASK-003",
+      "dependency_type": "blocks"
+    },
+    {
+      "task_id": "TASK-009",
+      "depends_on_task_id": "TASK-003",
+      "dependency_type": "blocks"
+    }
+  ],
+  "sprints": [
+    {
+      "sprint_name": "Sprint 1",
+      "total_points": 24,
+      "task_ids": [
+        "TASK-001",
+        "TASK-002",
+        "TASK-003",
+        "TASK-004",
+        "TASK-005",
+        "TASK-006",
+        "TASK-007",
+        "TASK-010",
+        "TASK-011",
+        "TASK-012",
+        "TASK-013"
+      ],
+      "over_capacity": false
+    },
+    {
+      "sprint_name": "Sprint 2",
+      "total_points": 24,
+      "task_ids": [
+        "TASK-014",
+        "TASK-015",
+        "TASK-016",
+        "TASK-017",
+        "TASK-018",
+        "TASK-019",
+        "TASK-020",
+        "TASK-021",
+        "TASK-022",
+        "TASK-023",
+        "TASK-024",
+        "TASK-025"
+      ],
+      "over_capacity": false
+    },
+    {
+      "sprint_name": "Sprint 3",
+      "total_points": 6,
+      "task_ids": [
+        "TASK-026",
+        "TASK-008",
+        "TASK-009"
+      ],
+      "over_capacity": false
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "TEST-001",
+      "requirement_id": "FR-001",
+      "title": "Verify Customers register, complete KYC, and log in with multi-factor authentication",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Customers logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Customers register, complete KYC, and log in with multi-factor authentication'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected their account"
+      ],
+      "expected_result": "Requirement FR-001 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-002",
+      "requirement_id": "FR-002",
+      "title": "Verify Customers view balances and real-time transaction history for savings and checking accounts",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Customers logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Customers view balances and real-time transaction history for savings and checking accounts'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected account balances and real-time transaction history for savings and checking accounts"
+      ],
+      "expected_result": "Requirement FR-002 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-003",
+      "requirement_id": "FR-003",
+      "title": "Verify Customers initiate domestic fund transfers between internal accounts and external beneficiaries",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Customers logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Customers initiate domestic fund transfers between internal accounts and external beneficiaries'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected domestic fund transfers between internal accounts and external beneficiaries"
+      ],
+      "expected_result": "Requirement FR-003 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-004",
+      "requirement_id": "FR-004",
+      "title": "Verify Customers schedule recurring standing instructions and future\u2011dated payments",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Customers logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Customers schedule recurring standing instructions and future\u2011dated payments'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected recurring standing instructions and future\u2011dated payments"
+      ],
+      "expected_result": "Requirement FR-004 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-005",
+      "requirement_id": "FR-005",
+      "title": "Verify Customers apply for personal, vehicle, or mortgage loans online",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Customers logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Customers apply for personal, vehicle, or mortgage loans online'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected personal, vehicle, or mortgage loans via the online portal"
+      ],
+      "expected_result": "Requirement FR-005 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-006",
+      "requirement_id": "FR-006",
+      "title": "Verify Customers download monthly account statements and tax certificates in PDF format",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Customers logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Customers download monthly account statements and tax certificates in PDF format'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected monthly account statements and tax certificates (PDF)"
+      ],
+      "expected_result": "Requirement FR-006 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-007",
+      "requirement_id": "FR-007",
+      "title": "Verify Customers request debit card activation, temporary freezing, and daily spending limit adjustments",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Customers logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Customers request debit card activation, temporary freezing, and daily spending limit adjustments'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected debit card activation, temporary freezing, and daily spending limit adjustments"
+      ],
+      "expected_result": "Requirement FR-007 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-008",
+      "requirement_id": "FR-008",
+      "title": "Verify Customers receive instantaneous SMS and push notifications for all debits, credits, and security alerts",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Customers receive instantaneous SMS and push notifications for all debits, credits, and security alerts'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected SMS and push notifications for debits, credits, and security alerts"
+      ],
+      "expected_result": "Requirement FR-008 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-009",
+      "requirement_id": "FR-009",
+      "title": "Verify Customers report suspicious transactions or compromised credentials immediately",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Customers logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Customers report suspicious transactions or compromised credentials immediately'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected suspicious transactions or compromised credentials"
+      ],
+      "expected_result": "Requirement FR-009 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-010",
+      "requirement_id": "FR-010",
+      "title": "Verify Tellers log in securely using terminal authorization and biometric credentials",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Tellers logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Tellers log in securely using terminal authorization and biometric credentials'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected banking terminals using authorization and biometric credentials"
+      ],
+      "expected_result": "Requirement FR-010 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-011",
+      "requirement_id": "FR-011",
+      "title": "Verify Tellers process cash deposits and withdrawals against customer accounts",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Tellers logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Tellers process cash deposits and withdrawals against customer accounts'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected cash deposits and withdrawals for customer accounts"
+      ],
+      "expected_result": "Requirement FR-011 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-012",
+      "requirement_id": "FR-012",
+      "title": "Verify Tellers should be able to verify customer signatures, photo identity...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Customer logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Tellers should be able to verify customer signatures, photo identity...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected account"
+      ],
+      "expected_result": "Requirement FR-012 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-013",
+      "requirement_id": "FR-013",
+      "title": "Verify Tellers should be able to issue cashier checks and process...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Tellers should be able to issue cashier checks and process...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected account"
+      ],
+      "expected_result": "Requirement FR-013 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-014",
+      "requirement_id": "FR-014",
+      "title": "Verify All teller transactions exceeding configured threshold amounts must require mandatory...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'All teller transactions exceeding configured threshold amounts must require mandatory...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-014 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-015",
+      "requirement_id": "FR-015",
+      "title": "Verify Tellers should perform end-of-day cash drawer balancing and generate teller...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Tellers should perform end-of-day cash drawer balancing and generate teller...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected reports"
+      ],
+      "expected_result": "Requirement FR-015 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-016",
+      "requirement_id": "FR-016",
+      "title": "Verify Loan Management and Underwriting Loan officers should be able to...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; Customer logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Loan Management and Underwriting Loan officers should be able to...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-016 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-017",
+      "requirement_id": "FR-017",
+      "title": "Verify Loan officers should be able to calculate debt-to-income ratios and...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Loan officers should be able to calculate debt-to-income ratios and...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-017 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-018",
+      "requirement_id": "FR-018",
+      "title": "Verify Loan officers should be able to approve, reject, or refer...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Loan officers should be able to approve, reject, or refer...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-018 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-019",
+      "requirement_id": "FR-019",
+      "title": "Verify The system should calculate interest, track monthly installment payments, and...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'The system should calculate interest, track monthly installment payments, and...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected accounts"
+      ],
+      "expected_result": "Requirement FR-019 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-020",
+      "requirement_id": "NFR-001",
+      "title": "Verify Compliance, Security and Auditing The system should enforce role-based access...",
+      "test_type": "performance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Compliance, Security and Auditing The system should enforce role-based access...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement NFR-001 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-021",
+      "requirement_id": "FR-020",
+      "title": "Verify All transactions must be immutably recorded in a tamper-resistant financial...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'All transactions must be immutably recorded in a tamper-resistant financial...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-020 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-022",
+      "requirement_id": "FR-021",
+      "title": "Verify The system should automatically monitor transactions against AML (Anti-Money Laundering)...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'The system should automatically monitor transactions against AML (Anti-Money Laundering)...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement FR-021 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-023",
+      "requirement_id": "FR-022",
+      "title": "Verify The system should flag high-value or suspicious patterns and generate...",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'The system should flag high-value or suspicious patterns and generate...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected reports"
+      ],
+      "expected_result": "Requirement FR-022 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-024",
+      "requirement_id": "NFR-002",
+      "title": "Verify All administrative changes, security policy updates, and manual ledger adjustments...",
+      "test_type": "performance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'All administrative changes, security policy updates, and manual ledger adjustments...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected system behavior"
+      ],
+      "expected_result": "Requirement NFR-002 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-025",
+      "requirement_id": "NFR-003",
+      "title": "Verify Customer financial records and account balances must be protected with...",
+      "test_type": "performance",
+      "preconditions": "System deployed; Customer logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Customer financial records and account balances must be protected with...'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected account"
+      ],
+      "expected_result": "Requirement NFR-003 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    },
+    {
+      "id": "TEST-026",
+      "requirement_id": "FR-023",
+      "title": "Verify Provide enterprise-grade core banking and portal system for all stakeholder groups",
+      "test_type": "acceptance",
+      "preconditions": "System deployed; System logged in",
+      "steps": [
+        "Trigger the system behavior for requirement 'Provide enterprise-grade core banking and portal system for all stakeholder groups'",
+        "Verify that the system processes the request successfully",
+        "Validate the expected Core Banking and Customer Portal Management System"
+      ],
+      "expected_result": "Requirement FR-023 acceptance criteria are satisfied without regression",
+      "status": "not_run"
+    }
+  ],
+  "traceability": {
+    "matrix": [
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-001",
+        "requirement_summary": "Customers register, complete KYC, and log in with multi-factor authentication",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-AUTHENTICATION",
+        "module_name": "Authentication & Authorization",
+        "task_ids": [
+          "TASK-001"
+        ],
+        "test_ids": [
+          "TEST-001"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-001",
+            "module_id": "MOD-AUTHENTICATION",
+            "module_name": "Authentication & Authorization"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-002",
+        "requirement_summary": "Customers view balances and real-time transaction history for savings and checking accounts",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-DATA",
+        "module_name": "Application Data Store",
+        "task_ids": [
+          "TASK-002"
+        ],
+        "test_ids": [
+          "TEST-002"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-002",
+            "module_id": "MOD-DATA",
+            "module_name": "Application Data Store"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-003",
+        "requirement_summary": "Customers initiate domestic fund transfers between internal accounts and external beneficiaries",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-PAYMENT",
+        "module_name": "Payment Management",
+        "task_ids": [
+          "TASK-003"
+        ],
+        "test_ids": [
+          "TEST-003"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-003",
+            "module_id": "MOD-PAYMENT",
+            "module_name": "Payment Management"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-004",
+        "requirement_summary": "Customers schedule recurring standing instructions and future\u2011dated payments",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-PAYMENT",
+        "module_name": "Payment Management",
+        "task_ids": [
+          "TASK-004"
+        ],
+        "test_ids": [
+          "TEST-004"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-004",
+            "module_id": "MOD-PAYMENT",
+            "module_name": "Payment Management"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-005",
+        "requirement_summary": "Customers apply for personal, vehicle, or mortgage loans online",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-BOOKING",
+        "module_name": "Booking & Scheduling",
+        "task_ids": [
+          "TASK-005"
+        ],
+        "test_ids": [
+          "TEST-005"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-005",
+            "module_id": "MOD-BOOKING",
+            "module_name": "Booking & Scheduling"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-006",
+        "requirement_summary": "Customers download monthly account statements and tax certificates in PDF format",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-FILE",
+        "module_name": "File & Document Management",
+        "task_ids": [
+          "TASK-006"
+        ],
+        "test_ids": [
+          "TEST-006"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-006",
+            "module_id": "MOD-FILE",
+            "module_name": "File & Document Management"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-007",
+        "requirement_summary": "Customers request debit card activation, temporary freezing, and daily spending limit adjustments",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-PROFILE",
+        "module_name": "Profile Management",
+        "task_ids": [
+          "TASK-007"
+        ],
+        "test_ids": [
+          "TEST-007"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-007",
+            "module_id": "MOD-PROFILE",
+            "module_name": "Profile Management"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-008",
+        "requirement_summary": "Customers receive instantaneous SMS and push notifications for all debits, credits, and security alerts",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-NOTIFICATION",
+        "module_name": "Notification Service",
+        "task_ids": [
+          "TASK-008"
+        ],
+        "test_ids": [
+          "TEST-008"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-008",
+            "module_id": "MOD-NOTIFICATION",
+            "module_name": "Notification Service"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-009",
+        "requirement_summary": "Customers report suspicious transactions or compromised credentials immediately",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-NOTIFICATION",
+        "module_name": "Notification Service",
+        "task_ids": [
+          "TASK-009"
+        ],
+        "test_ids": [
+          "TEST-009"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-009",
+            "module_id": "MOD-NOTIFICATION",
+            "module_name": "Notification Service"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-010",
+        "requirement_summary": "Tellers log in securely using terminal authorization and biometric credentials",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-AUTHENTICATION",
+        "module_name": "Authentication & Authorization",
+        "task_ids": [
+          "TASK-010"
+        ],
+        "test_ids": [
+          "TEST-010"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-010",
+            "module_id": "MOD-AUTHENTICATION",
+            "module_name": "Authentication & Authorization"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-011",
+        "requirement_summary": "Tellers process cash deposits and withdrawals against customer accounts",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-PAYMENT",
+        "module_name": "Payment Management",
+        "task_ids": [
+          "TASK-011"
+        ],
+        "test_ids": [
+          "TEST-011"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-011",
+            "module_id": "MOD-PAYMENT",
+            "module_name": "Payment Management"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-012",
+        "requirement_summary": "Tellers should be able to verify customer signatures, photo identity...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-AUTHENTICATION",
+        "module_name": "Authentication & Authorization",
+        "task_ids": [
+          "TASK-012"
+        ],
+        "test_ids": [
+          "TEST-012"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-012",
+            "module_id": "MOD-AUTHENTICATION",
+            "module_name": "Authentication & Authorization"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-013",
+        "requirement_summary": "Tellers should be able to issue cashier checks and process...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-PAYMENT",
+        "module_name": "Payment Management",
+        "task_ids": [
+          "TASK-013"
+        ],
+        "test_ids": [
+          "TEST-013"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-013",
+            "module_id": "MOD-PAYMENT",
+            "module_name": "Payment Management"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-014",
+        "requirement_summary": "All teller transactions exceeding configured threshold amounts must require mandatory...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-AUTHENTICATION",
+        "module_name": "Authentication & Authorization",
+        "task_ids": [
+          "TASK-014"
+        ],
+        "test_ids": [
+          "TEST-014"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-014",
+            "module_id": "MOD-AUTHENTICATION",
+            "module_name": "Authentication & Authorization"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-015",
+        "requirement_summary": "Tellers should perform end-of-day cash drawer balancing and generate teller...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-REPORTING",
+        "module_name": "Reporting & Analytics",
+        "task_ids": [
+          "TASK-015"
+        ],
+        "test_ids": [
+          "TEST-015"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-015",
+            "module_id": "MOD-REPORTING",
+            "module_name": "Reporting & Analytics"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-016",
+        "requirement_summary": "Loan Management and Underwriting Loan officers should be able to...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-FILE",
+        "module_name": "File & Document Management",
+        "task_ids": [
+          "TASK-016"
+        ],
+        "test_ids": [
+          "TEST-016"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-016",
+            "module_id": "MOD-FILE",
+            "module_name": "File & Document Management"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-017",
+        "requirement_summary": "Loan officers should be able to calculate debt-to-income ratios and...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-REPORTING",
+        "module_name": "Reporting & Analytics",
+        "task_ids": [
+          "TASK-017"
+        ],
+        "test_ids": [
+          "TEST-017"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-017",
+            "module_id": "MOD-REPORTING",
+            "module_name": "Reporting & Analytics"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-018",
+        "requirement_summary": "Loan officers should be able to approve, reject, or refer...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-BOOKING",
+        "module_name": "Booking & Scheduling",
+        "task_ids": [
+          "TASK-018"
+        ],
+        "test_ids": [
+          "TEST-018"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-018",
+            "module_id": "MOD-BOOKING",
+            "module_name": "Booking & Scheduling"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-019",
+        "requirement_summary": "The system should calculate interest, track monthly installment payments, and...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-DATA",
+        "module_name": "Application Data Store",
+        "task_ids": [
+          "TASK-019"
+        ],
+        "test_ids": [
+          "TEST-019"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-019",
+            "module_id": "MOD-DATA",
+            "module_name": "Application Data Store"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "NFR-001",
+        "requirement_summary": "Compliance, Security and Auditing The system should enforce role-based access...",
+        "req_type": "non_functional",
+        "status": "needs_review",
+        "module_id": "MOD-AUTHENTICATION",
+        "module_name": "Authentication & Authorization",
+        "task_ids": [
+          "TASK-020"
+        ],
+        "test_ids": [
+          "TEST-020"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-020",
+            "module_id": "MOD-AUTHENTICATION",
+            "module_name": "Authentication & Authorization"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-020",
+        "requirement_summary": "All transactions must be immutably recorded in a tamper-resistant financial...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-DATA",
+        "module_name": "Application Data Store",
+        "task_ids": [
+          "TASK-021"
+        ],
+        "test_ids": [
+          "TEST-021"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-021",
+            "module_id": "MOD-DATA",
+            "module_name": "Application Data Store"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-021",
+        "requirement_summary": "The system should automatically monitor transactions against AML (Anti-Money Laundering)...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-DATA",
+        "module_name": "Application Data Store",
+        "task_ids": [
+          "TASK-022"
+        ],
+        "test_ids": [
+          "TEST-022"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-022",
+            "module_id": "MOD-DATA",
+            "module_name": "Application Data Store"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-022",
+        "requirement_summary": "The system should flag high-value or suspicious patterns and generate...",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-REPORTING",
+        "module_name": "Reporting & Analytics",
+        "task_ids": [
+          "TASK-023"
+        ],
+        "test_ids": [
+          "TEST-023"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-023",
+            "module_id": "MOD-REPORTING",
+            "module_name": "Reporting & Analytics"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "NFR-002",
+        "requirement_summary": "All administrative changes, security policy updates, and manual ledger adjustments...",
+        "req_type": "non_functional",
+        "status": "needs_review",
+        "module_id": "MOD-DATA",
+        "module_name": "Application Data Store",
+        "task_ids": [
+          "TASK-024"
+        ],
+        "test_ids": [
+          "TEST-024"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-024",
+            "module_id": "MOD-DATA",
+            "module_name": "Application Data Store"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "NFR-003",
+        "requirement_summary": "Customer financial records and account balances must be protected with...",
+        "req_type": "non_functional",
+        "status": "needs_review",
+        "module_id": "MOD-DATA",
+        "module_name": "Application Data Store",
+        "task_ids": [
+          "TASK-025"
+        ],
+        "test_ids": [
+          "TEST-025"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-025",
+            "module_id": "MOD-DATA",
+            "module_name": "Application Data Store"
+          }
+        ],
+        "is_orphan": false
+      },
+      {
+        "source_id": "specification.docx",
+        "source_page": 3,
+        "requirement_id": "FR-023",
+        "requirement_summary": "Provide enterprise-grade core banking and portal system for all stakeholder groups",
+        "req_type": "functional",
+        "status": "needs_review",
+        "module_id": "MOD-DATA",
+        "module_name": "Application Data Store",
+        "task_ids": [
+          "TASK-026"
+        ],
+        "test_ids": [
+          "TEST-026"
+        ],
+        "task_module_links": [
+          {
+            "task_id": "TASK-026",
+            "module_id": "MOD-DATA",
+            "module_name": "Application Data Store"
+          }
+        ],
+        "is_orphan": false
+      }
+    ],
+    "total_requirements": 26,
+    "fully_linked_count": 26,
+    "orphan_count": 0,
+    "coverage_pct": 100.0,
+    "requirements_without_tasks": [],
+    "requirements_without_tests": [],
+    "requirements_with_invalid_modules": [],
+    "dangling_task_requirement_refs": [],
+    "dangling_test_requirement_refs": [],
+    "traceability_integrity": true
+  },
+  "source_trust": {
+    "overall_score": 98.49,
+    "status": "high_source_alignment",
+    "evidence_support_pct": 100.0,
+    "semantic_alignment_pct": 93.98,
+    "constraint_preservation_pct": 100.0,
+    "coverage_consistency_pct": 100.0,
+    "unsupported_content_pct": 0.0,
+    "requirements_total": 26,
+    "requirements_with_direct_evidence": 26,
+    "requirements_with_strong_semantic_match": 25,
+    "requirements_with_preserved_constraints": 26,
+    "source_statements_detected": 25,
+    "source_statements_supported": 25,
+    "uncovered_source_statements": [],
+    "requirements": [
+      {
+        "requirement_id": "FR-001",
+        "summary": "Customers register, complete KYC, and log in with multi-factor authentication",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "normalized_source_match",
+        "semantic_alignment_pct": 82.21,
+        "semantic_match_source": "Customer Banking Requirements Customers should be able to register, complete initial KYC verification, and log in with multi-factor authentication.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Customer Banking Requirements Customers should be able to register, complete initial KYC verification, and log in with multi-factor authentication.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-002",
+        "summary": "Customers view balances and real-time transaction history for savings and checking accounts",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 95.05,
+        "semantic_match_source": "Customers should be able to view account balances and real-time transaction history for savings and checking accounts.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [
+          "real-time"
+        ],
+        "constraints_preserved": [
+          "real-time"
+        ],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Customers should be able to view account balances and real-time transaction history for savings and checking accounts.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-003",
+        "summary": "Customers initiate domestic fund transfers between internal accounts and external beneficiaries",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 94.25,
+        "semantic_match_source": "Customers should be able to initiate domestic fund transfers between internal accounts and to external beneficiaries.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Customers should be able to initiate domestic fund transfers between internal accounts and to external beneficiaries.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-004",
+        "summary": "Customers schedule recurring standing instructions and future\u2011dated payments",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 95.59,
+        "semantic_match_source": "Customers should be able to schedule recurring standing instructions and future-dated payments.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Customers should be able to schedule recurring standing instructions and future-dated payments.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-005",
+        "summary": "Customers apply for personal, vehicle, or mortgage loans online",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 95.69,
+        "semantic_match_source": "Customers should be able to apply for personal, vehicle, or mortgage loans online.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Customers should be able to apply for personal, vehicle, or mortgage loans online.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-006",
+        "summary": "Customers download monthly account statements and tax certificates in PDF format",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 96.27,
+        "semantic_match_source": "Customers should be able to download monthly account statements and tax certificates in PDF format.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Customers should be able to download monthly account statements and tax certificates in PDF format.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-007",
+        "summary": "Customers request debit card activation, temporary freezing, and daily spending limit adjustments",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 95.11,
+        "semantic_match_source": "Customers should be able to request debit card activation, temporary card freezing, and daily spending limit adjustments.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Customers should be able to request debit card activation, temporary card freezing, and daily spending limit adjustments.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-008",
+        "summary": "Customers receive instantaneous SMS and push notifications for all debits, credits, and security alerts",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 97.66,
+        "semantic_match_source": "Customers should receive instantaneous SMS and push notifications for all debits, credits, and security alerts.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Customers should receive instantaneous SMS and push notifications for all debits, credits, and security alerts.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-009",
+        "summary": "Customers report suspicious transactions or compromised credentials immediately",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 95.0,
+        "semantic_match_source": "Customers should be able to report suspicious transactions or compromised credentials immediately.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [
+          "immediately"
+        ],
+        "constraints_preserved": [
+          "immediately"
+        ],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Customers should be able to report suspicious transactions or compromised credentials immediately.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-010",
+        "summary": "Tellers log in securely using terminal authorization and biometric credentials",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "normalized_source_match",
+        "semantic_alignment_pct": 77.53,
+        "semantic_match_source": "Teller and Branch Staff Requirements Tellers should be able to log in securely using terminal authorization and biometric credentials.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [
+          "securely"
+        ],
+        "constraints_preserved": [
+          "securely"
+        ],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Teller and Branch Staff Requirements Tellers should be able to log in securely using terminal authorization and biometric credentials.",
+        "verification_status": "mostly_supported"
+      },
+      {
+        "requirement_id": "FR-011",
+        "summary": "Tellers process cash deposits and withdrawals against customer accounts",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 93.36,
+        "semantic_match_source": "Tellers should be able to process cash deposits and cash withdrawals against customer accounts.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Tellers should be able to process cash deposits and cash withdrawals against customer accounts.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-012",
+        "summary": "Tellers should be able to verify customer signatures, photo identity...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 94.78,
+        "semantic_match_source": "Tellers should be able to verify customer signatures, photo identity documents, and account status.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Tellers should be able to verify customer signatures, photo identity documents, and account status.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-013",
+        "summary": "Tellers should be able to issue cashier checks and process...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 94.48,
+        "semantic_match_source": "Tellers should be able to issue cashier checks and process inter-branch account adjustments.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Tellers should be able to issue cashier checks and process inter-branch account adjustments.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-014",
+        "summary": "All teller transactions exceeding configured threshold amounts must require mandatory...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 96.8,
+        "semantic_match_source": "All teller transactions exceeding configured threshold amounts must require mandatory supervisory override.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "All teller transactions exceeding configured threshold amounts must require mandatory supervisory override.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-015",
+        "summary": "Tellers should perform end-of-day cash drawer balancing and generate teller...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 97.11,
+        "semantic_match_source": "Tellers should perform end-of-day cash drawer balancing and generate teller reconciliation reports.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Tellers should perform end-of-day cash drawer balancing and generate teller reconciliation reports.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-016",
+        "summary": "Loan Management and Underwriting Loan officers should be able to...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "normalized_source_match",
+        "semantic_alignment_pct": 94.57,
+        "semantic_match_source": "Loan Management and Underwriting Loan officers should be able to review customer loan applications, credit scores, and uploaded income proofs.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Loan Management and Underwriting Loan officers should be able to review customer loan applications, credit scores, and uploaded income proofs.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-017",
+        "summary": "Loan officers should be able to calculate debt-to-income ratios and...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 95.18,
+        "semantic_match_source": "Loan officers should be able to calculate debt-to-income ratios and generate proposed repayment schedules.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Loan officers should be able to calculate debt-to-income ratios and generate proposed repayment schedules.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-018",
+        "summary": "Loan officers should be able to approve, reject, or refer...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 95.78,
+        "semantic_match_source": "Loan officers should be able to approve, reject, or refer loan applications according to credit policy guidelines.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Loan officers should be able to approve, reject, or refer loan applications according to credit policy guidelines.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-019",
+        "summary": "The system should calculate interest, track monthly installment payments, and...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 95.87,
+        "semantic_match_source": "The system should calculate interest, track monthly installment payments, and flag delinquent accounts.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "The system should calculate interest, track monthly installment payments, and flag delinquent accounts.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "NFR-001",
+        "summary": "Compliance, Security and Auditing The system should enforce role-based access...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "normalized_source_match",
+        "semantic_alignment_pct": 94.09,
+        "semantic_match_source": "Compliance, Security and Auditing The system should enforce role-based access control and strict separation of duties across all banking operations.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Compliance, Security and Auditing The system should enforce role-based access control and strict separation of duties across all banking operations.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-020",
+        "summary": "All transactions must be immutably recorded in a tamper-resistant financial...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 97.6,
+        "semantic_match_source": "All transactions must be immutably recorded in a tamper-resistant financial ledger.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "All transactions must be immutably recorded in a tamper-resistant financial ledger.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-021",
+        "summary": "The system should automatically monitor transactions against AML (Anti-Money Laundering)...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 96.9,
+        "semantic_match_source": "The system should automatically monitor transactions against AML (Anti-Money Laundering) rule thresholds.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "The system should automatically monitor transactions against AML (Anti-Money Laundering) rule thresholds.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-022",
+        "summary": "The system should flag high-value or suspicious patterns and generate...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 96.04,
+        "semantic_match_source": "The system should flag high-value or suspicious patterns and generate regulatory compliance reports.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "The system should flag high-value or suspicious patterns and generate regulatory compliance reports.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "NFR-002",
+        "summary": "All administrative changes, security policy updates, and manual ledger adjustments...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 94.62,
+        "semantic_match_source": "All administrative changes, security policy updates, and manual ledger adjustments must be recorded in an audit trail.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "All administrative changes, security policy updates, and manual ledger adjustments must be recorded in an audit trail.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "NFR-003",
+        "summary": "Customer financial records and account balances must be protected with...",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 94.1,
+        "semantic_match_source": "Customer financial records and account balances must be protected with strong database encryption at rest and in transit.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "Customer financial records and account balances must be protected with strong database encryption at rest and in transit.",
+        "verification_status": "verified"
+      },
+      {
+        "requirement_id": "FR-023",
+        "summary": "Provide enterprise-grade core banking and portal system for all stakeholder groups",
+        "evidence_support_pct": 100.0,
+        "evidence_method": "exact_source_match",
+        "semantic_alignment_pct": 87.75,
+        "semantic_match_source": "The financial institution requires an enterprise-grade Core Banking and Customer Portal Management System for retail customers, loan officers, tellers, compliance auditors, and system administrators.",
+        "constraint_preservation_pct": 100.0,
+        "constraints_source": [],
+        "constraints_preserved": [],
+        "constraints_missing": [],
+        "unsupported_content_pct": 0.0,
+        "unsupported_content_flags": [],
+        "source_excerpt": "The financial institution requires an enterprise-grade Core Banking and Customer Portal Management System for retail customers, loan officers, tellers, compliance auditors, and system administrators.",
+        "verification_status": "verified"
+      }
+    ],
+    "methodology": {
+      "evidence_weight": 0.3,
+      "semantic_weight": 0.25,
+      "constraint_weight": 0.25,
+      "coverage_weight": 0.2,
+      "semantic_match_threshold": 0.45,
+      "strong_semantic_match_threshold": 0.6,
+      "note": "This is an automated source-alignment and trustworthiness measure, not ground-truth accuracy."
+    }
+  },
+  "reports": [
+    {
+      "report_type": "srs",
+      "title": "Software Requirements Specification (SRS)",
+      "content_markdown": "# Software Requirements Specification (SRS)\n\n## Project: Banking Management System\n\n**Domain:** Not specified  \n**Generated by:** ReqPilot AI Multi-Agent Engine  \n**Date:** 2026-10-13 17:49:07 UTC  \n**Status:** Generated Report\n\n---\n\n### 1. Executive Summary & Scope\n\nBenchmark evaluation project for Banking Management System\n\n### 2. Functional Requirements (23 Total)\n\n#### [FR-001] Customers register, complete KYC, and log in with multi-factor authentication\n\n- **Actor:** Customers\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Customers should be able to register, complete initial KYC verification, and log in with multi-factor authentication.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Customers are registered, KYC verified, and can access the system using multi-factor authentication.\n- **Acceptance Criteria:**\n  - Given a prospective customer, When they register, complete initial KYC verification, and log in with multi-factor authentication, Then they gain access to the system.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Customer Banking Requirements Customers should be able to register, complete initial KYC verification, and log in with multi-factor authentication.\"\n\n#### [FR-002] Customers view balances and real-time transaction history for savings and checking accounts\n\n- **Actor:** Customers\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Customers should be able to view account balances and real-time transaction history for savings and checking accounts.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Customers see up-to-date balances and transaction details for their savings and checking accounts.\n- **Acceptance Criteria:**\n  - Given a logged\u2011in customer, When they request to view balances and transaction history for savings or checking accounts, Then the system displays the current balances and real\u2011time transaction history.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Customers should be able to view account balances and real-time transaction history for savings and checking accounts.\"\n\n#### [FR-003] Customers initiate domestic fund transfers between internal accounts and external beneficiaries\n\n- **Actor:** Customers\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Customers should be able to initiate domestic fund transfers between internal accounts and to external beneficiaries.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Domestic fund transfers are created and processed as requested.\n- **Acceptance Criteria:**\n  - Given a logged\u2011in customer, When they initiate a domestic fund transfer between internal accounts or to an external beneficiary, Then the system creates the transfer request for processing.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Customers should be able to initiate domestic fund transfers between internal accounts and to external beneficiaries.\"\n\n#### [FR-004] Customers schedule recurring standing instructions and future\u2011dated payments\n\n- **Actor:** Customers\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Customers should be able to schedule recurring standing instructions and future-dated payments.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Scheduled instructions are stored and will be executed on the defined dates.\n- **Acceptance Criteria:**\n  - Given a logged\u2011in customer, When they schedule a recurring standing instruction or a future\u2011dated payment, Then the system records the schedule and will execute the payment on the specified dates.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Customers should be able to schedule recurring standing instructions and future-dated payments.\"\n\n#### [FR-005] Customers apply for personal, vehicle, or mortgage loans online\n\n- **Actor:** Customers\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Customers should be able to apply for personal, vehicle, or mortgage loans online.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Loan applications are submitted electronically for processing.\n- **Acceptance Criteria:**\n  - Given a logged\u2011in customer, When they submit an application for a personal, vehicle, or mortgage loan online, Then the system records the application for review.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Customers should be able to apply for personal, vehicle, or mortgage loans online.\"\n\n#### [FR-006] Customers download monthly account statements and tax certificates in PDF format\n\n- **Actor:** Customers\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Customers should be able to download monthly account statements and tax certificates in PDF format.\n- **Preconditions:** Not specified\n- **Expected Outcome:** PDF files of statements and certificates are provided to the customer.\n- **Acceptance Criteria:**\n  - Given a logged\u2011in customer, When they request a monthly account statement or tax certificate, Then the system provides the document as a downloadable PDF.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Customers should be able to download monthly account statements and tax certificates in PDF format.\"\n\n#### [FR-007] Customers request debit card activation, temporary freezing, and daily spending limit adjustments\n\n- **Actor:** Customers\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Customers should be able to request debit card activation, temporary card freezing, and daily spending limit adjustments.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Requested card actions are processed and reflected in the account.\n- **Acceptance Criteria:**\n  - Given a logged\u2011in customer, When they request activation, temporary freeze, or a change to the daily spending limit of their debit card, Then the system processes the request and updates the card status or limit accordingly.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Customers should be able to request debit card activation, temporary card freezing, and daily spending limit adjustments.\"\n\n#### [FR-008] Customers receive instantaneous SMS and push notifications for all debits, credits, and security alerts\n\n- **Actor:** System\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Customers should receive instantaneous SMS and push notifications for all debits, credits, and security alerts.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Customers are promptly notified of each transaction and security event.\n- **Acceptance Criteria:**\n  - Given a transaction or security event affecting a customer, When the event occurs, Then the system sends an instantaneous SMS and push notification to the customer.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Customers should receive instantaneous SMS and push notifications for all debits, credits, and security alerts.\"\n\n#### [FR-009] Customers report suspicious transactions or compromised credentials immediately\n\n- **Actor:** Customers\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Customers should be able to report suspicious transactions or compromised credentials immediately.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Reports are recorded and trigger appropriate investigation workflows.\n- **Acceptance Criteria:**\n  - Given a logged\u2011in customer, When they report a suspicious transaction or compromised credential, Then the system records the report and initiates the investigation process.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Customers should be able to report suspicious transactions or compromised credentials immediately.\"\n\n#### [FR-010] Tellers log in securely using terminal authorization and biometric credentials\n\n- **Actor:** Tellers\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Tellers should be able to log in securely using terminal authorization and biometric credentials.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Tellers gain authenticated access to the terminal.\n- **Acceptance Criteria:**\n  - Given a teller at a terminal, When they provide terminal authorization and biometric credentials, Then the system authenticates them and grants access.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Teller and Branch Staff Requirements Tellers should be able to log in securely using terminal authorization and biometric credentials.\"\n\n#### [FR-011] Tellers process cash deposits and withdrawals against customer accounts\n\n- **Actor:** Tellers\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** Tellers should be able to process cash deposits and cash withdrawals against customer accounts.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Deposits increase and withdrawals decrease the respective account balances.\n- **Acceptance Criteria:**\n  - Given a teller, When they process a cash deposit or withdrawal for a customer account, Then the system updates the account balance accordingly.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Tellers should be able to process cash deposits and cash withdrawals against customer accounts.\"\n\n#### [FR-012] Tellers should be able to verify customer signatures, photo identity...\n\n- **Actor:** Customer\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Tellers should be able to verify customer signatures, photo identity documents, and account status.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Tellers should be able to verify customer signatures, photo identity documents, and account status.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Tellers should be able to verify customer signatures, photo identity documents, and account status.\"\n\n#### [FR-013] Tellers should be able to issue cashier checks and process...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Tellers should be able to issue cashier checks and process inter-branch account adjustments.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Tellers should be able to issue cashier checks and process inter-branch account adjustments.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Tellers should be able to issue cashier checks and process inter-branch account adjustments.\"\n\n#### [FR-014] All teller transactions exceeding configured threshold amounts must require mandatory...\n\n- **Actor:** System\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** All teller transactions exceeding configured threshold amounts must require mandatory supervisory override.\n- **Preconditions:** Not specified\n- **Expected Outcome:** All teller transactions exceeding configured threshold amounts must require mandatory supervisory override.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"All teller transactions exceeding configured threshold amounts must require mandatory supervisory override.\"\n\n#### [FR-015] Tellers should perform end-of-day cash drawer balancing and generate teller...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Tellers should perform end-of-day cash drawer balancing and generate teller reconciliation reports.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Tellers should perform end-of-day cash drawer balancing and generate teller reconciliation reports.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Tellers should perform end-of-day cash drawer balancing and generate teller reconciliation reports.\"\n\n#### [FR-016] Loan Management and Underwriting Loan officers should be able to...\n\n- **Actor:** Customer\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Loan Management and Underwriting Loan officers should be able to review customer loan applications, credit scores, and uploaded income proofs.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Loan Management and Underwriting Loan officers should be able to review customer loan applications, credit scores, and uploaded income proofs.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Loan Management and Underwriting Loan officers should be able to review customer loan applications, credit scores, and uploaded income proofs.\"\n\n#### [FR-017] Loan officers should be able to calculate debt-to-income ratios and...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Loan officers should be able to calculate debt-to-income ratios and generate proposed repayment schedules.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Loan officers should be able to calculate debt-to-income ratios and generate proposed repayment schedules.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Loan officers should be able to calculate debt-to-income ratios and generate proposed repayment schedules.\"\n\n#### [FR-018] Loan officers should be able to approve, reject, or refer...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** Loan officers should be able to approve, reject, or refer loan applications according to credit policy guidelines.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Loan officers should be able to approve, reject, or refer loan applications according to credit policy guidelines.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"Loan officers should be able to approve, reject, or refer loan applications according to credit policy guidelines.\"\n\n#### [FR-019] The system should calculate interest, track monthly installment payments, and...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** The system should calculate interest, track monthly installment payments, and flag delinquent accounts.\n- **Preconditions:** Not specified\n- **Expected Outcome:** The system should calculate interest, track monthly installment payments, and flag delinquent accounts.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"The system should calculate interest, track monthly installment payments, and flag delinquent accounts.\"\n\n#### [FR-020] All transactions must be immutably recorded in a tamper-resistant financial...\n\n- **Actor:** System\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** All transactions must be immutably recorded in a tamper-resistant financial ledger.\n- **Preconditions:** Not specified\n- **Expected Outcome:** All transactions must be immutably recorded in a tamper-resistant financial ledger.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"All transactions must be immutably recorded in a tamper-resistant financial ledger.\"\n\n#### [FR-021] The system should automatically monitor transactions against AML (Anti-Money Laundering)...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** The system should automatically monitor transactions against AML (Anti-Money Laundering) rule thresholds.\n- **Preconditions:** Not specified\n- **Expected Outcome:** The system should automatically monitor transactions against AML (Anti-Money Laundering) rule thresholds.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"The system should automatically monitor transactions against AML (Anti-Money Laundering) rule thresholds.\"\n\n#### [FR-022] The system should flag high-value or suspicious patterns and generate...\n\n- **Actor:** System\n- **Priority:** medium\n- **Status:** needs_review\n- **Statement:** The system should flag high-value or suspicious patterns and generate regulatory compliance reports.\n- **Preconditions:** Not specified\n- **Expected Outcome:** The system should flag high-value or suspicious patterns and generate regulatory compliance reports.\n- **Acceptance Criteria:**\n  - Given the source-stated context, when the source-stated action occurs, then the source-stated outcome should occur.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"The system should flag high-value or suspicious patterns and generate regulatory compliance reports.\"\n\n#### [FR-023] Provide enterprise-grade core banking and portal system for all stakeholder groups\n\n- **Actor:** System\n- **Priority:** high\n- **Status:** needs_review\n- **Statement:** The financial institution requires an enterprise-grade Core Banking and Customer Portal Management System for retail customers, loan officers, tellers, compliance auditors, and system administrators.\n- **Preconditions:** Not specified\n- **Expected Outcome:** Enterprise-grade system available to retail customers, loan officers, tellers, compliance auditors, and system administrators.\n- **Acceptance Criteria:**\n  - Given the need for a banking platform, When the system is deployed, Then an enterprise-grade Core Banking and Customer Portal Management System is available to retail customers, loan officers, tellers, compliance auditors, and system administrators.\n- **Source Grounding:** specification.docx (Page 3)\n> *Excerpt:* \"The financial institution requires an enterprise-grade Core Banking and Customer Portal Management System for retail customers, loan officers, tellers, compliance auditors, and system administrators.\"\n\n---\n\n### 3. Non-Functional Requirements (3 Total)\n\n#### [NFR-001] Compliance, Security and Auditing The system should enforce role-based access...\n\n- **Priority:** medium\n- **Quality Score:** 90.2%\n- **Specification:** Compliance, Security and Auditing The system should enforce role-based access control and strict separation of duties across all banking operations.\n- **Source Citation:** specification.docx (Page 3)\n\n#### [NFR-002] All administrative changes, security policy updates, and manual ledger adjustments...\n\n- **Priority:** high\n- **Quality Score:** 93.2%\n- **Specification:** All administrative changes, security policy updates, and manual ledger adjustments must be recorded in an audit trail.\n- **Source Citation:** specification.docx (Page 3)\n\n#### [NFR-003] Customer financial records and account balances must be protected with...\n\n- **Priority:** high\n- **Quality Score:** 90.2%\n- **Specification:** Customer financial records and account balances must be protected with strong database encryption at rest and in transit.\n- **Source Citation:** specification.docx (Page 3)\n"
+    },
+    {
+      "report_type": "quality_audit",
+      "title": "Requirements Quality & Risk Audit",
+      "content_markdown": "# Requirements Quality & Risk Audit Report\n\n## Project: Banking Management System\n\n**Overall Quality Score:** 92.4 / 100.0  \n**Audit Date:** 2026-10-13  \n**Total Requirements Evaluated:** 26\n\n---\n\n### Quality Dimension Weights & Scoring\n\n- **Completeness (20%):** Evaluates presence of actors, actions, preconditions, and acceptance criteria.\n- **Clarity (15%):** Penalizes subjective or vague terms.\n- **Atomicity (15%):** Ensures single coherent behavioral statements.\n- **Consistency (20%):** Validates absence of logical or temporal contradictions.\n- **Testability (15%):** Checks for measurable verification conditions.\n- **Feasibility (10%):** Assesses technical realism.\n- **Traceability (5%):** Validates links to raw source citations.\n\n---\n\n### Detected Issues Summary\n\n- **Ambiguities:** 1\n- **Potential Conflicts:** 0\n- **Near-Duplicates / Overlaps:** 0\n\n### Active Conflict Issues\n\nNo active conflict issues were detected.\n\n### Active Ambiguity Findings\n- **NFR-003:** Found subjective phrase *'protected'*. The term 'protected' is subjective and lacks measurable engineering verification criteria.\n"
+    },
+    {
+      "report_type": "architecture",
+      "title": "System Architecture Proposal",
+      "content_markdown": "# System Architecture & Technical Decomposition\n\n## Project: Banking Management System\n\n**Total Modules:** 9  \n**Total Inter-Service Relations:** 22\n\n---\n\n### Module Specifications\n\n#### MOD-GATEWAY: API Gateway (GATEWAY)\n\n- **Tech Stack:** API gateway / reverse proxy\n- **Description:** Provides a common entry point for the application services derived from the software requirements.\n- **Responsibilities:**\n  - Route API requests\n  - Apply common request controls\n- **Exposed APIs:**\n  - `/api/*`\n\n#### MOD-AUTHENTICATION: Authentication & Authorization (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Manages user credentials, multi\u2011factor authentication, biometric verification and role\u2011based access control for customers and tellers.\n- **Responsibilities:**\n  - Validate credentials\n  - Issue security tokens\n  - Enforce RBAC\n  - Support MFA and biometric login\n- **Exposed APIs:**\n  - `/api/authentication`\n  - `/api/authentication/{id}`\n\n#### MOD-PROFILE: Profile Management (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Handles customer onboarding, KYC data, personal settings and card service preferences.\n- **Responsibilities:**\n  - Register and maintain customer profiles\n  - Store and verify KYC information\n  - Manage card activation and limit settings\n- **Exposed APIs:**\n  - `/api/profile`\n  - `/api/profile/{id}`\n\n#### MOD-PAYMENT: Payment Management (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Processes all monetary movements including transfers, deposits, withdrawals, card limits and transaction thresholds.\n- **Responsibilities:**\n  - Execute fund transfers\n  - Process cash deposits/withdrawals\n  - Enforce transaction limits\n  - Calculate interest and installments\n- **Exposed APIs:**\n  - `/api/payment`\n  - `/api/payment/{id}`\n\n#### MOD-BOOKING: Booking & Scheduling (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Manages loan applications, underwriting workflow and recurring/future\u2011dated payment scheduling.\n- **Responsibilities:**\n  - Accept loan applications\n  - Perform underwriting calculations\n  - Schedule recurring payments\n  - Approve or reject loan requests\n- **Exposed APIs:**\n  - `/api/booking`\n  - `/api/booking/{id}`\n\n#### MOD-NOTIFICATION: Notification Service (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Delivers real\u2011time SMS, push and email alerts for transaction events, security warnings and AML monitoring.\n- **Responsibilities:**\n  - Send transaction alerts\n  - Publish security and AML notifications\n  - Support configurable notification channels\n- **Exposed APIs:**\n  - `/api/notification`\n  - `/api/notification/{id}`\n\n#### MOD-FILE: File & Document Management (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Provides secure storage and retrieval of customer statements, tax certificates and generated report PDFs.\n- **Responsibilities:**\n  - Store PDF statements\n  - Serve downloadable documents\n  - Maintain audit\u2011ready file versioning\n- **Exposed APIs:**\n  - `/api/file`\n  - `/api/file/{id}`\n\n#### MOD-REPORTING: Reporting & Analytics (SERVICE)\n\n- **Tech Stack:** Application API + relational data access\n- **Description:** Generates operational, compliance and AML reports, and supplies data for dashboards and audit trails.\n- **Responsibilities:**\n  - Produce end\u2011of\u2011day teller reports\n  - Generate AML and high\u2011value transaction alerts\n  - Aggregate loan and payment metrics\n- **Exposed APIs:**\n  - `/api/reporting`\n  - `/api/reporting/{id}`\n\n#### MOD-DATA: Application Data Store (DATABASE)\n\n- **Tech Stack:** Relational database\n- **Description:** Provides persistent storage for entities and records required by the analyzed software requirements.\n- **Responsibilities:**\n  - Persist application entities\n  - Maintain data consistency\n  - Support application data retrieval\n- **Exposed APIs:**\n  - No API endpoints specified.\n\n---\n\n### Inter-Module Dependencies\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-AUTHENTICATION`: Gateway routes external requests to this service.\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-PROFILE`: Gateway routes external requests to this service.\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-PAYMENT`: Gateway routes external requests to this service.\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-BOOKING`: Gateway routes external requests to this service.\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-NOTIFICATION`: Gateway routes external requests to this service.\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-FILE`: Gateway routes external requests to this service.\n- `MOD-GATEWAY` **--[routes_to]-->** `MOD-REPORTING`: Gateway routes external requests to this service.\n- `MOD-AUTHENTICATION` **--[persists_to]-->** `MOD-DATA`: Authentication & Authorization persists state to application data store.\n- `MOD-PROFILE` **--[persists_to]-->** `MOD-DATA`: Profile Management persists state to application data store.\n- `MOD-PAYMENT` **--[persists_to]-->** `MOD-DATA`: Payment Management persists state to application data store.\n- `MOD-BOOKING` **--[persists_to]-->** `MOD-DATA`: Booking & Scheduling persists state to application data store.\n- `MOD-NOTIFICATION` **--[persists_to]-->** `MOD-DATA`: Notification Service persists state to application data store.\n- `MOD-FILE` **--[persists_to]-->** `MOD-DATA`: File & Document Management persists state to application data store.\n- `MOD-REPORTING` **--[persists_to]-->** `MOD-DATA`: Reporting & Analytics persists state to application data store.\n- `MOD-AUTHENTICATION` **--[calls]-->** `MOD-PROFILE`: Authentication service validates credentials before profile data is accessed.\n- `MOD-PROFILE` **--[publishes_to]-->** `MOD-REPORTING`: Profile changes (e.g., KYC updates) are emitted as audit events for reporting.\n- `MOD-PAYMENT` **--[publishes_to]-->** `MOD-NOTIFICATION`: Successful or failed payment transactions trigger real\u2011time notifications.\n- `MOD-BOOKING` **--[calls]-->** `MOD-PAYMENT`: Loan disbursement and scheduled recurring payments are executed via the payment service.\n- `MOD-BOOKING` **--[publishes_to]-->** `MOD-NOTIFICATION`: Loan application status changes and scheduled payment confirmations are sent as alerts.\n- `MOD-REPORTING` **--[reads_from]-->** `MOD-PAYMENT`: Reporting service reads transaction data from payment service for compliance and analytics.\n- `MOD-REPORTING` **--[reads_from]-->** `MOD-BOOKING`: Loan and scheduling data are consumed to produce loan performance reports.\n- `MOD-REPORTING` **--[calls]-->** `MOD-FILE`: Generated reports are persisted as PDF documents via the file service.\n"
+    },
+    {
+      "report_type": "plan",
+      "title": "Project Plan & Sprint Schedule",
+      "content_markdown": "# Software Project Plan & Sprint Schedule\n\n## Project: Banking Management System\n\n**Total Estimated Effort:** 168.0 Hours (54.0 Story Points)  \n**Total Persisted Sprints:** 3\n\n---\n\n### Sprint Roadmap\n\n#### Sprint 1 (Capacity: 24 Points)\n- **[TASK-001]** Implement: Customers register, complete KYC, and log in with multi-factor authentication (2 pts, 6.0 hrs, low complexity)\n- **[TASK-002]** Implement: Customers view balances and real-time transaction history for savings and checking accounts (3 pts, 12.0 hrs, medium complexity)\n- **[TASK-003]** Implement: Customers initiate domestic fund transfers between internal accounts and external beneficiaries (3 pts, 12.0 hrs, medium complexity)\n- **[TASK-004]** Implement: Customers schedule recurring standing instructions and future\u2011dated payments (2 pts, 6.0 hrs, low complexity)\n- **[TASK-005]** Implement: Customers apply for personal, vehicle, or mortgage loans online (2 pts, 6.0 hrs, low complexity)\n- **[TASK-006]** Implement: Customers download monthly account statements and tax certificates in PDF format (2 pts, 6.0 hrs, low complexity)\n- **[TASK-007]** Implement: Customers request debit card activation, temporary freezing, and daily spending limit adjustments (2 pts, 6.0 hrs, low complexity)\n- **[TASK-010]** Implement: Tellers log in securely using terminal authorization and biometric credentials (2 pts, 6.0 hrs, low complexity)\n- **[TASK-011]** Implement: Tellers process cash deposits and withdrawals against customer accounts (2 pts, 6.0 hrs, low complexity)\n- **[TASK-012]** Implement: Tellers should be able to verify customer signatures, photo identity... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-013]** Implement: Tellers should be able to issue cashier checks and process... (2 pts, 6.0 hrs, low complexity)\n\n\n#### Sprint 2 (Capacity: 24 Points)\n- **[TASK-014]** Implement: All teller transactions exceeding configured threshold amounts must require mandatory... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-015]** Implement: Tellers should perform end-of-day cash drawer balancing and generate teller... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-016]** Implement: Loan Management and Underwriting Loan officers should be able to... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-017]** Implement: Loan officers should be able to calculate debt-to-income ratios and... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-018]** Implement: Loan officers should be able to approve, reject, or refer... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-019]** Implement: The system should calculate interest, track monthly installment payments, and... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-020]** Implement: Compliance, Security and Auditing The system should enforce role-based access... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-021]** Implement: All transactions must be immutably recorded in a tamper-resistant financial... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-022]** Implement: The system should automatically monitor transactions against AML (Anti-Money Laundering)... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-023]** Implement: The system should flag high-value or suspicious patterns and generate... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-024]** Implement: All administrative changes, security policy updates, and manual ledger adjustments... (2 pts, 6.0 hrs, low complexity)\n- **[TASK-025]** Implement: Customer financial records and account balances must be protected with... (2 pts, 6.0 hrs, low complexity)\n\n\n#### Sprint 3 (Capacity: 6 Points)\n- **[TASK-008]** Implement: Customers receive instantaneous SMS and push notifications for all debits, credits, and security alerts (2 pts, 6.0 hrs, low complexity)\n- **[TASK-009]** Implement: Customers report suspicious transactions or compromised credentials immediately (2 pts, 6.0 hrs, low complexity)\n- **[TASK-026]** Implement: Provide enterprise-grade core banking and portal system for all stakeholder groups (2 pts, 6.0 hrs, low complexity)\n\n"
+    },
+    {
+      "report_type": "traceability",
+      "title": "Traceability Matrix Report",
+      "content_markdown": "# End-to-End Requirements Traceability Matrix (RTM)\n\n## Project: Banking Management System\n\n| Source Provenance | Requirement ID | Type | Architecture Module | Development Tasks | Test Cases | Traceability Status |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| specification.docx:p3 | `FR-001` | functional | `MOD-AUTHENTICATION` | TASK-001 | TEST-001 | Linked |\n| specification.docx:p3 | `FR-002` | functional | `MOD-DATA` | TASK-002 | TEST-002 | Linked |\n| specification.docx:p3 | `FR-003` | functional | `MOD-PAYMENT` | TASK-003 | TEST-003 | Linked |\n| specification.docx:p3 | `FR-004` | functional | `MOD-PAYMENT` | TASK-004 | TEST-004 | Linked |\n| specification.docx:p3 | `FR-005` | functional | `MOD-BOOKING` | TASK-005 | TEST-005 | Linked |\n| specification.docx:p3 | `FR-006` | functional | `MOD-FILE` | TASK-006 | TEST-006 | Linked |\n| specification.docx:p3 | `FR-007` | functional | `MOD-PROFILE` | TASK-007 | TEST-007 | Linked |\n| specification.docx:p3 | `FR-008` | functional | `MOD-NOTIFICATION` | TASK-008 | TEST-008 | Linked |\n| specification.docx:p3 | `FR-009` | functional | `MOD-NOTIFICATION` | TASK-009 | TEST-009 | Linked |\n| specification.docx:p3 | `FR-010` | functional | `MOD-AUTHENTICATION` | TASK-010 | TEST-010 | Linked |\n| specification.docx:p3 | `FR-011` | functional | `MOD-PAYMENT` | TASK-011 | TEST-011 | Linked |\n| specification.docx:p3 | `FR-012` | functional | `MOD-AUTHENTICATION` | TASK-012 | TEST-012 | Linked |\n| specification.docx:p3 | `FR-013` | functional | `MOD-PAYMENT` | TASK-013 | TEST-013 | Linked |\n| specification.docx:p3 | `FR-014` | functional | `MOD-AUTHENTICATION` | TASK-014 | TEST-014 | Linked |\n| specification.docx:p3 | `FR-015` | functional | `MOD-REPORTING` | TASK-015 | TEST-015 | Linked |\n| specification.docx:p3 | `FR-016` | functional | `MOD-FILE` | TASK-016 | TEST-016 | Linked |\n| specification.docx:p3 | `FR-017` | functional | `MOD-REPORTING` | TASK-017 | TEST-017 | Linked |\n| specification.docx:p3 | `FR-018` | functional | `MOD-BOOKING` | TASK-018 | TEST-018 | Linked |\n| specification.docx:p3 | `FR-019` | functional | `MOD-DATA` | TASK-019 | TEST-019 | Linked |\n| specification.docx:p3 | `NFR-001` | non_functional | `MOD-AUTHENTICATION` | TASK-020 | TEST-020 | Linked |\n| specification.docx:p3 | `FR-020` | functional | `MOD-DATA` | TASK-021 | TEST-021 | Linked |\n| specification.docx:p3 | `FR-021` | functional | `MOD-DATA` | TASK-022 | TEST-022 | Linked |\n| specification.docx:p3 | `FR-022` | functional | `MOD-REPORTING` | TASK-023 | TEST-023 | Linked |\n| specification.docx:p3 | `NFR-002` | non_functional | `MOD-DATA` | TASK-024 | TEST-024 | Linked |\n| specification.docx:p3 | `NFR-003` | non_functional | `MOD-DATA` | TASK-025 | TEST-025 | Linked |\n| specification.docx:p3 | `FR-023` | functional | `MOD-DATA` | TASK-026 | TEST-026 | Linked |\n"
+    }
+  ],
+  "logs": [
+    "Step 1/8: Initialized pipeline with 1 source chunks.",
+    "Step 2/8: Running Requirement Extraction Agent with evidence grounding...",
+    "Extracted 26 structured requirements.",
+    "Step 3/8: Running Quality Agent across 7 transparent dimensions...",
+    "Step 4/8: Detecting ambiguities, contradictions, and duplicates...",
+    "Detected 1 ambiguities, 0 conflicts, 0 duplicate candidates.",
+    "Generated 1 prioritized stakeholder clarification questions.",
+    "Step 5/8: Generating system architecture modules and interface topology...",
+    "Step 6/8: Decomposing requirements into Epics, Features, and Tasks...",
+    "Running deterministic effort estimation for generated tasks...",
+    "No team members supplied; resource matching skipped without fabricating assignments.",
+    "Step 7/8: Constructing end-to-end traceability matrix and test cases...",
+    "Running automated Source-Trust Verification against the original client document...",
+    "Source-Trust Verification completed: 98.49% source-alignment score.",
+    "Step 8/8: Generating analysis reports...",
+    "Pipeline execution successfully completed with evidence-grounded analysis."
+  ]
+}

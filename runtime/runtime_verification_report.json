@@ -1,0 +1,33 @@
+﻿{
+    "outcome":  "PIPELINE SUCCEEDED - LLM EVIDENCE INSUFFICIENT",
+    "provider":  "groq",
+    "model":  "llama-3.3-70b-versatile",
+    "llm_call":  {
+                     "attempted":  true,
+                     "succeeded":  null,
+                     "evidence":  "No definitive Groq success/failure evidence was captured from the running server output."
+                 },
+    "fallback_used":  "unknown",
+    "requirements_count":  13,
+    "downstream_counts":  {
+                              "issues":  0,
+                              "clarifications":  0,
+                              "architecture_modules":  0,
+                              "architecture_relations":  0,
+                              "tasks":  13,
+                              "sprints":  0,
+                              "test_cases":  0,
+                              "traceability_links":  0,
+                              "reports":  0
+                          },
+    "temporary_database_persistence":  true,
+    "original_database_checksum_before":  "F6ABFB48BF3799C7B71FA3C5D4EBCCF52F9603D8049EB3EFDF12C9B8E03B3D26",
+    "original_database_checksum_after":  "F6ABFB48BF3799C7B71FA3C5D4EBCCF52F9603D8049EB3EFDF12C9B8E03B3D26",
+    "original_database_unchanged":  true,
+    "test_project_id_in_original_db":  "SKIPPED (sqlite3 CLI not available - integrity confirmed by SHA-256 checksum)",
+    "source_code_modified":  false,
+    "secrets_exposed":  false,
+    "errors":  [
+
+               ]
+}

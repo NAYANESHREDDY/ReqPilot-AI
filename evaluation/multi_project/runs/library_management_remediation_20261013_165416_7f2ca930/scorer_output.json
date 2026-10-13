@@ -1,0 +1,128 @@
+{
+  "run_id": "7f2ca930-9de7-407d-95cb-3d56d875c96a",
+  "domain_key": "library_management",
+  "project_title": "Library Management System",
+  "timestamp": "2026-10-13T16:54:42.650533",
+  "llm_enabled": true,
+  "llm_extraction_succeeded": true,
+  "fallback_used": false,
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "matching_summary": {
+    "predicted_requirements_count": 25,
+    "reference_requirements_count": 24,
+    "uniquely_matched_count": 24,
+    "unmatched_predictions_count": 1,
+    "ambiguous_predictions_count": 0,
+    "duplicate_gold_matches_count": 0,
+    "unmatched_reference_count": 0
+  },
+  "classification_evaluation": {
+    "valid_matched_denominator": 24,
+    "correct_classifications": 21,
+    "accuracy": 0.875,
+    "penalized_end_to_end_accuracy": 0.84,
+    "macro_precision": 0.9357,
+    "macro_recall": 0.932,
+    "macro_f1": 0.9325,
+    "per_class_metrics": {
+      "AUTHENTICATION": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "BOOKING": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.8,
+        "recall": 0.6667,
+        "f1": 0.7273
+      },
+      "DATA": {
+        "tp": 6,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.75,
+        "recall": 0.8571,
+        "f1": 0.8
+      },
+      "NOTIFICATION": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "PAYMENT": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "REPORTING": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "SEARCH": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "errors_sample": [
+      {
+        "pred_id": "FR-009",
+        "gold_id": "FR-009",
+        "summary": "Patrons should be able to submit purchase recommendations or inter-library...",
+        "expected": "BOOKING",
+        "predicted": "DATA"
+      },
+      {
+        "pred_id": "FR-012",
+        "gold_id": "FR-012",
+        "summary": "Circulation staff should be able to process returned items, inspect...",
+        "expected": "DATA",
+        "predicted": "BOOKING"
+      },
+      {
+        "pred_id": "FR-021",
+        "gold_id": "FR-020",
+        "summary": "Administrators should be able to configure loan durations, maximum borrowing...",
+        "expected": "BOOKING",
+        "predicted": "DATA"
+      }
+    ],
+    "total_errors": 3
+  },
+  "structural_integrity": {
+    "total_requirements": 25,
+    "requirements_with_tasks": 25,
+    "requirements_without_tasks": 0,
+    "task_coverage_pct": 100.0,
+    "total_modules": 9,
+    "total_relations": 18,
+    "total_tasks": 25,
+    "total_test_cases": 25,
+    "untested_requirements_count": 0,
+    "traceability_matrix_rows": 25
+  },
+  "unsupported_metrics_declared": [
+    "semantic_test_step_oracle: NOT EVALUATED (No independent ground-truth test assertions)",
+    "code_level_traceability_oracle: NOT EVALUATED (No source code repository under analysis)",
+    "dynamic_runtime_latency_oracle: NOT EVALUATED (Pipeline runs offline)"
+  ]
+}

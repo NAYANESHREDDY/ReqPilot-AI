@@ -1,0 +1,42 @@
+{
+  "benchmark_name": "ReqPilot Multi-Project Ground-Truth Benchmark",
+  "created_at": "2026-10-12T22:45:00",
+  "version": "1.0.0",
+  "llm_configuration": {
+    "provider": "groq",
+    "model": "openai/gpt-oss-120b",
+    "temperature": 0.2
+  },
+  "projects": {
+    "ev_charging": {
+      "specification_docx_sha256": "4a38504015d1483a52e9047ee1e417ac3a42cffefb73139e719114ad33aafa9b",
+      "specification_txt_sha256": "6c2b5dc343e337c0dc58da3fcbd13171d112df162067868caeac614b08a9e3b5",
+      "gold_reference_sha256": "de7b0f66dc9ffec90cc36e8ca132eca7ba275d6bf8e501403f4b056e8c52ef19",
+      "provenance_sha256": "46ab09cb35fb2c2c04f310961ca1fb4fabd00c7a5b9fde4aeba9912311de9219"
+    },
+    "hospital_management": {
+      "specification_docx_sha256": "fa1178ddbcb2e4d7b3aa64d2b1068e71461267a6f86eca39cd14a28b683d3b29",
+      "specification_txt_sha256": "0ba94140834606c14175666817f988bc3337b36ced6930199dd40ccc2da220db",
+      "gold_reference_sha256": "60ef330d34fcaf3754c12fe3af45672401a4c43e11a420ac115159a153923dbc",
+      "provenance_sha256": "1f6d9b97703e836a4f490ebb111547b37c399872d34aea075ab2daa41729bb33"
+    },
+    "ecommerce_platform": {
+      "specification_docx_sha256": "83121bf3f9919dfb10de575be6e9c99582da323b50e07c298acd017a2d67af42",
+      "specification_txt_sha256": "7f1f43242c27fc5e07e2314ff56f622c74f09848ab398770bbf5b2a903defec4",
+      "gold_reference_sha256": "9096b24889b6f213e45908bdeea68a7690b9784f39e1f49e4e8fb92ca59978d0",
+      "provenance_sha256": "7c02c3f0b80eba12cd1589569319d9bc857c91bbb4dd7ebf03ac8e3055822be3"
+    },
+    "banking_management": {
+      "specification_docx_sha256": "446a9c08c0640cb62fad32d8a686a7589c3bd2204c4c51fc315e2f665fb260e4",
+      "specification_txt_sha256": "623c7921d963502a47b8bc8b55776e4e85ce2c4379bf17610e9c5ae1763f9153",
+      "gold_reference_sha256": "50916a000e2f6f8382999dbec787a1a334430063151cf2091ad8a3d08b079af8",
+      "provenance_sha256": "ad8de602e9325a64248016f7de187c8b154060aa22b11e8b878cffb6798316ad"
+    },
+    "library_management": {
+      "specification_docx_sha256": "57fcbfa59848bff752a0e4e837d86a3dfe4809000a8b03caedf0a437af98335e",
+      "specification_txt_sha256": "2103ec66283525d86d130c95d5884558e4641a8705a26072f9c2748d24304d38",
+      "gold_reference_sha256": "158664146dd1936731d574fb4fa8cca4e6092a3397909ad7fe36554961c8a950",
+      "provenance_sha256": "6890790df0404b722728b7a01d90fb5b61a832b0d4624a6a4297075bd7be4b21"
+    }
+  }
+}
